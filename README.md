@@ -169,21 +169,28 @@ Kurulum testi için linki tıklayın "http://localhost/info.php" . Eğer alt res
    $ git config --global user.email eposta # eposta'yı tanı.
 ```
 
-```bash
-  $ cd /var/www/html
-  $ git init # Git ile çalışabilmek için.
-```
-
-:four_leaf_clover: 14- Adminer Programı Kurulumu
+**_git init:** init komutu, bulunduğumuz dizini uzak bir sunucutaki bir sunucuya gönderebilmeniz için, bir Git repository’si haline getirip .git uzantılı bir dizin oluşturur.  Git/github kullanımı hakkında detaylı bilgiye [buradan](http://github.com) ulaşabilirsiniz.
 
 ```bash
-  $ cd /var/www/html
-  $ mkdir adminer
-  $ cd adminer
-  $ wget -O index.php https://www.adminer.org/latest.php
+  $ cd /var/www/html/ # html dizinine geç.
+  $ git init # Git'i bu dizin için konuşlandır.
 ```
 
-:four_leaf_clover: 15- ATOM Editörü Kurulumu
+### [Adminer Programı Kurulumu]
+
+```bash
+  $ cd /var/www/html/ # html dizinine geç.
+  $ mkdir adminer # Burada "adminer" adında bir dizin oluştur.
+  $ cd adminer # adminer dizinine geç.
+  $ wget -O index.php https://www.adminer.org/latest.php # latest.php dosyasını buraya indir.
+```
+
+Dosyayı indirdikten sonra dosyanın ismini "index.php" olarak değiştirmeyi unutmayın. html dizininin içerisindeki index.html dosyasını silin. Bundan sonra localhos'a girdiğimizde artık karımıza aşağıdaki resimde yer alan ekran çıkacaktır.
+
+![](https://lh3.googleusercontent.com/7E-pqQXKG_4t0fa1avWXu7R0s0Y7y3mxKR5H6v4-66UaPsrgu6lPOtbxMBC8mwd3P0jdjGcCqs8)
+Adminer bağlantısını seçtiğimizde ise aşağıdaki resimde gördüğümüz adminer giriş sayfasına ulaşırız. Parolayı unutmadıysanız kullanıcı adı ve parolayı girerek veritabanı oluşturmaya başlayabilirsiniz.
+![](https://lh3.googleusercontent.com/tXW3z-_h5xRDqFGWfrr3XmYi4kSplTXEe0Tv2e3H_GhkFFgCIh84bWgjdUzfiwv71Eor0-iYLkQ)
+### [ATOM Metin Editörü Kurulumu]
 
 ```bash
   $ wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
