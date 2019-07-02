@@ -25,7 +25,7 @@ Karşılabileceğim sorunların çözümleri ne olacak?
 ```
 
 ## PHP PAKETLERİNİN KURULMASI
-### [Sunucunun  Kurulması]
+### [Web Sunucusunun  Kurulması]
 Php için olmazsa olmaz, ***açık kaynak kodlu*** ve ücretsiz bir web sunucusu yazılımı olan *Apache* yi kuralım;
 
 ```bash
@@ -61,7 +61,7 @@ Resimdeki sayfayı göremiyorsak telaşlanmayın. Eğer güvenlik duvarı kullan
 **Kök Klasörü Yetkilendirmesi:** Apache'nin kullandığı /var/www/html/ kök dizininde işlem yapabilmesi için, sahipliğini "apache" kullanıcısına veriyoruz.
 
 ```bash
-  $ sudo chown www-data:www-data /var/www/html/ -R
+  $ sudo chown www-data:www-data /var/www/html/ -R # Html dizini ve alt elemanlarının sahibini ve grubunu www-data yap.
 ```
 
 ### [Veritabanı Kurulumu]
@@ -69,11 +69,11 @@ Resimdeki sayfayı göremiyorsak telaşlanmayın. Eğer güvenlik duvarı kullan
 MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL'in yaratıcısı olan *Monty Widenius*'un MySQL'in kodunu çatallayıp (fork) "çoğunlukla" MySQL ile aynı komutları, arayüzleri ve API'leri destekleyecek şekilde geliştirmeye başlanan, toplulukla iç içe hızlı ve verimli şekilde geliştirilmeye devam edilen MySQL ilişkisel veritabanı yönetim sistemidir.
 
 ```bash
-  $ sudo apt install mariadb-server mariadb-client # Mariadb kurulum.
+  $ sudo apt install mariadb-server mariadb-client # Mariadb'yi kur.
   $ sudo mariadb -u root # Mariadb'ye root şifresi istemeden girmek.
-  $ sudo systemctl start mariadb # Mariadb yeniden başlat.
-  $ sudo sudo systemctl enable mariadb # Açılışta otomatik başlatma.
-  $ systemctl status mariadb # Hata verebilir, sorun yok devam!
+  $ sudo systemctl start mariadb # Mariadb'yi yeniden başlat.
+  $ sudo sudo systemctl enable mariadb # Mariadb'yi açılışta otomatik başlat.
+  $ systemctl status mariadb # Hata verebilir, sorun yok devam! Panik yok!
 ```
 **Örnek Çıktı:**
 
@@ -90,7 +90,7 @@ MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL'
            └─3473 /usr/sbin/mysqld
 ```
 
-**Root kullanıcısı için parola belirleme:**
+**Root Kullanıcısı İçin Parola Belirleme:**
 
 ```bash
   $ sudo mysql -u root
@@ -107,14 +107,14 @@ Not: Unutmayacağınız bir parola lütfen!
 ```bash
   $ sudo mysql_secure_installation   
 ```
-Parolayı iki defa girmenizi ister. Parola ekranda görülmez ve aynı olmak zorundadır. Bu komuttan sonra gelen ekranda, sırasıyla aşağıda yer alan resimlerdeki adımları izleyin;
+**Parola** yı iki defa girmenizi ister.  **Parola** ekranda görülmez ve aynı olmak zorundadır. Bu komuttan sonra gelen ekranda, sırasıyla aşağıda yer alan resimlerdeki adımları izleyin;
 
 ![](https://lh3.googleusercontent.com/doizwnivOhuJS2Ce7CTbsKNMbhAGt0If3Qw_jkyBPKIpIh_MX9Zt_P8fh2t0hrzg9ao04i_pkm4)
 ![](https://lh3.googleusercontent.com/9XvVC-PXnCQ3Qk9lSnJwbwKzamA_YsaUJ0KA56soR-lVmkzUygNNWWwf3EQCO_BOGV4RMeUrUFI)
 
 
-### [Php7 Kurulumu]
-*Not: Bu komuttaki kurulacak paketler temel ihtiyaçlar için zorunlu paketlerdir.*
+### [PHP7 Kurulumu]
+*Not: Bu komutta kurulacak php7 paketleri temel ihtiyaçlar için zorunlu paketlerdir.*
 
 ```bash
   $ sudo apt install php7.2 libapache2-mod-php7.2 php7.2-mysql php-common php7.2-cli php7.2-common php7.2-json php7.2-opcache php7.2-readline # Php7'yi belirtilen paketlerle beraber kur.
@@ -123,28 +123,38 @@ Parolayı iki defa girmenizi ister. Parola ekranda görülmez ve aynı olmak zor
   $ sudo php -v # Php versiyon kontrolu yap.
 ```
 
-:four_leaf_clover: 10- PHP betiklerini Apache sunucusuyla test etmek;
-
-```bash
-  $ sudo nano /var/www/html/info.php
-```
-info.php dosyası oluşturulup konsolda açılır. İçerisine;
-
-```php
-  <?php phpinfo(); ?>
-```
-yazalım ve tarayıcı adres çubuğunda, "http://localhost/info.php" adresi ile test edelim.
-
-![](https://lh3.googleusercontent.com/KULDQE1ANwu3I_KmpzT7G-N8RiuDfH-GjQxjHm0jH0BwwKJyiL1UXiPRG42lL8s7wL03AuQoRRg)
-
-:four_leaf_clover: 11- html dizini için yetkilendirme
+**Html Dizini İçin Yetkilendirme:**
 
 ```bash
   $ sudo adduser $USER www-data
   $ sudo chown -R $USER:www-data /var/www/html/
 ```
 
-:four_leaf_clover: 12- GİT Kurulumu
+**Masaüstü'ne HTML Klasörü Kısayolunun Oluşturulması:**
+
+```bash
+  $ cd ~/Masaüstü # Masaüstü dizinine geç.
+  $ ln -s /var/www/html/ # Masaüstü'ne kısayol oluştur.  
+```
+
+**PHP Betiklerini Apache Sunucusunda Test Etmek:**
+
+```bash
+  $ cd /var/www/html/ # html dizinine geç.
+  $ sudo nano /var/www/html/info.php # info.php dosyasını oluştur ve konsolda aç.
+```
+İçerisine altta yer alan bir satırlık ilk php kodumuzu yazalım.
+
+```php
+  <?php phpinfo(); ?>
+```
+Kurulum testi için linki tıklayın "http://localhost/info.php" . Eğer alt resim gibi bir ekran ile karşılaştıysanız, sorun yok yola devam.
+
+![](https://lh3.googleusercontent.com/KULDQE1ANwu3I_KmpzT7G-N8RiuDfH-GjQxjHm0jH0BwwKJyiL1UXiPRG42lL8s7wL03AuQoRRg)
+
+### [GİT Kurulumu]
+
+**Git** , *Linus Torvalds* tarafından tasarlanıp geliştirilen, yazdığımız projeleri ve uygulamaları, bilgisayarımızda ya da harici disklerde değilde **internet üzerinde** tutmamızı ve yönetmemizi sağlayan ve GNU Genel Kamu Lisansı’nın 2. sürümüyle lisanslanmış bir **özgür versiyon kontrol sistemi** dir.
 
 ```bash
    $ sudo apt install git -y
@@ -152,12 +162,9 @@ yazalım ve tarayıcı adres çubuğunda, "http://localhost/info.php" adresi ile
    $ git config --global user.name "Hasan Çiçek"
 ```
 
-:four_leaf_clover: 13- Masaüzerine HTML klasörü kısayolunun açılması
 
 ```bash
-  $ cd ~/Desktop # İngilizce kurulum yapıldıysa bu komut
-  $ cd ~/Masaüstü # Türkçe kurulum yapıldıysa bu Komut
-  $ ln -s /var/www/html/  
+  $ cd /var/www/html
   $ git init # Git ile çalışabilmek için.
 ```
 
