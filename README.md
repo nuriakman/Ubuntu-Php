@@ -13,7 +13,7 @@ Karşılabileceğim sorunların çözümleri ne olacak?
   $ sudo apt update
 ```
 
-2- Sistemde kurulu olan paketler, "update" komutu ile güncellenen listeye göre bulunan en son sürüme yükseltir.
+2- Sistemde kurulu olan paketler, "upgrade" komutu ile güncellenen listeye göre bulunan en son sürüme yükseltir.
 
 ```bash  
   $ sudo apt upgrade -y
