@@ -1,4 +1,5 @@
 
+
 # Ubuntu-Php
 Ubuntu'da PHP çalışma ortamı nasıl oluşturulur?
 
@@ -8,29 +9,46 @@ Karşılabileceğim sorunların çözümleri ne olacak?
 
 # UBUNTU KURULUM SONRASI YAPILACAKLAR
 
-:four_leaf_clover: 1-  Linux sistemi kendisini güncellemek için bir merkeze bakıp, kontrol yapmaya ihtiyacı vardır. Bu listelerin bakılacağı yerler /etc/apt/sources.list dosyasında tutulur. "update" komutu ile sistemde kurulu olan paketler, paket deposundaki versiyonları ile farkları araştırılır ve liste güncellenir. Bu komut kurulum yapmaz.
+## SİSTEMİN GÜNCELLENMESİ
+**Depo Listesinin Güncellenmesi:** Linux sistemi kendisini güncellemek için bir merkeze bakıp, kontrol yapmaya ihtiyacı vardır. Bu listelerin bakılacağı yerler /etc/apt/sources.list dosyasında tutulur. "update" komutu ile sistemde kurulu olan paketler, paket deposundaki versiyonları ile farkları araştırılır ve liste güncellenir. Bu komut kurulum yapmaz.
 
 ```bash
   $ sudo apt update
 ```
 
-:four_leaf_clover: 2- Sistemde kurulu olan paketler, "upgrade" komutu ile güncellenen listeye göre bulunan en son sürüme yükseltir.
+**Paketlerin Güncellenmesi:** Sistemde kurulu olan paketler, "upgrade" komutu ile güncellenen listeye göre bulunan en son sürüme yükseltir.
 
 ```bash  
   $ sudo apt upgrade -y
 ```
 
-:four_leaf_clover: 3- Php için olmazsa olmaz, açık kaynak kodlu ve ücretsiz bir web sunucusu yazılımı olan *apache* yi kuralım;
+## PHP PAKETLERİNİN KURULMASI
+### [Sunucunun  Kurulması]
+Php için olmazsa olmaz, açık kaynak kodlu ve ücretsiz bir web sunucusu yazılımı olan *apache* yi kuralım;
 
 ```bash
   $ sudo apt install -y apache2 apache2-utils
   $ sudo systemctl start apache2 # apache2 yeniden başlat.
   $ sudo sudo systemctl enable apache2 # açılışta otomatik başlasın.
-  $ apache2 -v # Hata verebilir, sorun yok devam!
-  $ systemctl status apache2 # Hata verebilir, sorun yok devam!
+  $ systemctl status apache2 # Aşağıdaki çıktıyı verecektir! Vermezse telaşlanmayın!
 ```
+**Örnek Çıktı:**
+```bash
+● apache2.service - The Apache HTTP Server
+   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+  Drop-In: /lib/systemd/system/apache2.service.d
+           └─apache2-systemd.conf
+   Active: **active (running)** since Sat 2018-09-08 10:46:05 UTC; 3min 37s ago
+ Main PID: 1610 (apache2)
+    Tasks: 55 (limit: 505)
+   CGroup: /system.slice/apache2.service
+           ├─1610 /usr/sbin/apache2 -k start
+           ├─1612 /usr/sbin/apache2 -k start
+           └─1613 /usr/sbin/apache2 -k start
+```
+**Sunucuyu Test Etmek:** Taracımızın adres çubuğuna "127.0.0.1" veya "localhost" yazarak "*Apache2 Ubuntu Default Page*" sayfasını görebiliyorsak apache kurulmuş demektir.
 
-Taracımızın adres çubuğuna "127.0.0.1" veya "localhost" yazarak "*Apache2 Ubuntu Default Page*" sayfasını görebiliyorsak apache kurulmuş demektir.
+![apache ekran görüntüsü](https://picasaweb.google.com/112486291856082212964/6709021558838523649#6709021559023597874 "apache_1")
 
 Eğer güvenlik duvarı kullanıyorsanız 80 nolu TCP portu kapalı olabilir. Bunu açmak için aşağıdaki komutu gönderin ve tekrar tarayıcıdan deneyin.
 
@@ -38,13 +56,14 @@ Eğer güvenlik duvarı kullanıyorsanız 80 nolu TCP portu kapalı olabilir. Bu
   $ sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 ```
 
-:four_leaf_clover: 4- Apache'nin kullandığı /var/www/html/ kök dosyaya sahipliğini "apache" kullanıcısına veriyoruz.
+**Kök Klasörü Yetkilendirmesi:** Apache'nin kullandığı /var/www/html/ kök dizininde işlem yapabilmesi için, sahipliğini "apache" kullanıcısına veriyoruz.
 
 ```bash
   $ sudo chown www-data:www-data /var/www/html/ -R
 ```
 
-:four_leaf_clover: 5- Şimdi "*MariaDB*" yükleyelim. MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL ilişkisel veritabanı yönetim sistemidir.
+### [Veritabanı Kurulumu]
+"*MariaDB*" yükleyelim. MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL ilişkisel veritabanı yönetim sistemidir.
 
 ```bash
   $ sudo apt install mariadb-server mariadb-client
@@ -53,7 +72,7 @@ Eğer güvenlik duvarı kullanıyorsanız 80 nolu TCP portu kapalı olabilir. Bu
   $ systemctl status mariadb # Hata verebilir, sorun yok devam!
 ```
 
-:four_leaf_clover: 6- Root kullanıcısı için parola belirleme
+Root kullanıcısı için parola belirleme
 
 ```bash
   $ sudo mysql -u root
@@ -64,7 +83,7 @@ Eğer güvenlik duvarı kullanıyorsanız 80 nolu TCP portu kapalı olabilir. Bu
       exit;
 ```
 
-:four_leaf_clover: 7- Güvenlik için, mysql parolamızı değiştirelim.
+Güvenlik için, mysql parolamızı değiştirelim.
 
 ```bash
   $ sudo mysql_secure_installation   
@@ -131,9 +150,8 @@ yazalım ve tarayıcı adres çubuğunda, "http://localhost/info.php" adresi ile
 ```bash
   $ cd ~/Desktop # İngilizce kurulum yapıldıysa bu komut
   $ cd ~/Masaüstü # Türkçe kurulum yapıldıysa bu Komut
-  $ ln -s /var/www/html/
-  # Git ile çalışabilmek için.
-  $ git init
+  $ ln -s /var/www/html/  
+  $ git init # Git ile çalışabilmek için.
 ```
 
 :four_leaf_clover: 14- Adminer Programı Kurulumu
