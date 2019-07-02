@@ -14,9 +14,7 @@
 | pwd | Bulunduğunuz dizinin ismini verir. | :green_heart: |
 | ls | Dizin içerisini listeler. | :green_heart: |
 | ls -hal | Dizin içerisini detaylı olarak listeler. Dosya boyutlarıda anlaşılır olarak gelir. | :green_heart: |
-| cd | (Change Directory) En üst dizine (Ev dizinine) gider. | :green_heart: |
-| cd ..| Bir üst dizine geçer. | :green_heart: |
-| cd /dizin_adi | İsmi belirtilen dizine gider. | :green_heart: |
+| cd | (Change Directory) En üst dizine (Ev dizinine) gider. "cd .." Bir üst dizine geçer. "cd /dizin_adi" İsmi belirtilen dizine gider. | :green_heart: |
 | man | Komut için yardım dosyasını açar. "man komutadi" | :green_heart: |
 | clear | Konsol ekranını temizler. | :green_heart: |
 | history |Sistemde kullanılmış olan komutları görmek. | :green_heart: |
