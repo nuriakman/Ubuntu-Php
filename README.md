@@ -156,12 +156,18 @@ Kurulum testi için linki tıklayın "http://localhost/info.php" . Eğer alt res
 
 **Git** , *Linus Torvalds* tarafından tasarlanıp geliştirilen, yazdığımız projeleri ve uygulamaları, bilgisayarımızda ya da harici disklerde değilde **internet üzerinde** tutmamızı ve yönetmemizi sağlayan ve GNU Genel Kamu Lisansı’nın 2. sürümüyle lisanslanmış bir **özgür versiyon kontrol sistemi** dir.
 
+**Kurulum:**
+
 ```bash
-   $ sudo apt install git -y
-   $ git config --global user.email badboy714@gmail.com
-   $ git config --global user.name "Hasan Çiçek"
+   $ sudo apt install git -y # Git kurulumunu yap.
 ```
 
+**Kullanıcı Ayarlarının Yapılması:**
+
+```bash
+   $ git config --global user.name "kullaniciadi" # "kullaniciadi" kullanıcısını tanı.
+   $ git config --global user.email eposta # eposta'yı tanı.
+```
 
 ```bash
   $ cd /var/www/html
