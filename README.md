@@ -1,15 +1,16 @@
 
 
 # Ubuntu-Php
-Ubuntu'da PHP çalışma ortamı nasıl oluşturulur?
-
-Karşılabileceğim sorunların çözümleri ne olacak?
+Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunların çözümleri ne olacak?
 
 Çözemediğiniz sorunlarınız bizlere referans olacaktır. Lütfen gönderin, sorun! Ama çözüm arayıp bulamadıktan sonra...
 
 # UBUNTU KURULUM SONRASI YAPILACAKLAR
 
-*Not: Konsol komutlarını kopyalarken
+```bash
+  Not: Konsol komutlarını kopyalarken, "#" simgesi ile başlayan yerleri almayınız.
+       Buralar açıklamadır. Konların ne yaptığını, ne işe yaradığını anlamanız için yazılmıştır.
+```
 
 ## SİSTEMİN GÜNCELLENMESİ
 **Depo Listesinin Güncellenmesi:** Linux sistemi kendisini güncellemek için bir merkeze bakıp, kontrol yapmaya ihtiyacı vardır. Bu listelerin bakılacağı yerler /etc/apt/sources.list dosyasında tutulur. "update" komutu ile sistemde kurulu olan paketler, paket deposundaki versiyonları ile farkları araştırılır ve liste güncellenir. Bu komut kurulum yapmaz.
@@ -189,9 +190,12 @@ Kurulum testi için linki tıklayın "http://localhost/info.php" . Eğer alt res
 Dosyayı indirdikten sonra dosyanın ismini "index.php" olarak değiştirmeyi unutmayın. html dizininin içerisindeki index.html dosyasını silin. Bundan sonra localhos'a girdiğimizde artık karımıza aşağıdaki resimde yer alan ekran çıkacaktır.
 
 ![](https://lh3.googleusercontent.com/7E-pqQXKG_4t0fa1avWXu7R0s0Y7y3mxKR5H6v4-66UaPsrgu6lPOtbxMBC8mwd3P0jdjGcCqs8)
+
 Adminer bağlantısını seçtiğimizde ise aşağıdaki resimde gördüğümüz adminer giriş sayfasına ulaşırız. Parolayı unutmadıysanız kullanıcı adı ve parolayı girerek veritabanı oluşturmaya başlayabilirsiniz.
 
+
 ![](https://lh3.googleusercontent.com/zF0rA_zS5Tj7766qUSBqeHZODHEh5M2z8ORcT-74EuKI7xCS9AhmMmdjii-Ep7dC9xWVTO07FHC3)
+
 Veritabanı işlemleri hakkında daha geniş bilgiye [buradan](https://www.php.net/manual/tr/book.mysql.php) ulaşabilirsiniz.
 
 ### [ATOM Metin Editörü Kurulumu]
