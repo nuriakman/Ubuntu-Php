@@ -46,11 +46,11 @@ Php için olmazsa olmaz, açık kaynak kodlu ve ücretsiz bir web sunucusu yazı
            ├─1612 /usr/sbin/apache2 -k start
            └─1613 /usr/sbin/apache2 -k start
 ```
-**Sunucuyu Test Etmek:** Taracımızın adres çubuğuna "127.0.0.1" veya "localhost" yazarak "*Apache2 Ubuntu Default Page*" sayfasını görebiliyorsak apache kurulmuş demektir.
+**Sunucuyu Test Etmek:** Taracımızın adres çubuğuna "127.0.0.1" veya "localhost" yazarak "*Apache2 Ubuntu Default Page*" sayfasını görebiliyorsak yani aşağıdaki resim gibi bir sayfa ile karşılaştı isek apache kurulmuş demektir.
 
 ![](https://lh3.googleusercontent.com/XNhp6I05Wy_eMVUEdGHid8CnD9tJeeY3DYaGaXJ8Ls_eLhbbow1Ck1LusT9T0uMKDKBEa39vSkE)
 
-Eğer güvenlik duvarı kullanıyorsanız 80 nolu TCP portu kapalı olabilir. Bunu açmak için aşağıdaki komutu gönderin ve tekrar tarayıcıdan deneyin.
+Resimdeki sayfayı göremiyorsak telaşlanmayın. Eğer güvenlik duvarı kullanıyorsanız 80 nolu TCP portu kapalı yada meşgul olabilir. Bunu açmak için aşağıdaki komutu gönderin ve tekrar tarayıcıdan deneyin.
 
 ```bash
   $ sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
@@ -63,7 +63,8 @@ Eğer güvenlik duvarı kullanıyorsanız 80 nolu TCP portu kapalı olabilir. Bu
 ```
 
 ### [Veritabanı Kurulumu]
-"*MariaDB*" yükleyelim. MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL ilişkisel veritabanı yönetim sistemidir.
+
+MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL'in yaratıcısı olan Monty Widenius'un MySQL'in kodunu çatallayıp (fork) "çoğunlukla" MySQL ile aynı komutları, arayüzleri ve API'leri destekleyecek şekilde geliştirmeye başlanan, toplulukla iç içe hızlı ve verimli şekilde geliştirilmeye devam edilen MySQL ilişkisel veritabanı yönetim sistemidir.
 
 ```bash
   $ sudo apt install mariadb-server mariadb-client
@@ -129,6 +130,8 @@ info.php dosyası oluşturulup konsolda açılır. İçerisine;
   <?php phpinfo(); ?>
 ```
 yazalım ve tarayıcı adres çubuğunda, "http://localhost/info.php" adresi ile test edelim.
+
+![](https://lh3.googleusercontent.com/KULDQE1ANwu3I_KmpzT7G-N8RiuDfH-GjQxjHm0jH0BwwKJyiL1UXiPRG42lL8s7wL03AuQoRRg)
 
 :four_leaf_clover: 11- html dizini için yetkilendirme
 
