@@ -1,3 +1,4 @@
+
 # Ubuntu-Php
 Ubuntu'da PHP çalışma ortamı nasıl oluşturulur?
 
@@ -7,7 +8,7 @@ Karşılabileceğim sorunların çözümleri ne olacak?
 
 # UBUNTU KURULUM SONRASI YAPILACAKLAR
 
-1- Linux sistemi kendisini güncellemek için bir merkeze bakıp, kontrol yapmaya ihtiyacı vardır. Bu listelerin bakılacağı yerler /etc/apt/sources.list dosyasında tutulur. "update" komutu ile sistemde kurulu olan paketler, paket deposundaki versiyonları ile farkları araştırılır ve liste güncellenir. Bu komut kurulum yapmaz.
+1-  :arrow_right: Linux sistemi kendisini güncellemek için bir merkeze bakıp, kontrol yapmaya ihtiyacı vardır. Bu listelerin bakılacağı yerler /etc/apt/sources.list dosyasında tutulur. "update" komutu ile sistemde kurulu olan paketler, paket deposundaki versiyonları ile farkları araştırılır ve liste güncellenir. Bu komut kurulum yapmaz.
 
 ```bash
   $ sudo apt update
@@ -19,30 +20,7 @@ Karşılabileceğim sorunların çözümleri ne olacak?
   $ sudo apt upgrade -y
 ```
 
-3- Uygulamalardan "*Yazılım Güncelleştirici*" yi açıp, ayarlar düğmesine basarak "*Yazılım ve Güncelleştirmeler*" ekranına geçiyoruz. "*Diğer Yazılımlar*" sekmesindeki kutuları işaretledikten sonra, "*Ek Sürücüler*" sekmesine geçerek sistemin tarama yapmasını bekliyoruz. Ek sürücü varsa ve sürücü gerekli ise kuruyoruz.
-
-4- Sistemimizin performansını artırmak için gerekli olan "Medya Kodekleri" ni yüklüyoruz.
-
-```bash
-  $ sudo apt install ubuntu-restricted-extras libavcodec-extra libdvd-pkg
-```
-
-5- Tek tıkla pencereleri küçültmek için aşağıdaki komutları konsoldan yollayın!
-
-```bash
-  $ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
-```
-
-6- "*Ubuntu Yazılımlar*" uygulamasını açarak ihtiyacımız ve tercihimiz olan uygulamaları kuruyoruz. Bir kaç uygulama tavsiyesi;
-
-- **Telegram:** Haberleşme için kullanabileceğiniz sosyal uygulamadır.
- - **Chromium:** Alternatif tarayıcı.
- - **Vlc:** Video oynatma uygulaması.
- - **Gimp:** Photoshop'ın linux tarafı alternatif resim işleme uygulaması.
- - **Kdenlive:** Video düzenleme uygulaması.
- - **FreeCad:** 3 boyutlu ve hareketli grafikler yapabileceğiniz Solid'in alternatifi uygulamadır.
-
-7- Php için olmazsa olmaz, açık kaynak kodlu ve ücretsiz bir web sunucusu yazılımı olan *apache* yi kuralım;
+3- Php için olmazsa olmaz, açık kaynak kodlu ve ücretsiz bir web sunucusu yazılımı olan *apache* yi kuralım;
 
 ```bash
   $ sudo apt install -y apache2 apache2-utils
@@ -60,13 +38,13 @@ Eğer güvenlik duvarı kullanıyorsanız 80 nolu TCP portu kapalı olabilir. Bu
   $ sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 ```
 
-8- Apache'nin kullandığı /var/www/html/ kök dosyaya sahipliğini "apache" kullanıcısına veriyoruz.
+4- Apache'nin kullandığı /var/www/html/ kök dosyaya sahipliğini "apache" kullanıcısına veriyoruz.
 
 ```bash
   $ sudo chown www-data:www-data /var/www/html/ -R
 ```
 
-9- Şimdi "*MariaDB*" yükleyelim. MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL ilişkisel veritabanı yönetim sistemidir.
+5- Şimdi "*MariaDB*" yükleyelim. MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL ilişkisel veritabanı yönetim sistemidir.
 
 ```bash
   $ sudo apt install mariadb-server mariadb-client
@@ -75,7 +53,7 @@ Eğer güvenlik duvarı kullanıyorsanız 80 nolu TCP portu kapalı olabilir. Bu
   $ systemctl status mariadb # Hata verebilir, sorun yok devam!
 ```
 
-10- Root kullanıcısı için parola belirleme
+6- Root kullanıcısı için parola belirleme
 
 ```bash
   $ sudo mysql -u root
@@ -86,13 +64,12 @@ Eğer güvenlik duvarı kullanıyorsanız 80 nolu TCP portu kapalı olabilir. Bu
       exit;
 ```
 
-11- Güvenlik için, mysql parolamızı değiştirelim.
+7- Güvenlik için, mysql parolamızı değiştirelim.
 
 ```bash
   $ sudo mysql_secure_installation   
 ```
 Bu komuttan sonra gelen ekranda, sırasıylaaşağıdaki adımları izleyin;<br>
-
 
  1. Enter<br>
  2. y Enter
@@ -103,13 +80,13 @@ Bu komuttan sonra gelen ekranda, sırasıylaaşağıdaki adımları izleyin;<br>
  7. Enter <br>
  8. Enter <br>
 
-12- Mariadb'ye root şifresi istemeden girmek için;
+8- Mariadb'ye root şifresi istemeden girmek için;
 
 ```bash
   $ sudo mariadb -u root
 ```
 
-13- Php7 kurulumu<br>
+9- Php7 kurulumu<br>
 *Not: Bu komuttaki kurulacak paketler temel ihtiyaçlar için zorunlu paketlerdir.*
 
 ```bash
@@ -122,7 +99,7 @@ Bu komuttan sonra gelen ekranda, sırasıylaaşağıdaki adımları izleyin;<br>
   $ sudo php -v
 ```
 
-14- PHP betiklerini Apache sunucusuyla test etmek;
+10- PHP betiklerini Apache sunucusuyla test etmek;
 
 ```bash
   $ sudo nano /var/www/html/info.php
@@ -134,14 +111,14 @@ info.php dosyası oluşturulup konsolda açılır. İçerisine;
 ```
 yazalım ve tarayıcı adres çubuğunda, "http://localhost/info.php" adresi ile test edelim.
 
-15- html dizini için yetkilendirme
+11- html dizini için yetkilendirme
 
 ```bash
   $ sudo adduser $USER www-data
   $ sudo chown -R $USER:www-data /var/www/html/
 ```
 
-16- GİT Kurulumu
+12- GİT Kurulumu
 
 ```bash
    $ sudo apt install git -y
@@ -149,7 +126,7 @@ yazalım ve tarayıcı adres çubuğunda, "http://localhost/info.php" adresi ile
    $ git config --global user.name "Hasan Çiçek"
 ```
 
-17- Masaüzerine HTML klasörü kısayolunun açılması
+13- Masaüzerine HTML klasörü kısayolunun açılması
 
 ```bash
   $ cd ~/Desktop # İngilizce kurulum yapıldıysa bu komut
@@ -158,7 +135,8 @@ yazalım ve tarayıcı adres çubuğunda, "http://localhost/info.php" adresi ile
   # Git ile çalışabilmek için.
   $ git init
 ```
-18- Adminer Programı Kurulumu
+
+14- Adminer Programı Kurulumu
 
 ```bash
   $ cd /var/www/html
@@ -167,7 +145,7 @@ yazalım ve tarayıcı adres çubuğunda, "http://localhost/info.php" adresi ile
   $ wget -O index.php https://www.adminer.org/latest.php
 ```
 
-19- ATOM Editörü Kurulumu
+15- ATOM Editörü Kurulumu
 
 ```bash
   $ wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
@@ -175,21 +153,53 @@ yazalım ve tarayıcı adres çubuğunda, "http://localhost/info.php" adresi ile
   $ sudo apt update
   $ sudo apt install atom -y
 ```
-### NOTLAR
+
+### PÜF NOTLARI
+
+1- Uygulamalardan "*Yazılım Güncelleştirici*" yi açıp, ayarlar düğmesine basarak "*Yazılım ve Güncelleştirmeler*" ekranına geçiyoruz. "*Diğer Yazılımlar*" sekmesindeki kutuları işaretledikten sonra, "*Ek Sürücüler*" sekmesine geçerek sistemin tarama yapmasını bekliyoruz. Ek sürücü varsa ve sürücü gerekli ise kuruyoruz.
+
+2- Sistemimizin performansını artırmak için gerekli olan "Medya Kodekleri" ni yüklüyoruz.
 
 ```bash
-  # Php7 paketlerini görebilmek için;
+  $ sudo apt install ubuntu-restricted-extras libavcodec-extra libdvd-pkg
+```
+
+3- Tek tıkla pencereleri küçültmek için aşağıdaki komutları konsoldan yollayın!
+
+```bash
+  $ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+```
+
+4- "*Ubuntu Yazılımlar*" uygulamasını açarak ihtiyacımız ve tercihimiz olan uygulamaları kuruyoruz. Bir kaç uygulama tavsiyesi;
+
+- **Telegram:** Haberleşme için kullanabileceğiniz sosyal uygulamadır.
+ - **Chromium:** Alternatif tarayıcı.
+ - **Vlc:** Video oynatma uygulaması.
+ - **Gimp:** Photoshop'ın linux tarafı alternatif resim işleme uygulaması.
+ - **Kdenlive:** Video düzenleme uygulaması.
+ - **FreeCad:** 3 boyutlu ve hareketli grafikler yapabileceğiniz Solid'in alternatifi uygulamadır.
+
+5- Php7 paketlerini görebilmek için;
+
+```bash
   $ apt-cache search php7
+```
 
-  # Servisleri yeniden başlatmak;
-  $ sudo service apache2 restart
-  $ sudo service mariadb restart
+6- Servisleri yeniden başlatmak;
 
-  # Servislerin bilgisayar açıldığında aktif olmasını sağlamak;
-  $ sudo systemctl enable mariadb
-  $ sudo systemctl enable apache2
+```bash
+  $ sudo service servisadi restart
+```
 
-  # Synaptic paket yükleyici-kaldırıcı kurmak;
+7- Servisleri bilgisayar açıldığında aktif etmek;
+
+```bash
+  $ sudo systemctl enable servisadi
+```
+
+8- Synaptic paket yükleyici-kaldırıcı kurmak;
+
+```bash
    $ sudo apt --fix-broken install
    $ sudo apt install synaptic
 ```
