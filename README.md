@@ -72,6 +72,20 @@ MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL'
   $ sudo sudo systemctl enable mariadb # açılışta otomatik başlasın.
   $ systemctl status mariadb # Hata verebilir, sorun yok devam!
 ```
+**Örnek Çıktı:**
+
+```bash
+● mariadb.service - MariaDB 10.1.34 database server
+   Loaded: loaded (/lib/systemd/system/mariadb.service; enabled; vendor preset: enabled)
+   Active: active (running) since Sat 2018-09-08 11:13:27 UTC; 21s ago
+     Docs: man:mysqld(8)
+           https://mariadb.com/kb/en/library/systemd/
+ Main PID: 3473 (mysqld)
+   Status: "Taking your SQL requests now..."
+    Tasks: 27 (limit: 505)
+   CGroup: /system.slice/mariadb.service
+           └─3473 /usr/sbin/mysqld
+```
 
 Root kullanıcısı için parola belirleme
 
@@ -89,16 +103,11 @@ Güvenlik için, mysql parolamızı değiştirelim.
 ```bash
   $ sudo mysql_secure_installation   
 ```
-Bu komuttan sonra gelen ekranda, sırasıylaaşağıdaki adımları izleyin;<br>
+Bu komuttan sonra gelen ekranda, sırasıyla aşağıdaki adımları izleyin;
 
- 1. Enter<br>
- 2. y Enter
- 3. Yeni veritabanı parolasını girin. Enter <br>
- 4. Yeni veritabanı parolasını tekrar girin. Enter <br>
- 5. Enter <br>
- 6. Enter <br>
- 7. Enter <br>
- 8. Enter <br>
+![enter image description here](https://lh3.googleusercontent.com/doizwnivOhuJS2Ce7CTbsKNMbhAGt0If3Qw_jkyBPKIpIh_MX9Zt_P8fh2t0hrzg9ao04i_pkm4)
+![](https://lh3.googleusercontent.com/9XvVC-PXnCQ3Qk9lSnJwbwKzamA_YsaUJ0KA56soR-lVmkzUygNNWWwf3EQCO_BOGV4RMeUrUFI)
+
 
 :four_leaf_clover: 8- Mariadb'ye root şifresi istemeden girmek için;
 
