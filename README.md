@@ -9,7 +9,7 @@ Yazık... Siz daha linux kullanmıyormusunuz. Linux kullanmıyorsanız lütfen s
 Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunların çözümleri ne olacak?  Sorularınızı duyar gibi oluyorum. Sorularınızın çözümlerini burada bulacaksınız. Hoş, aşağıdaki adımları anlayarak, tane tane , sindire sindire yaparsanız sorunsuzca PHP çalışma ortamına kavuşacağınıza inanıyorum.
 
 
-# UBUNTU KURULUM SONRASI YAPILACAKLAR
+# PHP ÇALIŞMA ORTAMI HAZIRLAMA
 
 ```bash
   Not: Konsol komutlarını kopyalarken, "#" simgesi ile başlayan yerleri almayınız.
@@ -66,7 +66,8 @@ Resimdeki sayfayı göremiyorsak telaşlanmayın. Eğer güvenlik duvarı kullan
 **Kök Klasörü Yetkilendirmesi:** Apache'nin kullandığı /var/www/html/ kök dizininde işlem yapabilmesi için, sahipliğini "apache" kullanıcısına veriyoruz.
 
 ```bash
-  $ sudo chown www-data:www-data /var/www/html/ -R # Html dizini ve alt elemanlarının sahibini ve grubunu www-data yap.
+  # Html dizini ve alt elemanlarının sahibini ve grubunu www-data yap.
+  $ sudo chown www-data:www-data /var/www/html/ -R
 ```
 
 ### [Veritabanı Kurulumu]
@@ -123,7 +124,9 @@ Not: Unutmayacağınız bir parola lütfen!
 *Not: Bu komutta kurulacak php7 paketleri temel ihtiyaçlar için zorunlu paketlerdir.*
 
 ```bash
-  $ sudo apt install php7.2 libapache2-mod-php7.2 php7.2-mysql php-common php7.2-cli php7.2-common php7.2-json php7.2-opcache php7.2-readline # Php7'yi belirtilen paketlerle beraber kur.
+  # Php7'yi belirtilen paketlerle beraber kur.
+  $ sudo apt install php7.2 libapache2-mod-php7.2 php7.2-mysql php-common php7.2-cli
+  php7.2-common php7.2-json php7.2-opcache php7.2-readline
   $ sudo a2enmod php7.2 # Apache php7.2 modülünü etkinleştir.  
   $ sudo systemctl restart apache2 # Apache Web sunucusunu yeniden başlat.  
   $ sudo php -v # Php versiyon kontrolu yap.
@@ -202,61 +205,45 @@ Adminer bağlantısını seçtiğimizde ise aşağıdaki resimde gördüğümüz
 
 Veritabanı işlemleri hakkında daha geniş bilgiye [buradan](https://www.php.net/manual/tr/book.mysql.php) ulaşabilirsiniz.
 
-### [ATOM Metin Editörü Kurulumu]
+## ATOM TEXT EDİTÖRÜ KURULUMU
+
+### [Atom Paketi Deposunun Listeye Eklenmesi]
 
 ```bash
+  # Atom paketinin indirileceği depoyu sisteme ekle.
   $ wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
-  $ sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+  $ sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" >
+   /etc/apt/sources.list.d/atom.list'
   $ sudo apt update
-  $ sudo apt install atom -y
 ```
 
-### PÜF NOTLARI
-
-:wink: 1- Uygulamalardan "*Yazılım Güncelleştirici*" yi açıp, ayarlar düğmesine basarak "*Yazılım ve Güncelleştirmeler*" ekranına geçiyoruz. "*Diğer Yazılımlar*" sekmesindeki kutuları işaretledikten sonra, "*Ek Sürücüler*" sekmesine geçerek sistemin tarama yapmasını bekliyoruz. Ek sürücü varsa ve sürücü gerekli ise kuruyoruz.
-
-:wink: 2- Sistemimizin performansını artırmak için gerekli olan "Medya Kodekleri" ni yüklüyoruz.
+### [Atom Text Editörü'nün Kurulumu]
 
 ```bash
-  $ sudo apt install ubuntu-restricted-extras libavcodec-extra libdvd-pkg
+  $ sudo apt install atom -y  # Atom paketini kur.
 ```
 
-:wink: 3- Tek tıkla pencereleri küçültmek için aşağıdaki komutları konsoldan yollayın!
+Atom Metin editörü hakkında bilgiye ve kullanışlı eklentilerine [buradan](https://emregeldegul.net/2017/10/kullanisli-atom-paketleri/) ulaşabilirsiniz.
 
-```bash
-  $ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
-```
 
-:wink: 4- "*Ubuntu Yazılımlar*" uygulamasını açarak ihtiyacımız ve tercihimiz olan uygulamaları kuruyoruz. Bir kaç uygulama tavsiyesi;
 
-- **Telegram:** Haberleşme için kullanabileceğiniz sosyal uygulamadır.
- - **Chromium:** Alternatif tarayıcı.
- - **Vlc:** Video oynatma uygulaması.
- - **Gimp:** Photoshop'ın linux tarafı alternatif resim işleme uygulaması.
- - **Kdenlive:** Video düzenleme uygulaması.
- - **FreeCad:** 3 boyutlu ve hareketli grafikler yapabileceğiniz Solid'in alternatifi uygulamadır.
+## PÜF NOTLARI
 
-:wink: 5- Php7 paketlerini görebilmek için;
 
-```bash
-  $ apt-cache search php7
-```
-
-:wink: 6- Servisleri yeniden başlatmak;
+*** Servisleri yeniden başlatmak; ***
 
 ```bash
   $ sudo service servisadi restart
 ```
 
-:wink: 7- Servisleri bilgisayar açıldığında aktif etmek;
+*** Servisleri bilgisayar açıldığında aktif etmek; ***
 
 ```bash
   $ sudo systemctl enable servisadi
 ```
 
-:wink: 8- Synaptic paket yükleyici-kaldırıcı kurmak;
+*** Php7 paketlerini görebilmek için; ***
 
 ```bash
-   $ sudo apt --fix-broken install
-   $ sudo apt install synaptic
+  $ apt-cache search php7
 ```
