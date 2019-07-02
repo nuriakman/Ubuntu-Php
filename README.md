@@ -8,19 +8,19 @@ Karşılabileceğim sorunların çözümleri ne olacak?
 
 # UBUNTU KURULUM SONRASI YAPILACAKLAR
 
-1-  :arrow_right: Linux sistemi kendisini güncellemek için bir merkeze bakıp, kontrol yapmaya ihtiyacı vardır. Bu listelerin bakılacağı yerler /etc/apt/sources.list dosyasında tutulur. "update" komutu ile sistemde kurulu olan paketler, paket deposundaki versiyonları ile farkları araştırılır ve liste güncellenir. Bu komut kurulum yapmaz.
+:four_leaf_clover: 1-  Linux sistemi kendisini güncellemek için bir merkeze bakıp, kontrol yapmaya ihtiyacı vardır. Bu listelerin bakılacağı yerler /etc/apt/sources.list dosyasında tutulur. "update" komutu ile sistemde kurulu olan paketler, paket deposundaki versiyonları ile farkları araştırılır ve liste güncellenir. Bu komut kurulum yapmaz.
 
 ```bash
   $ sudo apt update
 ```
 
-2- Sistemde kurulu olan paketler, "upgrade" komutu ile güncellenen listeye göre bulunan en son sürüme yükseltir.
+:four_leaf_clover: 2- Sistemde kurulu olan paketler, "upgrade" komutu ile güncellenen listeye göre bulunan en son sürüme yükseltir.
 
 ```bash  
   $ sudo apt upgrade -y
 ```
 
-3- Php için olmazsa olmaz, açık kaynak kodlu ve ücretsiz bir web sunucusu yazılımı olan *apache* yi kuralım;
+:four_leaf_clover: 3- Php için olmazsa olmaz, açık kaynak kodlu ve ücretsiz bir web sunucusu yazılımı olan *apache* yi kuralım;
 
 ```bash
   $ sudo apt install -y apache2 apache2-utils
@@ -38,13 +38,13 @@ Eğer güvenlik duvarı kullanıyorsanız 80 nolu TCP portu kapalı olabilir. Bu
   $ sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 ```
 
-4- Apache'nin kullandığı /var/www/html/ kök dosyaya sahipliğini "apache" kullanıcısına veriyoruz.
+:four_leaf_clover: 4- Apache'nin kullandığı /var/www/html/ kök dosyaya sahipliğini "apache" kullanıcısına veriyoruz.
 
 ```bash
   $ sudo chown www-data:www-data /var/www/html/ -R
 ```
 
-5- Şimdi "*MariaDB*" yükleyelim. MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL ilişkisel veritabanı yönetim sistemidir.
+:four_leaf_clover: 5- Şimdi "*MariaDB*" yükleyelim. MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL ilişkisel veritabanı yönetim sistemidir.
 
 ```bash
   $ sudo apt install mariadb-server mariadb-client
@@ -53,7 +53,7 @@ Eğer güvenlik duvarı kullanıyorsanız 80 nolu TCP portu kapalı olabilir. Bu
   $ systemctl status mariadb # Hata verebilir, sorun yok devam!
 ```
 
-6- Root kullanıcısı için parola belirleme
+:four_leaf_clover: 6- Root kullanıcısı için parola belirleme
 
 ```bash
   $ sudo mysql -u root
@@ -64,7 +64,7 @@ Eğer güvenlik duvarı kullanıyorsanız 80 nolu TCP portu kapalı olabilir. Bu
       exit;
 ```
 
-7- Güvenlik için, mysql parolamızı değiştirelim.
+:four_leaf_clover: 7- Güvenlik için, mysql parolamızı değiştirelim.
 
 ```bash
   $ sudo mysql_secure_installation   
@@ -80,13 +80,13 @@ Bu komuttan sonra gelen ekranda, sırasıylaaşağıdaki adımları izleyin;<br>
  7. Enter <br>
  8. Enter <br>
 
-8- Mariadb'ye root şifresi istemeden girmek için;
+:four_leaf_clover: 8- Mariadb'ye root şifresi istemeden girmek için;
 
 ```bash
   $ sudo mariadb -u root
 ```
 
-9- Php7 kurulumu<br>
+:four_leaf_clover: 9- Php7 kurulumu<br>
 *Not: Bu komuttaki kurulacak paketler temel ihtiyaçlar için zorunlu paketlerdir.*
 
 ```bash
@@ -99,7 +99,7 @@ Bu komuttan sonra gelen ekranda, sırasıylaaşağıdaki adımları izleyin;<br>
   $ sudo php -v
 ```
 
-10- PHP betiklerini Apache sunucusuyla test etmek;
+:four_leaf_clover: 10- PHP betiklerini Apache sunucusuyla test etmek;
 
 ```bash
   $ sudo nano /var/www/html/info.php
@@ -111,14 +111,14 @@ info.php dosyası oluşturulup konsolda açılır. İçerisine;
 ```
 yazalım ve tarayıcı adres çubuğunda, "http://localhost/info.php" adresi ile test edelim.
 
-11- html dizini için yetkilendirme
+:four_leaf_clover: 11- html dizini için yetkilendirme
 
 ```bash
   $ sudo adduser $USER www-data
   $ sudo chown -R $USER:www-data /var/www/html/
 ```
 
-12- GİT Kurulumu
+:four_leaf_clover: 12- GİT Kurulumu
 
 ```bash
    $ sudo apt install git -y
@@ -126,7 +126,7 @@ yazalım ve tarayıcı adres çubuğunda, "http://localhost/info.php" adresi ile
    $ git config --global user.name "Hasan Çiçek"
 ```
 
-13- Masaüzerine HTML klasörü kısayolunun açılması
+:four_leaf_clover: 13- Masaüzerine HTML klasörü kısayolunun açılması
 
 ```bash
   $ cd ~/Desktop # İngilizce kurulum yapıldıysa bu komut
@@ -136,7 +136,7 @@ yazalım ve tarayıcı adres çubuğunda, "http://localhost/info.php" adresi ile
   $ git init
 ```
 
-14- Adminer Programı Kurulumu
+:four_leaf_clover: 14- Adminer Programı Kurulumu
 
 ```bash
   $ cd /var/www/html
@@ -145,7 +145,7 @@ yazalım ve tarayıcı adres çubuğunda, "http://localhost/info.php" adresi ile
   $ wget -O index.php https://www.adminer.org/latest.php
 ```
 
-15- ATOM Editörü Kurulumu
+:four_leaf_clover: 15- ATOM Editörü Kurulumu
 
 ```bash
   $ wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
@@ -156,21 +156,21 @@ yazalım ve tarayıcı adres çubuğunda, "http://localhost/info.php" adresi ile
 
 ### PÜF NOTLARI
 
-1- Uygulamalardan "*Yazılım Güncelleştirici*" yi açıp, ayarlar düğmesine basarak "*Yazılım ve Güncelleştirmeler*" ekranına geçiyoruz. "*Diğer Yazılımlar*" sekmesindeki kutuları işaretledikten sonra, "*Ek Sürücüler*" sekmesine geçerek sistemin tarama yapmasını bekliyoruz. Ek sürücü varsa ve sürücü gerekli ise kuruyoruz.
+:wink: 1- Uygulamalardan "*Yazılım Güncelleştirici*" yi açıp, ayarlar düğmesine basarak "*Yazılım ve Güncelleştirmeler*" ekranına geçiyoruz. "*Diğer Yazılımlar*" sekmesindeki kutuları işaretledikten sonra, "*Ek Sürücüler*" sekmesine geçerek sistemin tarama yapmasını bekliyoruz. Ek sürücü varsa ve sürücü gerekli ise kuruyoruz.
 
-2- Sistemimizin performansını artırmak için gerekli olan "Medya Kodekleri" ni yüklüyoruz.
+:wink: 2- Sistemimizin performansını artırmak için gerekli olan "Medya Kodekleri" ni yüklüyoruz.
 
 ```bash
   $ sudo apt install ubuntu-restricted-extras libavcodec-extra libdvd-pkg
 ```
 
-3- Tek tıkla pencereleri küçültmek için aşağıdaki komutları konsoldan yollayın!
+:wink: 3- Tek tıkla pencereleri küçültmek için aşağıdaki komutları konsoldan yollayın!
 
 ```bash
   $ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 ```
 
-4- "*Ubuntu Yazılımlar*" uygulamasını açarak ihtiyacımız ve tercihimiz olan uygulamaları kuruyoruz. Bir kaç uygulama tavsiyesi;
+:wink: 4- "*Ubuntu Yazılımlar*" uygulamasını açarak ihtiyacımız ve tercihimiz olan uygulamaları kuruyoruz. Bir kaç uygulama tavsiyesi;
 
 - **Telegram:** Haberleşme için kullanabileceğiniz sosyal uygulamadır.
  - **Chromium:** Alternatif tarayıcı.
@@ -179,25 +179,25 @@ yazalım ve tarayıcı adres çubuğunda, "http://localhost/info.php" adresi ile
  - **Kdenlive:** Video düzenleme uygulaması.
  - **FreeCad:** 3 boyutlu ve hareketli grafikler yapabileceğiniz Solid'in alternatifi uygulamadır.
 
-5- Php7 paketlerini görebilmek için;
+:wink: 5- Php7 paketlerini görebilmek için;
 
 ```bash
   $ apt-cache search php7
 ```
 
-6- Servisleri yeniden başlatmak;
+:wink: 6- Servisleri yeniden başlatmak;
 
 ```bash
   $ sudo service servisadi restart
 ```
 
-7- Servisleri bilgisayar açıldığında aktif etmek;
+:wink: 7- Servisleri bilgisayar açıldığında aktif etmek;
 
 ```bash
   $ sudo systemctl enable servisadi
 ```
 
-8- Synaptic paket yükleyici-kaldırıcı kurmak;
+:wink: 8- Synaptic paket yükleyici-kaldırıcı kurmak;
 
 ```bash
    $ sudo apt --fix-broken install
