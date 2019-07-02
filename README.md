@@ -9,27 +9,29 @@ Karşılabileceğim sorunların çözümleri ne olacak?
 
 # UBUNTU KURULUM SONRASI YAPILACAKLAR
 
+*Not: Konsol komutlarını kopyalarken
+
 ## SİSTEMİN GÜNCELLENMESİ
 **Depo Listesinin Güncellenmesi:** Linux sistemi kendisini güncellemek için bir merkeze bakıp, kontrol yapmaya ihtiyacı vardır. Bu listelerin bakılacağı yerler /etc/apt/sources.list dosyasında tutulur. "update" komutu ile sistemde kurulu olan paketler, paket deposundaki versiyonları ile farkları araştırılır ve liste güncellenir. Bu komut kurulum yapmaz.
 
 ```bash
-  $ sudo apt update
+  $ sudo apt update # Depo listelerini güncelle.
 ```
 
 **Paketlerin Güncellenmesi:** Sistemde kurulu olan paketler, "upgrade" komutu ile güncellenen listeye göre bulunan en son sürüme yükseltir.
 
 ```bash  
-  $ sudo apt upgrade -y
+  $ sudo apt upgrade -y # Paketlerin yeni sürümleri varsa yükselt.
 ```
 
 ## PHP PAKETLERİNİN KURULMASI
 ### [Sunucunun  Kurulması]
-Php için olmazsa olmaz, açık kaynak kodlu ve ücretsiz bir web sunucusu yazılımı olan *apache* yi kuralım;
+Php için olmazsa olmaz, ***açık kaynak kodlu*** ve ücretsiz bir web sunucusu yazılımı olan *Apache* yi kuralım;
 
 ```bash
-  $ sudo apt install -y apache2 apache2-utils
-  $ sudo systemctl start apache2 # apache2 yeniden başlat.
-  $ sudo sudo systemctl enable apache2 # açılışta otomatik başlasın.
+  $ sudo apt install -y apache2 apache2-utils # Apache kur, ve onay isterse "evet" de.
+  $ sudo systemctl start apache2 # Apache2'yi yeniden başlat.
+  $ sudo sudo systemctl enable apache2 # Apache2'yi açılışta otomatik başlat.
   $ systemctl status apache2 # Aşağıdaki çıktıyı verecektir! Vermezse telaşlanmayın!
 ```
 **Örnek Çıktı:**
@@ -46,7 +48,7 @@ Php için olmazsa olmaz, açık kaynak kodlu ve ücretsiz bir web sunucusu yazı
            ├─1612 /usr/sbin/apache2 -k start
            └─1613 /usr/sbin/apache2 -k start
 ```
-**Sunucuyu Test Etmek:** Taracımızın adres çubuğuna "127.0.0.1" veya "localhost" yazarak "*Apache2 Ubuntu Default Page*" sayfasını görebiliyorsak yani aşağıdaki resim gibi bir sayfa ile karşılaştı isek apache kurulmuş demektir.
+**Sunucuyu Test Etmek:** Taracımızın adres çubuğuna "127.0.0.1" veya "localhost" yazarak "*Apache2 Ubuntu Default Page*" sayfasını görebiliyorsak yani aşağıdaki resim gibi bir sayfa ile karşılaştıysak apache kurulmuş demektir.
 
 ![](https://lh3.googleusercontent.com/XNhp6I05Wy_eMVUEdGHid8CnD9tJeeY3DYaGaXJ8Ls_eLhbbow1Ck1LusT9T0uMKDKBEa39vSkE)
 
@@ -64,12 +66,13 @@ Resimdeki sayfayı göremiyorsak telaşlanmayın. Eğer güvenlik duvarı kullan
 
 ### [Veritabanı Kurulumu]
 
-MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL'in yaratıcısı olan Monty Widenius'un MySQL'in kodunu çatallayıp (fork) "çoğunlukla" MySQL ile aynı komutları, arayüzleri ve API'leri destekleyecek şekilde geliştirmeye başlanan, toplulukla iç içe hızlı ve verimli şekilde geliştirilmeye devam edilen MySQL ilişkisel veritabanı yönetim sistemidir.
+MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL'in yaratıcısı olan *Monty Widenius*'un MySQL'in kodunu çatallayıp (fork) "çoğunlukla" MySQL ile aynı komutları, arayüzleri ve API'leri destekleyecek şekilde geliştirmeye başlanan, toplulukla iç içe hızlı ve verimli şekilde geliştirilmeye devam edilen MySQL ilişkisel veritabanı yönetim sistemidir.
 
 ```bash
-  $ sudo apt install mariadb-server mariadb-client
-  $ sudo systemctl start mariadb # mariadb yeniden başlat.
-  $ sudo sudo systemctl enable mariadb # açılışta otomatik başlasın.
+  $ sudo apt install mariadb-server mariadb-client # Mariadb kurulum.
+  $ sudo mariadb -u root # Mariadb'ye root şifresi istemeden girmek.
+  $ sudo systemctl start mariadb # Mariadb yeniden başlat.
+  $ sudo sudo systemctl enable mariadb # Açılışta otomatik başlatma.
   $ systemctl status mariadb # Hata verebilir, sorun yok devam!
 ```
 **Örnek Çıktı:**
@@ -87,7 +90,7 @@ MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL'
            └─3473 /usr/sbin/mysqld
 ```
 
-Root kullanıcısı için parola belirleme
+**Root kullanıcısı için parola belirleme:**
 
 ```bash
   $ sudo mysql -u root
@@ -98,34 +101,26 @@ Root kullanıcısı için parola belirleme
       exit;
 ```
 
-Güvenlik için, mysql parolamızı değiştirelim.
+**MySql Parolası Belirleme:**
+Not: Unutmayacağınız bir parola lütfen!
 
 ```bash
   $ sudo mysql_secure_installation   
 ```
-Bu komuttan sonra gelen ekranda, sırasıyla aşağıdaki adımları izleyin;
+Parolayı iki defa girmenizi ister. Parola ekranda görülmez ve aynı olmak zorundadır. Bu komuttan sonra gelen ekranda, sırasıyla aşağıda yer alan resimlerdeki adımları izleyin;
 
-![enter image description here](https://lh3.googleusercontent.com/doizwnivOhuJS2Ce7CTbsKNMbhAGt0If3Qw_jkyBPKIpIh_MX9Zt_P8fh2t0hrzg9ao04i_pkm4)
+![](https://lh3.googleusercontent.com/doizwnivOhuJS2Ce7CTbsKNMbhAGt0If3Qw_jkyBPKIpIh_MX9Zt_P8fh2t0hrzg9ao04i_pkm4)
 ![](https://lh3.googleusercontent.com/9XvVC-PXnCQ3Qk9lSnJwbwKzamA_YsaUJ0KA56soR-lVmkzUygNNWWwf3EQCO_BOGV4RMeUrUFI)
 
 
-:four_leaf_clover: 8- Mariadb'ye root şifresi istemeden girmek için;
-
-```bash
-  $ sudo mariadb -u root
-```
-
-:four_leaf_clover: 9- Php7 kurulumu<br>
+### [Php7 Kurulumu]
 *Not: Bu komuttaki kurulacak paketler temel ihtiyaçlar için zorunlu paketlerdir.*
 
 ```bash
-  $ sudo apt install php7.2 libapache2-mod-php7.2 php7.2-mysql php-common php7.2-cli php7.2-common php7.2-json php7.2-opcache php7.2-readline
-  # Apache php7.2 modülünü etkinleştirme.
-  $ sudo a2enmod php7.2
-  # Apache Web sunucusunu yeniden başlatma.
-  $ sudo systemctl restart apache2
-  # Php versiyon kontrolu
-  $ sudo php -v
+  $ sudo apt install php7.2 libapache2-mod-php7.2 php7.2-mysql php-common php7.2-cli php7.2-common php7.2-json php7.2-opcache php7.2-readline # Php7'yi belirtilen paketlerle beraber kur.
+  $ sudo a2enmod php7.2 # Apache php7.2 modülünü etkinleştir.  
+  $ sudo systemctl restart apache2 # Apache Web sunucusunu yeniden başlat.  
+  $ sudo php -v # Php versiyon kontrolu yap.
 ```
 
 :four_leaf_clover: 10- PHP betiklerini Apache sunucusuyla test etmek;
