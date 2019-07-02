@@ -232,7 +232,7 @@ Atom Metin editörü hakkında bilgiye ve kullanışlı eklentilerine [buradan](
 
 ***  Portları Dinleme  ***
 
-Localhost'a bağlanamazsak 80 nolu port kapalımı yada başka bir programmı kullanıyor bakmamız gerekmektedir. Bunu yapmak için netstat komutunu kullanırız.
+Localhost'a bağlanamazsak 80 nolu port kapalımı yada başka bir programmı kullanıyor bakmamız gerekmektedir. Bunu yapmak için [netstat](https://www.netinternet.com.tr/bilgi-bankasi/netstat-nedir-nasil-kullanilir) komutunu kullanırız.
 
 ```bash
   $ sudo apt install net-tools # Netstat'ın bulunduğu paketi kur.
