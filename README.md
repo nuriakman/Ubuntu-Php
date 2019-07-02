@@ -48,7 +48,7 @@ Php için olmazsa olmaz, açık kaynak kodlu ve ücretsiz bir web sunucusu yazı
 ```
 **Sunucuyu Test Etmek:** Taracımızın adres çubuğuna "127.0.0.1" veya "localhost" yazarak "*Apache2 Ubuntu Default Page*" sayfasını görebiliyorsak apache kurulmuş demektir.
 
-![apache ekran görüntüsü](https://picasaweb.google.com/112486291856082212964/6709021558838523649#6709021559023597874 "apache_1")
+![](https://lh3.googleusercontent.com/XNhp6I05Wy_eMVUEdGHid8CnD9tJeeY3DYaGaXJ8Ls_eLhbbow1Ck1LusT9T0uMKDKBEa39vSkE)
 
 Eğer güvenlik duvarı kullanıyorsanız 80 nolu TCP portu kapalı olabilir. Bunu açmak için aşağıdaki komutu gönderin ve tekrar tarayıcıdan deneyin.
 
