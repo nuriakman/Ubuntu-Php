@@ -2,6 +2,8 @@
 
 # Ubuntu-Php
 ![](https://lh3.googleusercontent.com/U-un3tfUy1_u2c132WZW-dN7ronDEfod0ruz_GjsjMAGcJaJRzeRRuG48WWkr3X76uDKM8Wr_C8u)
+
+
 Yazık... Siz daha linux kullanmıyormusunuz. Linux kullanmıyorsanız lütfen sayfamdan ayrılın! Bizim bağımlı insanlarla işimiz olmaz. Biz özgürlüğümüzün peşindeyiz. Sizde özgür olmak istiyorsanız, buyurun ubuntu kurulumu hakkında [buradan](https://wiki.ubuntu-tr.net/index.php?title=Kurulum) bilgi alabilirsiniz.
 
 Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunların çözümleri ne olacak? Çözemediğiniz sorunlarınız bizlere referans olacaktır. Lütfen gönderin, sorun! Ama çözüm arayıp bulamadıktan sonra...
