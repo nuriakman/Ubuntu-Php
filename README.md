@@ -6,7 +6,7 @@
 
 Yazık... Siz daha linux kullanmıyormusunuz. Linux kullanmıyorsanız lütfen sayfamdan ayrılın! Bizim bağımlı insanlarla işimiz olmaz. Biz özgürlüğümüzün peşindeyiz. Sizde özgür olmak istiyorsanız, buyurun ubuntu kurulumu hakkında [buradan](https://wiki.ubuntu-tr.net/index.php?title=Kurulum) bilgi alabilirsiniz.
 
-Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunların çözümleri ne olacak?  Sorularınızı duyar gibi oluyorum. Sorularınızın çözümlerini burada bulacaksınız. Hoş, aşağıdaki adımları anlayarak, tane tane , sindire sindire yaparsanız sorunsuzca PHP çalışma ortamına kavuşacağınıza inanıyorum.
+Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunların çözümleri ne olacak?  Sorularınızı duyar gibi oluyorum. Sorularınızın çözümlerini burada bulacaksınız. Hoş, aşağıdaki adımları anlayarak, tane tane , sindire sindire yaparsanız sorunsuzca PHP çalışma ortamına kavuşacağınıza inanıyorum. İlk defa siyah ekranla tanışıp; Bu nedir? Bunlar ne işe yarar? Başka neler yapabilirim diyenler linux temel komutlarına [buradan](https://wiki.ubuntu-tr.net/index.php?title=Temel_Linux_komutlar%C4%B1) ulaşabilirler.
 
 
 # PHP ÇALIŞMA ORTAMI HAZIRLAMA
@@ -17,7 +17,7 @@ Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunl
 ```
 
 ## SİSTEMİN GÜNCELLENMESİ
-**Depo Listesinin Güncellenmesi:** Linux sistemi kendisini güncellemek için bir merkeze bakıp, kontrol yapmaya ihtiyacı vardır. Bu listelerin bakılacağı yerler /etc/apt/sources.list dosyasında tutulur. "update" komutu ile sistemde kurulu olan paketler, paket deposundaki versiyonları ile farkları araştırılır ve liste güncellenir. Bu komut kurulum yapmaz.
+**Depo Listesinin Güncellenmesi:** Linux sistemi kendisini güncellemek için bir merkeze bakıp, kontrol yapmaya ihtiyacı vardır. Bu listelerin bakılacağı yerler /etc/apt/sources.list dosyasında tutulur. "update" komutu ile sistemde kurulu olan paketler, paket deposundaki versiyonları ile farkları araştırılır ve liste güncellenir. Bu komut kurulum yapmaz. Ubuntu paket listeleri hakkında detaylı bilgiye [buradan](https://wiki.ubuntu-tr.net/index.php?title=Yaz%C4%B1l%C4%B1m_ve_G%C3%BCncelle%C5%9Ftirmeler) ulaşabilirsiniz.
 
 ```bash
   $ sudo apt update # Depo listelerini güncelle.
@@ -37,7 +37,7 @@ Php için olmazsa olmaz, ***açık kaynak kodlu*** ve ücretsiz bir web sunucusu
   $ sudo apt install -y apache2 apache2-utils # Apache kur, ve onay isterse "evet" de.
   $ sudo systemctl start apache2 # Apache2'yi yeniden başlat.
   $ sudo sudo systemctl enable apache2 # Apache2'yi açılışta otomatik başlat.
-  $ systemctl status apache2 # Aşağıdaki çıktıyı verecektir! Vermezse telaşlanmayın!
+  $ sudo systemctl status apache2.service # Aşağıdaki çıktıyı verecektir!
 ```
 **Örnek Çıktı:**
 ```bash
@@ -230,6 +230,14 @@ Atom Metin editörü hakkında bilgiye ve kullanışlı eklentilerine [buradan](
 
 ## PÜF NOTLARI
 
+***  Portları Dinleme  ***
+
+Localhost'a bağlanamazsak 80 nolu port kapalımı yada başka bir programmı kullanıyor bakmamız gerekmektedir. Bunu yapmak için netstat komutunu kullanırız.
+
+```bash
+  $ sudo apt install net-tools # Netstat'ın bulunduğu paketi kur.
+  $ sudo netstat –tlpn # Portları dinle.
+```
 
 *** Servisleri yeniden başlatmak; ***
 
