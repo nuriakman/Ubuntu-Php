@@ -6,7 +6,7 @@
 
 ## Temel Komutlar
 
-| Komut |Açıklama  |Tehlike|
+| Komut |Açıklama  |!!!|
 |--|--|--|
 | whoami  | Sisteme şu an bağlı olan kullanıcının adını görmek. | :green_heart: |
 | logname | Giriş yapılan kullanıcıyı ekrana yazar. | :green_heart: |
