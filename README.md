@@ -114,6 +114,7 @@ Not: Unutmayacağınız bir parola lütfen!
 
 
 ### [PHP7 Kurulumu]
+
 *Not: Bu komutta kurulacak php7 paketleri temel ihtiyaçlar için zorunlu paketlerdir.*
 
 ```bash
@@ -189,7 +190,10 @@ Dosyayı indirdikten sonra dosyanın ismini "index.php" olarak değiştirmeyi un
 
 ![](https://lh3.googleusercontent.com/7E-pqQXKG_4t0fa1avWXu7R0s0Y7y3mxKR5H6v4-66UaPsrgu6lPOtbxMBC8mwd3P0jdjGcCqs8)
 Adminer bağlantısını seçtiğimizde ise aşağıdaki resimde gördüğümüz adminer giriş sayfasına ulaşırız. Parolayı unutmadıysanız kullanıcı adı ve parolayı girerek veritabanı oluşturmaya başlayabilirsiniz.
-![](https://lh3.googleusercontent.com/tXW3z-_h5xRDqFGWfrr3XmYi4kSplTXEe0Tv2e3H_GhkFFgCIh84bWgjdUzfiwv71Eor0-iYLkQ)
+
+![](https://lh3.googleusercontent.com/zF0rA_zS5Tj7766qUSBqeHZODHEh5M2z8ORcT-74EuKI7xCS9AhmMmdjii-Ep7dC9xWVTO07FHC3)
+Veritabanı işlemleri hakkında daha geniş bilgiye [buradan](https://www.php.net/manual/tr/book.mysql.php) ulaşabilirsiniz.
+
 ### [ATOM Metin Editörü Kurulumu]
 
 ```bash
