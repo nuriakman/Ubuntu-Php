@@ -157,7 +157,7 @@ Not: Unutmayacağınız bir parola lütfen!
 ```php
   <?php phpinfo(); ?>
 ```
-Kurulum testi için linki tıklayın "http://localhost/info.php" . Eğer alt resim gibi bir ekran ile karşılaştıysanız, sorun yok yola devam.
+Kurulum testini [buradan](http://localhost/info.php) yapabilirsiniz. Eğer alt resim gibi bir ekran ile karşılaştıysanız, sorun yok yola devam.
 
 ![](https://lh3.googleusercontent.com/KULDQE1ANwu3I_KmpzT7G-N8RiuDfH-GjQxjHm0jH0BwwKJyiL1UXiPRG42lL8s7wL03AuQoRRg)
 
