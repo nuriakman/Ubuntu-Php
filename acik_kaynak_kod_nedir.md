@@ -13,3 +13,20 @@ UNIX, 1969 yılında AT&T’nin Bell Laboratuvarlarında, Assembly dili (makine 
 Stallman’a göre yazılım kodlarının gizlenmesi, bir firma veya şahsın açık kaynak kodlu bir yazılımı alıp birkaç değişiklik yaptıktan sonra kaynak kodunu kapatarak ticari amaçla kullanması gibi bir çok soruna sebep olmasıydı. Böylesi bir döngü dünyadaki tüm geliştirilen yazılımların zamanla kapalı kaynak haline gelmesine yol açabileceği için Stallman tüm enerjisini, açık kaynak kodlu yazılım savunuculuğuna yöneltmiştir. Burada, GNU’nun açılımının ‘GNU is Not Unix’ olmasıdır. Yani GNU, ‘GNU, Unix değildir’ anlamına gelmektedir. Neden, yukarıda da söylemiştik. Çekirdek hariç demiştik.
 
 1990’lı yılların başında GNU projesi iyice büyümüş olmasına rağmen çekirdek (kernel) hala en büyük eksik olarak kalmıştır. Çekirdek, bir işletim sisteminin yeteneklerini belirleyen fiziksel donanımların (ana kart, işlemci, RAM vb.) kontrol edilmesini sağlayan bölümdür. 1990'lı yıllarda GNU projesi için çok sayıda çekirdek yazılmış olsa bile bu çekirdekler yetersiz görülmüştür.
+
+GNU OS’un çekirdek sorunu çözmek için birçok çalışma yapılmış ve bu çalışmalardan bir tanesi de Helsinki Üniversitesi'nde öğrenci olan Linus Torvalds tarafından yapılmıştır. Linus Torvalds, Andrew S. Tanenbaum tarafından geliştirilen Minix işletim sistemi geliştirildikçe zamanla Unix tarzında kişisel bilgisayarlarda çalışabilecek bir işletim sistemi çekirdeğine dönüştürülüp adınada Linux adı vermiştir.
+
+Linux'un GNU projesinin çekirdek sorununa çözüm olabileceğini gören Richard Stallman projede Linux’u kullanmaya başladı. Böylece artık GNU projesinin yeni adı GNU/Linux olarak değişti.
+
+Artık ortada on binlerce yazılıma sahip bir proje (GNU), son derece gelişmiş özelliklere sahip bir çekirdek (Linux) vardı. Yani un var, yağ var, şeker var hadi o zaman helva yapalım misali birçok kurum, üniversite, araştırma merkezi ve bilgisayar kullanıcısı kendi ihtiyaçlarını giderecek işletim sistemlerini yazmaya başladılar. Kısa bir süre içerisinde piyasaya çok sayıda GNU/Linux tabanlı işletim sistemi çıkmıştır. Şu anda piyasada GNU/Linux tabanlı 350’nin üzerinde işletim sistemi vardır.
+
+
+
+
+
+
+
+
+
+
+> Written with [StackEdit](https://stackedit.io/).
