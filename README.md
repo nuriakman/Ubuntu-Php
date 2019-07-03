@@ -237,6 +237,32 @@ Aşağıdaki ayarları tek tek dikkatlice girmeniz gerekmektedir.
   $ git init # Git'i bu dizin için konuşlandır.
 ```
 
+**SSH KEY Üretme:**
+
+```bash
+  $ cd ~/.ssh # Eğer hata verirse sorun yok alt satırdan devam edin.
+  $ ssh-keygen
+```
+Ekran çıktısı;
+```bash
+  Generating public/private rsa key pair.
+  Enter file in which to save the key (/home/nuri/.ssh/id_rsa): # ENTER BASIN!
+  Enter passphrase (empty for no passphrase): # ENTER BASIN!
+  Enter same passphrase again: # ENTER BASIN!
+  Your identification has been saved in /home/nuri/.ssh/id_rsa.
+  Your public key has been saved in /home/nuri/.ssh/id_rsa.pub. The key fingerprint is:
+  SHA256:0EOJV1HNjSxnrDqZxiE6B9EyOwpf8w0vlAK5MHV7/Xo nuri@nuri-LIFEBOOK-S751 The key's randomart...
+```
+**GitHub Sitesine SSH Key'i Ekleme:**
+```bash
+  $ cat ~/.ssh/id_rsa.pub # Ssh Key'in olduğu dosyayı aç.
+```
+*Örnek Ssh Key görüntüsü;*
+
+ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDql21MYWNY5EDBPrfS34kHjcaB2Ez+HQPF0Fyt4PebOXaAsa YQfSs/kIcl03ez5XVgQjfAqgibDbgN6BKETUDA1giNvSAF0ugxhe1nRbH5fVAhya1AfsmouRuQL2PGOXVy8w8qXWN aX7msa5Cf4AGzgBlOodvazV1gKO4fFAsUS32QF0i/A0s85Ly1WOskk2B3obiwvry765pN1P0M7EXqp3k4rLHWntH/ rcXENzaFZJEqeSmAID+ETYZxzFLGN357qSrnz9buU3hiLyPosTv361DkcAVMi+S4BtBfJxGMdr98nFYxnmvqy8xCTuOc X2fePCmGw3Oy0bDsfyugXUNd kullaniciadi@makinaadi
+
+[github.com/settings/keys](https://github.com/settings/keys) sayfasına geçip, başlığı yazdıktan sonra **Key** bölümüne kopyaladığımız ssh key'i yapıştırıyoruz.
+
 ### [Adminer Programı Kurulumu]
 
 ```bash
@@ -275,34 +301,3 @@ Veritabanı işlemleri hakkında daha geniş bilgiye [buradan](https://www.php.n
 ```
 
 Atom Metin editörü hakkında bilgiye ve kullanışlı eklentilerine [buradan](https://emregeldegul.net/2017/10/kullanisli-atom-paketleri/) ulaşabilirsiniz.
-
-
-
-## PÜF NOTLARI
-
-***  Portları Dinleme  ***
-
-Localhost'a bağlanamazsak 80 nolu port kapalımı yada başka bir programmı kullanıyor bakmamız gerekmektedir. Bunu yapmak için [netstat](https://www.netinternet.com.tr/bilgi-bankasi/netstat-nedir-nasil-kullanilir) komutunu kullanırız.
-
-```bash
-  $ sudo apt install net-tools # Netstat'ın bulunduğu paketi kur.
-  $ sudo netstat –tlpn # Portları dinle.
-```
-
-*** Servisleri yeniden başlatmak; ***
-
-```bash
-  $ sudo service servisadi restart
-```
-
-*** Servisleri bilgisayar açıldığında aktif etmek; ***
-
-```bash
-  $ sudo systemctl enable servisadi
-```
-
-*** Php7 paketlerini görebilmek için; ***
-
-```bash
-  $ apt-cache search php7
-```

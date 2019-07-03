@@ -55,3 +55,41 @@
 | cut	| Bir dosya içerisindeki satırların içerdiği alanların keserek belirli bir yere kopyalamak için kullanılır. | cut seçenekler dosya | :green_heart: |
 | Paste	| Aynı bir dosyanın veya başka dosyaların belirli kısımlarını bir araya getirmek için kullanılır. Paste komutuyla ister yatay, isterse düşey olarak birleştirme işlemi yapılabilir. | paste seçenekler dosya | :green_heart: |
 | dd	| Disk iceriklerini kopyalamak icin | | :green_heart: |
+
+
+Resimdeki sayfayı göremiyorsak telaşlanmayın. Eğer güvenlik duvarı kullanıyorsanız 80 nolu TCP portu kapalı yada meşgul olabilir. Bunu açmak için aşağıdaki komutu gönderin ve tekrar tarayıcıdan deneyin.
+
+```bash
+  $ sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+```
+
+***  Portları Dinleme  ***
+
+Localhost'a bağlanamazsak 80 nolu port kapalımı yada başka bir programmı kullanıyor bakmamız gerekmektedir. Bunu yapmak için [netstat](https://www.netinternet.com.tr/bilgi-bankasi/netstat-nedir-nasil-kullanilir) komutunu kullanırız.
+
+```bash
+  $ sudo apt install net-tools # Netstat'ın bulunduğu paketi kur.
+  $ sudo netstat –tlpn # Portları dinle.
+```
+Sistemimizin performansını artırmak için gerekli olan "Medya Kodekleri" ni yüklüyoruz.
+```bash
+  $ sudo apt install -y ubuntu-restricted-extras libavcodec-extra libdvd-pkg
+```
+
+*** Servisleri yeniden başlatmak; ***
+
+```bash
+  $ sudo service servisadi restart
+```
+
+*** Servisleri bilgisayar açıldığında aktif etmek; ***
+
+```bash
+  $ sudo systemctl enable servisadi
+```
+
+*** Php7 paketlerini görebilmek için; ***
+
+```bash
+  $ apt-cache search php7
+```
