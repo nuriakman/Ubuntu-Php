@@ -5,6 +5,11 @@ Yazık... Siz daha [linux](https://github.com/yeniceri1453/Ubuntu-Php/blob/maste
 
 Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunların çözümleri ne olacak?  Sorularınızı duyar gibi oluyorum. Sorularınızın çözümlerini burada bulacaksınız. Hoş, aşağıdaki adımları anlayarak, tane tane , sindire sindire yaparsanız sorunsuzca PHP çalışma ortamına kavuşacağınıza inanıyorum. İlk defa siyah ekranla tanışıp; Bu nedir? Bunlar ne işe yarar? Başka neler yapabilirim diyenler [linux](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/linux.md) temel komutlarına [buradan](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/linux_komutlari.md) ulaşabilirler.
 
+**İpucu:**  *Ubuntu kurduktan sonra, pencereleri rıhtımdan tek tıkla açıp kapatmak için bir defaya mahsus aşağıdaki komutu konsoldan gönderin.*
+
+```bash
+  $ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+```
 
 # PHP ÇALIŞMA ORTAMI HAZIRLAMA
 
