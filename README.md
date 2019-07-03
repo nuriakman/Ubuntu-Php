@@ -1,6 +1,4 @@
-
-
-# Ubuntu-Php
+# UBUNTU-PHP
 
 ![](https://lh3.googleusercontent.com/U-un3tfUy1_u2c132WZW-dN7ronDEfod0ruz_GjsjMAGcJaJRzeRRuG48WWkr3X76uDKM8Wr_C8u)
 
