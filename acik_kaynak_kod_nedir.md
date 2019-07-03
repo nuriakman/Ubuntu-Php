@@ -1,0 +1,19 @@
+# AÇIK KAYNAK KOD NEDİR?
+
+İlk sayısal bilgisayar 1940’lı yıllarda geliştirilmiş ve bu bilgisayara ENIAC ismi verilmiştir. Geliştirilme sürecinde, donanımların sağlıklı bir şekilde çalışmasını sağlamak için uygun yazılımlara ihtiyaç duyulmuştur. Bu sebep ile geliştirme işini yapanlar hem yazılım ve hem donanım ekiplerinde aynı anda çalışmaktayken donanım ile yazılımcıların farklı ekiplerden oluşması gerektiği ortaya çıkmıştır. Bu sayede kısa sürede bir çok yazılım üretilmiştir. Kuşkusuz bu yazılımların en önemlileri sistem yazılımlarını yani bilgisayardaki donanımlara iş yaptıran yazılımları oluşturmaktadır. Sistem yazılımlarına en güzel örnek birçoğumuzun da bildiği ve kullandığı GNU/Linux Ubuntu, Windows 7, Mac OS gibi işletim sistemleridir. Bizler burada Linux’tan bahsedeceğimiz için diğer ayrıntılara pek girmeyeceğiz.
+
+Öncelikle Linux kavramını doğru bir şekilde anlamak için Linux’un babası olarak kabul edebileceğimiz Unix işletim sistemine bakmalıyız.
+
+UNIX, 1969 yılında AT&T’nin Bell Laboratuvarlarında, Assembly dili (makine diline çok yakın bir dil) ile yazılmış ve kullanıcıya destek verecek şekilde tasarlanan bir işletim sistemidir. Unix başlangıçta tamamen bilgisayar programlarının yazılması için kullanılan alt seviyeli bir çevirme dilinde yazılmıştı. Daha sonra 1973 te Dennis Ritche tarafından C programlama diliyle tekrar yazıldı ve bugünkü işletim sistemlerinde de var olan birçok yeni özelliğe kavuşarak sadece programcılara değil normal kullanıcılara da hitap etmeye başladı. Bu aşamadan sonra bir çok araştırma merkezi ve üniversiteler unix türevi kendi işletim sistemlerini yazmaya başladı. Fakat bu benzerlik ortaya çıkarılan birçok işletim sisteminin kendine özgü yeni özellikler getirememesinden dolayı kısa süre içerisinde piyasadan silinmesine neden olmuştur.
+
+1983’de, kendi işletim sistemini yazmak amacıyla kolları sıvayan kişilerden birisi de Richard Stallman’dır. Stallman,  işletim sistemi oluşturmak amacıyla sistem çekirdeği (kernel) hariç sistem için gerekli olan tüm yazılımları içeren dev bir özgür yazılım koleksiyonu olan GNU Projesi’ni hayata geçirdi. 70’lerin sonu ve 80’lerin başında MIT’de AI (Yapay Zeka) konusunda çalışmalar yaptığı sırada mesai arkadaşlarının geliştirdikleri yazılımların kaynak kodlarını ticaret amacıyla kapatmalarına isyan etti.
+
+Stallman’a göre yazılım kodlarının gizlenmesi, bir firma veya şahsın açık kaynak kodlu bir yazılımı alıp birkaç değişiklik yaptıktan sonra kaynak kodunu kapatarak ticari amaçla kullanması gibi bir çok soruna sebep olmasıydı. Böylesi bir döngü dünyadaki tüm geliştirilen yazılımların zamanla kapalı kaynak haline gelmesine yol açabileceği için Stallman tüm enerjisini, açık kaynak kodlu yazılım savunuculuğuna yöneltmiştir. Burada, GNU’nun açılımının ‘GNU is Not Unix’ olmasıdır. Yani GNU, ‘GNU, Unix değildir’ anlamına gelmektedir. Neden, yukarıda da söylemiştik. Çekirdek hariç demiştik.
+
+
+
+
+
+
+
+> Written with [StackEdit](https://stackedit.io/).
