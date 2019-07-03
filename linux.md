@@ -19,14 +19,3 @@ GNU OS’un çekirdek sorunu çözmek için birçok çalışma yapılmış ve bu
 Linux'un GNU projesinin çekirdek sorununa çözüm olabileceğini gören Richard Stallman projede Linux’u kullanmaya başladı. Böylece artık GNU projesinin yeni adı GNU/Linux olarak değişti.
 
 Artık ortada on binlerce yazılıma sahip bir proje (GNU), son derece gelişmiş özelliklere sahip bir çekirdek (Linux) vardı. Yani un var, yağ var, şeker var hadi o zaman helva yapalım misali birçok kurum, üniversite, araştırma merkezi ve bilgisayar kullanıcısı kendi ihtiyaçlarını giderecek işletim sistemlerini yazmaya başladılar. Kısa bir süre içerisinde piyasaya çok sayıda GNU/Linux tabanlı işletim sistemi çıkmıştır. Şu anda piyasada GNU/Linux tabanlı 350’nin üzerinde işletim sistemi vardır.
-
-
-
-
-
-
-
-
-
-
-> Written with [StackEdit](https://stackedit.io/).
