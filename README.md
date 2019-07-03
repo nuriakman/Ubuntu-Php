@@ -162,6 +162,26 @@ Kurulum testini [buradan](http://localhost/info.php) yapabilirsiniz. Eğer alt r
 
 ![](https://lh3.googleusercontent.com/KULDQE1ANwu3I_KmpzT7G-N8RiuDfH-GjQxjHm0jH0BwwKJyiL1UXiPRG42lL8s7wL03AuQoRRg)
 
+** php.ini Ayarları: **
+php.ini dosyasının adresine [buradan](http://localhost/info.php) ulaşabilirsiniz. Aşağıdaki resimde işaretli olan yer.
+
+![](https://lh3.googleusercontent.com/9hMuEXc8t5xR68WyPfND-H3N67p5ljGpChMIIx2j12u3oHHnVy42VcvSnM54J0EgkgsecCvsL9g1)
+
+display_startup_errors = On
+display_errors         = On
+short_open_tag         = On
+opcache.enable         = 0
+upload_max_filesize    = 128M
+upload_max_size        = 128M
+post_max_size          = 128M
+max_input_vars         = 5000
+date.timezone          = "Europe/Istanbul"
+error_reporting        = E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE & ~E_WARNING
+mbstring.language          = Turkish
+mbstring.internal_encoding = UTF-8
+disable_functions          = exec, passthru, shell_exec, system, proc_open, popen, curl_exec, curl_multi_
+
+
 ### [GİT Kurulumu]
 
 **Git** , *Linus Torvalds* tarafından tasarlanıp geliştirilen, yazdığımız projeleri ve uygulamaları, bilgisayarımızda ya da harici disklerde değilde **internet üzerinde** tutmamızı ve yönetmemizi sağlayan ve GNU Genel Kamu Lisansı’nın 2. sürümüyle lisanslanmış bir **özgür versiyon kontrol sistemi** dir.
