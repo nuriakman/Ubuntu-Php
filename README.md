@@ -120,6 +120,41 @@ Not: Unutmayacağınız bir parola lütfen!
 ![](https://lh3.googleusercontent.com/9XvVC-PXnCQ3Qk9lSnJwbwKzamA_YsaUJ0KA56soR-lVmkzUygNNWWwf3EQCO_BOGV4RMeUrUFI)
 
 
+**my.cnf Ayarları:**
+
+**my.cnf dosyası** sunucunuzda bulunan **veri tabanı yönetim sisteminin** ayar dosyasıdır ve oldukça önemlidir. Dosyanın yerini konsoldan aşağıdaki komutu yazarak bulabiliriz.
+
+```bash
+  $ sudo find / -name my.cnf
+```
+Ekran çıktısı:
+```bash
+  [sudo] password for ******:
+  /var/lib/dpkg/alternatives/my.cnf
+  /etc/mysql/my.cnf  # DOSYA ADRESİ BURADA
+  /etc/alternatives/my.cnf
+```
+Dosyayı konsoldan açmak için;
+```bash
+  $ sudo nano /etc/mysql/my.cnf # Kendi dosya adresinizi girin!
+```
+Aşağıdaki ayarları tek tek dikkatlice girmeniz gerekmektedir.
+```bash
+  [client]
+  default-character-set=utf8
+
+  [mysql]
+  default-character-set=utf8
+
+  [mysqld]
+  collation-server     = utf8_unicode_ci
+  init-connect         = SET NAMES utf8
+  character-set-server = utf8
+  max_allowed_packet   = 256M
+  max_connections      = 300
+```
+
+
 ### [PHP7 Kurulumu]
 
 *Not: Bu komutta kurulacak php7 paketleri temel ihtiyaçlar için zorunlu paketlerdir.*
@@ -162,24 +197,35 @@ Kurulum testini [buradan](http://localhost/info.php) yapabilirsiniz. Eğer alt r
 
 ![](https://lh3.googleusercontent.com/KULDQE1ANwu3I_KmpzT7G-N8RiuDfH-GjQxjHm0jH0BwwKJyiL1UXiPRG42lL8s7wL03AuQoRRg)
 
-** php.ini Ayarları: **
-php.ini dosyasının adresine [buradan](http://localhost/info.php) ulaşabilirsiniz. Aşağıdaki resimde işaretli olan yer.
+
+**php.ini Ayarları:**
+
+
+php.ini dosyasının adresine [buradan](http://localhost/info.php) ulaşabilirsiniz. Aşağıdaki resimde işaretli olan yer (Loaded Configuration File).
 
 ![](https://lh3.googleusercontent.com/9hMuEXc8t5xR68WyPfND-H3N67p5ljGpChMIIx2j12u3oHHnVy42VcvSnM54J0EgkgsecCvsL9g1)
 
-display_startup_errors = On
-display_errors         = On
-short_open_tag         = On
-opcache.enable         = 0
-upload_max_filesize    = 128M
-upload_max_size        = 128M
-post_max_size          = 128M
-max_input_vars         = 5000
-date.timezone          = "Europe/Istanbul"
-error_reporting        = E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE & ~E_WARNING
-mbstring.language          = Turkish
-mbstring.internal_encoding = UTF-8
-disable_functions          = exec, passthru, shell_exec, system, proc_open, popen, curl_exec, curl_multi_
+Dosyayı konsoldan açmak için;
+```bash
+  $ sudo nano /etc/php/7.2/apache2/php.ini # Kendi dosya adresinizi girin!
+```
+
+Aşağıdaki ayarları tek tek dikkatlice girmeniz gerekmektedir.
+```bash
+  display_startup_errors = On
+  display_errors         = On
+  short_open_tag         = On
+  opcache.enable         = 0
+  upload_max_filesize    = 128M
+  upload_max_size        = 128M
+  post_max_size          = 128M
+  max_input_vars         = 5000
+  date.timezone          = "Europe/Istanbul"
+  error_reporting        = E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE & ~E_WARNING
+  mbstring.language          = Turkish
+  mbstring.internal_encoding = UTF-8
+  disable_functions          = exec, passthru, shell_exec, system, proc_open, popen, curl_exec, curl_multi_
+```
 
 
 ### [GİT Kurulumu]
@@ -276,3 +322,8 @@ Localhost'a bağlanamazsak 80 nolu port kapalımı yada başka bir programmı ku
 ```bash
   $ apt-cache search php7
 ```
+
+
+
+
+> Written with [StackEdit](https://stackedit.io/).
