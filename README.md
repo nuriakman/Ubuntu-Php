@@ -31,10 +31,10 @@ Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunl
 Php için olmazsa olmaz, ***açık kaynak kodlu*** ve ücretsiz bir web sunucusu yazılımı olan *Apache* yi kuralım;
 
 ```bash
-  $ sudo apt install -y apache2 apache2-utils # Apache kur, ve onay isterse "evet" de.
+  $ sudo apt install -y apache2 apache2-utils # Apache kur.
+  $ sudo systemctl status apache2.service # Aşağıdaki çıktıyı verecektir!
   $ sudo systemctl start apache2 # Apache2'yi yeniden başlat.
   $ sudo sudo systemctl enable apache2 # Apache2'yi açılışta otomatik başlat.
-  $ sudo systemctl status apache2.service # Aşağıdaki çıktıyı verecektir!
 ```
 **Örnek Çıktı:**
 ```bash
@@ -55,12 +55,6 @@ Php için olmazsa olmaz, ***açık kaynak kodlu*** ve ücretsiz bir web sunucusu
 
 ![](https://lh3.googleusercontent.com/XNhp6I05Wy_eMVUEdGHid8CnD9tJeeY3DYaGaXJ8Ls_eLhbbow1Ck1LusT9T0uMKDKBEa39vSkE)
 
-Resimdeki sayfayı göremiyorsak telaşlanmayın. Eğer güvenlik duvarı kullanıyorsanız 80 nolu TCP portu kapalı yada meşgul olabilir. Bunu açmak için aşağıdaki komutu gönderin ve tekrar tarayıcıdan deneyin.
-
-```bash
-  $ sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
-```
-
 **Kök Klasörü Yetkilendirmesi:** Apache'nin kullandığı /var/www/html/ kök dizininde işlem yapabilmesi için, sahipliğini "apache" kullanıcısına veriyoruz.
 
 ```bash
@@ -73,11 +67,11 @@ Resimdeki sayfayı göremiyorsak telaşlanmayın. Eğer güvenlik duvarı kullan
 MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL'in yaratıcısı olan *Monty Widenius*'un MySQL'in kodunu çatallayıp (fork) "çoğunlukla" MySQL ile aynı komutları, arayüzleri ve API'leri destekleyecek şekilde geliştirmeye başlanan, toplulukla iç içe hızlı ve verimli şekilde geliştirilmeye devam edilen MySQL ilişkisel veritabanı yönetim sistemidir.
 
 ```bash
-  $ sudo apt install mariadb-server mariadb-client # Mariadb'yi kur.
-  $ sudo mariadb -u root # Mariadb'ye root şifresi istemeden girmek.
+  $ sudo apt install -y mariadb-server mariadb-client # Mariadb'yi kur.
   $ sudo systemctl start mariadb # Mariadb'yi yeniden başlat.
   $ sudo sudo systemctl enable mariadb # Mariadb'yi açılışta otomatik başlat.
-  $ systemctl status mariadb # Hata verebilir, sorun yok devam! Panik yok!
+  $ systemctl status mariadb.service
+  $ sudo mariadb -u root # Mariadb'ye root şifresi istemeden girmek.
 ```
 **Örnek Çıktı:**
 
@@ -96,6 +90,7 @@ MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL'
 
 **Root Kullanıcısı İçin Parola Belirleme:**
 
+Aşağıdaki kodları, satır satır gönderin.
 ```bash
   $ sudo mysql -u root
       show databases;
@@ -135,20 +130,9 @@ Dosyayı konsoldan açmak için;
 ```bash
   $ sudo nano /etc/mysql/my.cnf # Kendi dosya adresinizi girin!
 ```
-Aşağıdaki ayarları tek tek dikkatlice girmeniz gerekmektedir.
+Aşağıdaki ayarları bir seferde kopyalayıp yapıştırabilirsiniz.
 ```bash
-  [client]
-  default-character-set=utf8
-
-  [mysql]
-  default-character-set=utf8
-
-  [mysqld]
-  collation-server     = utf8_unicode_ci
-  init-connect         = SET NAMES utf8
-  character-set-server = utf8
-  max_allowed_packet   = 256M
-  max_connections      = 300
+  Değişecek olan kodlar buraya yazılacak. Eskileri mariadb nin başlamasını engelliyor.
 ```
 
 
@@ -158,11 +142,10 @@ Aşağıdaki ayarları tek tek dikkatlice girmeniz gerekmektedir.
 
 ```bash
   # Php7'yi belirtilen paketlerle beraber kur.
-  $ sudo apt install php7.2 libapache2-mod-php7.2 php7.2-mysql php-common php7.2-cli
-  php7.2-common php7.2-json php7.2-opcache php7.2-readline
-  $ sudo a2enmod php7.2 # Apache php7.2 modülünü etkinleştir.  
-  $ sudo systemctl restart apache2 # Apache Web sunucusunu yeniden başlat.  
+  $ sudo apt install php7.2 libapache2-mod-php7.2 php7.2-mysql php-common php7.2-cli php7.2-common php7.2-json php7.2-opcache php7.2-readline
   $ sudo php -v # Php versiyon kontrolu yap.
+  $ sudo a2enmod php7.2 # Apache php7.2 modülünü etkinleştir.  
+  $ sudo systemctl restart apache2 # Apache Web sunucusunu yeniden başlat.
 ```
 
 **Html Dizini İçin Yetkilendirme:**
@@ -214,7 +197,6 @@ Aşağıdaki ayarları tek tek dikkatlice girmeniz gerekmektedir.
   short_open_tag         = On
   opcache.enable         = 0
   upload_max_filesize    = 128M
-  upload_max_size        = 128M
   post_max_size          = 128M
   max_input_vars         = 5000
   date.timezone          = "Europe/Istanbul"
@@ -233,6 +215,7 @@ Aşağıdaki ayarları tek tek dikkatlice girmeniz gerekmektedir.
 
 ```bash
    $ sudo apt install git -y # Git kurulumunu yap.
+   $ git --version # Git versiyonunu gösterirse kurulum tamamdır.
 ```
 
 **Kullanıcı Ayarlarının Yapılması:**
@@ -258,7 +241,7 @@ Aşağıdaki ayarları tek tek dikkatlice girmeniz gerekmektedir.
   $ wget -O index.php https://www.adminer.org/latest.php # latest.php dosyasını buraya indir.
 ```
 
-Dosyayı indirdikten sonra dosyanın ismini "index.php" olarak değiştirmeyi unutmayın. html dizininin içerisindeki index.html dosyasını silin. Bundan sonra localhos'a girdiğimizde artık karımıza aşağıdaki resimde yer alan ekran çıkacaktır.
+Dosyayı indirdikten sonra dosyanın ismi "index.php" değilse "index.php" olarak değiştirmeyi unutmayın. html dizininin içerisindeki index.html dosyasını silin. Bundan sonra localhos'a girdiğimizde artık karımıza aşağıdaki resimde yer alan ekran çıkacaktır.
 
 ![](https://lh3.googleusercontent.com/7E-pqQXKG_4t0fa1avWXu7R0s0Y7y3mxKR5H6v4-66UaPsrgu6lPOtbxMBC8mwd3P0jdjGcCqs8)
 
@@ -276,8 +259,7 @@ Veritabanı işlemleri hakkında daha geniş bilgiye [buradan](https://www.php.n
 ```bash
   # Atom paketinin indirileceği depoyu sisteme ekle.
   $ wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
-  $ sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" >
-   /etc/apt/sources.list.d/atom.list'
+  $ sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
   $ sudo apt update
 ```
 
