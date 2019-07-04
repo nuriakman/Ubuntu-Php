@@ -20,6 +20,9 @@ Php etiketleri demişken; php'de **açılış** etiketi ` <?php ` **kapanış** 
 Bu iki etiket arasına yazılan kodlar, php kodu olarak yorumlanır. Php etiketleri içerisine rastgele yazı yazamayız `hata verir`. Mutlaka `php kodu` olması gerekir. Çünkü biz bu etiketleri yazmakla burada php kodu yazacağımızı ifade etmiş oluyoruz. Tarayıcılar da bu etiketleri gördüğünde içeriğini php kodu olarak yorumlar.
 
 Ekrana yazdırma komutu `echo` yada `print` dır ve her komut satırı `;` ile kapatılmalıdır.
-```
-echo "Linux Yaz Kampı 2017";
+```php
+<?php
+    echo "Linux Yaz Kampı 2017";
+    print "Linux Yaz Kampı 2017";
+?>
 ```
