@@ -59,9 +59,10 @@ Değişken örnekleri;
 <?php
     $birinci = "Linux ";
     $_ikinci = "Yaz ";
-    $üçüncü = "Kampı ";
+    $üçüncü = "Kampı";
     $dördüncü = 2017;
-    echo $birinci.$_ikinci.$üçüncü.$dördüncü;
+
+    echo $birinci.$_ikinci.$üçüncü." ".$dördüncü;
 ?>
 ```
 Ekran çıktısı;
