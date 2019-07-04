@@ -2,7 +2,7 @@
 
 ### Php'ye Başlangıç
 
-**Yazım Kuralları (Syntax)**  
+**Yazım Kuralları (Syntax):**
 Php dosya uzantıları dosyaismi.php şeklinde, yani .php olur. Sunucular ilk önce index isimli dosyayı okur. Bu nedenle ilk sayfamızın adı index.php olmalıdır.
 
 - İçerisinde kod olmayan her hangi bi şeyler yazdığımız sayfalar tarayıcıda olduğu gibi düz metin olarak gösterilir.
@@ -33,7 +33,7 @@ Linux Yaz Kampı 2017
 Linux Yaz Kampı 2017
 ```
 
-**Açıklama Satırları**  
+**Açıklama Satırları:**
 Açıklama satırları ekranda tarayıcıda görünmez. Kod yazan için hatırlatıcı notlar içerir. Aşağıda örnekleri görebilirsiniz.
 
 ```php
@@ -41,7 +41,9 @@ Açıklama satırları ekranda tarayıcıda görünmez. Kod yazan için hatırla
     // Tek satırlık açıklama satırı.
     #  Tek satırlık açıklama satırı.
     /*
-    Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı.
+    Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı.
+    Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı.
+    Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı.
     */
 ?>
 ```
