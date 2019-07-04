@@ -13,6 +13,7 @@ Php etiketleri demişken; php'de **açılış** etiketi ` <?php ` **kapanış** 
 *Örnek index.php*;
 ```php
 <?php
+   // Heyecanlandım. İlk defa PHP kodu yazıyorum.
    echo "Linux Yaz Kampı 2017";
 ?>
 ```
