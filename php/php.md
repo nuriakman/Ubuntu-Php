@@ -2,7 +2,7 @@
 
 ### Php'ye Başlangıç
 
-**Yazım Kuralları (Syntax):**
+**Yazım Kuralları (Syntax)**  
 Php dosya uzantıları dosyaismi.php şeklinde, yani .php olur. Sunucular ilk önce index isimli dosyayı okur. Bu nedenle ilk sayfamızın adı index.php olmalıdır.
 
 - İçerisinde kod olmayan her hangi bi şeyler yazdığımız sayfalar tarayıcıda olduğu gibi düz metin olarak gösterilir.
@@ -13,7 +13,6 @@ Php etiketleri demişken; php'de **açılış** etiketi ` <?php ` **kapanış** 
 *Örnek index.php*;
 ```php
 <?php
-   // Heyecanlandım. İlk defa PHP kodu yazıyorum.
    echo "Linux Yaz Kampı 2017";
 ?>
 ```
@@ -33,7 +32,7 @@ Linux Yaz Kampı 2017
 Linux Yaz Kampı 2017
 ```
 
-**Açıklama Satırları:**
+**Açıklama Satırları**
 Açıklama satırları ekranda tarayıcıda görünmez. Kod yazan için hatırlatıcı notlar içerir. Aşağıda örnekleri görebilirsiniz.
 
 ```php
@@ -41,9 +40,7 @@ Açıklama satırları ekranda tarayıcıda görünmez. Kod yazan için hatırla
     // Tek satırlık açıklama satırı.
     #  Tek satırlık açıklama satırı.
     /*
-    Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı.
-    Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı.
-    Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı.
+    Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı.
     */
 ?>
 ```
@@ -56,5 +53,16 @@ Değişkenlerin özellikleri;
 - Sayı ile başlamazlar,
 - Türkçe karekter içerebilir, fakat tercih etmeyiz,
 - Büyük-küçük harfe duyarlıdırlar (case-sensitive).
+
+Değişken örnekleri;
+```php
+<?php
+    $birinci = "Linux ";
+    $_ikinci = "Yaz ";
+    $üçüncü = "Kampı ";
+    $dördüncü = 2017;
+    echo $birinci.$_ikinci.$üçüncü.$dördüncü;
+?>
+```
 
 İpucu: Aynı isimde değişken oluşturulduğunda, son oluşturulan (alt satırdaki) değişkenin değeri geçerlidir.
