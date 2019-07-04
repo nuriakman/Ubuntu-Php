@@ -40,7 +40,7 @@ Açıklama satırları ekranda tarayıcıda görünmez. Kod yazan için hatırla
     // Tek satırlık açıklama satırı.
     #  Tek satırlık açıklama satırı.
     /*
-    Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı.
+     Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı.
      Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı.
      Çok satırlı açıklama satırı. Çok satırlı açıklama satırı. Çok satırlı açıklama satırı.
     */

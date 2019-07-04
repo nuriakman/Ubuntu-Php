@@ -310,3 +310,5 @@ Veritabanı işlemleri hakkında daha geniş bilgiye [buradan](https://www.php.n
 ```
 
 Atom Metin editörü hakkında bilgiye ve kullanışlı eklentilerine [buradan](https://emregeldegul.net/2017/10/kullanisli-atom-paketleri/) ulaşabilirsiniz.
+
+**ARTIK PHP İLE TANIŞMAYA HAZIRSANIZ, [HAYDE BURADAN](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/php.md). 
