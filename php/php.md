@@ -59,14 +59,18 @@ Değişken örnekleri;
 <?php
     $birinci = "Linux ";
     $_ikinci = "Yaz ";
-    $üçüncü = "Kampı";
+    $üçüncÜ = "Kampı";
     $dördüncü = 2017;
 
-    echo $birinci.$_ikinci.$üçüncü." ".$dördüncü;
+    echo $birinci.$_ikinci.$üçüncÜ." ".$dördüncü;
 ?>
 ```
+
+Not: Burada `=` atama operatörüdür.
+
 Ekran çıktısı;
 ```sh
     Linux Yaz Kampı 2017
 ```
+
 İpucu: Aynı isimde değişken oluşturulduğunda, son oluşturulan (alt satırdaki) değişkenin değeri geçerlidir.
