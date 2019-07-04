@@ -64,5 +64,8 @@ Değişken örnekleri;
     echo $birinci.$_ikinci.$üçüncü.$dördüncü;
 ?>
 ```
-
+Ekran çıktısı;
+```sh
+    Linux Yaz Kampı 2017
+```
 İpucu: Aynı isimde değişken oluşturulduğunda, son oluşturulan (alt satırdaki) değişkenin değeri geçerlidir.
