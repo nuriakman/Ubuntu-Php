@@ -1,6 +1,6 @@
 # Özgür Yazılım Nedir?
 
-Özgür yazılımı kardeşlerimiz [buradan](http://ozgurlisanslar.org.tr/sik-sorulan-sorular/ozgur-yazilim-nedir/) ne kadar da güzel anlatmışlar. Ben de aynen ekledim, buyrun;
+Özgür yazılımı kardeşlerimiz [burada](http://ozgurlisanslar.org.tr/sik-sorulan-sorular/ozgur-yazilim-nedir/) ne kadar da güzel anlatmışlar. Ben de aynen ekledim, buyrun;
 
 Özgür yazılım ücretsiz yazılım değildir! Müşterilerinize bir özgür yazılımı para ile satabilirsiniz.
 
