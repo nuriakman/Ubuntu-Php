@@ -33,7 +33,7 @@ Linux Yaz Kampı 2017
 Linux Yaz Kampı 2017
 ```
 
-**Açıklama Satırları**
+**Açıklama Satırları**  
 Açıklama satırları ekranda tarayıcıda görünmez. Kod yazan için hatırlatıcı notlar içerir. Aşağıda örnekleri görebilirsiniz.
 
 ```php
