@@ -76,3 +76,48 @@ Ekran çıktısı;
 ```
 
 İpucu: Aynı isimde değişken oluşturulduğunda, son oluşturulan (alt satırdaki) değişkenin değeri geçerlidir.
+
+### Php'de Veri Türleri (Date Types)
+
+- **Strings :** Metinler ( Php ile Web Programlama )
+- **Integer :** Tam sayılar( 500, 200 vb. )
+- **Float(double) :**  Ondalık sayıları ifade eder. ( 5.5, 2.3 vb. )
+- **Boolean :** Doğru, yanlış (True-False)
+- **Array :** Diziler ( Sınıftaki öğrencilerin isimleri vb. )
+- **Object :** Nesneler ( $object= new stdClass; vb. )
+- **NULL :**  Yok, boş değil.
+
+Peki veri tipini nasıl tespit ederiz. Bunun için `gettype();`fonksiyonunu kullanırız. Fonksiyonun ne olduğundan ileride bahsedeceğiz.
+
+Örnekler;
+```php
+<?php
+    $meyve = "elma";
+    $adet = 15;
+    $yarimkilo = 0.5;
+    $tatlimi = true;
+    $meyveler = array(elma, armut, muz, ayva);
+    $varmi = NULL;
+
+
+    echo '$meyve'." değişkeninin türü ="." ".gettype($meyve)."<br>";
+    echo '$adet'." değişkeninin türü ="." ".gettype($adet)."<br>";
+    echo '$yarimkilo'." değişkeninin türü ="." ".gettype($yarimkilo)."<br>";
+    echo '$tatlimi'." değişkeninin türü ="." ".gettype($tatlimi)."<br>";
+    echo '$meyveler'." değişkeninin türü ="." ".gettype($meyveler)."<br>";
+    echo '$varmi'." değişkeninin türü ="." ".gettype($varmi)."<br>";
+
+    class kediler
+    {
+        function birŞeySöyle()
+        {
+            echo "Miyav.";
+        }
+    }
+
+    $kedi = new kediler;
+
+    // Değişken türü true-false döner.
+    echo '$kedi'." değişkeninin türü ="." ".is_object($kedi)."<br>";
+
+?>
