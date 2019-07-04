@@ -5,6 +5,7 @@ DNS, Domain Name System’in kısaltılmış şeklidir. Türkçe karşılığı 
 Host ismi, tümüyle tanımlanmış isim (**full qualified name**) olarak da bilinir ve hem bilgisayarın ismini hem de bilgisayarın bulunduğu internet domainini gösterir. **DNS**, verilen bir makina adının **IP** adresini çözerek makinaların internet üzerinde host isimleri ile haberleşmelerine olanak tanır.
 
 ![](https://lh3.googleusercontent.com/rlRZM1FQaFjZ_VMEsvZeKoa0IU2J9RAzgIK00iZXal6-_U-r_Jf_i0vPU2eWKQ6-woVq83HzhxsF)
+
 **DNS’in Kullanım Amacı Nedir?**
 
 DNS’in kullanım amacı son derece basittir, kolay anlaşılabilir ve kullanılabilir makine ve alan isimleri ile makine IP adresleri arasında çift taraflı dönüşümü sağlar. IP adreslerinin gündelik hayatta kullanımı ve hatırlanması pek pratik olmadığı için domain isimlendirme sistemi kullanılır.
