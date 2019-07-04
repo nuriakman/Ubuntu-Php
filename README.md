@@ -1,9 +1,18 @@
+
 # UBUNTU-PHP
 ![](https://lh3.googleusercontent.com/U-un3tfUy1_u2c132WZW-dN7ronDEfod0ruz_GjsjMAGcJaJRzeRRuG48WWkr3X76uDKM8Wr_C8u)
 
-Yazık... Siz daha [linux](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/linux.md) kullanmıyormusunuz. [Linux](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/linux.md) kullanmıyorsanız lütfen sayfamdan ayrılın! Bizim bağımlı insanlarla işimiz olmaz. Biz özgürlüğümüzün peşindeyiz. Sizde özgür olmak istiyorsanız, buyurun ubuntu kurulumu hakkında [buradan](https://wiki.ubuntu-tr.net/index.php?title=Kurulum) bilgi alabilirsiniz.
+Yazık... Siz daha linux kullanmıyormusunuz. Linux kullanmıyorsanız lütfen sayfamdan ayrılın! Bizim bağımlı insanlarla işimiz olmaz. Biz özgürlüğümüzün peşindeyiz. Sizde özgür olmak istiyorsanız, buyurun ubuntu kurulumu hakkında [buradan](https://wiki.ubuntu-tr.net/index.php?title=Kurulum) bilgi alabilirsiniz.
 
-Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunların çözümleri ne olacak?  Sorularınızı duyar gibi oluyorum. Sorularınızın çözümlerini burada bulacaksınız. Hoş, aşağıdaki adımları anlayarak, tane tane , sindire sindire yaparsanız sorunsuzca PHP çalışma ortamına kavuşacağınıza inanıyorum. İlk defa siyah ekranla tanışıp; Bu nedir? Bunlar ne işe yarar? Başka neler yapabilirim diyenler [linux](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/linux.md) temel komutlarına [buradan](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/linux_komutlari.md) ulaşabilirler.
+Yalnız arkadaşlar, benim burada kısaca değinmeye çalışacağım konulara başlamadan önce bizim dünyamızda kullandığımız bazı terimler hakkında bilgi sahibi olmanız gerektiğini düşünüyorum. Bunlar;
+
+-  [Linux](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/linux.md)
+-  [Özgür Yazılım](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/ozgur_yazilim_nedir.md)
+-  [Açık Kaynak Kod](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/acik_kaynak_kod.md)
+-  DNS
+-  Php Yaşam Döngüsü
+
+Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunların çözümleri ne olacak?  Sorularınızı duyar gibi oluyorum. Sorularınızın çözümlerini burada bulacaksınız. Hoş, aşağıdaki adımları anlayarak, tane tane , sindire sindire yaparsanız sorunsuzca PHP çalışma ortamına kavuşacağınıza inanıyorum. İlk defa siyah ekranla tanışıp; Bu nedir? Bunlar ne işe yarar? Başka neler yapabilirim diyenler linux temel komutlarına [buradan](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/linux_komutlari.md) ulaşabilirler.
 
 **İpucu:**  *Ubuntu kurduktan sonra, pencereleri rıhtımdan tek tıkla açıp kapatmak için bir defaya mahsus aşağıdaki komutu konsoldan gönderin.*
 
@@ -15,11 +24,11 @@ Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunl
 
 ```bash
   Not: Konsol komutlarını kopyalarken, "#" simgesi ile başlayan yerleri almayınız.
-       Buralar açıklamadır. Konların ne yaptığını, ne işe yaradığını anlamanız için yazılmıştır.
+       Buralar açıklamadır. Komutların ne yaptığını, ne işe yaradığını anlamanız için yazılmıştır.
 ```
 
 ## SİSTEMİN GÜNCELLENMESİ
-**Depo Listesinin Güncellenmesi:** [linux](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/linux.md) sistemi kendisini güncellemek için bir merkeze bakıp, kontrol yapmaya ihtiyacı vardır. Bu listelerin bakılacağı yerler /etc/apt/sources.list dosyasında tutulur. "update" komutu ile sistemde kurulu olan paketler, paket deposundaki versiyonları ile farkları araştırılır ve liste güncellenir. Bu komut kurulum yapmaz. Ubuntu paket listeleri hakkında detaylı bilgiye [buradan](https://wiki.ubuntu-tr.net/index.php?title=Yaz%C4%B1l%C4%B1m_ve_G%C3%BCncelle%C5%9Ftirmeler) ulaşabilirsiniz.
+**Depo Listesinin Güncellenmesi:** [linux](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/linux.md) sistemi kendisini güncellemek için bir merkeze bakıp, kontrol yapmaya ihtiyacı vardır. Bu listelerin bakılacağı yerler /etc/apt/sources.list dosyasında tutulur. "update" komutu ile sistemde kurulu olan paketler, paket deposundaki versiyonları ile farklarına bakılır ve fark varsa liste güncellenir. Bu komut kurulum yapmaz. Ubuntu paket listeleri hakkında detaylı bilgiye [buradan](https://wiki.ubuntu-tr.net/index.php?title=Yaz%C4%B1l%C4%B1m_ve_G%C3%BCncelle%C5%9Ftirmeler) ulaşabilirsiniz.
 
 ```bash
   $ sudo apt update # Depo listelerini güncelle.
