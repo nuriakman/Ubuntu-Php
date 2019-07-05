@@ -63,7 +63,7 @@ Ekran çıktısı;
 
 ```sh
 
-  Array ( [0] => Hasan [1] => Çiçek [2] => Geliştirici [3] => 50 ) 
+  Array ( [0] => Hasan [1] => Çiçek [2] => Geliştirici [3] => 50 )
 
 ```
 
@@ -90,5 +90,29 @@ Ekran çıktısı;
   Array ( [ad] => Hasan [soyad] => Çiçek [meslek] => Geliştirici [yas] => 50 )
 
 ```
+Dizi içerisinden bir elemanı çekmek istersek;
+
+```php
+<?php
+
+  $kimlik = array (
+      'ad'      => "Hasan",
+      'soyad'   => "Çiçek",
+      'meslek'  => "Geliştirici",
+      'yas'     => "50"
+  );
+
+  echo $kimlik['meslek']; # Mesleğinin ne olduğunu sorduk.
+
+?>
+```
+Ekran çıktısı;
+
+```sh
+
+  Array ( [ad] => Hasan [soyad] => Çiçek [meslek] => Geliştirici [yas] => 50 )
+
+```
+
 
 [Artırma ve Azaltma Operatörleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/artirma_azaltma.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php) :arrow_right: [Dizi Oluşturmak ve Dizi Tanımlamanın İki Yolu](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/diziler.md)
