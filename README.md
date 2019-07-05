@@ -1,6 +1,10 @@
 # PHP İLE WEB PROGRAMLAMAYA GİRİŞ
 ## LYK EĞİTİM NOTLARI
 
+
+![](https://lh3.googleusercontent.com/drhgnbdpb6KdMS-4zl4wAc1MmHM7TGtblXBeklHdM11IyDBeFy6ESgVEqQySGoqGf4D8VYKKHYM2)
+
+
 ***Ben bu konuyu biliyorum diye düşünüp bazı konuları geçebileceğinizi düşünebilirsiniz. Size tavsiyem bildiğinizi sandığınız konulara da bir göz atın derim...***
 
 ### BAŞLANGIÇ
