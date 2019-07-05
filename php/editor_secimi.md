@@ -1,4 +1,4 @@
-### Doğru Editör Seçimi (IDE)
+## Doğru Editör Seçimi (IDE)
 
 Başka editörler kullanırken PHP kodları için eklenti yüklemek gerekebilir ve gerekecektir. Eğer kullandığınız dile ait bir IDE varsa onu kullanmamız gerekir.
 

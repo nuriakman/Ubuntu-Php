@@ -1,4 +1,4 @@
-### PHP'de Veri Türleri (Date Types)
+## PHP'de Veri Türleri (Date Types)
 
 - **Strings :** Metinler ( Php ile Web Programlama )
 - **Integer :** Tam sayılar( 500, 200 vb. )
@@ -26,6 +26,7 @@ Peki veri tipini nasıl tespit ederiz. Bunun için `gettype();`fonksiyonunu kull
     echo "\$yarimkilo"." değişkeninin türü ="." ".gettype($yarimkilo)."<br>";
     echo "\$tatlimi"." değişkeninin türü ="." ".gettype($tatlimi)."<br>";
     echo "\$meyveler"." değişkeninin türü ="." ".gettype($meyveler)."<br>";
+    // ;Alt satırda boşluk bırakma diğerlerinden farklı olarak yapılmıştır.
     echo "\$varmi"." değişkeninin türü ="." ".gettype($varmi)."<br>";
 
 ?>

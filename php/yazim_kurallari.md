@@ -1,4 +1,4 @@
-### Yazım Kuralları (Syntax)
+## Yazım Kuralları (Syntax)
 
 Php dosya uzantıları dosyaismi.php şeklinde, yani .php olur. Sunucular ilk önce index isimli dosyayı okur. Bu nedenle ilk sayfamızın adı index.php olmalıdır.
 

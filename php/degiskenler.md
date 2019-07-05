@@ -1,4 +1,4 @@
-### PHP'de Değişkenlerin Kullanımı
+## PHP'de Değişkenlerin Kullanımı
 
 Değişkenlerin özellikleri;
 - `$` simgesi ile tanımlanırlar,
