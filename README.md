@@ -2,7 +2,7 @@
 ## LYK EĞİTİM NOTLARI
 
 
-![](https://lh3.googleusercontent.com/4sQfsULSKcL_uveoYOFoLVq5UOlYz4LKdc4sA8hcZ25NFTT-MkpqRuG1rG-42n4RIIdZ-xy5I7MP)
+![](https://lh3.googleusercontent.com/hTju6PNPOVRXbORlfGwkr0uJUkfjDED-gGrxbZfb4UKSqIJhVE0FlQCUH9MIyZNm93-TRd_Z5nAa)
 
 
 ***Ben bu konuyu biliyorum diye düşünüp bazı konuları geçebileceğinizi düşünebilirsiniz. Size tavsiyem bildiğinizi sandığınız konulara da bir göz atın derim...***
