@@ -1,6 +1,6 @@
 # PHP İLE WEB PROGRAMLAMAYA GİRİŞ LYK EĞİTİM NOTLARI
-
-### Php'ye Başlangıç
+## PHP'YE GİRİŞ
+### PHP'ye Başlangıç
 
 **Yazım Kuralları (Syntax)**  
 Php dosya uzantıları dosyaismi.php şeklinde, yani .php olur. Sunucular ilk önce index isimli dosyayı okur. Bu nedenle ilk sayfamızın adı index.php olmalıdır.
@@ -47,7 +47,7 @@ Açıklama satırları ekranda tarayıcıda görünmez. Kod yazan için hatırla
 ?>
 ```
 
-### Php'de Değişkenlerin Kullanımı
+### PHP'de Değişkenlerin Kullanımı
 
 Değişkenlerin özellikleri;
 - `$` simgesi ile tanımlanırlar,
@@ -77,7 +77,7 @@ Ekran çıktısı;
 
 İpucu: Aynı isimde değişken oluşturulduğunda, son oluşturulan (alt satırdaki) değişkenin değeri geçerlidir.
 
-### Php'de Veri Türleri (Date Types)
+### PHP'de Veri Türleri (Date Types)
 
 - **Strings :** Metinler ( Php ile Web Programlama )
 - **Integer :** Tam sayılar( 500, 200 vb. )
@@ -100,12 +100,12 @@ Peki veri tipini nasıl tespit ederiz. Bunun için `gettype();`fonksiyonunu kull
     $varmi = NULL;
 
 
-    echo '$meyve'." değişkeninin türü ="." ".gettype($meyve)."<br>";
-    echo '$adet'." değişkeninin türü ="." ".gettype($adet)."<br>";
-    echo '$yarimkilo'." değişkeninin türü ="." ".gettype($yarimkilo)."<br>";
-    echo '$tatlimi'." değişkeninin türü ="." ".gettype($tatlimi)."<br>";
-    echo '$meyveler'." değişkeninin türü ="." ".gettype($meyveler)."<br>";
-    echo '$varmi'." değişkeninin türü ="." ".gettype($varmi)."<br>";
+    echo "\$meyve"." değişkeninin türü ="." ".gettype($meyve)."<br>";
+    echo "\$adet"." değişkeninin türü ="." ".gettype($adet)."<br>";
+    echo "\$yarimkilo"." değişkeninin türü ="." ".gettype($yarimkilo)."<br>";
+    echo "\$tatlimi"." değişkeninin türü ="." ".gettype($tatlimi)."<br>";
+    echo "\$meyveler"." değişkeninin türü ="." ".gettype($meyveler)."<br>";
+    echo "\$varmi"." değişkeninin türü ="." ".gettype($varmi)."<br>";
 
     class kediler
     {
@@ -119,5 +119,43 @@ Peki veri tipini nasıl tespit ederiz. Bunun için `gettype();`fonksiyonunu kull
 
     // Değişken türü true-false döner.
     echo '$kedi'." değişkeninin türü ="." ".is_object($kedi)."<br>";
-
 ?>
+```
+Ekran Görüntüsü,
+```sh
+  $meyve değişkeninin türü = string
+  $adet değişkeninin türü = integer
+  $yarimkilo değişkeninin türü = double
+  $tatlimi değişkeninin türü = boolean
+  $meyveler değişkeninin türü = array
+  $varmi değişkeninin türü = NULL
+  $kedi değişkeninin türü = 1
+```
+
+### PHP'de Sabit Değişkenler
+
+Sabit değişkenler de değişkenlerle aynı kurallara sahiptirler. Sadece veri türü olarak "*object*" veri türünü taşıyamazlar.  
+
+Kullanımı;
+```php
+  <?php
+    define("sabitdegiskenadi","degeri");
+  ?>
+```
+İpucu: Sabit değişkenlerin değeri değiştirilemez. Bir kere oluşturulurken verilir!
+
+### PHP'de Sihirli Karakterler
+
+Sihirli karekterler sadece `String` ifadelerde ve `çift tırnak` içerisinde kullanılabilir.
+
+| Sihir | Açıklama |
+|----|----|
+| \t | Tab karakteri, bir tab atar. |
+| \n | Enter karakteri, bir alt satıra indirir. |
+| \\\ | Kullanmak istediğimiz karakterin önüne konur. |
+| \\$ | Değişkenin adının olduğu gibi göstermesi için kullanılır. |
+| \\' | Tırnak içerisinde tırnak kullanma istersek kullanılır. |
+| \\" | Fazladan çift tırnak kullanmak için kullanılır.|
+
+## PHP'DE OPERATÖRLER
+### Aritmatik Operatörler
