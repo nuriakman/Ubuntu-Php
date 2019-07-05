@@ -1,4 +1,4 @@
-## PHP'de Veri Türleri (Date Types)
+## Veri Türleri (Date Types)
 
 - **Strings :** Metinler ( Php ile Web Programlama )
 - **Integer :** Tam sayılar( 500, 200 vb. )
