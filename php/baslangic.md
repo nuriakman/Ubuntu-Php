@@ -4,9 +4,9 @@
 
 **PHP Nedir?**
 
-PHP (PHP: Hypertext Preprocessor) derlemeye gerek duyulmadan, geliştirme için tasarlanmış HTML içine gömülebilen bir betik dilidir.  
+PHP (PHP: Hypertext Preprocessor) derlemeye gerek duyulmadan, geliştirme için tasarlanmış HTML içine gömülebilen bir betik dilidir.
 
-Php, "Ben kendime kişisel bir web sayfası yapsam nasıl olur." diye düşünüp kendi web sayfasını yaparken *Rasmus Lerdorf*  tarafından geliştirilmiştir.  
+Php, "Ben kendime kişisel bir web sayfası yapsam nasıl olur." diye düşünüp kendi web sayfasını yaparken *Rasmus Lerdorf*  tarafından geliştirilmiştir.
 
 Php'nin ilk adı "*Personel hompage (Kişisel Anasayfa)*" dir. 1994 yılında denemeler yaptıktan sonra 1995 yılında php'nin ilk versiyonu çıkıyor. 8 Haziran 1995 yılında Rasmus Lerdorf "*Open Searce (Açık Kaynak)*" geliştirilmek üzere bir tartışma grubunda "*Personel Homepage Tools*" ismiyle duyurarak, gruba "*Ben bunu yaptım, alın geliştirin*" demiş.
 
@@ -31,7 +31,7 @@ Başka editörler kullanırken PHP kodları için eklenti yüklemek gerekebilir 
 ## PHP'YE GİRİŞ
 ### PHP'ye Başlangıç
 
-**Yazım Kuralları (Syntax)**  
+**Yazım Kuralları (Syntax)**
 Php dosya uzantıları dosyaismi.php şeklinde, yani .php olur. Sunucular ilk önce index isimli dosyayı okur. Bu nedenle ilk sayfamızın adı index.php olmalıdır.
 
 - İçerisinde kod olmayan her hangi bi şeyler yazdığımız sayfalar tarayıcıda olduğu gibi düz metin olarak gösterilir.
@@ -163,7 +163,7 @@ Ekran Görüntüsü,
 
 ### PHP'de Sabit Değişkenler
 
-Sabit değişkenler de değişkenlerle aynı kurallara sahiptirler. Sadece veri türü olarak "*object*" veri türünü taşıyamazlar.  
+Sabit değişkenler de değişkenlerle aynı kurallara sahiptirler. Sadece veri türü olarak "*object*" veri türünü taşıyamazlar.
 
 Kullanımı;
 ```php
@@ -187,7 +187,7 @@ Sihirli karekterler sadece `String` ifadelerde ve `çift tırnak` içerisinde ku
 | \\" | Fazladan çift tırnak kullanmak için kullanılır.|
 
 ## PHP'DE OPERATÖRLER
-### Aritmatik Operatörler   
+### Aritmatik Operatörler
 
 Matematik işlemleri için kullanılırlar. Aşağıdaki tabloda operatörler görülmektedir.
 
@@ -216,7 +216,7 @@ Matematik işlemleri için kullanılırlar. Aşağıdaki tabloda operatörler g�
   echo  $a - $b ."<br>";  // Ekran çıktısı 10 dur.
   //Mod(Kalan) işlemine örnek.
   echo  $a % $c;  // Ekran çıktısı kalan 3 dür.
-?>    
+?>
 ```
 
 Yalnız, matematiksel operatörleri kullanırken işlem sırasına(önceliğine) dikkat etmek gerekmektedir.
