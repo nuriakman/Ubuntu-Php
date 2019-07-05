@@ -22,4 +22,4 @@ Daha sonra; iki israilli programcı "*Zeev Suraski*" ve "*Andi Gutmans*" (*Zend 
 
 Başka editörler kullanırken PHP kodları için eklenti yüklemek gerekebilir ve gerekecektir. Eğer kullandığınız dile ait bir IDE varsa onu kullanmamız gerekir. Örneğin; Php için "*Phpstorm*" kullanmak gibi. Fakat biz sizlere [Atom](https://atom.io/) yada [SublimeText](https://www.sublimetext.com/) kullanmanızı öneriyoruz. Çünkü, kullanmanız için herhangi bir ücret ödemeniz gerekmiyor.
 
-[UBUNTU-PHP](https://github.com/yeniceri1453/Ubuntu-Php) :arrow_left: [:hause:](https://github.com/yeniceri1453/Ubuntu-Php) :arrow_left: [Yazım Kuralları](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/yazim_kurallari.md) [Yazım Kuralları]
+[UBUNTU-PHP](https://github.com/yeniceri1453/Ubuntu-Php) :arrow_left: [anasayfa](https://github.com/yeniceri1453/Ubuntu-Php) :arrow_right: [Yazım Kuralları](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/yazim_kurallari.md) [Yazım Kuralları]
