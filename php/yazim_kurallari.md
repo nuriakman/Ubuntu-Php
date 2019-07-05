@@ -43,3 +43,5 @@ Açıklama satırları ekranda tarayıcıda görünmez. Kod yazan için hatırla
     */
 ?>
 ```
+
+[Doğru Editör Seçimi](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/php/editor_secimi.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/php) :arrow_right: [Veri Türleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/veri_turleri.md)
