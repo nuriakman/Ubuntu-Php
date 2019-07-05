@@ -17,3 +17,6 @@ Ana amacı, ağ üzerinden gelen alan adı veya IP numarası ile ilgili sorgulam
 DNS sistemi isim **sunucuları** ve **çözümleyicilerinden** oluşur. İsim sunucuları olarak düzenlenen bilgisayarlar host isimlerine karşılık gelen IP adresi bilgilerini tutarlar. Çözümleyiciler ise DNS istemcilerdir. DNS istemcilerde, DNS sunucu ya da sunucuların adresleri bulunur.
 
 Bir DNS istemci bir bilgisayarın ismine karşılık IP adresini bulmak istediği zaman isim sunucuya başvurur. İsim sunucu, yani DNS sunucu da eğer kendi veri tabanında öyle bir isim varsa, bu isme karşılık gelen IP adresini istemciye gönderir.
+
+
+[ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php)

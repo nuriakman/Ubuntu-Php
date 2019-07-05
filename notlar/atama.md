@@ -13,4 +13,4 @@
 
 
 
-[Aritmatik Operatörler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/aritmatik.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/php) :arrow_right: [Artırma ve Azaltma Operatörleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/artirma_azaltma.md)
+[Aritmatik Operatörler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/aritmatik.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php) :arrow_right: [Artırma ve Azaltma Operatörleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/artirma_azaltma.md)

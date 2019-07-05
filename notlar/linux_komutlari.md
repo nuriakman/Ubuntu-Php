@@ -93,3 +93,7 @@ Sistemimizin performansını artırmak için gerekli olan "Medya Kodekleri" ni y
 ```bash
   $ apt-cache search php7
 ```
+
+
+
+[ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php)

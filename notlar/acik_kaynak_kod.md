@@ -13,3 +13,6 @@ Açık kaynak kodlu yazılımlar;
 -   Yazılımlarda bir açık bulunduğunda, onunla ilgilenen çok daha fazla kişi olduğundan çok daha çabuk kapatılabilir. Kapalı kaynak kodlu yazılımlarda ise uzun bir süre beklemeniz gerekebilir.
 -   Yazılımların farklı çeşitlerinin ortaya çıkmasını sağlar.
 -   Yazılım geliştiricisinin PC'nizde şüpheli işler çevirmediğinden emin olmanızı sağlar. Kaynak kodu kapalı bir yazılımın yaptığını iddia ettiği şeyleri gerçekten güvenilir yoldan yaptığını anlamanın çok fazla yolu olmayabilir.
+
+
+[ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php)

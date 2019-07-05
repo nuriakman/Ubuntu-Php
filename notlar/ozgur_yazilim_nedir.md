@@ -12,3 +12,6 @@ Eğer kullanıcılar bir yazılımı özgürce kullanabiliyor, kopyalayabiliyor,
 -   Tüm toplumun yarar sağlayabileceği şekilde programı geliştirme ve geliştirdiklerinizi (ve genel olarak değiştirilmiş sürümlerini) yayınlama özgürlüğü. Kaynak koduna erişmek, bunun için bir önkoşuldur.
 
 Bir yazılım, eğer yazılımın kullanıcıları bu özgürlüklere sahipse özgür yazılımdır. Yani, kopyalarını değiştirerek ya da değiştirmeden, **ücretli** ya da ücretsiz, herhangi birine dağıtmaya serbest olmalısınız. Bu anlamda özgür olmak demek, tüm bunları yapmak için izin istemek zorunda olmamanız demektir.
+
+
+[ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php)
