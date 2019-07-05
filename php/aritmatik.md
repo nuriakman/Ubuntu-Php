@@ -35,7 +35,7 @@ Yalnız, matematiksel operatörleri kullanırken işlem sırasına(önceliğine)
 **İşlem Önceliği**
 
 - Üs alma işlemleri
-- arantez içindeki işlemler
+- Parantez içindeki işlemler
 - Çarpma veya Bölme İşlemi
 - Toplama veya Çıkarma İşlemi
 
