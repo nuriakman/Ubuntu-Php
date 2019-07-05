@@ -1,4 +1,4 @@
-## PHP'de Sihirli Karakterler
+## Sihirli Karakterler
 
 Sihirli karekterler sadece `String` ifadelerde ve `çift tırnak` içerisinde kullanılabilir.
 

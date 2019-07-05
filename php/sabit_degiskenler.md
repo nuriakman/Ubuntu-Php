@@ -1,4 +1,4 @@
-## PHP'de Sabit Değişkenler
+## Sabit Değişkenler
 
 Sabit değişkenler de değişkenlerle aynı kurallara sahiptirler. Sadece veri türü olarak "*object*" veri türünü taşıyamazlar.  
 
