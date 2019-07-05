@@ -5,15 +5,15 @@
 
 - [Php Nedir?](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/php_nedir.md)
 - [Ubuntu İşletim Sisteminde Php Çalışma Ortamı Kurulumu](https://github.com/yeniceri1453/Ubuntu-Php)
-- Doğru Editör Seçimi (IDM)
+- [Doğru Editör Seçimi (IDM)](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/editor_secimi.md)
 
 ### PHP'YE GİRİŞ
 
-- Yazım Kuralları (Syntax)
-- Değişkenlerin Kullanımı
-- Veri Türleri
-- Sabit Değişkenler
-- Sihirli Karakterler
+- [Yazım Kuralları (Syntax)](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/yazim_kurallari.md)
+- [Veri Türleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/veri_turleri.md)
+- [Değişkenlerin Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/degiskenler.md)
+- [Sabit Değişkenler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/sabit_degiskenler.md)
+- [Sihirli Karakterler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/sihirli_karakterler.md)
 
 ### PHP'DE OPERATÖRLER
 

@@ -1,5 +1,5 @@
+# UBUNTU-PHP  
 
-# UBUNTU-PHP
 ![](https://lh3.googleusercontent.com/cpTkZZTpSZunQ2sumhHyA0OFKMMmSJ4TjIcHzeJ9MuMUwGAEkizHpWVV0d_O5iDLkw8BKKrdshRI)
 
 Yazık... Siz daha linux kullanmıyormusunuz. Linux kullanmıyorsanız lütfen sayfamdan ayrılın! Bizim bağımlı insanlarla işimiz olmaz. Biz özgürlüğümüzün peşindeyiz. Sizde özgür olmak istiyorsanız, buyurun ubuntu kurulumu hakkında [buradan](https://wiki.ubuntu-tr.net/index.php?title=Kurulum) bilgi alabilirsiniz.
@@ -311,4 +311,4 @@ Veritabanı işlemleri hakkında daha geniş bilgiye [buradan](https://www.php.n
 
 Atom Metin editörü hakkında bilgiye ve kullanışlı eklentilerine [buradan](https://emregeldegul.net/2017/10/kullanisli-atom-paketleri/) ulaşabilirsiniz.
 
-**ARTIK PHP İLE TANIŞMAYA HAZIRSANIZ, [HAYDE BURADAN](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/php.md).** 
+**ARTIK PHP İLE TANIŞMAYA HAZIRSANIZ, [HAYDE BURADAN](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/php.md).**
