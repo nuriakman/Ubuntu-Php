@@ -27,9 +27,9 @@
 
 ### DİZİLER
 
-- Dizi Oluşturmak ve Dizi Tanımlamanın İki Yolu
-- İç İçe Dizi Oluşturmak
-- Sabit Değişkenlerde Dizilerin Kullanımı
+- [Dizi Oluşturmak ve Dizi Tanımlamanın İki Yolu](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/diziler.md)
+- [İç İçe Dizi Oluşturmak](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/ic_ice_diziler.md)
+- [Sabit Değişkenlerde Dizilerin Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/sabit_degiskenlerde_dizi.md)
 
 ### KOŞULLU İFADELER
 
