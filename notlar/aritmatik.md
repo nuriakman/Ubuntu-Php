@@ -42,4 +42,4 @@ Yalnız, matematiksel operatörleri kullanırken işlem sırasına(önceliğine)
 *Önemli Not: Eğer aynı önceliğe sahip işlemler varsa (Örneğin bir işlemde hem çarpma hem de bölme varsa) işlemler soldan sağa doğru yapılır.*
 
 
-[Sihirli Karakterler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/sihirli_karakterler.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/php) :arrow_right: [Atama Operatörleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/atama.md)
+[Sihirli Karakterler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/sihirli_karakterler.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php) :arrow_right: [Atama Operatörleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/atama.md)

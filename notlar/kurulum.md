@@ -188,8 +188,11 @@ Aşağıdaki ayarları bir seferde kopyalayıp yapıştırabilirsiniz.
 İçerisine altta yer alan bir satırlık ilk php kodumuzu yazalım.
 
 ```php
+
   <?php phpinfo(); ?>
+
 ```
+
 Kurulum testini [buradan](http://localhost/info.php) yapabilirsiniz. Eğer alt resim gibi bir ekran ile karşılaştıysanız, sorun yok yola devam.
 
 ![](https://lh3.googleusercontent.com/KULDQE1ANwu3I_KmpzT7G-N8RiuDfH-GjQxjHm0jH0BwwKJyiL1UXiPRG42lL8s7wL03AuQoRRg)
@@ -306,7 +309,7 @@ Veritabanı işlemleri hakkında daha geniş bilgiye [buradan](https://www.php.n
   $ sudo apt update
 ```
 
-### [Atom Text Editörü'nün Kurulumu]
+### [Atom Text Editörü\'nün Kurulumu]
 
 ```bash
   $ sudo apt install atom -y  # Atom paketini kur.
@@ -315,4 +318,4 @@ Veritabanı işlemleri hakkında daha geniş bilgiye [buradan](https://www.php.n
 Atom Metin editörü hakkında bilgiye ve kullanışlı eklentilerine [buradan](https://emregeldegul.net/2017/10/kullanisli-atom-paketleri/) ulaşabilirsiniz.
 
 
-[Php Nedir?](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/php_nedir.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/php) :arrow_right: [Doğru Editör Seçimi](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/php/editor_secimi.md)
+[Php Nedir?](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/php_nedir.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php) :arrow_right: [Doğru Editör Seçimi](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/notlar/editor_secimi.md)

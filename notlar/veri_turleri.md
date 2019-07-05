@@ -42,4 +42,4 @@ Ekran Görüntüsü,
 ```
 
 
-[Yazım Kuralları](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/php/yazim_kurallari.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/php) :arrow_right: [Değişkenlerin Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/degiskenler.md)
+[Yazım Kuralları](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/notlar/yazim_kurallari.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php) :arrow_right: [Değişkenlerin Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/degiskenler.md)

@@ -6,7 +6,7 @@
 ### BAŞLANGIÇ
 
 - [Php Nedir?](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/php_nedir.md)
-- [LAMP kurulumu](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/kurulum.md)
+- [LAMP Kurulumu](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/kurulum.md)
 - [Doğru Editör Seçimi (IDM)](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/editor_secimi.md)
 
 ### PHP'YE GİRİŞ

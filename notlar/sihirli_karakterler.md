@@ -13,4 +13,4 @@ Sihirli karekterler sadece `String` ifadelerde ve `çift tırnak` içerisinde ku
 
 
 
-[Sabit Değişkenler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/sabit_degiskenler.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/php) :arrow_right: [Aritmatik Operatörler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/aritmatik.md)
+[Sabit Değişkenler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/sabit_degiskenler.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php) :arrow_right: [Aritmatik Operatörler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/aritmatik.md)

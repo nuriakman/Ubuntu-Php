@@ -31,4 +31,4 @@ Ekran çıktısı;
 
 
 
-[Veri Türleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/veri_turleri.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/php) :arrow_right: [Sabit Değişkenler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/sabit_degiskenler.md)
+[Veri Türleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/veri_turleri.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php) :arrow_right: [Sabit Değişkenler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/sabit_degiskenler.md)
