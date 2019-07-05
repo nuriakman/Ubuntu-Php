@@ -1,9 +1,6 @@
 # PHP İLE WEB PROGRAMLAMAYA GİRİŞ LYK EĞİTİM NOTLARI
-
 ## BAŞLAMADAN ÖNCE
-
 **PHP Nedir?**
-
 PHP (PHP: Hypertext Preprocessor) derlemeye gerek duyulmadan, geliştirme için tasarlanmış HTML içine gömülebilen bir betik dilidir.  
 
 Php, "Ben kendime kişisel bir web sayfası yapsam nasıl olur." diye düşünüp kendi web sayfasını yaparken *Rasmus Lerdorf*  tarafından geliştirilmiştir.  
@@ -27,7 +24,6 @@ Daha sonra; iki israilli programcı "*Zeev Suraski*" ve "*Andi Gutmans*" (*Zend 
 Başka editörler kullanırken PHP kodları için eklenti yüklemek gerekebilir ve gerekecektir. Eğer kullandığınız dile ait bir IDE varsa onu kullanmamız gerekir. Örneğin; Php için "*Phpstorm*" kullanmak gibi. Fakat biz sizlere [Atom](https://atom.io/) yada [SublimeText](https://www.sublimetext.com/) kullanmanızı öneriyoruz. Çünkü, kullanmanız için herhangi bir ücret ödemeniz gerekmiyor.
 
 ## PHP'YE GİRİŞ
-
 ### PHP'ye Başlangıç
 
 **Yazım Kuralları (Syntax)**  
@@ -186,4 +182,35 @@ Sihirli karekterler sadece `String` ifadelerde ve `çift tırnak` içerisinde ku
 | \\" | Fazladan çift tırnak kullanmak için kullanılır.|
 
 ## PHP'DE OPERATÖRLER
-### Aritmatik Operatörler
+### Aritmatik Operatörler   
+
+Matematik işlemleri için kullanılırlar. Aşağıdaki tabloda operatörler görülmektedir.
+
+| Operatör | Açıklama |
+|----|----|
+| \* | Çarpma operatörü. |
+| \/ | Bölme operatörü. |
+| \+ | Toplama operatörü |
+| \- | Çıkarma operatörü. |
+| \% | Mod (Kalan) |
+
+Örnek Operatör İşlemleri;
+```php
+<?php
+    $a = 15;
+    $b = 5;
+    $c = 4;
+
+  //Çarpma işlemine örnek.
+  echo  $a * $b ."<br>";  // Ekran çıktısı 75 dir.
+  //Bölme işlemine örnek.
+  echo  $a / $b ."<br>";  // Ekran çıktısı 3 dür.
+  //Toplama işlemine örnek.
+  echo  $a + $b ."<br>";  // Ekran çıktısı 20 dir.
+  //Çıkarma işlemine örnek.
+  echo  $a - $b ."<br>";  // Ekran çıktısı 10 dur.
+  //Mod(Kalan) işlemine örnek.
+  echo  $a % $c;  // Ekran çıktısı kalan 3 dür.
+
+?>    
+```
