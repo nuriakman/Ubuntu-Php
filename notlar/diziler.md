@@ -110,7 +110,7 @@ Ekran çıktısı;
 
 ```sh
 
-  Array ( [ad] => Hasan [soyad] => Çiçek [meslek] => Geliştirici [yas] => 50 )
+  Geliştirici
 
 ```
 
