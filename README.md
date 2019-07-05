@@ -1,6 +1,7 @@
-## PHP İLE WEB PROGRAMLAMAYA GİRİŞ LYK EĞİTİM NOTLARI
+# PHP İLE WEB PROGRAMLAMAYA GİRİŞ
+## LYK EĞİTİM NOTLARI
 
-Ben bu konuyu biliyorum diye düşünüp bazı konuları atlayabilirsiniz. Size tavsiyem bildiğinizi sandığınız konularada bir göz atın derim.
+***Ben bu konuyu biliyorum diye düşünüp bazı konuları geçebileceğinizi düşünebilirsiniz. Size tavsiyem bildiğinizi sandığınız konulara da bir göz atın derim...***
 
 ### BAŞLANGIÇ
 
