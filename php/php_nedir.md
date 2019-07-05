@@ -1,6 +1,4 @@
-## GİRİŞ
-
-**PHP Nedir?**
+##PHP Nedir?
 
 PHP (PHP: Hypertext Preprocessor) derlemeye gerek duyulmadan, geliştirme için tasarlanmış HTML içine gömülebilen bir betik dilidir.  
 
