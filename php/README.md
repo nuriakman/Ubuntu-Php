@@ -1,4 +1,4 @@
-# PHP İLE WEB PROGRAMLAMA
+# PHP İLE WEB PROGRAMLAMAYA GİRİŞ LYK EĞİTİM NOTLARI
 
 ### Php'ye Başlangıç
 
