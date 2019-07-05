@@ -20,7 +20,7 @@ Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunl
   $ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 ```
 
-# PHP ÇALIŞMA ORTAMI HAZIRLAMA
+# PHP ÇALIŞMA ORTAMI HAZIRLAMA (LAMP KURULUMU)
 
 ```bash
   Not: Konsol komutlarını kopyalarken, "#" simgesi ile başlayan yerleri almayınız.
@@ -28,6 +28,7 @@ Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunl
 ```
 
 ## SİSTEMİN GÜNCELLENMESİ
+
 **Depo Listesinin Güncellenmesi:** Linux sistemi kendisini güncellemek için bir merkeze bakıp, kontrol yapmaya ihtiyacı vardır. Bu listelerin bakılacağı yerler /etc/apt/sources.list dosyasında tutulur. "update" komutu ile sistemde kurulu olan paketler, paket deposundaki versiyonları ile farklarına bakılır ve fark varsa liste güncellenir. Bu komut kurulum yapmaz. Ubuntu paket listeleri hakkında detaylı bilgiye [buradan](https://wiki.ubuntu-tr.net/index.php?title=Yaz%C4%B1l%C4%B1m_ve_G%C3%BCncelle%C5%9Ftirmeler) ulaşabilirsiniz.
 
 ```bash
@@ -41,6 +42,7 @@ Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunl
 ```
 
 ## PHP PAKETLERİNİN KURULMASI
+
 ### [Web Sunucusunun  Kurulması]
 Php için olmazsa olmaz, ***açık kaynak kodlu*** ve ücretsiz bir web sunucusu yazılımı olan *Apache* yi kuralım;
 
@@ -115,6 +117,7 @@ Aşağıdaki kodları, satır satır gönderin.
 ```
 
 **MySql Parolası Belirleme:**
+
 Not: Unutmayacağınız bir parola lütfen!
 
 ```bash
@@ -311,4 +314,5 @@ Veritabanı işlemleri hakkında daha geniş bilgiye [buradan](https://www.php.n
 
 Atom Metin editörü hakkında bilgiye ve kullanışlı eklentilerine [buradan](https://emregeldegul.net/2017/10/kullanisli-atom-paketleri/) ulaşabilirsiniz.
 
-**SANIRIM ARTIK PHP İLE TANIŞMAYA HAZIRSINIZ, [HAYDE BURADAN](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php) DEVAM EDELİM O ZAMAN.**
+
+[Php Nedir?](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/php_nedir.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/php) :arrow_right: [Doğru Editör Seçimi](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/php/editor_secimi.md)
