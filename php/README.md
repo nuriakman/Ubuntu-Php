@@ -17,7 +17,7 @@
 
 ### PHP'DE OPERATÖRLER
 
-- Aritmatik Operatörler
+- [Aritmatik Operatörler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/aritmatik.md)
 - Atama Operatörleri
 - Artırma ve Azaltma Operatörleri
 - Karşılaştırma Operatörleri
