@@ -40,3 +40,6 @@ Ekran Görüntüsü,
   $meyveler değişkeninin türü = array
   $varmi değişkeninin türü = NULL
 ```
+
+
+[Yazım Kuralları](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/php/yazim_kurallari.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/php) :arrow_right: [Değişkenlerin Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/degiskenler.md)

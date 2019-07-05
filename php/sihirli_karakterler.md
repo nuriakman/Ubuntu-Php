@@ -10,3 +10,7 @@ Sihirli karekterler sadece `String` ifadelerde ve `çift tırnak` içerisinde ku
 | \\$ | Değişkenin adının olduğu gibi göstermesi için kullanılır. |
 | \\' | Tırnak içerisinde tırnak kullanma istersek kullanılır. |
 | \\" | Fazladan çift tırnak kullanmak için kullanılır.|
+
+
+
+[Sabit Değişkenler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/sabit_degiskenler.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/php) :arrow_right: [Aritmatik Operatörler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/php/aritmatik.md)
