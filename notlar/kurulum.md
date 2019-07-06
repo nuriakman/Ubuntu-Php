@@ -6,11 +6,11 @@ Yazık... Siz daha linux kullanmıyormusunuz. Linux kullanmıyorsanız lütfen s
 
 Yalnız arkadaşlar, benim burada kısaca değinmeye çalışacağım konulara başlamadan önce bizim dünyamızda kullandığımız bazı terimler hakkında bilgi sahibi olmanız gerektiğini düşünüyorum. Bunlar;
 
--  [Linux](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/genel/linux.md)
--  [Özgür Yazılım](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/genel/ozgur_yazilim_nedir.md)
--  [Açık Kaynak Kod](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/genel/acik_kaynak_kod.md)
--  [Dns](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/genel/dns.md)
--  [Http Yaşam Döngüsü](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/genel/http_yasam_dongusu.md)
+-  [Linux](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/linux.md)
+-  [Özgür Yazılım](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/ozgur_yazilim_nedir.md)
+-  [Açık Kaynak Kod](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/acik_kaynak_kod.md)
+-  [Dns](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/dns.md)
+-  [Http Yaşam Döngüsü](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/http_yasam_dongusu.md)
 
 Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunların çözümleri ne olacak?  Sorularınızı duyar gibi oluyorum. Sorularınızın çözümlerini burada bulacaksınız. Hoş, aşağıdaki adımları anlayarak, tane tane , sindire sindire yaparsanız sorunsuzca PHP çalışma ortamına kavuşacağınıza inanıyorum. İlk defa siyah ekranla tanışıp; Bu nedir? Bunlar ne işe yarar? Başka neler yapabilirim diyenler linux temel komutlarına [buradan](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/genel/linux_komutlari.md) ulaşabilirler.
 
@@ -42,6 +42,8 @@ Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunl
 ```
 
 ## PHP PAKETLERİNİN KURULMASI
+
+Komutların açıklamalı sade listesine [buradan](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/kurulum_kodlari.md) ulaşabilirsiniz.
 
 ### WEB SUNUCUSUNUN (Apache) KURULMASI
 
@@ -441,7 +443,12 @@ Ekran çıktısı;
 *Örnek Ssh Key görüntüsü;*
 
 ```sh
- ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDql21MYWNY5EDBPrfS34kHjcaB2Ez+HQPF0Fyt4PebOXaAsa YQfSs/kIcl03ez5XVgQjfAqgibDbgN6BKETUDSA1giNvSAF0ugxhe1nRbH5fVAhya1AfsmouRuQLH2PGOXVy8w8qXWN aX7msa5Cf4AGzgBlOodvazV1gKO4fFAsUS32QF0i/A0s85Ly1WOskk2B3obiwvry765pN1P0M7EXqp3k4rLHWntH/ rcXENzaFZJEqeSmAID+ETxzFLGN357qSrnz9buU3hiLyPosTv361DkcAVMi+S4BtBfJxGMdr98nFYxnmvqy8xCTuOc X2fePCmGw55y0bDsfyugXUNd kullaniciadi@makinaadi
+ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDql21MYWNY5EDBPrfS34kHjcaB2Ez+HQPF0Fyt
+ 4PebOXaAsa YQfSs/kIcl03ez5XVgQjfAqgibDbgN6BKETUDSA1giNvSAF0ugxhe1nRbH5fVAhya
+ 1AfsmouRuQLH2PGOXVy8w8qXWN aX7msa5Cf4AGzgBlOodvazV1gKO4fFAsUS32QF0i/A0s85Ly1
+ WOskk2B3obiwvry765pN1P0M7EXqp3k4rLHWntH/ rcXENzaFZJEqeSmAID+ETxzFLGN357qSrnz
+ 9buU3hiLyPosTv361DkcAVMi+S4BtBfJxGMdr98nFYxnmvqy8xCTuOc X2fePCmGw55y0bDsfyug
+ XUNd kullaniciadi@makinaadi
 ```
 
 [github.com/settings/keys](https://github.com/settings/keys) sayfasına geçip, başlığı yazdıktan sonra **Key** bölümüne kopyaladığımız ssh key'i yapıştırıyoruz.
