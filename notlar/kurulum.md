@@ -193,7 +193,7 @@ Dosyayı konsoldan açmak için;
   $ sudo nano /etc/mysql/my.cnf # Kendi dosya adresinizi girin!
 ```
 
-Aşağıdaki ayarları bir seferde kopyalayıp yapıştırabilirsiniz.
+Aşağıdaki ayarları bir seferde kopyalayıp sayfanın en altına yapıştırabilirsiniz.
 
 ```bash
       [client]
@@ -351,7 +351,8 @@ Dosyayı konsoldan açmak için;
   $ sudo nano /etc/php/7.2/apache2/php.ini # Kendi dosya adresinizi girin!
 ```
 
-Aşağıdaki ayarları tek tek dikkatlice girmeniz gerekmektedir.
+Aşağıdaki ayarları bir seferde kopyalayıp sayfanın en altına yapıştırabilirsiniz.
+
 ```bash
       display_startup_errors = On
       display_errors         = On
@@ -439,7 +440,9 @@ Ekran çıktısı;
 
 *Örnek Ssh Key görüntüsü;*
 
+```sh
  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDql21MYWNY5EDBPrfS34kHjcaB2Ez+HQPF0Fyt4PebOXaAsa YQfSs/kIcl03ez5XVgQjfAqgibDbgN6BKETUDSA1giNvSAF0ugxhe1nRbH5fVAhya1AfsmouRuQLH2PGOXVy8w8qXWN aX7msa5Cf4AGzgBlOodvazV1gKO4fFAsUS32QF0i/A0s85Ly1WOskk2B3obiwvry765pN1P0M7EXqp3k4rLHWntH/ rcXENzaFZJEqeSmAID+ETxzFLGN357qSrnz9buU3hiLyPosTv361DkcAVMi+S4BtBfJxGMdr98nFYxnmvqy8xCTuOc X2fePCmGw55y0bDsfyugXUNd kullaniciadi@makinaadi
+```
 
 [github.com/settings/keys](https://github.com/settings/keys) sayfasına geçip, başlığı yazdıktan sonra **Key** bölümüne kopyaladığımız ssh key'i yapıştırıyoruz.
 
@@ -466,7 +469,7 @@ Veritabanı işlemleri hakkında daha geniş bilgiye [buradan](https://www.php.n
 
 ## ATOM TEXT EDİTÖRÜ KURULUMU
 
-### [Atom Paketi Deposunun Listeye Eklenmesi]
+### Atom Paketi Deposunun Listeye Eklenmesi
 
 ```bash
   # Atom paketinin indirileceği depoyu sisteme ekle.
@@ -475,7 +478,7 @@ Veritabanı işlemleri hakkında daha geniş bilgiye [buradan](https://www.php.n
   $ sudo apt update
 ```
 
-### ATOM TEXT EDÜTÖRÜ\'NÜN KURULUMU
+### Kurulumu
 
 ```bash
   $ sudo apt install atom -y  # Atom paketini kur.
