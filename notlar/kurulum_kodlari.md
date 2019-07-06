@@ -1,4 +1,4 @@
-# UBUNTU'DA PHP ÇALIŞMA ORTAMI KURULUM KODLARI
+# PHP ÇALIŞMA ORTAMI KURULUM KODLARI
 
 *Açıklama satırlarını okuyarak kodları konsolda satır satır çalıştırın!*
 
