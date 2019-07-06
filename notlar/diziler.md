@@ -3,12 +3,12 @@
 Diziler çoklu veri tutmaya yarayan yapılardır.
 
 Dizilerin özellikleri;
-- array() fonksiyonu ile oluşturulur,
-- Her elemanının bir indis değeri olur ve bu indislere biz müdahale etmediğimiz sürece indis numarası 0 dan başlar,
+- `array()` fonksiyonu ile oluşturulur,
+- Her elemanının bir indis değeri olur ve bu indislere biz müdahale etmediğimiz sürece indis numarası "0" dan başlar,
 - Dizinin boyutu birden fazla olabilir,
-- İndisi string bir değer olabilir,
+- İndisi "string" bir değer olabilir,
 - Elemanlarına köşeli parantezler içine indis değeri yazılarak ulaşılır,
-- Eleman sayısına count() fonksiyonu ile ulaşırız.
+- Eleman sayısına "count()" fonksiyonu ile ulaşırız.
 
 Örnek;
 
@@ -39,42 +39,29 @@ Dizilerin özellikleri;
 
 ```php
 <?php
-
-  $kimlik = array (
-      'ad'      => "Hasan",
-      'soyad'   => "Çiçek",
-      'meslek'  => "Eğitmen",
-      'yas'     => "50"
-  );
-
-  print_r($kimlik); # Dizi içerisinde ne geldiğine bakıyoruz.
-
+      $kimlik = array (
+          'ad'      => "Hasan",
+          'soyad'   => "Çiçek",
+          'meslek'  => "Eğitmen",
+          'yas'     => "50"
+      );
 ?>
 ```
 
-Dizi içerisinden bir elemanı çekmek istersek;
+**Dizileri ekrana yazdırmak;**
+
+```php
+      print_r($kimlik);
+```
+
+**Dizi içerisinden bir elemanı görmek;**
 
 ```php
 <?php
-
-  $kimlik = array (
-      'ad'      => "Hasan",
-      'soyad'   => "Çiçek",
-      'meslek'  => "Eğitmen",
-      'yas'     => "50"
-  );
-
-  echo $kimlik['meslek']; # Mesleğinin ne olduğunu sorduk.
-
+      echo $kimlik['meslek'];
 ?>
 ```
-Ekran çıktısı;
 
-```sh
-
-  Eğitmen
-
-```
 
 
 [Mantıksal Operatörler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/mantiksal.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php) :arrow_right: [İç İçe Dizi Oluşturmak](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/ic_ice_diziler.md)
