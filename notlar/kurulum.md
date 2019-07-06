@@ -43,29 +43,42 @@ Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunl
 
 ## PHP PAKETLERİNİN KURULMASI
 
-### [Web Sunucusunun  Kurulması]
+### Web Sunucusunun  Kurulması
 Php için olmazsa olmaz, ***açık kaynak kodlu*** ve ücretsiz bir web sunucusu yazılımı olan *Apache* yi kuralım;
 
 ```bash
   $ sudo apt install -y apache2 apache2-utils # Apache kur.
-  $ sudo systemctl status apache2.service # Aşağıdaki çıktıyı verecektir!
-  $ sudo systemctl start apache2 # Apache2'yi yeniden başlat.
   $ sudo sudo systemctl enable apache2 # Apache2'yi açılışta otomatik başlat.
 ```
-**Örnek Çıktı:**
+
+Apache kurulumunu test için aşağıdaki komutu gönderin. Çıkmak için ise `CTRL+C` yada `q` ya basın.
+
 ```bash
-● apache2.service - The Apache HTTP Server
-   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
-  Drop-In: /lib/systemd/system/apache2.service.d
-           └─apache2-systemd.conf
-   Active: **active (running)** since Sat 2018-09-08 10:46:05 UTC; 3min 37s ago
- Main PID: 1610 (apache2)
-    Tasks: 55 (limit: 505)
-   CGroup: /system.slice/apache2.service
-           ├─1610 /usr/sbin/apache2 -k start
-           ├─1612 /usr/sbin/apache2 -k start
-           └─1613 /usr/sbin/apache2 -k start
+  $ sudo systemctl status apache2.service # Aşağıdaki çıktıyı verecektir!
 ```
+
+**ÖRNEK EKRAN GÖRÜNTÜSÜ:**
+
+```bash
+    hasan@armada:/var/www/html$ sudo systemctl status apache2.service
+    [sudo] password for hasan:
+    ● apache2.service - The Apache HTTP Server
+       Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+       Active: active (running) since Sat 2019-07-06 18:08:51 +03; 1min 58s ago
+         Docs: https://httpd.apache.org/docs/2.4/
+      Process: 898 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
+     Main PID: 1035 (apache2)
+        Tasks: 6 (limit: 4566)
+       Memory: 18.4M
+       CGroup: /system.slice/apache2.service
+               ├─1035 /usr/sbin/apache2 -k start
+               ├─1187 /usr/sbin/apache2 -k start
+               ├─1188 /usr/sbin/apache2 -k start
+               ├─1189 /usr/sbin/apache2 -k start
+               ├─1190 /usr/sbin/apache2 -k start
+               └─1191 /usr/sbin/apache2 -k start
+```
+
 **Sunucuyu Test Etmek:** Taracımızın adres çubuğuna "127.0.0.1" veya "localhost" yazarak "*Apache2 Ubuntu Default Page*" sayfasını görebiliyorsak yani aşağıdaki resim gibi bir sayfa ile karşılaştıysak apache kurulmuş demektir. Testi buradan ( [localhost](http://localhost/)  yada [127.0.0.1](http://127.0.0.1/)  ) yapabilirsiniz.
 
 
@@ -78,16 +91,14 @@ Php için olmazsa olmaz, ***açık kaynak kodlu*** ve ücretsiz bir web sunucusu
   $ sudo chown www-data:www-data /var/www/html/ -R
 ```
 
-### [Veritabanı Kurulumu]
+### Veritabanı (MariaDB) Kurulumu
 
-MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL'in yaratıcısı olan *Monty Widenius*'un MySQL'in kodunu çatallayıp (fork) "çoğunlukla" MySQL ile aynı komutları, arayüzleri ve API'leri destekleyecek şekilde geliştirmeye başlanan, toplulukla iç içe hızlı ve verimli şekilde geliştirilmeye devam edilen MySQL ilişkisel veritabanı yönetim sistemidir.
+MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL'in yaratıcısı olan *Monty Widenius*'un MySQL'in kodunu çatallayıp (fork) "çoğunlukla" MySQL ile aynı komutları, arayüzleri ve API'leri destekleyecek şekilde geliştirmeye başlanan, toplulukla iç içe hızlı ve verimli şekilde geliştirilmeye devam edilen MySQL ilişkisel veritabanı yönetim sistemidir.  Çıkmak için ise `CTRL+C` yada `q` ya basın.
 
 ```bash
   $ sudo apt install -y mariadb-server mariadb-client # Mariadb'yi kur.
-  $ sudo systemctl start mariadb # Mariadb'yi yeniden başlat.
   $ sudo sudo systemctl enable mariadb # Mariadb'yi açılışta otomatik başlat.
   $ systemctl status mariadb.service
-  $ sudo mariadb -u root # Mariadb'ye root şifresi istemeden girmek.
 ```
 **Örnek Çıktı:**
 
@@ -106,6 +117,7 @@ MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL'
 
 **Root Kullanıcısı İçin Parola Belirleme:**
 
+$ sudo mariadb -u root # Mariadb'ye root şifresi istemeden girmek.
 Aşağıdaki kodları, satır satır gönderin.
 ```bash
   $ sudo mysql -u root
