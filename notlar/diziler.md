@@ -1,73 +1,41 @@
 ## Dizi Oluşturmak
 
-Değişkenleri tanımlarken tek bir değer atıyabiliyorduk. Birden fazla değer atamak gerektiği zaman dizileri kullanıyoruz. Dizi oluşturulurken `array();` fonksiyonunu kullanırız.
+Diziler çoklu veri tutmaya yarayan yapılardır.
+
+Dizilerin özellikleri;
+- array() fonksiyonu ile oluşturulur,
+- Her elemanının bir indis değeri olur ve bu indislere biz müdahale etmediğimiz sürece indis numarası 0 dan başlar,
+- Dizinin boyutu birden fazla olabilir,
+- İndisi string bir değer olabilir,
+- Elemanlarına köşeli parantezler içine indis değeri yazılarak ulaşılır,
+- Eleman sayısına count() fonksiyonu ile ulaşırız.
 
 Örnek;
 
-```php
-<?php
+#### Dizi Oluşturma
 
-  $ad = "Hasan";
-  $soyad = "Çiçek";
-  $meslek = "Geliştirici";
-  $yas = 50;
-
-?>
-```
-
-Gördüğünüz gibi kişi bilgilerini dört ayrı değişkene atadık. Bunları tek bir seferde bir değişkende tutmak daha mantıklı değil mi?
-
-**Dizi Tanımlamanın 1. Yolu:** Sadece değerleri girerek oluşturmak.
+**1. Yol:** Sadece değerleri girerek oluşturmak. İndis numarası otomatik oluşur.
 
 ```php
 <?php
-
-  $kimlik = array (
-      "Hasan",
-      "Çiçek",
-      "Geliştirici",
-      "50"
-  );
-
-  print_r($kimlik); # Dizi içerisinde ne geldiğine bakıyoruz.
-
+      $kimlik = array ( "Hasan", "Çiçek", "Eğitmen", "50");
 ?>
 ```
 
-Ekran çıktısı;
-
-```sh
-
-  Array ( [0] => Hasan [1] => Çiçek [2] => Geliştirici [3] => 50 )
-
-```
-
-**Dizi Tanımlamanın 2. Yolu:** Anahtarlarını girerek oluşturmak. Dizi Anahtarları(key) her zaman "0" dan başlar.
+**2. Yol:** İndis numarasını girerek oluşturmak.
 
 ```php
 <?php
-
-  $kimlik = array (
-      [0] => "Hasan",
-      [1] => "Çiçek",
-      [2] => "Geliştirici",
-      [3] => "50"
-  );
-
-  print_r($kimlik); # Dizi içerisinde ne geldiğine bakıyoruz.
-
+      $kimlik = array (
+          [0] => "Hasan",
+          [1] => "Çiçek",
+          [2] => "Eğitmen",
+          [3] => "50"
+      );
 ?>
 ```
 
-Ekran çıktısı;
-
-```sh
-
-  Array ( [0] => Hasan [1] => Çiçek [2] => Geliştirici [3] => 50 )
-
-```
-
-Anahtarları hatırlama kolaylığı bakımından isimlendirerek de oluşturabiliriz.
+**3. Yol:** İndislerini kendimiz vererek oluşturabiliriz. Bu veri çekerken hatırlanabilir olur.
 
 ```php
 <?php
@@ -75,7 +43,7 @@ Anahtarları hatırlama kolaylığı bakımından isimlendirerek de oluşturabil
   $kimlik = array (
       'ad'      => "Hasan",
       'soyad'   => "Çiçek",
-      'meslek'  => "Geliştirici",
+      'meslek'  => "Eğitmen",
       'yas'     => "50"
   );
 
@@ -83,13 +51,7 @@ Anahtarları hatırlama kolaylığı bakımından isimlendirerek de oluşturabil
 
 ?>
 ```
-Ekran çıktısı;
 
-```sh
-
-  Array ( [ad] => Hasan [soyad] => Çiçek [meslek] => Geliştirici [yas] => 50 )
-
-```
 Dizi içerisinden bir elemanı çekmek istersek;
 
 ```php
@@ -98,7 +60,7 @@ Dizi içerisinden bir elemanı çekmek istersek;
   $kimlik = array (
       'ad'      => "Hasan",
       'soyad'   => "Çiçek",
-      'meslek'  => "Geliştirici",
+      'meslek'  => "Eğitmen",
       'yas'     => "50"
   );
 
@@ -110,7 +72,7 @@ Ekran çıktısı;
 
 ```sh
 
-  Geliştirici
+  Eğitmen
 
 ```
 
