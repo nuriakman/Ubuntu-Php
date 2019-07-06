@@ -1,3 +1,6 @@
+# UBUNTU'DA PHP ÇALIŞMA ORTAMI KURULUM KODLARI
+
+*Açıklama satırlarını okuyarak kodları konsolda satır satır çalıştırın!*
 
 ```sh
       # Ekranları araç çubuğundan tek tıkla aç-kapat özelliğini vermek.
