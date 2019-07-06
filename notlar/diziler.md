@@ -1,4 +1,4 @@
-## Dizi Oluşturmak
+## Diziler
 
 Diziler çoklu veri tutmaya yarayan yapılardır.
 
