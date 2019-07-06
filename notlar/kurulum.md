@@ -43,7 +43,8 @@ Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunl
 
 ## PHP PAKETLERİNİN KURULMASI
 
-### Web Sunucusunun  Kurulması
+### WEB SUNUCUSUNUN (Apache) KURULMASI
+
 Php için olmazsa olmaz, ***açık kaynak kodlu*** ve ücretsiz bir web sunucusu yazılımı olan *Apache* yi kuralım;
 
 ```bash
@@ -51,13 +52,13 @@ Php için olmazsa olmaz, ***açık kaynak kodlu*** ve ücretsiz bir web sunucusu
   $ sudo sudo systemctl enable apache2 # Apache2'yi açılışta otomatik başlat.
 ```
 
-Apache kurulumunu test için aşağıdaki komutu gönderin. Çıkmak için ise `CTRL+C` yada `q` ya basın.
+Apache kurulumunu test için aşağıdaki komutu gönderin. Çıkmak için ise `CTRL+C` ya da `q` ya basın.
 
 ```bash
   $ sudo systemctl status apache2.service # Aşağıdaki çıktıyı verecektir!
 ```
 
-**ÖRNEK EKRAN GÖRÜNTÜSÜ:**
+**Örnek Ekran Görüntüsü:**
 
 ```bash
     hasan@armada:/var/www/html$ sudo systemctl status apache2.service
@@ -91,41 +92,69 @@ Apache kurulumunu test için aşağıdaki komutu gönderin. Çıkmak için ise `
   $ sudo chown www-data:www-data /var/www/html/ -R
 ```
 
-### Veritabanı (MariaDB) Kurulumu
+### VERİTABANI (MariaDB) KURULUMU
 
-MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL'in yaratıcısı olan *Monty Widenius*'un MySQL'in kodunu çatallayıp (fork) "çoğunlukla" MySQL ile aynı komutları, arayüzleri ve API'leri destekleyecek şekilde geliştirmeye başlanan, toplulukla iç içe hızlı ve verimli şekilde geliştirilmeye devam edilen MySQL ilişkisel veritabanı yönetim sistemidir.  Çıkmak için ise `CTRL+C` yada `q` ya basın.
+MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL'in yaratıcısı olan *Monty Widenius*'un MySQL'in kodunu çatallayıp (fork) "çoğunlukla" MySQL ile aynı komutları, arayüzleri ve API'leri destekleyecek şekilde geliştirmeye başlanan, toplulukla iç içe hızlı ve verimli şekilde geliştirilmeye devam edilen MySQL ilişkisel veritabanı yönetim sistemidir.
 
 ```bash
   $ sudo apt install -y mariadb-server mariadb-client # Mariadb'yi kur.
   $ sudo sudo systemctl enable mariadb # Mariadb'yi açılışta otomatik başlat.
   $ systemctl status mariadb.service
 ```
-**Örnek Çıktı:**
+
+Çıkmak için ise `CTRL+C` ya da `q` ya basın.
+
+**Örnek Ekran Görüntüsü:**
 
 ```bash
-● mariadb.service - MariaDB 10.1.34 database server
+hasan@armada:/var/www/html/Ubuntu-Php$ systemctl status mariadb.service
+● mariadb.service - MariaDB 10.3.13 database server
    Loaded: loaded (/lib/systemd/system/mariadb.service; enabled; vendor preset: enabled)
-   Active: active (running) since Sat 2018-09-08 11:13:27 UTC; 21s ago
+   Active: active (running) since Sat 2019-07-06 18:27:03 +03; 5s ago
      Docs: man:mysqld(8)
            https://mariadb.com/kb/en/library/systemd/
- Main PID: 3473 (mysqld)
+  Process: 5812 ExecStartPre=/usr/bin/install -m 755 -o mysql -g root -d /var/run/mysqld (code=exited, status=0/SUCCESS)
+  Process: 5823 ExecStartPre=/bin/sh -c systemctl unset-environment _WSREP_START_POSITION (code=exited, status=0/SUCCESS)
+  Process: 5825 ExecStartPre=/bin/sh -c [ ! -e /usr/bin/galera_recovery ] && VAR= ||   VAR=`/usr/bin/galera_recovery`; [ $? -eq 0 ]   && systemctl set
+  Process: 6091 ExecStartPost=/etc/mysql/debian-start (code=exited, status=0/SUCCESS)
+  Process: 6094 ExecStartPost=/bin/sh -c systemctl unset-environment _WSREP_START_POSITION (code=exited, status=0/SUCCESS)
+ Main PID: 6060 (mysqld)
    Status: "Taking your SQL requests now..."
-    Tasks: 27 (limit: 505)
+    Tasks: 31 (limit: 4566)
+   Memory: 74.5M
    CGroup: /system.slice/mariadb.service
-           └─3473 /usr/sbin/mysqld
+           └─6060 /usr/sbin/mysqld
 ```
 
 **Root Kullanıcısı İçin Parola Belirleme:**
 
-$ sudo mariadb -u root # Mariadb'ye root şifresi istemeden girmek.
-Aşağıdaki kodları, satır satır gönderin.
 ```bash
   $ sudo mysql -u root
+```
+
+**Örnek Ekran Görüntüsü:**
+
+```sh
+      hasan@armada:~$ sudo mariadb -u root
+      Welcome to the MariaDB monitor.  Commands end with ; or \g.
+      Your MariaDB connection id is 47
+      Server version: 10.3.13-MariaDB-2 Ubuntu 19.04
+
+      Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+      Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+      MariaDB [(none)]>
+```
+
+Aşağıdaki kodları, satır satır gönderin.
+
+```bash
       show databases;
       use mysql;
       update user set plugin='' where User='root';
       flush privileges;
-      exit;
+      exit; # Mariadb'den çıkış.
 ```
 
 **MySql Parolası Belirleme:**
@@ -143,29 +172,131 @@ Not: Unutmayacağınız bir parola lütfen!
 
 **my.cnf Ayarları:**
 
-**my.cnf dosyası** sunucunuzda bulunan **veri tabanı yönetim sisteminin** ayar dosyasıdır ve oldukça önemlidir. Dosyanın yerini konsoldan aşağıdaki komutu yazarak bulabiliriz.
+**my.cnf dosyası** sunucunuzda bulunan **veri tabanı yönetim sisteminin** ayar dosyasıdır ve oldukça önemlidir. my.cnf sunucuda varsayılan olarak /etc/my.cnf yolu ile erişilebilir ve düzenlenebilir şekilde kayıtlıdır. Ayrıca dosyanın yerini konsoldan aşağıdaki komutu yazarak bulabiliriz.
 
 ```bash
   $ sudo find / -name my.cnf
 ```
+
 Ekran çıktısı:
+
 ```bash
   [sudo] password for ******:
   /var/lib/dpkg/alternatives/my.cnf
   /etc/mysql/my.cnf  # DOSYA ADRESİ BURADA
   /etc/alternatives/my.cnf
 ```
+
 Dosyayı konsoldan açmak için;
+
 ```bash
   $ sudo nano /etc/mysql/my.cnf # Kendi dosya adresinizi girin!
 ```
+
 Aşağıdaki ayarları bir seferde kopyalayıp yapıştırabilirsiniz.
+
 ```bash
-  Değişecek olan kodlar buraya yazılacak. Eskileri mariadb nin başlamasını engelliyor.
+      [client]
+      port                            = 3306
+      socket                          = /var/lib/mysql/mysql.sock
+
+      [mysqld-safe]
+      socket                          = /var/lib/mysql/mysql.sock
+      nice                            = 0
+
+      [mysqld]
+      # Basic
+      innodb_force_recovery = 1
+      bind-address                    = 127.0.0.1 # Comment out if you want remote servers to connect to this server's MySQL instance
+      datadir                         = /var/lib/mysql
+      lc-messages-dir                 = /usr/share/mysql
+      max-allowed-packet              = 128M
+      max-connect-errors              = 1000000
+      pid-file                        = /var/lib/mysql/mysql.pid
+      port                            = 3306
+      skip-external-locking
+      skip-name-resolve
+      socket                          = /var/lib/mysql/mysql.sock
+      tmpdir                          = /dev/shm/mysql/
+      user                            = mysql
+
+
+      # MyISAM Query Cache Settings
+      query-cache-limit               = 1M    # UPD
+      query-cache-size                = 70M   # UPD
+      query-cache-type                = 1
+
+      key-buffer-size                 = 150M   # UPD
+
+      low-priority-updates            = 1
+      concurrent-insert               = 2
+
+      # Common
+      max-connections                 = 100   # UPD
+      back-log                        = 512
+
+      wait-timeout                    = 90
+      interactive-timeout             = 90
+
+      join-buffer-size                = 2M    # UPD
+      read-buffer-size                = 2M    # UPD
+      read-rnd-buffer-size            = 4M    # UPD
+      sort-buffer-size                = 4M    # UPD
+
+      thread-cache-size               = 16   # UPD (most of the times you probably won't need to change this)
+      thread-stack                    = 192K
+
+      max-heap-table-size             = 50M
+      tmp-table-size                  = 50M
+
+      table-definition-cache          = 8000  # UPD
+      table-open-cache                = 1000  # UPD
+      open-files-limit                = 24000 # UPD
+
+      ft-min-word-len                 = 3     # Minimum length of words to be indexed for search results
+
+      expire-logs-days                = 2
+      log-error                       = /var/lib/mysql/mysql_error.log
+      log-queries-not-using-indexes   = 1
+      long-query-time                 = 0.1
+      max-binlog-size                 = 100M
+      slow-query-log                  = 1
+      slow-query-log-file             = /var/lib/mysql/mysql_slow.log
+
+      thread-cache-size               = 16   # UPD (most of the times you probably won't need to change this)
+      thread-stack                    = 192K
+
+      max-heap-table-size             = 50M
+      tmp-table-size                  = 50M
+
+      table-definition-cache          = 8000  # UPD
+      table-open-cache                = 1000  # UPD
+      open-files-limit                = 24000 # UPD
+
+      ft-min-word-len                 = 3     # Minimum length of words to be indexed for search results
+
+      expire-logs-days                = 2
+      log-error                       = /var/lib/mysql/mysql_error.log
+      log-queries-not-using-indexes   = 1
+      long-query-time                 = 0.1
+      max-binlog-size                 = 100M
+      slow-query-log                  = 1
+      slow-query-log-file             = /var/lib/mysql/mysql_slow.log
+
+      max_allowed_packet=32M
+      open_files_limit=50000
+      [mysqldump]
+      quick
+      quote-names
+      max-allowed-packet              = 16M
+
+      [mysql]
+
+      [isamchk]
+      key-buffer-size                 = 150M
 ```
 
-
-### [PHP7 Kurulumu]
+### PHP7 KURULUMU
 
 *Not: Bu komutta kurulacak php7 paketleri temel ihtiyaçlar için zorunlu paketlerdir.*
 
@@ -197,12 +328,10 @@ Aşağıdaki ayarları bir seferde kopyalayıp yapıştırabilirsiniz.
   $ cd /var/www/html/ # html dizinine geç.
   $ sudo nano /var/www/html/info.php # info.php dosyasını oluştur ve konsolda aç.
 ```
-İçerisine altta yer alan bir satırlık ilk php kodumuzu yazalım.
+İçerisine altta yer alan bir satırlık ilk php kodumuzu yazalım ve `CTRL+C` sonra `E` sonra `ENTER` şeklinde kayıt edep çıkalım.
 
 ```php
-
   <?php phpinfo(); ?>
-
 ```
 
 Kurulum testini [buradan](http://localhost/info.php) yapabilirsiniz. Eğer alt resim gibi bir ekran ile karşılaştıysanız, sorun yok yola devam.
@@ -224,22 +353,29 @@ Dosyayı konsoldan açmak için;
 
 Aşağıdaki ayarları tek tek dikkatlice girmeniz gerekmektedir.
 ```bash
-  display_startup_errors = On
-  display_errors         = On
-  short_open_tag         = On
-  opcache.enable         = 0
-  upload_max_filesize    = 128M
-  post_max_size          = 128M
-  max_input_vars         = 5000
-  date.timezone          = "Europe/Istanbul"
-  error_reporting        = E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE & ~E_WARNING
-  mbstring.language          = Turkish
-  mbstring.internal_encoding = UTF-8
-  disable_functions          = exec, passthru, shell_exec, system, proc_open, popen, curl_exec, curl_multi_
+      display_startup_errors = On
+      display_errors         = On
+      short_open_tag         = On
+      opcache.enable         = 0
+      upload_max_filesize    = 128M
+      upload_max_size        = 128M
+      post_max_size          = 128M
+      max_input_vars         = 5000
+      date.timezone          = "Europe/Istanbul"
+      error_reporting        = E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE & ~E_WARNING
+      mbstring.language          = Turkish
+      mbstring.internal_encoding = UTF-8
+      disable_functions          = exec, passthru, shell_exec, system, proc_open, popen, curl_exec, curl_multi_exec, parse_ini_file, show_source
 ```
 
+### Apache ve MariaDB Servislerinin Tekrar Başlatılması
 
-### [GİT Kurulumu]
+```sh
+      sudo systemctl start apache2
+      sudo systemctl start mariadb
+```
+
+### GİT KURULUMU
 
 **Git** , *Linus Torvalds* tarafından tasarlanıp geliştirilen, yazdığımız projeleri ve uygulamaları, bilgisayarımızda ya da harici disklerde değilde **internet üzerinde** tutmamızı ve yönetmemizi sağlayan ve GNU Genel Kamu Lisansı’nın 2. sürümüyle lisanslanmış bir **özgür versiyon kontrol sistemi** dir.
 
@@ -264,7 +400,7 @@ Aşağıdaki ayarları tek tek dikkatlice girmeniz gerekmektedir.
   $ git init # Git'i bu dizin için konuşlandır.
 ```
 
-**SSH KEY Üretme:**
+### SSH KEY ÜRETME
 
 ```bash
   $ cd ~/.ssh # Eğer hata verirse sorun yok alt satırdan devam edin.
@@ -272,25 +408,44 @@ Aşağıdaki ayarları tek tek dikkatlice girmeniz gerekmektedir.
 ```
 Ekran çıktısı;
 ```bash
-  Generating public/private rsa key pair.
-  Enter file in which to save the key (/home/nuri/.ssh/id_rsa): # ENTER BASIN!
-  Enter passphrase (empty for no passphrase): # ENTER BASIN!
-  Enter same passphrase again: # ENTER BASIN!
-  Your identification has been saved in /home/nuri/.ssh/id_rsa.
-  Your public key has been saved in /home/nuri/.ssh/id_rsa.pub. The key fingerprint is:
-  SHA256:0EOJV1HNjSxnrDqZxiE6B9EyOwpf8w0vlAK5MHV7/Xo nuri@nuri-LIFEBOOK-S751 The key's randomart...
+      hasan@armada:~/.ssh$ ssh-keygen
+      Generating public/private rsa key pair.
+      Enter file in which to save the key (/home/hasan/.ssh/id_rsa):
+      Enter passphrase (empty for no passphrase):
+      Enter same passphrase again:
+      Your identification has been saved in /home/hasan/.ssh/id_rsa.
+      Your public key has been saved in /home/hasan/.ssh/id_rsa.pub.
+      The key fingerprint is:
+      SHA256:YwQ39WDGdTVSFiwUlGR5D+3Tfzgz5XFqGhIODecXb0c hasan@armada
+      The key's randomart image is:
+      +---[RSA 2048]----+
+      |      . oo=.=BBBo|
+      |       o.+ooo=+oE|
+      |        .=  .oo+o|
+      |       .. + . ooB|
+      |        So o . *=|
+      |       . .o . B +|
+      |           . + +.|
+      |            .    |
+      |                 |
+      +----[SHA256]-----+
 ```
-**GitHub Sitesine SSH Key'i Ekleme:**
+
+**GitHub Sitesine SSH Key\'i Ekleme:**
+
 ```bash
   $ cat ~/.ssh/id_rsa.pub # Ssh Key'in olduğu dosyayı aç.
 ```
+
 *Örnek Ssh Key görüntüsü;*
 
- ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDql21MYWNY5EDBPrfS34kHjcaB2Ez+HQPF0Fyt4PebOXaAsa YQfSs/kIcl03ez5XVgQjfAqgibDbgN6BKETUDA1giNvSAF0ugxhe1nRbH5fVAhya1AfsmouRuQL2PGOXVy8w8qXWN aX7msa5Cf4AGzgBlOodvazV1gKO4fFAsUS32QF0i/A0s85Ly1WOskk2B3obiwvry765pN1P0M7EXqp3k4rLHWntH/ rcXENzaFZJEqeSmAID+ETYZxzFLGN357qSrnz9buU3hiLyPosTv361DkcAVMi+S4BtBfJxGMdr98nFYxnmvqy8xCTuOc X2fePCmGw3Oy0bDsfyugXUNd kullaniciadi@makinaadi
+ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDql21MYWNY5EDBPrfS34kHjcaB2Ez+HQPF0Fyt4PebOXaAsa YQfSs/kIcl03ez5XVgQjfAqgibDbgN6BKETUDSA1giNvSAF0ugxhe1nRbH5fVAhya1AfsmouRuQLH2PGOXVy8w8qXWN aX7msa5Cf4AGzgBlOodvazV1gKO4fFAsUS32QF0i/A0s85Ly1WOskk2B3obiwvry765pN1P0M7EXqp3k4rLHWntH/ rcXENzaFZJEqeSmAID+ETxzFLGN357qSrnz9buU3hiLyPosTv361DkcAVMi+S4BtBfJxGMdr98nFYxnmvqy8xCTuOc X2fePCmGw55y0bDsfyugXUNd kullaniciadi@makinaadi
 
 [github.com/settings/keys](https://github.com/settings/keys) sayfasına geçip, başlığı yazdıktan sonra **Key** bölümüne kopyaladığımız ssh key'i yapıştırıyoruz.
 
-### [Adminer Programı Kurulumu]
+### ADMİNER VERİTABANI YÖNETİM ARACI KURULUMU
+
+PHP ile yazılmış tam özellikli bir veritabanı yönetim aracıdır. PhpMyAdmin, Adminer tersine hedef sunucuya dağıtmak için hazır, tek bir dosya oluşur. Adminer MySQL, PostgreSQL, SQLite, MS SQL ve Oracle için kullanılabilir.
 
 ```bash
   $ cd /var/www/html/ # html dizinine geç.
@@ -304,7 +459,6 @@ Dosyayı indirdikten sonra dosyanın ismi "index.php" değilse "index.php" olara
 ![](https://lh3.googleusercontent.com/7E-pqQXKG_4t0fa1avWXu7R0s0Y7y3mxKR5H6v4-66UaPsrgu6lPOtbxMBC8mwd3P0jdjGcCqs8)
 
 Adminer [bağlantısını](http://localhost/adminer/)  seçtiğimizde ise aşağıdaki resimde gördüğümüz adminer giriş sayfasına ulaşırız. Parolayı unutmadıysanız kullanıcı adı ve parolayı girerek veritabanı oluşturmaya başlayabilirsiniz.
-
 
 ![](https://lh3.googleusercontent.com/zF0rA_zS5Tj7766qUSBqeHZODHEh5M2z8ORcT-74EuKI7xCS9AhmMmdjii-Ep7dC9xWVTO07FHC3)
 
@@ -321,13 +475,33 @@ Veritabanı işlemleri hakkında daha geniş bilgiye [buradan](https://www.php.n
   $ sudo apt update
 ```
 
-### [Atom Text Editörü\'nün Kurulumu]
+### ATOM TEXT EDÜTÖRÜ\'NÜN KURULUMU
 
 ```bash
   $ sudo apt install atom -y  # Atom paketini kur.
 ```
 
 Atom Metin editörü hakkında bilgiye ve kullanışlı eklentilerine [buradan](https://emregeldegul.net/2017/10/kullanisli-atom-paketleri/) ulaşabilirsiniz.
+
+### WORDPRESS KURULUMU
+
+```sh
+      cd ~
+      wget --no-check-certificate https://wordpress.org/latest.tar.gz
+      tar xzvf latest.tar.gz
+      mv wordpress /var/www/html/
+      cd /var/www/html/wordpress
+      sudo chmod -R 777 ../wordpress
+      cp wp-config-sample.php wp-config.php
+      atom wp-config.php
+```
+
+Atom editör içinde DB_NAME, DB_USER, DB_PASSWORD, DB_HOST Sabitleri tanımlanır. Adminer’e geçip WordPress isminde Utf8 Turkish_ci dilinde bir database oluşturun.
+
+http://localhost/wordpress adresinden wordpress sitesine girilebilir.
+
+http://localhost/wordpress/wp-admin adresinden wordpress YÖNETİM sayfalarına girilebilir.
+
 
 
 [Php Nedir?](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/php_nedir.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php) :arrow_right: [Doğru Editör Seçimi](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/notlar/editor_secimi.md)
