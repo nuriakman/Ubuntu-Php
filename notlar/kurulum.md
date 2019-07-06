@@ -27,6 +27,8 @@ Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunl
        Buralar açıklamadır. Komutların ne yaptığını, ne işe yaradığını anlamanız için yazılmıştır.
 ```
 
+Kurulum komutlarının açıklamalı sade listesine [buradan](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/kurulum_kodlari.md) ulaşabilirsiniz.
+
 ## SİSTEMİN GÜNCELLENMESİ
 
 **Depo Listesinin Güncellenmesi:** Linux sistemi kendisini güncellemek için bir merkeze bakıp, kontrol yapmaya ihtiyacı vardır. Bu listelerin bakılacağı yerler /etc/apt/sources.list dosyasında tutulur. "update" komutu ile sistemde kurulu olan paketler, paket deposundaki versiyonları ile farklarına bakılır ve fark varsa liste güncellenir. Bu komut kurulum yapmaz. Ubuntu paket listeleri hakkında detaylı bilgiye [buradan](https://wiki.ubuntu-tr.net/index.php?title=Yaz%C4%B1l%C4%B1m_ve_G%C3%BCncelle%C5%9Ftirmeler) ulaşabilirsiniz.
@@ -42,8 +44,6 @@ Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunl
 ```
 
 ## PHP PAKETLERİNİN KURULMASI
-
-Komutların açıklamalı sade listesine [buradan](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/kurulum_kodlari.md) ulaşabilirsiniz.
 
 ### WEB SUNUCUSUNUN (Apache) KURULMASI
 
