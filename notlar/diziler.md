@@ -48,12 +48,12 @@ Dizilerin özellikleri;
 ?>
 ```
 
-**Dizileri görmek;**
+####Dizileri görmek;
 ```php
       print_r($kimlik);
 ```
 
-**Dizi içerisinden bir elemanı görmek;**
+####Dizi içerisinden bir elemanı görmek;
 ```php
 <?php
       echo $kimlik['meslek'];
