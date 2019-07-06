@@ -115,4 +115,4 @@ Ekran çıktısı;
 ```
 
 
-[Artırma ve Azaltma Operatörleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/artirma_azaltma.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php) :arrow_right: [Dizi Oluşturmak ve Dizi Tanımlamanın İki Yolu](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/diziler.md)
+[Mantıksal Operatörler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/mantiksal.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php) :arrow_right: [İç İçe Dizi Oluşturmak](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/ic_ice_diziler.md)
