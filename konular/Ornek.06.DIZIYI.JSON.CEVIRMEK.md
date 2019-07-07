@@ -14,7 +14,7 @@
   echo "\n\n<h1>Dizi İçeriği</h1>";
   echo "<pre>";
   print_r($Personel);
-  echo "<pre>";
+  echo "</pre>";
 
   echo "\n\n<h1>JSON'a Çevrilmiş Biçimi</h1>";
   echo json_encode($Personel);
