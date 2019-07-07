@@ -304,7 +304,7 @@ Aşağıdaki ayarları bir seferde kopyalayıp sayfanın en altına yapıştıra
 
 ```bash
   # Php7'yi belirtilen paketlerle beraber kur.
-  $ sudo apt install php7.2 php-mbstring php7.2-mbstring php-xml php-simplexml libapache2-mod-php7.2 php7.2-mysql php-common php7.2-cli php7.2-common php7.2-json php7.2-opcache php7.2-readline
+  $ sudo apt install php7.2 php-mbstring php7.2-mbstring php-xml libapache2-mod-php7.2 php7.2-mysql php-common php7.2-cli php7.2-common php7.2-json php7.2-opcache php7.2-readline
   $ sudo php -v # Php versiyon kontrolu yap.
   $ sudo a2enmod php7.2 # Apache php7.2 modülünü etkinleştir.  
   $ sudo systemctl restart apache2 # Apache Web sunucusunu yeniden başlat.
