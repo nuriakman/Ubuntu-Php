@@ -5,10 +5,10 @@
 ```PHP
 <?php
   $METIN = <<<FOO
-  Nuri: Erkek;Arapça;İsmin anlamı burada olacak
-  Ahmet: Erkek;Farsça;İsmin anlamı burada olacak
-  Deniz: Unisex;Farsça;İsmin anlamı burada olacak
-  HASAN: Erkek;Farsça;İsmin anlamı burada olacak
+  Nuri: Erkek;Arapça;Nura ait, nurla ilgili.
+  Ahmet: Erkek;Farsça;Çok, en çok övülmüş, methedilmiş.
+  Deniz: Unisex;Farsça;Büyük su kütlesi.
+  Hasan: Erkek;Farsça;Güzellik, iyilik, hüsn sahibi olmak.
   Ayhan; Deeme
   Anlamsız satır var burada.
   Meral: Kadın;Türkçe;Geyik, geyik yavrusu, dağ keçisi
