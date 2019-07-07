@@ -43,7 +43,7 @@
 </script>
 ```
 
-### sorular.txt
+### sorular.txt dosyasını mutlaka ekle.
 ```TEXT
 dün|bugün|yarın|1|Bu akşam sokakta {} gördüğüm araba aklıma geldi.
 birşey|bugün|bir gün|2|Kim bilebilirdi seninle {} tekrar karşılaşacağız.
