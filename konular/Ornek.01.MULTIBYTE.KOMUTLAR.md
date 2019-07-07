@@ -8,12 +8,8 @@
 
    echo "<pre>";
    echo $str . "<br>";
-   $str = mb_convert_case($str, MB_CASE_UPPER, "UTF-8")."<br>";
-   //echo mb_convert_case($str, MB_CASE_UPPER) . "<br>"; // MB_CASE_UPPER, MB_CASE_LOWER, MB_CASE_TITLE
+   $str = mb_convert_case($str, MB_CASE_UPPER, "UTF-8")."<br>"; // MB_CASE_UPPER, MB_CASE_LOWER, MB_CASE_TITLE
    echo $str;
-
-   //ini_set('mbstring.language','Turkish');
-   //mb_internal_encoding("UTF-8"); // mb_*** komutlarının tümünün doğru çalışması için ayar yapalım...
 
    echo "<br><br>";
    echo $str . "<br>";
