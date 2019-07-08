@@ -46,6 +46,14 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
 ## BOOTSTRAP SINIFLARI
 
+**Kırılım noktaları**
+
+-    : Çözünürlüğü 576px'den küçük cihazlar;
+- sm : Çözünürlüğü 576px ile 768px dahil arasında olan cihazlar (Cep telefonları vb.).
+- md : Çözünürlüğü 768px ile 992px dahil arasında olan cihazlar (Tablet vb.).
+- lg : Çözünürlüğü 992px ile 1200px dahil arasında olan cihazlar (Notebook vb.).
+- xl : Çözünürlüğü 1200px den büyük cihazlar (Televizyon, Dizüstü vb.).
+
 **Temel Sınıflar**
 
 - container : Ana kapsayıcı. Satınların tam olarak yerleşmesi için kesinlikle ihtiyaç vardır. Kenarlardan 15px boşluk bırakır.
@@ -75,18 +83,40 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 **Metin Hizalama**
 
 - text-justify : Metinleri iki yana yaslar.
-- text-left : Metni sola yaslar.
-- text-center : Metni ortalar.
-- text-right : Metni sağa yaslar.
+- text-left : Metni istediğiniz yöne yaslar (left, center, right).
 - text-sm-left : Kırılım noktalarına göre de sola yaslıyabiliriz.
 - text-md-center : Kırılım noktalarına göre de ortalayabiliriz..
 - text-xl-right : Kırılım noktalarına göre de sağa yaslıyabiliriz.
-- bg-primary : Arka plana renk verir. Renkler; primary, secondary, lsuccess, danger, warning, ingo, light, dark ve white.
+
+**Renkler**
+
+- bg-primary : Arka plana renk verir (primary, secondary, lsuccess, danger, warning, ingo, light, dark, white).
 - bg-transparent : Arka plana rengini transparan yapar.
 - text-primary : Metine rengi verir. Yukarıdaki renkler geçerlidir.
 - text-muted : Metin rengini açık gri gibi yapar.
+
+**Kenarlıklar**
+
 - border : Dört yöne de kenarlık ekler.
-- border-top : Üst tarafa kenarlık ekler.
-- border-right : Sağ tarafa kenarlık ekler.
-- border-bottom : Alt tarafa kenarlık ekler.
-- border-left : Sol tarafa kenarlık ekler.
+- border-top : istediğiniz yöne kenarlık ekler (top, right, botton, left).
+- border-0 : Kenarlıkları kaldırır.
+- border-primary : Kenarlığa tanımlı bütün renkleri verebilirsiniz.
+- rounded : Köşeleri yuvarlıyarak kenarlık verir.
+- rounded-top : İstediğiniz yönü yuvarlıyarak kenarlık verir (top, right, botton, left).
+- rounded-circle : Yuvarlak yapar.
+- rounded-0 : Yönlerdeki yuvarlıkları kaldırır.
+
+**Dış ve İç Boşluk** (margin-padding)
+
+- m-5 : 3 rem dış boşluk verir (0, 1, 2, 3, 4, 5, auto). Auto değeri sadece margin için kullanılır.
+- mt-5 : Yukarıdan 3 rem boşluk verir (mt:yukarıdan, mb:aşağıdan, ml:soldan, mr:sağdan, mx: sol ve sağdan, my:aşağı ve yukarıdan boşluk atar).
+- m-sm-2 : Kırılma noktalarına göre de boşluk verebilirsiniz.
+- ml-sm-2 : Hem yön hemde kırılma noktalarına göre boşluk verme.
+
+**Float-Clearfix**
+
+- float-left : Elemanları sola yaslar.
+- float-right : Elemanları sağa yaslar.
+- float-none : Serbest.
+- float-sm-left : Kırılma noktalarına göre de float verebiliriz.
+- clearfix : Float atadığımız elemenleri bir diz içerisine alarak, float değerlerini temizleriz. Böylece float vermediğimiz elementler aralara karışmaz.
