@@ -42,3 +42,31 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
   <script type="text/javascript" src="js/popper.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
 ```
+
+
+## BOOTSTRAP SINIFLARI
+
+**Temel Sınıflar**
+
+- container : Ana kapsayıcı. Satınların tam olarak yerleşmesi için kesinlikle ihtiyaç vardır. Kenarlardan 15px boşluk bırakır.
+- container-fluid : Ana kapsayıcı. Sağdan ve soldan boşluk bırakmadan tamamen ekranı kaplar.
+- row : Satırları ifade eder. Sütunlar sadece satırlar içerisinde olmalıdır. Aksi halde sayfada dağılmalar olur. Katmanlar arasında 15px boşluk kalır.
+
+**Hizalama Sınıfları**
+
+- col
+- align-items-start : Kolonları dikey üste hizalama.
+- align-items-center : Kolonları dikey ortaya hizalama.
+- align-items-end : Kolonları dikey alta hizalama.
+- justify-content-start : Kolonları yatay sola hizalama.
+- justify-content-center : Kolonları yatay ortaya hizalama.
+- justify-content-end : Kolonları yatay sağa hizalama.
+- justify-content-around : Kolonları yatay eşit dağıtır.
+- justify-content-between : Kolonlara yatay eşit aralık verir.
+
+**Sıralama Sınıfları**
+
+- order-1 : 1,2,3,.....12'ye kadar. Sıralama küçükten büyüğe doğru sıralar.
+- order-first : Birinci sırada gösterir.
+- order-last : Son sırada gösterir.
+- order-sm-1 : sm kırılma noktasına gelince 1. sırada gösterir. "sm" yerine diğer kırılma noktaları, "1" yerine first ve last kullanılabilir.
