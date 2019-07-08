@@ -120,3 +120,21 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 - float-none : Serbest.
 - float-sm-left : Kırılma noktalarına göre de float verebiliriz.
 - clearfix : Float atadığımız elemenleri bir diz içerisine alarak, float değerlerini temizleriz. Böylece float vermediğimiz elementler aralara karışmaz.
+
+**Görüntüleme (Display)**
+
+- d-[özellik] : Görüntüleme.
+- d-[kırılma noktası]-[özellik] : Kırılma noktasına göre görüntüleme.
+- d-print-[özellik] : Yazıcıda görüntüleme.
+
+  Özellik yerine aşağıdakilerden size uygun olanı yazılacak!
+
+    - none : Elementin ekranda görüntülenmemesini sağlar.
+    - inline : Elementi "span" gibi satır içi elementi olarak görüntülenmesini sağlar. Yükseklik ve genişlik değerinin bir etkisi olmaz.
+    - inline-block : İnline ile aynıdır, fakat yükseklik ve genişlik değerleri uygulanabilir.
+    - block : Uygulandığı elementi "H" etiketi gibi blok element olarak görüntülenmesini sağlar. Uygulanan element yeni satırdan başlar ve bulunduğu alanın tün genişliğini kaplar.
+    - table : Uygulandığı elementin tablo etiketi gibi davranmasını sağlar.
+    - table-cell : Uygulandığı elementin "td" etiketi gibi davranmasını sağlar.
+    - table-row : Uygulandığı elementin "tr" etiketi gibi davranmasını sağlar.
+    - flex : Uygulandığı elementin bir flex container olarak görüntülenmesini sağlar.
+    - inline-flex : Uygulandığı elementin satır içi seviyesinde bir flex container olarak görüntülenmesini sağlar.
