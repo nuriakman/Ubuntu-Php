@@ -52,6 +52,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 - container-fluid : Ana kapsayıcı. Sağdan ve soldan boşluk bırakmadan tamamen ekranı kaplar.
 - row : Satırları ifade eder. Sütunlar sadece satırlar içerisinde olmalıdır. Aksi halde sayfada dağılmalar olur. Katmanlar arasında 15px boşluk kalır.
 - col : Sütun sınıfını temsil eder. Bir satırda en fazla 12 sütun olur. 12 den fazla olursa alta geçer.
+- offset-sm-1 : Sütunu 1 ileriden başlatır. 1 ile 11 e kadar değerlerde özelleştirilebilir.
 
 **Hizalama Sınıfları**
 
@@ -70,3 +71,22 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 - order-first : Birinci sırada gösterir.
 - order-last : Son sırada gösterir.
 - order-sm-1 : sm kırılma noktasına gelince 1. sırada gösterir. "sm" yerine diğer kırılma noktaları, "1" yerine first ve last kullanılabilir.
+
+**Metin Hizalama**
+
+- text-justify : Metinleri iki yana yaslar.
+- text-left : Metni sola yaslar.
+- text-center : Metni ortalar.
+- text-right : Metni sağa yaslar.
+- text-sm-left : Kırılım noktalarına göre de sola yaslıyabiliriz.
+- text-md-center : Kırılım noktalarına göre de ortalayabiliriz..
+- text-xl-right : Kırılım noktalarına göre de sağa yaslıyabiliriz.
+- bg-primary : Arka plana renk verir. Renkler; primary, secondary, lsuccess, danger, warning, ingo, light, dark ve white.
+- bg-transparent : Arka plana rengini transparan yapar.
+- text-primary : Metine rengi verir. Yukarıdaki renkler geçerlidir.
+- text-muted : Metin rengini açık gri gibi yapar.
+- border : Dört yöne de kenarlık ekler.
+- border-top : Üst tarafa kenarlık ekler.
+- border-right : Sağ tarafa kenarlık ekler.
+- border-bottom : Alt tarafa kenarlık ekler.
+- border-left : Sol tarafa kenarlık ekler.
