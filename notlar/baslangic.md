@@ -11,6 +11,7 @@ Yalnız arkadaşlar, benim burada kısaca değinmeye çalışacağım konulara b
 -  [Açık Kaynak Kod](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/acik_kaynak_kod.md)
 -  [Dns](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/dns.md)
 -  [Http Yaşam Döngüsü](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/http_yasam_dongusu.md)
+-  [Atom Text Editörü](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/atom.md)
 -  [Bootstrap](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/bootstrap.md)
 
 Ubuntu'da PHP çalışma ortamı nasıl oluşturulur? Karşılabileceğim sorunların çözümleri ne olacak?  Sorularınızı duyar gibi oluyorum. Sorularınızın çözümlerini burada bulacaksınız. Hoş, aşağıdaki adımları anlayarak, tane tane , sindire sindire yaparsanız sorunsuzca PHP çalışma ortamına kavuşacağınıza inanıyorum. İlk defa siyah ekranla tanışıp; Bu nedir? Bunlar ne işe yarar? Başka neler yapabilirim diyenler linux temel komutlarına [buradan](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/genel/linux_komutlari.md) ulaşabilirler.

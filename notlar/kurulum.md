@@ -1,4 +1,4 @@
-# PHP ÇALIŞMA ORTAMI HAZIRLAMA (LAMP KURULUMU)
+# PHP ÇALIŞMA ORTAMI HAZIRLAMA (LAMP)
 
 ```bash
   Not: Konsol komutlarını kopyalarken, "#" simgesi ile başlayan yerleri almayınız.
