@@ -51,10 +51,10 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 - container : Ana kapsayıcı. Satınların tam olarak yerleşmesi için kesinlikle ihtiyaç vardır. Kenarlardan 15px boşluk bırakır.
 - container-fluid : Ana kapsayıcı. Sağdan ve soldan boşluk bırakmadan tamamen ekranı kaplar.
 - row : Satırları ifade eder. Sütunlar sadece satırlar içerisinde olmalıdır. Aksi halde sayfada dağılmalar olur. Katmanlar arasında 15px boşluk kalır.
+- col : Sütun sınıfını temsil eder. Bir satırda en fazla 12 sütun olur. 12 den fazla olursa alta geçer.
 
 **Hizalama Sınıfları**
 
-- col
 - align-items-start : Kolonları dikey üste hizalama.
 - align-items-center : Kolonları dikey ortaya hizalama.
 - align-items-end : Kolonları dikey alta hizalama.
