@@ -10,13 +10,13 @@
 Dosyaları indirdikten sonra dizin yapısı aşağıdaki gibi olmalıdır,
 
 ```sh
-  Proje Adı
-    css
-      bootstrap.min.css
-    js
-      bootstrap.min.js
-      jquery-3.4.1.min.js
-      popper.min.js
+  Proje Adı/
+    css/
+      -bootstrap.min.css
+    js/
+      -bootstrap.min.js
+      -jquery-3.4.1.min.js
+      -popper.min.js
 ```
 
 ## İNCELİKLER
@@ -27,9 +27,9 @@ Türkçe karekterlerin düzgün çıkmasını sağlar.
   <meta charset="utf-8">
 ```
 
-width=device-width : Web sayfasının genişliğini bağlanılan cihazın ekran genişliğine göre eşitler.
-initial-scale=1 : Web sayfası yüklendiğinde, ilk yakınlaştırma seviyesini 1 olarak ayarlar.
-shrink-to-fit=no : Web sayfasının ekrana sığması için küçültme yapılmasını önler.
+- width=device-width : Web sayfasının genişliğini bağlanılan cihazın ekran genişliğine göre eşitler.
+- initial-scale=1 : Web sayfası yüklendiğinde, ilk yakınlaştırma seviyesini 1 olarak ayarlar.
+- shrink-to-fit=no : Web sayfasının ekrana sığması için küçültme yapılmasını önler.
 
 ```html
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
