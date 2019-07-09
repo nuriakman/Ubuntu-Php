@@ -48,11 +48,11 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
 **Kırılım Noktaları**
 
--    : Çözünürlüğü 576px'den küçük cihazlar;
-- sm : Çözünürlüğü 576px ile 768px dahil arasında olan cihazlar (Cep telefonları vb.).
-- md : Çözünürlüğü 768px ile 992px dahil arasında olan cihazlar (Tablet vb.).
-- lg : Çözünürlüğü 992px ile 1200px dahil arasında olan cihazlar (Notebook vb.).
-- xl : Çözünürlüğü 1200px den büyük cihazlar (Televizyon, Dizüstü vb.).
+- *xs*  : Çözünürlüğü 576px'den küçük cihazlar;
+- *sm* : Çözünürlüğü 576px ile 768px dahil arasında olan cihazlar (Cep telefonları vb.).
+- *md* : Çözünürlüğü 768px ile 992px dahil arasında olan cihazlar (Tablet vb.).
+- *lg* : Çözünürlüğü 992px ile 1200px dahil arasında olan cihazlar (Notebook vb.).
+- *xl* : Çözünürlüğü 1200px den büyük cihazlar (Televizyon, Dizüstü vb.).
 
 **Temel Sınıflar**
 
@@ -169,3 +169,4 @@ Bu sınıf sadece inline, inline-block, inline-table ve table-cell elementlerind
 - *position-sticky* :
 - *sticky-top* : Elementisayfanın üst kısmına konumlandırır. Fakat bu işlemi kaydırma çubuğu kendisini geçtiği anda yapmaya başlar.
 - *fixed-top* : Elementi her zaman sayfanın en üstünde konumlandırır.
+- *fixed-bottom* : Elementi sayfanın en altına konumlandırır.
