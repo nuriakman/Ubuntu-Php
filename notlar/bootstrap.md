@@ -144,7 +144,18 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
 **Boyutlandırma sınıfları**
 
-- %25   :
-- %50   :
-- %75   :
-- %100  :
+- w-25  : Bir elemente %25, %50, %75, %100 genişlik vermek için kullanılır.
+- h-25  : Bir elemente %25, %50, %75, %100 yükseklik vermek için kullanılır.
+- mw-100 : İçerisinde bulunduğu elementin genişliğini aşmışsa dış elementin genişliğine uydurmak.
+- mh-100 : İçerisinde bulunduğu elementin yüksekliğini aşmışsa dış elementin genişliğine uydurmak.
+
+**Dikey hizalama**
+
+Bu sınıf sadece inline, inline-block, inline-table ve table-cell elementlerinde çalışır.
+
+- aling-basaline : 
+- aling-top :
+- aling-bottom :
+- aling-middle :
+- aling-text-top :
+- aling-text-bottom :

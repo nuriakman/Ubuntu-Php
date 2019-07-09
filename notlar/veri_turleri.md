@@ -20,25 +20,23 @@ Peki veri tipini nasıl tespit ederiz. Bunun için `gettype();`fonksiyonunu kull
     $meyveler = array(elma, armut, muz, ayva);
     $varmi = NULL;
 
-
-    echo "\$meyve"." değişkeninin türü ="." ".gettype($meyve)."<br>";
-    echo "\$adet"." değişkeninin türü ="." ".gettype($adet)."<br>";
-    echo "\$yarimkilo"." değişkeninin türü ="." ".gettype($yarimkilo)."<br>";
-    echo "\$tatlimi"." değişkeninin türü ="." ".gettype($tatlimi)."<br>";
-    echo "\$meyveler"." değişkeninin türü ="." ".gettype($meyveler)."<br>";
-    // ;Alt satırda boşluk bırakma diğerlerinden farklı olarak yapılmıştır.
-    echo "\$varmi"." değişkeninin türü ="." ".gettype($varmi)."<br>";
+    echo "\$meyve değişkeni ".gettype($meyve)." türündedir.<br>";
+    echo "\$adet"." değişkeni ". gettype($adet)." türündedir.<br>";
+    echo "\$yarimkilo"." değişkeni ". gettype($yarimkilo)." türündedir.<br>";
+    echo "\$tatlimi"." değişkeni ". gettype($tatlimi)." türündedir.<br>";
+    echo "\$meyveler"." değişkeni ". gettype($meyveler)." türündedir.<br>";
+    echo "\$varmi"." değişkeni ".gettype($varmi)." türündedir.";
 
 ?>
 ```
 Ekran Görüntüsü,
 ```sh
-  $meyve değişkeninin türü = string
-  $adet değişkeninin türü = integer
-  $yarimkilo değişkeninin türü = double
-  $tatlimi değişkeninin türü = boolean
-  $meyveler değişkeninin türü = array
-  $varmi değişkeninin türü = NULL
+  $meyve değişkeni string türündedir.
+  $adet değişkeni integer türündedir.
+  $yarimkilo değişkeni double türündedir.
+  $tatlimi değişkeni boolean türündedir.
+  $meyveler değişkeni array türündedir.
+  $varmi değişkeni NULL türündedir.
 ```
 
 
