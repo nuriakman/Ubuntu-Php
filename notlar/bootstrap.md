@@ -123,9 +123,9 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
 **Görüntüleme Sınıfları** (Display)
 
-- **d-[özellik]**                   : Görüntüleme.
-- **d-[kırılma noktası]-[özellik]** : Kırılma noktasına göre görüntüleme.
-- **d-print-[özellik]**             : Yazıcıda görüntüleme.
+- *d-[özellik]*                   : Görüntüleme.
+- *d-[kırılma noktası]-[özellik]* : Kırılma noktasına göre görüntüleme.
+- *d-print-[özellik]*             : Yazıcıda görüntüleme.
 
   Özellik yerine aşağıdakilerden size uygun olanı yazılacak!
 
@@ -139,8 +139,8 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
     - *flex*         : Uygulandığı elementin bir flex container olarak görüntülenmesini sağlar.
     - *inline-flex*  : Uygulandığı elementin satır içi seviyesinde bir flex container olarak görüntülenmesini sağlar.
 
-- invisible : Elementi gizler ama sayfadaki yerini hala korur.
-- visible   : invisible ile gizlediğimiz elementin içerisindeki her hangi bir yeri göstermemizi sağlar.
+- *invisible* : Elementi gizler ama sayfadaki yerini hala korur.
+- *visible*   : invisible ile gizlediğimiz elementin içerisindeki her hangi bir yeri göstermemizi sağlar.
 
 **Boyutlandırma Sınıfları**
 
@@ -189,6 +189,16 @@ Bu sınıf sadece inline, inline-block, inline-table ve table-cell elementlerind
 **Başlık Sınıfları**
 
 - *display-1* : Başlık stilidir (1, 2, 3, 4). Daha büyük boyutlarda ve dikkat çekici yazı stili kullanılır.
+
+**Öne Çıkan Metin**
+
+- *lead* : Yazı stilini değiştirip daha belirgin yapar.
+
+**Satır İçi Metin Elementleri**
+
+- *<mark>* : Yazılarda vurgu yapmaya yarar.
+- *<del>* : Silindiğini göstermek istediğiniz kelime yada metinlerde kullanılır. Yazının üzerine çizgi çeker.
+- *<s>* : Artık doğru, net ve ilgili olmayan metni işaret etmek için kullanılır. Bu da yazının üzerine çizgi çeker.
 
 
 **İPUCU**
