@@ -93,7 +93,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 - *bg-primary**   : Arka plana renk verir (primary, secondary, lsuccess, danger, warning, ingo, light, dark, white).
 - *bg-transparent*: Arka plana rengini transparan yapar.
 - *text-primary*  : Metine rengi verir. Yukarıdaki renkler geçerlidir.
-- *text-muted*    : Metin rengini açık gri gibi yapar.
+- *text-muted*    : Metin rengini soluklaştırır. Slogan gibi ikincil bir yapıda kullanabiliriz.
 
 **Kenarlık Sınıfları**
 
@@ -173,11 +173,23 @@ Bu sınıf sadece inline, inline-block, inline-table ve table-cell elementlerind
 
 **Metni Arka Plan Resmi İle Değiştirme**
 
-- *text-hide* : ***<h1>*** etiketine bu sınıfı verdikten sonra, ***background-image*** özelliğine istediğimiz resmin adresini verip, genişlik ve yüksekliğini ayarlıyoruz. Böylece ekranda resim görülüyor fakat arama motorları ***h1*** etiketinde yazdığımız metne görür.
+- *text-hide* : `<h1>` etiketine bu sınıfı verdikten sonra, `background-image` özelliğine istediğimiz resmin adresini verip, genişlik ve yüksekliğini ayarlıyoruz. Böylece ekranda resim görülüyor fakat arama motorları `h1` etiketinde yazdığımız metne görür.
 
 **Kapatma İkonu**
 
-- *close* : Buton sınıfına bu özelliği verdikten sonra, `*&times;*` kapatma işareti konularak yapılır.
+- *close* : Buton sınıfına bu özelliği verdikten sonra, etiket arasına `&times;` kapatma işareti konularak yapılır.
+
+**Ekran Okuyucu Optimizasyonu**
+
+- *sr-only* : Elementi ekran okuyucular dışındaki tüm cihazlarda gizler. Sayfa tasarımına bir etki etmez. Web sayfanızın erişilebilir özelliğini arttırır. Ekran okuyucularına şu an hangi sayfada oldukları hakkında bilgi vermiş olur. Örneğin görme engelli bir kişiye hata mesajı vermek içinde kullanılabilir. Uyarı mesajları `<span>` etiketi içerisinde verilebilir.
+- *sr-only-focusable* : Bağlantının normal kullanıcılarında görmesini sağlar.
+- *aria-label* : Uyarı mesajının kapatma işaretinin ekran okuyucuları için bir şey ifade etmesini sağlar.
+- *aria-hidden* : Ekran okuyucuların elementi görmemesini sağlayabiliriz.
+
+**Başlık Sınıfları**
+
+- *display-1* : Başlık stilidir (1, 2, 3, 4). Daha büyük boyutlarda ve dikkat çekici yazı stili kullanılır.
+
 
 **İPUCU**
 
