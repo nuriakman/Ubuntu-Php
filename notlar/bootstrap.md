@@ -327,7 +327,15 @@ Terim listesi varsayılan olarak alt alta listelenir. `dl` elementi sınıfına 
 
 Bir resime birden fazla kaynak belirteceğimizde ya da farklı ekran boyutlarına göre farklı resimler göstereceğimizde `<picture>` elementini kullanırız. Resimlere bootstrap özellikleri uygulayacaksak `<picture>` elementi içerisindeki `<img>` elementi sınıfına `img-fluid`, `img-thumbnail` gibi elementler kullanabiliriz. Resimleri hizalamak için ise `float`, `margin` ve metin hizalama sınıflarını kullanabiliriz. Metin hizalama sınıfları kullanılırken resim bir `<div>` içerisine alınması gerekir. `<div>`'e `text-right`, `text-left` ve `text-center` verilebilir.
 
+**Figürler**
 
+Figürler içerisinde resimlere varsayılan olarak bir boyutlandırma yapılmamaktadır. Bu nedenle resimlere `img-fluid` sınıfı vererek duyarlı resimler oluşturabilir ve taşmaların önüne geçebilirsiniz.
+
+| Sınıf.............................. | Açıklama |
+| ---- | ---- |
+| \<figure\> | Resimleri `inline-block` olarak görüntülenmesinde kullanılmaktadır. Bu etikete `figure` sınıfı eklenir. |
+| figure-img | `<figure` elementinin içerisindeki `<img>` etiketlerine sınıf olarak verilir. Bu sınıf resmin `margin` ve `bottom` özelliğini 0.5 rem yapar ve satır aralığını 1'e eşitler. |
+| figure-caption | `<figcaption` resim yazısı etiketine sınıf olarak uygulayarak yazıya stil verebilirsiniz. Bu sınıf yazının `font-size`'ın %90' yapar ve yazı rengini değiştirir. |
 
 
 
