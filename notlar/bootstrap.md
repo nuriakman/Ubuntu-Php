@@ -205,7 +205,7 @@ Bu sınıf sadece inline, inline-block, inline-table ve table-cell elementlerind
 
 | Sınıf.............................. | Açıklama |
 | ---- | ---- |
-| text-hide | h1 etiketine bu sınıfı verdikten sonra, `background-image` özelliğine istediğimiz resmin adresini verip, genişlik ve yüksekliğini ayarlıyoruz. Böylece ekranda resim görülüyor fakat arama motorları `h1` etiketinde yazdığımız metne görür. |
+| text-hide | h1 etiketine bu sınıfı verdikten sonra, `background-image` özelliğine istediğimiz resmin adresini verip, genişlik ve yüksekliğini ayarlıyoruz. Böylece ekranda resim görülüyor fakat arama motorları `<h1>` etiketinde yazdığımız metne görür. |
 
 **Kapatma İkonu**
 
@@ -256,7 +256,26 @@ Her etiket görünümüne göre değil, kullanma amacına göre kullanılmalıd�
 
 | Sınıf.............................. | Açıklama |
 | ---- | ---- |
-| code | Satır içerisinde kod tanımlamak için kullanılır. |
+| \<code\> | Satır içerisinde kod tanımlamak için kullanılır. |
+| \<pre\> | Çok satırlı bir kod kullanacaksak `<code>` etiketini içerisinde kullanırız.|
+| \<var\> | Değişkenleri belirtmek için kullanılır. |
+| \<kdb\> | Klavye girdileri (Kısayolları) için kullanılır.|
+| \<samp\> | Örnek bir proğram çıktısı için kullanılır.|
+
+**Alıntı Yapma Etiketi (blockquote) ve Sınıfları**
+
+Ana kapsayıcı olarak kullanılıp. Ana metin için aşağıdaki birinci sıradaki sınıf kullanılır. Etiketi hizalamak için metin hizalama sınıflarını kullanabiliriz. `blockquote` ve `blockquote-footer` iki sınıfı vardır.
+
+Örneğin;
+
+```html
+  <blockquote class="blockquote text-right">
+    <p>Metin</p>
+    <footer class="blockquote-footer">Alıntı sahibi<footer>
+  </blockquote>
+```
+
+
 
 **İPUCU**
 
@@ -264,4 +283,4 @@ Her etiket görünümüne göre değil, kullanma amacına göre kullanılmalıd�
 
 | Sınıf.............................. | Açıklama |
 | ---- | ---- |
-| <h1> | Erişilibilirlik ve arama motorları(SEO) için önemlidir. Sitemizin arama motorlarında üst sıralarda çıkmasında büyük fayda sağlar. Bu yüzden bu etiketi kullanırken arama motorlarının baktığını unutmayalım. |
+| \<h1\> | Erişilibilirlik ve arama motorları(SEO) için önemlidir. Sitemizin arama motorlarında üst sıralarda çıkmasında büyük fayda sağlar. Bu yüzden bu etiketi kullanırken arama motorlarının baktığını unutmayalım. |
