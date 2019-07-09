@@ -48,7 +48,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
 **Kırılım Noktaları**
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | xs | Çözünürlüğü 576px'den küçük cihazlar. |
 | sm | Çözünürlüğü 576px ile 768px dahil arasında olan cihazlar (Cep telefonları vb.). |
@@ -58,7 +58,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
 **Temel Sınıflar**
 
-| Sınıf........................... | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | -------- |
 | container | Ana kapsayıcı. Satınların tam olarak yerleşmesi için kesinlikle ihtiyaç vardır. Kenarlardan 15px boşluk bırakır. |
 | container-fluid | Ana kapsayıcı. Sağdan ve soldan boşluk bırakmadan tamamen ekranı kaplar. |
@@ -68,7 +68,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
 **Hizalama Sınıfları**
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | align-items-start | Kolonları dikey üste hizalama. |
 | align-items-center | Kolonları dikey ortaya hizalama. |
@@ -81,7 +81,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
 **Sıralama Sınıfları**
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 |order-1| Sıralama küçükten büyüğe doğru sıralar (1,2,3,4,5,6,7,8,9,10,11,12).|
 |order-first| Birinci sırada gösterir.|
@@ -90,7 +90,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
 **Metin Hizalama Sınıfları**
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | text-justify | Metinleri iki yana yaslar. |
 | text-left | Metni istediğiniz yöne yaslar (left, center, right). |
@@ -100,7 +100,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
 **Renk Sınıfları**
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | bg-primary | Arka plana renk verir (primary, secondary, lsuccess, danger, warning, ingo, light, dark, white). |
 | bg-transparent | Arka plana rengini transparan yapar. |
@@ -109,7 +109,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
 **Kenarlık Sınıfları**
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | border | Dört yöne de kenarlık ekler. |
 | border-top | İstediğiniz yöne kenarlık ekler (top, right, botton, left). |
@@ -122,7 +122,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
 **Dış ve İç Boşluk Sınıfları** (margin-padding)
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | m-5 | 3 rem dış boşluk verir (0, 1, 2, 3, 4, 5, auto). Auto değeri sadece margin için kullanılır. |
 | mt-5 | Yukarıdan 3 rem boşluk verir (mt:yukarıdan, mb:aşağıdan, ml:soldan, mr:sağdan, mx: sol ve sağdan, my:aşağı ve yukarıdan boşluk atar). |
@@ -131,7 +131,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
 **Float-Clearfix**
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | float-left | Elemanları sola yaslar. |
 | float-right |Elemanları sağa yaslar. |
@@ -141,7 +141,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
  **Görüntüleme Sınıfları (Display)**
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | d-[özellik | Görüntüleme. |
 | d-[kırılma noktası]-[özellik] | Kırılma noktasına göre görüntüleme. |
@@ -152,7 +152,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
 Özellik yerine aşağıdakilerden size uygun olanı yazılacak!
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | none | Elementin ekranda görüntülenmemesini sağlar. |
 | inline | Elementi "span" gibi satır içi elementi olarak görüntülenmesini sağlar. Yükseklik ve genişlik değerinin bir etkisi olmaz. |
@@ -168,7 +168,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
 **Boyutlandırma Sınıfları**
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | w-25 | Bir elemente %25, %50, %75, %100 genişlik vermek için kullanılır.
 | h-25 | Bir elemente %25, %50, %75, %100 yükseklik vermek için kullanılır.
@@ -179,7 +179,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
 Bu sınıf sadece inline, inline-block, inline-table ve table-cell elementlerinde çalışır.
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | aling-basaline | Elementi ana çizgisine hizalar.
 | aling-top | Satırdaki en uzun öğerin üst kısmı ile hizalanır.
@@ -190,7 +190,7 @@ Bu sınıf sadece inline, inline-block, inline-table ve table-cell elementlerind
 
 **Position Sınıfları**
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | position-static | |
 | position-relative | |
@@ -203,19 +203,19 @@ Bu sınıf sadece inline, inline-block, inline-table ve table-cell elementlerind
 
 **Metni Arka Plan Resmi İle Değiştirme**
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | text-hide | h1 etiketine bu sınıfı verdikten sonra, `background-image` özelliğine istediğimiz resmin adresini verip, genişlik ve yüksekliğini ayarlıyoruz. Böylece ekranda resim görülüyor fakat arama motorları `h1` etiketinde yazdığımız metne görür. |
 
 **Kapatma İkonu**
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | close | Buton sınıfına bu özelliği verdikten sonra, etiket arasına `&times;` kapatma işareti konularak yapılır. |
 
 **Ekran Okuyucu Optimizasyonu**
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | sr-only | Elementi ekran okuyucular dışındaki tüm cihazlarda gizler. Sayfa tasarımına bir etki etmez. Web sayfanızın erişilebilir özelliğini arttırır. Ekran okuyucularına şu an hangi sayfada oldukları hakkında bilgi vermiş olur. Örneğin görme engelli bir kişiye hata mesajı vermek içinde kullanılabilir. Uyarı mesajları `<span>` etiketi içerisinde verilebilir. |
 | sr-only-focusable | Bağlantının normal kullanıcılarında görmesini sağlar. |
@@ -224,13 +224,13 @@ Bu sınıf sadece inline, inline-block, inline-table ve table-cell elementlerind
 
 **Başlık Sınıfları**
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | display-1 | Başlık stilidir (1, 2, 3, 4). Daha büyük boyutlarda ve dikkat çekici yazı stili kullanılır. |
 
 **Öne Çıkan Metin**
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | lead | Yazı stilini değiştirip daha belirgin yapar. |
 
@@ -240,7 +240,7 @@ Bu sınıf sadece inline, inline-block, inline-table ve table-cell elementlerind
 
 Her etiket görünümüne göre değil, kullanma amacına göre kullanılmalıdır. Çünkü; tarayıcılar etikete göre yorumlar.
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | <mark> | Gerekli kelimeleri belirginleştirmenize yarar. Renklendirir. |
 | <del> | Silindiğini göstermek istediğiniz kelime yada metinlerde kullanılır. Yazının üzerine çizgi çeker. |
@@ -254,7 +254,7 @@ Her etiket görünümüne göre değil, kullanma amacına göre kullanılmalıd�
 
 **Kod Etiketleri**
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | code | Satır içerisinde kod tanımlamak için kullanılır. |
 
@@ -262,6 +262,6 @@ Her etiket görünümüne göre değil, kullanma amacına göre kullanılmalıd�
 
 **h1 Etiketi**
 
-| Sınıf | Açıklama |
+| Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | <h1> | Erişilibilirlik ve arama motorları(SEO) için önemlidir. Sitemizin arama motorlarında üst sıralarda çıkmasında büyük fayda sağlar. Bu yüzden bu etiketi kullanırken arama motorlarının baktığını unutmayalım. |
