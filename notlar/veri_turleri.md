@@ -19,14 +19,17 @@ Peki veri tipini nasıl tespit ederiz. Bunun için `gettype();`fonksiyonunu kull
     $tatlimi = true;
     $meyveler = array(elma, armut, muz, ayva);
     $varmi = NULL;
+    $yokmu = " ";
 
-    echo "\$meyve değişkeni ".gettype($meyve)." türündedir.<br>";
-    echo "\$adet"." değişkeni ". gettype($adet)." türündedir.<br>";
-    echo "\$yarimkilo"." değişkeni ". gettype($yarimkilo)." türündedir.<br>";
-    echo "\$tatlimi"." değişkeni ". gettype($tatlimi)." türündedir.<br>";
-    echo "\$meyveler"." değişkeni ". gettype($meyveler)." türündedir.<br>";
-    echo "\$varmi"." değişkeni ".gettype($varmi)." türündedir.";
-
+    echo "\$meyve değişkeninin değeri \"$meyve\" türü ise \"".gettype($meyve)."\" dir.<br>";
+    echo "\$adet değişkeninin değeri \"$adet\" türü ise \"".gettype($adet)."\" dir.<br>";
+    echo "\$yarimkilo değişkeninin değeri \"$yarimkilo\" türü ise \"".gettype($yarimkilo)."\" dır.<br>";
+    echo "\$tatlimi değişkeninin değeri \"$tatlimi\" türü ise \"".gettype($tatlimi)."\" dir.<br>";
+    echo "\$varmi değişkeninin değeri \"$varmi\" türü ise \"".gettype($varmi)."\" dır.<br>";
+    echo "\$yokmu değişkeninin değeri \"$yokmu\" türü ise \"".gettype($yokmu)."\" dir. Bir araçubuğu boşluk var.<br><br>";
+    echo "\$meyveler değişkeninin değeri; <br><pre>";
+    print_r($meyveler);
+    echo "</pre>türü ise \"".gettype($meyveler)."\" dir.";
 ?>
 ```
 Ekran Görüntüsü,
