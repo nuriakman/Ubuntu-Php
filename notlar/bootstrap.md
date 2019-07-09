@@ -121,17 +121,14 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 - `float-sm-left` : Kırılma noktalarına göre de float verebiliriz.
 - `clearfix`      : Float atadığımız elemenleri bir diz içerisine alarak, float değerlerini temizleriz. Böylece float vermediğimiz elementler aralara karışmaz.
 
-**Görüntüleme Sınıfları** (Display)
-
-- `d-[özellik]`                   : Görüntüleme.
-- `d-[kırılma noktası]-[özellik]` : Kırılma noktasına göre görüntüleme.
-- `d-print-[özellik]`             : Yazıcıda görüntüleme.
-
+| **Görüntüleme Sınıfları** (Display) |
 | Sınıf | Açıklama |
 | ---- | ---- |
 | d-[özellik | Görüntüleme. |
 | d-[kırılma noktası]-[özellik] | Kırılma noktasına göre görüntüleme. |
 | d-print-[özellik] | Yazıcıda görüntüleme. |
+| invisible | Elementi gizler ama sayfadaki yerini hala korur. |
+| visible | invisible ile gizlediğimiz elementin içerisindeki her hangi bir yeri göstermemizi sağlar. |
 
 
   Özellik yerine aşağıdakilerden size uygun olanı yazılacak!
@@ -146,8 +143,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
     - `flex` Uygulandığı elementin bir flex container olarak görüntülenmesini sağlar.
     - `inline-flex` Uygulandığı elementin satır içi seviyesinde bir flex container olarak görüntülenmesini sağlar.
 
-- `invisible` Elementi gizler ama sayfadaki yerini hala korur.
-- `visible` invisible ile gizlediğimiz elementin içerisindeki her hangi bir yeri göstermemizi sağlar.
+
 
 **Boyutlandırma Sınıfları**
 
@@ -219,7 +215,7 @@ Her etiket görünümüne göre değil, kullanma amacına göre kullanılmalıd�
 
 **Kod Etiketleri**
 
-- `code` Satır içerisinde kod tanımlamak için kullanılır. 
+- `code` Satır içerisinde kod tanımlamak için kullanılır.
 
 **İPUCU**
 
