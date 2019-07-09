@@ -58,7 +58,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
 **Temel Sınıflar**
 
-| Sınıf........ | Açıklama |
+| Sınıf........................... | Açıklama |
 | ---- | -------- |
 | container | Ana kapsayıcı. Satınların tam olarak yerleşmesi için kesinlikle ihtiyaç vardır. Kenarlardan 15px boşluk bırakır. |
 | container-fluid | Ana kapsayıcı. Sağdan ve soldan boşluk bırakmadan tamamen ekranı kaplar. |
