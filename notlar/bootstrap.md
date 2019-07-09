@@ -127,6 +127,13 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 - `d-[kırılma noktası]-[özellik]` : Kırılma noktasına göre görüntüleme.
 - `d-print-[özellik]`             : Yazıcıda görüntüleme.
 
+| Sınıf | Açıklama |
+| ---- | ---- |
+| d-[özellik | Görüntüleme. |
+| d-[kırılma noktası]-[özellik] | Kırılma noktasına göre görüntüleme. |
+| d-print-[özellik] | Yazıcıda görüntüleme. |
+
+
   Özellik yerine aşağıdakilerden size uygun olanı yazılacak!
 
     - `none` Elementin ekranda görüntülenmemesini sağlar.
@@ -209,6 +216,10 @@ Her etiket görünümüne göre değil, kullanma amacına göre kullanılmalıd�
 - `<strong>` Önemli metni tanımlamak içim kullanılır. Metni kalın yapar.
 - `<em>` Vurgulanmış kelimeler için kullanılır. Metin `italik` görünür.
 - `<abbr>` Kısaltmalı bir sözcüğü ifade eder. Etiket içerisinde `title` ile kısaltmanın açılımı yazılır.
+
+**Kod Etiketleri**
+
+- `code` Satır içerisinde kod tanımlamak için kullanılır. 
 
 **İPUCU**
 
