@@ -34,12 +34,24 @@ Peki veri tipini nasıl tespit ederiz. Bunun için `gettype();`fonksiyonunu kull
 ```
 Ekran Görüntüsü,
 ```sh
-  $meyve değişkeni string türündedir.
-  $adet değişkeni integer türündedir.
-  $yarimkilo değişkeni double türündedir.
-  $tatlimi değişkeni boolean türündedir.
-  $meyveler değişkeni array türündedir.
-  $varmi değişkeni NULL türündedir.
+  $meyve değişkeninin değeri "elma" türü ise "string" dir.
+  $adet değişkeninin değeri "15" türü ise "integer" dir.
+  $yarimkilo değişkeninin değeri "0.5" türü ise "double" dır.
+  $tatlimi değişkeninin değeri "1" türü ise "boolean" dir.
+  $varmi değişkeninin değeri "" türü ise "NULL" dır.
+  $yokmu değişkeninin değeri " " türü ise "string" dir. Bir araçubuğu boşluk var.
+
+  $meyveler değişkeninin değeri;
+
+  Array
+  (
+      [0] => elma
+      [1] => armut
+      [2] => muz
+      [3] => ayva
+  )
+
+  türü ise "array" dir.
 ```
 
 
