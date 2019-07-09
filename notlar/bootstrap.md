@@ -44,7 +44,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 ```
 
 
-## BOOTSTRAP SINIFLARI
+## BOOTSTRAP SINIFLARI VE ETİKETLERİ
 
 **Kırılım Noktaları**
 
@@ -129,7 +129,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 | m-sm-2 | Kırılma noktalarına göre de boşluk verebilirsiniz. |
 | ml-sm-2 | Hem yön hemde kırılma noktalarına göre boşluk verme. |
 
-**Float-Clearfix**
+**Yan Yana Getirme (Float-Clearfix) Sınıfları**
 
 | Sınıf.............................. | Açıklama |
 | ---- | ---- |
@@ -207,13 +207,13 @@ Bu sınıf sadece inline, inline-block, inline-table ve table-cell elementlerind
 | ---- | ---- |
 | text-hide | h1 etiketine bu sınıfı verdikten sonra, `background-image` özelliğine istediğimiz resmin adresini verip, genişlik ve yüksekliğini ayarlıyoruz. Böylece ekranda resim görülüyor fakat arama motorları `<h1>` etiketinde yazdığımız metne görür. |
 
-**Kapatma İkonu**
+***Kapatma İkonu***
 
 | Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | close | Buton sınıfına bu özelliği verdikten sonra, etiket arasına `&times;` kapatma işareti konularak yapılır. |
 
-**Ekran Okuyucu Optimizasyonu**
+***Ekran Okuyucu Optimizasyonu***
 
 | Sınıf.............................. | Açıklama |
 | ---- | ---- |
@@ -228,13 +228,12 @@ Bu sınıf sadece inline, inline-block, inline-table ve table-cell elementlerind
 | ---- | ---- |
 | display-1 | Başlık stilidir (1, 2, 3, 4). Daha büyük boyutlarda ve dikkat çekici yazı stili kullanılır. |
 
-**Öne Çıkan Metin**
+**Öne Çıkan Metin Sınıfı**
 
 | Sınıf.............................. | Açıklama |
 | ---- | ---- |
 | lead | Yazı stilini değiştirip daha belirgin yapar. |
 
-## BAZI ÖNEMLİ ETİKETLER
 
 **Satır İçi Metin Etiketleri**
 
