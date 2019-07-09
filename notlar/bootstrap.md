@@ -173,7 +173,7 @@ Bu sınıf sadece inline, inline-block, inline-table ve table-cell elementlerind
 
 **Metni Arka Plan Resmi İle Değiştirme**
 
-- `text-hide` : `<h1>` etiketine bu sınıfı verdikten sonra, `background-image` özelliğine istediğimiz resmin adresini verip, genişlik ve yüksekliğini ayarlıyoruz. Böylece ekranda resim görülüyor fakat arama motorları `h1` etiketinde yazdığımız metne görür.
+- `text-hide` : h1 etiketine bu sınıfı verdikten sonra, `background-image` özelliğine istediğimiz resmin adresini verip, genişlik ve yüksekliğini ayarlıyoruz. Böylece ekranda resim görülüyor fakat arama motorları `h1` etiketinde yazdığımız metne görür.
 
 **Kapatma İkonu**
 
