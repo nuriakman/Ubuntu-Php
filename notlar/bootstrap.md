@@ -275,7 +275,7 @@ Ana kapsayıcı olarak kullanılıp. Ana metin için aşağıdaki birinci sırad
   </blockquote>
 ```
 
-**Yazı ,Kalınlığı ve İtalik Yazı***
+**Yazı Kalınlığı ve İtalik Yazı**
 
 | Sınıf.............................. | Açıklama |
 | ---- | ---- |
