@@ -318,7 +318,7 @@ Tanım listesi, terimlerin açıklamalarıyla birlikte listelendiği listeleme t
 
 Terim listesi varsayılan olarak alt alta listelenir. `dl` elementi sınıfına `row`, `dt` etiketine `col-3` sınıfı ve `dd` etiketine `col-9` uygulayarak sütunlar halinde de gösterebilirsiniz.
 
-**Resimler**
+**Resimler Sınıfları**
 
 | Sınıf.............................. | Açıklama |
 | ---- | ---- |
@@ -327,7 +327,7 @@ Terim listesi varsayılan olarak alt alta listelenir. `dl` elementi sınıfına 
 
 Bir resime birden fazla kaynak belirteceğimizde ya da farklı ekran boyutlarına göre farklı resimler göstereceğimizde `<picture>` elementini kullanırız. Resimlere bootstrap özellikleri uygulayacaksak `<picture>` elementi içerisindeki `<img>` elementi sınıfına `img-fluid`, `img-thumbnail` gibi elementler kullanabiliriz. Resimleri hizalamak için ise `float`, `margin` ve metin hizalama sınıflarını kullanabiliriz. Metin hizalama sınıfları kullanılırken resim bir `<div>` içerisine alınması gerekir. `<div>`'e `text-right`, `text-left` ve `text-center` verilebilir.
 
-**Figürler**
+**Figür Etiketi ve Sınıfı**
 
 Figürler içerisinde resimlere varsayılan olarak bir boyutlandırma yapılmamaktadır. Bu nedenle resimlere `img-fluid` sınıfı vererek duyarlı resimler oluşturabilir ve taşmaların önüne geçebilirsiniz.
 
