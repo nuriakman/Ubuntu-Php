@@ -167,6 +167,18 @@ Bu sınıf sadece inline, inline-block, inline-table ve table-cell elementlerind
 - *position-absulute* :
 - *position-fixed* :
 - *position-sticky* :
-- *sticky-top* : Elementisayfanın üst kısmına konumlandırır. Fakat bu işlemi kaydırma çubuğu kendisini geçtiği anda yapmaya başlar.
+- *sticky-top* : Elementi sayfanın üst kısmına konumlandırır. Fakat bu işlemi kaydırma çubuğu kendisini geçtiği anda yapmaya başlar.
 - *fixed-top* : Elementi her zaman sayfanın en üstünde konumlandırır.
 - *fixed-bottom* : Elementi sayfanın en altına konumlandırır.
+
+**Metni Arka Plan Resmi İle Değiştirme**
+
+- *text-hide* : ***<h1>*** etiketine bu sınıfı verdikten sonra, ***background-image*** özelliğine istediğimiz resmin adresini verip, genişlik ve yüksekliğini ayarlıyoruz. Böylece ekranda resim görülüyor fakat arama motorları ***h1*** etiketinde yazdığımız metne görür.
+
+
+
+**İPUCU**
+
+**h1 Etiketi**
+
+- *<h1>* erişilibilirlik ve arama motorları(SEO) için önemlidir. Sitemizin arama motorlarında üst sıralarda çıkmasında büyük fayda sağlar. Bu yüzden bu etiketi kullanırken arama motorlarının baktığını unutmayalım.  
