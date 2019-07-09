@@ -59,12 +59,10 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 **Temel Sınıflar**
 
 | Sınıf | Açıklama |
-| ---- | ---- |
-| container | Ana kapsayıcı. Satınların tam olarak yerleşmesi için kesinlikle ihtiyaç vardır.
-Kenarlardan 15px boşluk bırakır. |
+| :---- | :---- |
+| container | Ana kapsayıcı. Satınların tam olarak yerleşmesi için kesinlikle ihtiyaç vardır. Kenarlardan 15px boşluk bırakır. |
 | container-fluid | Ana kapsayıcı. Sağdan ve soldan boşluk bırakmadan tamamen ekranı kaplar. |
-| row | Satırları ifade eder. Sütunlar sadece satırlar içerisinde olmalıdır. Aksi halde sayfada
- dağılmalar olur. Katmanlar arasında 15px boşluk kalır. |
+| row | Satırları ifade eder. Sütunlar sadece satırlar içerisinde olmalıdır. Aksi halde sayfada dağılmalar olur. Katmanlar arasında 15px boşluk kalır. |
 | col | Sütun sınıfını temsil eder. Bir satırda en fazla 12 sütun olur. 12 den fazla olursa alta geçer. |
 | offset-sm-1 | Sütunu 1 ileriden başlatır. 1 ile 11 e kadar değerlerde özelleştirilebilir. |
 
