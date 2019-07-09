@@ -195,4 +195,4 @@ Bu sınıf sadece inline, inline-block, inline-table ve table-cell elementlerind
 
 **h1 Etiketi**
 
-- *<h1>* erişilibilirlik ve arama motorları(SEO) için önemlidir. Sitemizin arama motorlarında üst sıralarda çıkmasında büyük fayda sağlar. Bu yüzden bu etiketi kullanırken arama motorlarının baktığını unutmayalım.  
+- `*<h1>*` erişilibilirlik ve arama motorları(SEO) için önemlidir. Sitemizin arama motorlarında üst sıralarda çıkmasında büyük fayda sağlar. Bu yüzden bu etiketi kullanırken arama motorlarının baktığını unutmayalım.  
