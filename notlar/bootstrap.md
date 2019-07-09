@@ -275,7 +275,7 @@ Ana kapsayıcı olarak kullanılıp. Ana metin için aşağıdaki birinci sırad
   </blockquote>
 ```
 
-**Yazı Kalınlığı ve İtalik Yazı**
+**Yazı Kalınlığı ve İtalik Yazı Sınıfları**
 
 | Sınıf.............................. | Açıklama |
 | ---- | ---- |
@@ -283,6 +283,50 @@ Ana kapsayıcı olarak kullanılıp. Ana metin için aşağıdaki birinci sırad
 | font-weight-normal | Kalın yazı içerisindeki kelime yada metni normal göstermek için kullanılır. |
 | font-weight-light | İnce yazmak için kullanılır. |
 | font-italic | Metni italik göstermek için kullanılır. |
+
+**Metin Dönüştürme Sınıfları**
+
+| Sınıf.............................. | Açıklama |
+| ---- | ---- |
+| text-lovercase | metni küçük harflere dönüştürür. |
+| text-uppercase | METNİ BÜYÜK HARFE DÖNÜŞTÜRÜR. |
+| text-capitilaze | Her Sözcüğü Büyük Harfe Dönüştürür. |
+
+**Metin Kaydırma ve Kesme Sınıfları**
+
+| Sınıf.............................. | Açıklama |
+| ---- | ---- |
+| novrap | Metinleri aynı satırda yazdırır. Aşağı kaydırmaz. |
+| truncate | Metni `<div>` genişliğine ulaştığında keser ve üç nokta koyar. |
+
+**Listeleme Sınıfları**
+
+| Sınıf.............................. | Açıklama |
+| ---- | ---- |
+| list-unstyled | Varsayılan listelemeleri kaldırır. İçerideki listelere etki etmez. Eğer içerideki listelemeyide kaldırmak istiyorsanız, orayada uygulamanız gerekmektedir.|
+| list-inline | `<ul>` etiketlerini verilir ve alttaki elemanları yan yana listelememizi sağlar. Bunun için alt elementlere yani `<li>` elemanlarına da `list-inline-item` sınıfı verilir. Bu özelliği menü yapmada kullanabiliriz. |
+
+**Tanım Listesi Sınıfları**
+
+Tanım listesi, terimlerin açıklamalarıyla birlikte listelendiği listeleme türüdür.
+
+| Sınıf.............................. | Açıklama |
+| ---- | ---- |
+| dl | Terimler tanım listesi başlangıç etiketi. Ana kapsayıcısıdır. |
+| dt | Her bir terim için açılır. |
+| dd | Her bir terim açıklaması için açılır. |
+
+Terim listesi varsayılan olarak alt alta listelenir. `dl` elementi sınıfına `row`, `dt` etiketine `col-3` sınıfı ve `dd` etiketine `col-9` uygulayarak sütunlar halinde de gösterebilirsiniz.
+
+**Resimler**
+
+| Sınıf.............................. | Açıklama |
+| ---- | ---- |
+| img-fluid | Resmin ekran boyutuna duyarlı olmasını sağlar. Resmin max genişliğini %100, yüksekliğinide auto yapar. Bu sayede resmin boyutu orantılı (responsive) olur.|
+| img-thumbnail | Uygulandığı resmin çerçeveli bir şekilde görüntülenmesini sağlar. |
+
+Bir resime birden fazla kaynak belirteceğimizde ya da farklı ekran boyutlarına göre farklı resimler göstereceğimizde `<picture>` elementini kullanırız. Resimlere bootstrap özellikleri uygulayacaksak `<picture>` elementi içerisindeki `<img>` elementi sınıfına `img-fluid`, `img-thumbnail` gibi elementler kullanabiliriz. Resimleri hizalamak için ise `float`, `margin` ve metin hizalama sınıflarını kullanabiliriz. Metin hizalama sınıfları kullanılırken resim bir `<div>` içerisine alınması gerekir. `<idv`'e `text-right`, `text-left` ve `text-center` verilebilir.
+
 
 
 **İPUCU**
