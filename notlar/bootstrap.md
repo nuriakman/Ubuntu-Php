@@ -275,6 +275,14 @@ Ana kapsayıcı olarak kullanılıp. Ana metin için aşağıdaki birinci sırad
   </blockquote>
 ```
 
+**Yazı ,Kalınlığı ve İtalik Yazı***
+
+| Sınıf.............................. | Açıklama |
+| ---- | ---- |
+| font-weight-bold | Kalın yazmak için kullanılır. |
+| font-weight-normal | Kalın yazı içerisindeki kelime yada metni normal göstermek için kullanılır. |
+| font-weight-light | İnce yazmak için kullanılır. |
+| font-italic | Metni italik göstermek için kullanılır. |
 
 
 **İPUCU**
