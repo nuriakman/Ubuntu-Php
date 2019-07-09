@@ -47,12 +47,13 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 ## BOOTSTRAP SINIFLARI
 
 **Kırılım Noktaları**
-
-- `xs` Çözünürlüğü 576px'den küçük cihazlar;
-- `sm` Çözünürlüğü 576px ile 768px dahil arasında olan cihazlar (Cep telefonları vb.).
-- `md` Çözünürlüğü 768px ile 992px dahil arasında olan cihazlar (Tablet vb.).
-- `lg` Çözünürlüğü 992px ile 1200px dahil arasında olan cihazlar (Notebook vb.).
-- `xl` Çözünürlüğü 1200px den büyük cihazlar (Televizyon, Dizüstü vb.).
+| Sınıf | Açıklama |
+| ---- | ---- |
+|xs| Çözünürlüğü 576px'den küçük cihazlar.|
+|sm| Çözünürlüğü 576px ile 768px dahil arasında olan cihazlar (Cep telefonları vb.).|
+|md| Çözünürlüğü 768px ile 992px dahil arasında olan cihazlar (Tablet vb.).|
+|lg| Çözünürlüğü 992px ile 1200px dahil arasında olan cihazlar (Notebook vb.).|
+|xl| Çözünürlüğü 1200px den büyük cihazlar (Televizyon, Dizüstü vb.).|
 
 **Temel Sınıflar**
 
@@ -121,8 +122,8 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 - `float-sm-left` : Kırılma noktalarına göre de float verebiliriz.
 - `clearfix`      : Float atadığımız elemenleri bir diz içerisine alarak, float değerlerini temizleriz. Böylece float vermediğimiz elementler aralara karışmaz.
 
- **Görüntüleme Sınıfları** (Display)
- 
+ **Görüntüleme Sınıfları (Display)**
+
 | Sınıf | Açıklama |
 | ---- | ---- |
 | d-[özellik | Görüntüleme. |
