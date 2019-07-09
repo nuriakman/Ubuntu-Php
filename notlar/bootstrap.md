@@ -325,7 +325,9 @@ Terim listesi varsayılan olarak alt alta listelenir. `dl` elementi sınıfına 
 | img-fluid | Resmin ekran boyutuna duyarlı olmasını sağlar. Resmin max genişliğini %100, yüksekliğinide auto yapar. Bu sayede resmin boyutu orantılı (responsive) olur.|
 | img-thumbnail | Uygulandığı resmin çerçeveli bir şekilde görüntülenmesini sağlar. |
 
-Bir resime birden fazla kaynak belirteceğimizde ya da farklı ekran boyutlarına göre farklı resimler göstereceğimizde `<picture>` elementini kullanırız. Resimlere bootstrap özellikleri uygulayacaksak `<picture>` elementi içerisindeki `<img>` elementi sınıfına `img-fluid`, `img-thumbnail` gibi elementler kullanabiliriz. Resimleri hizalamak için ise `float`, `margin` ve metin hizalama sınıflarını kullanabiliriz. Metin hizalama sınıfları kullanılırken resim bir `<div>` içerisine alınması gerekir. `<idv`'e `text-right`, `text-left` ve `text-center` verilebilir.
+Bir resime birden fazla kaynak belirteceğimizde ya da farklı ekran boyutlarına göre farklı resimler göstereceğimizde `<picture>` elementini kullanırız. Resimlere bootstrap özellikleri uygulayacaksak `<picture>` elementi içerisindeki `<img>` elementi sınıfına `img-fluid`, `img-thumbnail` gibi elementler kullanabiliriz. Resimleri hizalamak için ise `float`, `margin` ve metin hizalama sınıflarını kullanabiliriz. Metin hizalama sınıfları kullanılırken resim bir `<div>` içerisine alınması gerekir. `<div>`'e `text-right`, `text-left` ve `text-center` verilebilir.
+
+
 
 
 
