@@ -121,7 +121,8 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 - `float-sm-left` : Kırılma noktalarına göre de float verebiliriz.
 - `clearfix`      : Float atadığımız elemenleri bir diz içerisine alarak, float değerlerini temizleriz. Böylece float vermediğimiz elementler aralara karışmaz.
 
-| **Görüntüleme Sınıfları** (Display) |
+ **Görüntüleme Sınıfları** (Display)
+ 
 | Sınıf | Açıklama |
 | ---- | ---- |
 | d-[özellik | Görüntüleme. |
