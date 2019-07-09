@@ -242,15 +242,15 @@ Her etiket görünümüne göre değil, kullanma amacına göre kullanılmalıd�
 
 | Sınıf.............................. | Açıklama |
 | ---- | ---- |
-| <mark> | Gerekli kelimeleri belirginleştirmenize yarar. Renklendirir. |
-| <del> | Silindiğini göstermek istediğiniz kelime yada metinlerde kullanılır. Yazının üzerine çizgi çeker. |
-| <s> | Artık doğru, net ve ilgili olmayan metni işaret etmek için kullanılır. Bu da yazının üzerine çizgi çeker. |
-| <ins> | Belgeye sonradan eklenmiş metni tanımlar. Metnin altını çizer. |
-| <u> | Metnin altını çizmek için kullanılır. |
-| <small> | Gerekli kelimeleri belirginleştirmenize yarar. Normaldan daha küçük yazar. |
-| <strong> | Önemli metni tanımlamak içim kullanılır. Metni kalın yapar. |
-| <em> | Vurgulanmış kelimeler için kullanılır. Metin `italik` görünür. |
-| <abbr> | Kısaltmalı bir sözcüğü ifade eder. Etiket içerisinde `title` ile kısaltmanın açılımı yazılır. |
+| \<mark\> | Gerekli kelimeleri belirginleştirmenize yarar. Renklendirir. |
+| \<del\> | Silindiğini göstermek istediğiniz kelime yada metinlerde kullanılır. Yazının üzerine çizgi çeker. |
+| \<s\> | Artık doğru, net ve ilgili olmayan metni işaret etmek için kullanılır. Bu da yazının üzerine çizgi çeker. |
+| \<ins\> | Belgeye sonradan eklenmiş metni tanımlar. Metnin altını çizer. |
+| \<u\> | Metnin altını çizmek için kullanılır. |
+| \<small\> | Gerekli kelimeleri belirginleştirmenize yarar. Normaldan daha küçük yazar. |
+| \<strong\> | Önemli metni tanımlamak içim kullanılır. Metni kalın yapar. |
+| \<em\> | Vurgulanmış kelimeler için kullanılır. Metin `italik` görünür. |
+| \<abbr\> | Kısaltmalı bir sözcüğü ifade eder. Etiket içerisinde `title` ile kısaltmanın açılımı yazılır. |
 
 **Kod Etiketleri**
 
