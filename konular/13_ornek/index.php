@@ -1,47 +1,46 @@
 <!DOCTYPE html>
-<html lang="tr">
-<head>
-  <title>Bootstrap 4 Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</head>
+<html>
 <body>
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <!-- Brand -->
-    <a class="navbar-brand" href="#">LYK 2019</a>
+  <?php
+  if( isset($_POST["YeniAd"]) ) {
+    /*
+    echo "<pre>";
+    print_r($_POST);
+    print_r($_FILES); // Yüklenmek isteyen dosya hakkındaki bilgiler
+    echo "</pre>";
+    */
+    if( $_FILES["Dosya"]["size"] > 1048576 ) { // 1 Mb
+      echo "<H1>HATA: En çok 1 Mb olabilir!</H1>";
+      die();
+    }
+    if( $_FILES["Dosya"]["type"] == "image/jpeg" ) {
+      list($width, $height, $type, $attr) = getimagesize($_FILES["Dosya"]["tmp_name"]);
+      echo "Genişlik: $width, Yükseklik: $height";
+      if($width>400 or $height>400) {
+        echo "<H1>HATA: En çok 400x400 olabilir!</H1>";
+        die();
+      }
+      $HEDEF = "Uploads/";
+      //    $HEDEFDOSYAADI = $HEDEF . basename($_FILES["Dosya"]["name"]);
+      $HEDEFDOSYAADI = $HEDEF . $_POST["YeniAd"];
+      move_uploaded_file($_FILES["Dosya"]["tmp_name"], $HEDEFDOSYAADI);
+      echo "<H1>Başarılı!</H1>";
+    } else  {
+      echo "<H1>HATA: Sadece jpg dosya yüklenebilir.</H1>";
+    }
+  }
+  ?>
 
-    <!-- Links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link 1</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link 2</a>
-      </li>
+  <form method="post" enctype="multipart/form-data">
 
-      <!-- Dropdown -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Dropdown link
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Link 1</a>
-          <a class="dropdown-item" href="#">Link 2</a>
-          <a class="dropdown-item" href="#">Link 3</a>
-        </div>
-      </li>
-    </ul>
-  </nav>
-  <br>
-  <div class="container-fluid">
-    <div class="row col-md-3 bg-dark text-white">
+    Dosyanın Yeni Adı Ne Olsun?<br>
+    <input type="text" name="YeniAd" value=""><br><br>
 
+    Yüklenecek dosyayı seçiniz:<br>
+    <input type="file" name="Dosya"><br><br>
 
-    </div>
-  </div>
+    <input type="submit" value="Dosyayı Yükle!">
+  </form>
+
 </body>
 </html>

@@ -22,7 +22,7 @@
    echo "A Karakterinin uzunluğu: " . mb_strlen("A") . "<br>";
    echo "Ğ Karakterinin uzunluğu: " . mb_strlen("Ğ") . "<br>";
    echo "<br>";
-   echo "/<pre>";
+   echo "<pre>";
 
    echo "<hr>";
 ?>
