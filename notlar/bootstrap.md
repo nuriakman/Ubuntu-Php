@@ -334,7 +334,43 @@ Figürler içerisinde resimlere varsayılan olarak bir boyutlandırma yapılmama
 | ---- | ---- |
 | \<figure\> | Resimleri `inline-block` olarak görüntülenmesinde kullanılmaktadır. Bu etikete `figure` sınıfı eklenir. |
 | figure-img | `<figure` elementinin içerisindeki `<img>` etiketlerine sınıf olarak verilir. Bu sınıf resmin `margin` ve `bottom` özelliğini 0.5 rem yapar ve satır aralığını 1'e eşitler. |
-| figure-caption | `<figcaption` resim yazısı etiketine sınıf olarak uygulayarak yazıya stil verebilirsiniz. Bu sınıf yazının `font-size`'ın %90' yapar ve yazı rengini değiştirir. |
+| figure-caption | `<figcaption>` resim yazısı etiketine sınıf olarak uygulayarak yazıya stil verebilirsiniz. Bu sınıf yazının `font-size`'ın %90' yapar ve yazı rengini değiştirir. Yazıyı hizalamak için se metin hizalama sınıflarından kullanılabilir.|
+
+**Embed**
+
+Embed sınıfı `<iframe>`, `<embed>`, `<video>` ve `<object>` elementlerine uygulanır. Aşağıdaki örnekte `emmed` sınıfı `<iframe>` elementi üzerinden gösterilmiştir. Kullanabileceğimiz en-boy oranları, 1'e1, 4'e3, 16'ya9 ve 21'e9 dur. Biz örneğimizde 16'ya9 kullandık.
+
+Örneğin;
+
+```html
+  <div class="emmed-responsive emmed-responsive-19by6">
+    <iframe class="emmed-responsive-item">
+      src="https://www.youtube.com/watch?v=lc9JEHLlqdU">
+    </iframe
+  </div>
+```
+**Buton Sınıfları**
+
+Bootstrapta butonlara stil vermek için `btn` sınıfını kullanıyoruz. `btn` sınıfıyla birlikte elementimize, tanımlanmış olan tüm temel buton özellikleri uygulanır. Buton sınıfları `<input>` elementinde `type="input"` `type="submit">` ve `type="reset"` ile birlikte kullanabiliriz.
+
+| Sınıf.............................. | Açıklama |
+| ---- | ---- |
+| btn-renk | Varsayılan buton rengi beyazdır. `btn-` ön eki ile birlikte tüm bootstrap renk sınıflarını kullanabiliriz. |
+| btn-link | Link görünümü vermek için kullanılır. |
+| btn-outline-renk | Buton görünümünü tersine çevirir. Kenarlık ve üzerine gelince değişen rengini vermiş oluruz. |
+| btn-small | Butonu küçük yapar. |
+| btn-large | Butonu büyük yapar. |
+| btn-block | Butonun display özelliğini blok, genişliğini ise %100 yapar. |
+
+**Buton Grupları**
+
+| Sınıf.............................. | Açıklama |
+| ---- | ---- |
+| btn-group | Butonları bir `<div>` içerisine alarak `<div>`'e bu sınıfı uyguluyoruz. |
+| btn-toolbar | Butonlardan oluşan bir araç çubuğu oluşturabiliriz. |
+| btn-group-sm | Küçük buton grubu yapar. |
+| btn-group-lg | Büyük buton grubu yapar. |
+| btn-group | Butun grubunu dikey olarak görüntüler. |
 
 
 
