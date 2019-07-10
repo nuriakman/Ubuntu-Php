@@ -5,13 +5,13 @@
   <title>RESİM</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body>
+<body class="bg-light">
   <div class="container-fluid">
     <div class="row">
       <!--  ORİGİNAL RESİM BAŞLANGICI -->
-      <div class="col-9 bg-info text-center">
+      <div class="col-9 bg-light text-center">
         <div class="mt-3">
-          <h4>ORİJİNAL RESİMLER</h4>
+          <h4 class="lead">ORİJİNAL RESİMLER</h4>
         </div>
         <?php
             # Resimleri cek
@@ -49,9 +49,9 @@
         ?>
       </div>
       <!-- KÜÇÜLTÜLMÜŞ RESİM BAŞLANGICI -->
-      <div class="col-3 bg-success text-center align-items-center">
+      <div class="col-3 bg-light text-center">
         <div class="mt-3">
-          <h4>KÜÇÜK RESİMLER</h4>
+          <h4 class="lead">KÜÇÜK RESİMLER</h4>
         </div>
         <?php
             # Resimleri cek
@@ -90,8 +90,8 @@
           ?>
       </div>
     </div>
-      <!-- İLERİ-GERİ -->
-    <div class="row bg-dark text-center">
+      <!-- GÖSTERGE -->
+    <div class="row bg-dark text-center fixed-bottom">
       <div class="col-12 m-3">
         <?php
           # Birden başlayıp sayfa sayısı kadar link bas
