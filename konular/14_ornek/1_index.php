@@ -8,7 +8,7 @@
 <body>
   <div class="container-fluid">
     <div class="row">
-      <!--  ORİGİNAL RESİM BAŞLANGICI -->
+      /*  ORİGİNAL RESİM BAŞLANGICI */
       <div class="col-9 bg-info text-center">
         <div class="mt-3">
           <h4>ORİJİNAL RESİMLER</h4>
@@ -37,19 +37,20 @@
             # $kactan başlayıp $kaca kadar resim bas
             for($i=$kactan; $i < $kaca; $i++){
             echo " <a href='".$dizin."/".$resim[$i]."' target='_blank'>
-            <img class=\"img-thumbnail img-fluid my-1\" onContextMenu='return false' src='".$dizin."/".$resim[$i]."'></a>";
+            <img class=\"img-thumbnail my-1\" onContextMenu='return false' src='".$dizin."/".$resim[$i]."'></a>";
             }
             echo" </br></br>";
-          /*  # Birden başlayıp sayfa sayısı kadar link bas
+            # Birden başlayıp sayfa sayısı kadar link bas
             for($i=1; $i < $toplam / $limit; $i++){
             if($sf == $i)
             echo "$in"; else
+            //echo "<a class=\"sr-only\" href='index.php?sf=$i'>$i</a>";
             echo "<a class=\"badge-primary m-1 p-1 \" href='index.php?sf=$i'>$i</a>";
-          }*/
+            }
         ?>
       </div>
-      <!-- KÜÇÜLTÜLMÜŞ RESİM BAŞLANGICI -->
-      <div class="col-3 bg-success text-center align-items-center">
+      /* KÜÇÜLTÜLMÜŞ RESİM BAŞLANGICI */
+      <div class="col-3 bg-success text-center">
         <div class="mt-3">
           <h4>KÜÇÜK RESİMLER</h4>
         </div>
@@ -86,21 +87,15 @@
             if($sf == $i)
             echo "$in"; else
             echo "<a class=\"sr-only\" href='index.php?sf=$i'>$i</a>";
+            //echo "<a class=\"badge-primary m-1 p-1 \" href='index.php?sf=$i'>$i</a>";
             }
           ?>
       </div>
     </div>
-      <!-- İLERİ-GERİ -->
-    <div class="row bg-dark text-center">
-      <div class="col-12 m-3">
-        <?php
-          # Birden başlayıp sayfa sayısı kadar link bas
-          for($i=1; $i < $toplam / $limit; $i++){
-          if($sf == $i)
-          echo "$in"; else
-          echo "<a class=\"badge-primary m-1 p-2 \" href='index.php?sf=$i'>$i</a>";
-          }
-        ?>
+      /* İLERİ-GERİ
+    <div class="row">
+      <div class="col-12">
+        Hasan Çiçek
       </div>
     </div>
   </div>

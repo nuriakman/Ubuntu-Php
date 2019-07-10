@@ -102,7 +102,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 
 | Sınıf.............................. | Açıklama |
 | ---- | ---- |
-| bg-primary | Arka plana renk verir (primary, secondary, lsuccess, danger, warning, ingo, light, dark, white). |
+| bg-primary | Arka plana renk verir (primary, secondary, success, danger, warning, info, light, dark, white). |
 | bg-transparent | Arka plana rengini transparan yapar. |
 | text-primary | Metine rengi verir. Yukarıdaki renkler geçerlidir. |
 | text-muted | Metin rengini soluklaştırır. Slogan gibi ikincil bir yapıda kullanabiliriz. |
@@ -157,7 +157,7 @@ Java script kodları body kapatma etiketinin hemen üzerinde  ve sıralaması a�
 | none | Elementin ekranda görüntülenmemesini sağlar. |
 | inline | Elementi "span" gibi satır içi elementi olarak görüntülenmesini sağlar. Yükseklik ve genişlik değerinin bir etkisi olmaz. |
 | inline-block | İnline ile aynıdır, fakat yükseklik ve genişlik değerleri uygulanabilir. |
-| block | Uygulandığı elementi "H" etiketi gibi blok element olarak görüntülenmesini sağlar. Uygulanan element yeni satırdan başlar ve bulunduğu alanın tün genişliğini kaplar. |
+| block | Uygulandığı elementi `<h1>` etiketi gibi blok element olarak görüntülenmesini sağlar. Uygulanan element yeni satırdan başlar ve bulunduğu alanın tün genişliğini kaplar. |
 | table | Uygulandığı elementin tablo etiketi gibi davranmasını sağlar. |
 | table-cell | Uygulandığı elementin "td" etiketi gibi davranmasını sağlar. |
 |table-row | Uygulandığı elementin "tr" etiketi gibi davranmasını sağlar. |
@@ -454,7 +454,7 @@ Rozetler yeni veya okunmamış öğeleri vurgulamak için kullanılır. Rozetler
 
 **İçerik Haritası**
 
-İçerik haritaları navigasyon öğesi olduğu için `<nav>` etiketini ve belirli bir hiyerarşiyi temsil ettiği için `<ol>` etiketini kullanırız. Bunları şekillendirmek için, `<ol>` etiketine `breadcrumb` sınıfını ve her liste elemanı için `breaadcrumb-item` sınıfını uyguluyoruz. Son elemanada `active` sınıfını veriyoruz. 
+İçerik haritaları navigasyon öğesi olduğu için `<nav>` etiketini ve belirli bir hiyerarşiyi temsil ettiği için `<ol>` etiketini kullanırız. Bunları şekillendirmek için, `<ol>` etiketine `breadcrumb` sınıfını ve her liste elemanı için `breaadcrumb-item` sınıfını uyguluyoruz. Son elemanada `active` sınıfını veriyoruz.
 
 **İPUCU**
 
