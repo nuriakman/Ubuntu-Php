@@ -390,6 +390,7 @@ Menüyü oluşturmak için ise; en dışa bir `<div>` açarak `<div>`'e `dropdow
 ```
 
 **Dropdown Çeşitleri**
+
 Varsayılan olarak dropdown menü aşağı doğru açılır. Aşağıdaki sınıfları en dış `<div>` sınıfına vererek değiştirebiliriz.
 
 | Sınıf.............................. | Açıklama |
