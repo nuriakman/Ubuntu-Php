@@ -406,6 +406,55 @@ Varsayılan olarak dropdown menü aşağı doğru açılır. Aşağıdaki sını
 | dropdown-header | `<h6>` etiketi sınıfına vererek menü içerisinde başlık oluşturabiliriz. |
 | dropdown-divider | Ayraç oluşturur. Menü içerisinde bir `<div>` açılarak sınıfına `dropdown-divider` vererek yapıyoruz. |
 
+**Form Oluşturma**
+
+Bootstrap'ta form elemanları genellikle bir `<div>` içerisine alınır ve `<div>`'e `form-group` sınıfı verilerek kullanılır. Bu sınıfın kullanılmasıyla form elemanları arasına boşluklandırma yapılarak formun düzenli bir şekilde görünmesi sağlanır. Form elemanlarına stil vermek içinse her bir form elemanına `form-control` sınıfı verilir.
+
+*checkbox* ve *radio* ları stillendirmek için en dış `<div>`'e `form-group` yerine `form-check` sınıfı verilir. `<input>` elemanına ise `form-control` yerine `form-check-input` sınıfı verilir. Formunuzda bir yazı kullanmanız gerektiğinde, bu yazıyı `<small>` etiketleri içerisine alıp bu etikete `form-text` sınıfını uygulayarak yazınızı stillendirebilirsiniz. Bunun yanı sıra renk sınıflarından da faydalanarak yazınızın daha güzel görüntülenmesini sağlayabilirsiniz.
+
+**inline Form**
+
+Formlarımızı nasıl yan yana gösterebiliriz ve erişilebilirliğini arttırmak için ne gibi yollar izleyebiliriz?  
+
+İnline formlarda labeller hem görüntü hem de kapladığı yer açısından pek tercih edilmezler. Bootstrap formlarda bunu yerine `placeholder` kullanılır. Fakat `<label>`'leri sildiğimizde ekran okuyucularda anlam kargaşasına yol açar. Bu yüzden `<label>`'i silmek yerine `<label>`'in sınıfına `sr-only` veririz. Böylelikle `<label>`'in verdigi çirkin görüntüden kurtulmuş oluruz.
+
+Örnek;
+
+```html
+  <form class="form-inline" action="/action_page.php">
+    <label for="kAd" class="sr-only">Kullanıcı Adı:</label>
+    <input type="text" class="form-control" id="kAd" placeholder="Kullanıcı Adı" required>
+
+    <label for="parola" class="sr-only">Parola:</label>
+    <input type="text" class="form-control mx-sm-2" id="parola" placeholder="Parola" required>
+
+    <button type="submit" class="brn btn-primary">Giriş</button>
+  </form>
+```
+
+**Formlarda Izgara(Grid) Sistemini Kullanma**
+
+| Sınıf.............................. | Açıklama |
+| ---- | ---- |
+| form-row | Form elemanlarını aynı satırda göstermek için kullanırız. Önce elemanları bir `<div>` içerisine alıp sınıfını `form-row` yaparız. Daha sonrada form elemanlarının sınıfına kaplayacakları sütun (col) sayısını belirtiriz. |
+
+**Yatay Form**
+
+  `<label>` ile `<input>` etiketini aynı hizaya getirmek için, önce `<label>` etiketi sınıfına `col-2` ve `col-form-label` veriyoruz. Daha sonrada `<input>` etiketine de `col-10` veriyoruz. `col-form-label` etiketi dikey ortalar.
+
+**İlerleme Çubukları (Progress Bar)**
+
+İlerleme çubukları bir görevin veya eylemin ilerlemesini kullanıcılara göstermek için kullanılır. Nasıl oluşturulduğuna bakalım;
+
+Öncelikle bir `<div>` oluşturulur ve sınıfına `progress` verilir. Bu sınıfla birlikte gri arkaplana sahip bir çubuk oluşturulur. Daha sonra `<div>` içerisine bir `<div>` daha açılarak sınıfına `progress-bar` sınıfı eklenir ve divin genişliği belirtilir. Böylece şu anki ilerleme durumu görüntülenir. İlerlene çubuğunun durumunu yazı ile belirtmek içinde `<div>` içerisine yazı yazılabilir. Barların arkaplan rengi varsayılan olarak mavi'dir. Barlara çizgi eklemek için `progress-bar-striped`, animasyon olarak görünmesi için ise `progress-bar-animated` sınıfları eklenebilir.
+
+**Rozetler**
+
+Rozetler yeni veya okunmamış öğeleri vurgulamak için kullanılır. Rozetleri kullanmak için etiketlere `badge` sınıfı eklenir. Rozetleri renklendirmek için bootstrap'daki renkler `badge-primary` öneki ile kullanılabilir. Rozetleri yuvarlak olarak kullanmak istesiğimizde `badge-pill` sınıfını kullanabiliriz.
+
+**İçerik Haritası**
+
+İçerik haritaları navigasyon öğesi olduğu için `<nav>` etiketini ve belirli bir hiyerarşiyi temsil ettiği için `<ol>` etiketini kullanırız. Bunları şekillendirmek için, `<ol>` etiketine `breadcrumb` sınıfını ve her liste elemanı için `breaadcrumb-item` sınıfını uyguluyoruz. Son elemanada `active` sınıfını veriyoruz. 
 
 **İPUCU**
 
