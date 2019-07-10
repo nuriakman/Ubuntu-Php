@@ -1,14 +1,15 @@
 <?php
-  unlink("kedi_kucuk.jpg"); // Dosya silme komutu.
-  $RESIM = imagecreatefromjpeg("kedi_buyuk.jpg");
-  $YENIRESIM = imagescale($RESIM, 300, 200);
-  imagejpeg($YENIRESIM, "kedi_kucuk.jpg");
+  unlink("resim_kucuk.jpeg"); // Dosya silme komutu.
+  $RESIM = imagecreatefromjpeg("resim_buyuk.jpeg"); //Bir dosya veya URL'den yeni bir resim oluşturur.
+  $YENIRESIM = imagescale($RESIM, 300, 200); // Yeni yükseklik ve genişlik verir.
+  imagejpeg($YENIRESIM, "resim_kucuk.jpeg"); // Resmi tarayıcıya veya dosyaya yazar.
+  imagedestroy($YENIRESIM); // Belleği serbest bırakalım
 ?>
 
 <p>
-  <img src="kedi_kucuk.jpg">
+  <img src="resim_kucuk.jpeg">
 </p>
 
 <p>
-  <img src="kedi_buyuk.jpg">
+  <img src="resim_buyuk.jpeg">
 </p>
