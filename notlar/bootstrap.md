@@ -372,6 +372,38 @@ Bootstrapta butonlara stil vermek için `btn` sınıfını kullanıyoruz. `btn` 
 | btn-group-lg | Büyük buton grubu yapar. |
 | btn-group | Butun grubunu dikey olarak görüntüler. |
 
+**Dropdown Bileşeni**
+
+Öncelikle bir buton oluşturuyoruz ve butona `dropdown-toggle` uygulayarak **dropdown** görünümünü veriyoruz. Butona tıklandığında menünün açılması için arka planda bir *javascript fonksiyonu* çalışmaktadır. Bu fonksiyonu kullanabilmek için butonun `data-toggle` özelliğini *dropdown* olarak veriyoruz.
+
+Menüyü oluşturmak için ise; en dışa bir `<div>` açarak `<div>`'e `dropdown-menu` sınıfını veriyoruz. Daha sonra her bir menu elemanı için `dropdown-item` sınıfını uyguluyoruz. Son olarak, buton ve menümüzü bir `<div>` içerisine alarak bu `<div>`'e `btn-group` sınıfını vererek **dropdown** bileşenini tamamlıyoruz. Dropdown menünü boyutunu değiştirmek için butonlara uyguladığımız sınıfları (btn-sm, btn-lg) kullanabiliriz. Aşağıdaki örneği dikkatle inceleyin;
+
+```html
+  <div class="btn-group">
+   <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown">Dropdown</button>
+   <div class="dropdown-menu">
+     <a class="dropdown-item" href="#">Link 1</a>
+     <a class="dropdown-item" href="#">Link 2</a>
+     <a class="dropdown-item" href="#">Link 3</a>
+   </div>
+  </div>
+```
+
+**Dropdown Çeşitleri**
+Varsayılan olarak dropdown menü aşağı doğru açılır. Aşağıdaki sınıfları en dış `<div>` sınıfına vererek değiştirebiliriz.
+
+| Sınıf.............................. | Açıklama |
+| ---- | ---- |
+| dropup | Yukarı doğru açılmasını sağlar. |
+| dropright | Sağa doğru açılmasını sağlar. |
+| dropleft | Sola doğru açılmasını sağlar. |
+
+**Dropdown Menü'de Başlık ve Ayraç Kullanımı**
+
+| Sınıf.............................. | Açıklama |
+| ---- | ---- |
+| dropdown-header | `<h6>` etiketi sınıfına vererek menü içerisinde başlık oluşturabiliriz. |
+| dropdown-divider | Ayraç oluşturur. Menü içerisinde bir `<div>` açılarak sınıfına `dropdown-divider` vererek yapıyoruz. |
 
 
 **İPUCU**
