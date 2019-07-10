@@ -4,15 +4,15 @@
 
 ```PHP
 <?php
-  $METIN = "<<<FOO
-  Nuri: Erkek;Arapça;Nura ait, nurla ilgili.
-  Ahmet: Erkek;Farsça;Çok, en çok övülmüş, methedilmiş.
-  Deniz: Unisex;Farsça;Büyük su kütlesi.
-  Hasan: Erkek;Farsça;Güzellik, iyilik, hüsn sahibi olmak.
-  Ayhan; Deeme
-  Anlamsız satır var burada.
-  Meral: Kadın;Türkçe;Geyik, geyik yavrusu, dağ keçisi
-  FOO";
+$METIN = <<<FOO
+Nuri: Erkek;Arapça;Nura ait, nurla ilgili.
+Ahmet: Erkek;Farsça;Çok, en çok övülmüş, methedilmiş.
+Deniz: Unisex;Farsça;Büyük su kütlesi.
+Hasan: Erkek;Farsça;Güzellik, iyilik, hüsn sahibi olmak.
+Ayhan; Deeme
+Anlamsız satır var burada.
+Meral: Kadın;Türkçe;Geyik, geyik yavrusu, dağ keçisi
+FOO;
 
   // preg_match_all('/(?<isim>.*): (?<cinsiyet>(E|K|U).*);(?<kaynak>.*);(?<anlam>.*)/', $METIN, $SONUC);
   preg_match_all('/(.*): ((E|K|U).*);(.*);(.*)/', $METIN, $SONUC);
