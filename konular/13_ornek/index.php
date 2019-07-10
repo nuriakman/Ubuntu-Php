@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html>
 <body>
+
+  <form name="yukleme" method="post" action="index.php" enctype="multipart/form-data">
+    <table border="0">
+      <tr>
+        <td>Dosya Seçiniz:</td>
+        <td><input type="file" name="dosya"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><input type="submit" name="yukle" value="Yükle"></td>
+      </tr>
+    </table>
+  </form>
+
   <?php
-  if( isset($_POST["YeniAd"]) ) {
-    /*
-    echo "<pre>";
-    print_r($_POST);
-    print_r($_FILES); // Yüklenmek isteyen dosya hakkındaki bilgiler
-    echo "</pre>";
-    */
-    if( $_FILES["Dosya"]["size"] > 1048576 ) { // 1 Mb
-      echo "<H1>HATA: En çok 1 Mb olabilir!</H1>";
-      die();
-    }
-    if( $_FILES["Dosya"]["type"] == "image/jpeg" ) {
-      list($width, $height, $type, $attr) = getimagesize($_FILES["Dosya"]["tmp_name"]);
-      echo "Genişlik: $width, Yükseklik: $height";
-      if($width>400 or $height>400) {
-        echo "<H1>HATA: En çok 400x400 olabilir!</H1>";
-        die();
+  function turkce($metin){
+    $aranan=array("ç","Ç","ğ","Ğ","ı","İ","ö","Ö","ş","Ş","ü","Ü"," ");
+    $yerine=array("c","c","g","g","i","i","o","o","s","s","u","u","_");
+    return str_replace($aranan,$yerine,$metin);
+  }
+
+  if($_POST){
+    $gecici_ad=$_FILES["dosya"]["tmp_name"];
+    $kalici_yol_ad="Ubuntu-Php/xxx/".turkce($_FILES["dosya"]["name"]);
+
+    if ($_FILES["dosya"]["error"]) // hata oluştu ise
+    echo "<font color='green'>Hata : ",$_FILES["dosya"]["error"],"</font>";
+    else{
+      if (file_exists($kalici_yol_ad)) // yüklenen dosya upload dizininde varsa
+      echo "<font color='red'>Yazdığınız ad ile bir dosya zaten kayıtlıdır.</font>";
+      else{
+        if (move_uploaded_file($gecici_ad,$kalici_yol_ad)) // eğer dosya kaydedilirse
+        echo "<font color='green'>Dosya başarı ile yüklendi.</font>";
+        else
+        echo "<font color='red'>Dosya yükleme başarısız.</font>";
       }
-      $HEDEF = "Uploads/";
-      //    $HEDEFDOSYAADI = $HEDEF . basename($_FILES["Dosya"]["name"]);
-      $HEDEFDOSYAADI = $HEDEF . $_POST["YeniAd"];
-      move_uploaded_file($_FILES["Dosya"]["tmp_name"], $HEDEFDOSYAADI);
-      echo "<H1>Başarılı!</H1>";
-    } else  {
-      echo "<H1>HATA: Sadece jpg dosya yüklenebilir.</H1>";
     }
   }
   ?>
-
-  <form method="post" enctype="multipart/form-data">
-
-    Dosyanın Yeni Adı Ne Olsun?<br>
-    <input type="text" name="YeniAd" value=""><br><br>
-
-    Yüklenecek dosyayı seçiniz:<br>
-    <input type="file" name="Dosya"><br><br>
-
-    <input type="submit" value="Dosyayı Yükle!">
-  </form>
 
 </body>
 </html>
