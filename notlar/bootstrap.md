@@ -456,6 +456,19 @@ Rozetler yeni veya okunmamış öğeleri vurgulamak için kullanılır. Rozetler
 
 İçerik haritaları navigasyon öğesi olduğu için `<nav>` etiketini ve belirli bir hiyerarşiyi temsil ettiği için `<ol>` etiketini kullanırız. Bunları şekillendirmek için, `<ol>` etiketine `breadcrumb` sınıfını ve her liste elemanı için `breaadcrumb-item` sınıfını uyguluyoruz. Son elemanada `active` sınıfını veriyoruz.
 
+**Navbar Sınıfları**
+
+| Sınıf.............................. | Açıklama |
+| ---- | ---- |
+| navbar | Elementin navbar olduğunu ifade eder. |
+| navbar- dark | Navbar arkaplan rengi. |
+| navbar-expand-lg| Küçük çözünülürlükte cihazlar için menüyü küçültür. Kırılım noktasına göre ayarlanır.|
+
+
+
+
+
+
 **İPUCU**
 
 **h1 Etiketi**
