@@ -14,16 +14,17 @@
           <h4 class="lead">ORİJİNAL RESİMLER</h4>
         </div>
         <?php
-            # Resimleri cek
-            $dizin = "buyuk/";//Resminizin Bulunduğu Yolu Yazınız
-            $tutucu = opendir($dizin);
-            while($dosya = readdir($tutucu)){
-            if(is_file($dizin."/".$dosya))
-            $resim[] = $dosya;
+            # Resimleri Çekme
+            $dizin = "buyuk/";// Resimlerin bulunduğu dizin yolu.
+            $tutucu = opendir($dizin); //Dizini açar, tanıtır.
+            while($dosya = readdir($tutucu)){ // readdir: Her bir dosyanın ismiri $dosya değişkenine yazar.
+              if(is_file($dizin."/".$dosya)) // Adreste böyle dosya ismi varsa.
+              $resim[] = $dosya; // Dizin içerisindeki resimleri, resim  değişkenine (array) alır.
             }
-            closedir($tutucu);
+            closedir($tutucu); // Açılan dizini kapatır.
 
             # Ön bilgiler
+            /* index.php sayfasında $sf değişkeni gelmez. */
             $limit = 1; //Bir sayfada gösterilecek resim sayısı
             $sf = $_GET["sf"];
             if($sf < 1) $sf = 1;
