@@ -51,6 +51,6 @@
 
 ### FONKSİYONLAR
 
-- Fonksiyonların Kullanımı
+- [Fonksiyonların Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/fonksiyonlar.md)
 - Anonim Fonksiyonlar
 - Fonksiyonlarda Sınırsız Parametre Göndermek
