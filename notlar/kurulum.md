@@ -77,7 +77,7 @@ Apache kurulumunu test için aşağıdaki komutu gönderin. Çıkmak için ise `
 MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL'in yaratıcısı olan *Monty Widenius*'un MySQL'in kodunu çatallayıp (fork) "çoğunlukla" MySQL ile aynı komutları, arayüzleri ve API'leri destekleyecek şekilde geliştirmeye başlanan, toplulukla iç içe hızlı ve verimli şekilde geliştirilmeye devam edilen MySQL ilişkisel veritabanı yönetim sistemidir.
 
 ```bash
-  $ sudo apt install -y mariadb-server mariadb-client # Mariadb'yi kur.
+  $ sudo apt install mariadb-server mariadb-client -y # Mariadb'yi kur.
   $ sudo sudo systemctl enable mariadb # Mariadb'yi açılışta otomatik başlat.
   $ systemctl status mariadb.service
 ```
@@ -127,7 +127,7 @@ hasan@armada:/var/www/html/Ubuntu-Php$ systemctl status mariadb.service
       MariaDB [(none)]>
 ```
 
-Aşağıdaki kodları, satır satır gönderin.
+Aşağıdaki komutları, satır satır gönderin.
 
 ```bash
       show databases;
@@ -276,16 +276,18 @@ Aşağıdaki ayarları bir seferde kopyalayıp sayfanın en altına yapıştıra
       key-buffer-size                 = 150M
 ```
 
-### PHP7 KURULUMU
+### PHP KURULUMU
 
 *Not: Bu komutta kurulacak php7 paketleri temel ihtiyaçlar için zorunlu paketlerdir.*
 
 ```bash
-  # Php7'yi belirtilen paketlerle beraber kur.
-  $ sudo apt install php7.2 php-mbstring php7.2-mbstring php-xml php-gd libapache2-mod-php7.2 php7.2-mysql php-common php7.2-cli php7.2-common php7.2-json php7.2-opcache php7.2-readline
-  $ sudo php -v # Php versiyon kontrolu yap.
-  $ sudo a2enmod php7.2 # Apache php7.2 modülünü etkinleştir.  
-  $ sudo systemctl restart apache2 # Apache Web sunucusunu yeniden başlat.
+  # Php'yi belirtilen paketlerle beraber kur.    
+  $ sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc -y
+  $ sudo apt install php-gd php-mysql php-mbstring php-xml libapache2-mod-php -y
+  # Php versiyon kontrolu yap.
+  $ sudo php -v
+  # Apache Web sunucusunu yeniden başlat.
+  $ sudo systemctl restart apache2
 ```
 
 **Html Dizini İçin Yetkilendirme:**

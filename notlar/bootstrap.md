@@ -7,7 +7,7 @@
 - [JQuery](https://code.jquery.com/jquery-3.4.1.min.js)
 - [Popper](https://unpkg.com/popper.js)
 
-Dosyaları indirdikten sonra dizin yapısı aşağıdaki gibi olmalıdır,
+Dosyaları indirdikten sonra dizin yapısı aşağıdaki gibi olmalıdır, aşağıdaki dizin yapısı dışındaki dosyaları silebilirsiniz.
 
 ```sh
   Proje Adı/
