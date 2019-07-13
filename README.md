@@ -44,7 +44,7 @@
 
 ### DÖNGÜLER
 
-- For Döngüsü
+- [For Döngüsü](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/for.md)
 - Foreach Döngüsü
 - While Döngüsü
 - Do-While Döngüsü
