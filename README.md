@@ -38,8 +38,8 @@
 
 ### KOŞULLU İFADELER
 
-- İf-Else İfadesi
-- Switch-Case İfadesi
+- [İf-Else İfadesi](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/if_else.md)
+- [Switch-Case İfadesi](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/if_else.md)
 - Tennary(Üçlü) Operatör Kullanımı
 - İf-Else ve Switch-Case İçin Alternatif Söz Dizimleri
 
