@@ -49,8 +49,8 @@
 - [While Döngüsü](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/while.md)
 - [Do-While Döngüsü](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/dowhile.md)
 
-### FONKSİYONLAR
+### FONKSİYONLAR  
 
 - [Fonksiyonların Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/fonksiyonlar.md)
-- Anonim Fonksiyonlar
+- [Anonim Fonksiyonlar](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/anonim_fonksiyonlar.md)
 - Fonksiyonlarda Sınırsız Parametre Göndermek
