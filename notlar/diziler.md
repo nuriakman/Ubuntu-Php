@@ -1,6 +1,6 @@
 ## Diziler
 
-Diziler çoklu veri tutmaya yarayan yapılardır.
+Diziler çoklu veri tutmaya yarayan yapılardır. Bu değişkenler aynı türdedir ve tek bir ana değişken içerisinde bulunurlar.
 
 Dizilerin özellikleri;
 - `array()` fonksiyonu ile oluşturulur,

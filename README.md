@@ -39,9 +39,8 @@
 ### KOŞULLU İFADELER
 
 - [İf-Else İfadesi](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/if_else.md)
-- [Switch-Case İfadesi](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/if_else.md)
-- Tennary(Üçlü) Operatör Kullanımı
-- İf-Else ve Switch-Case İçin Alternatif Söz Dizimleri
+- [Switch-Case İfadesi](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/switch_case.md)
+- [Ternary(Üçlü) Operatör Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/ternary.md)
 
 ### DÖNGÜLER
 
