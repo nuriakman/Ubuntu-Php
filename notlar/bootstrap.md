@@ -11,12 +11,12 @@ Dosyaları indirdikten sonra dizin yapısı aşağıdaki gibi olmalıdır,
 
 ```sh
   Proje Adı/
-    css/
-      -bootstrap.min.css
-    js/
-      -bootstrap.min.js
-      -jquery-3.4.1.min.js
-      -popper.min.js
+      ├── css
+      │   └── bootstrap.min.css
+      ├── js
+          ├── bootstrap.min.js
+          ├── jquery-3.4.1.min.js
+          └── popper.min.js
 ```
 
 ## İNCELİKLER

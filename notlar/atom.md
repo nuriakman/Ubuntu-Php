@@ -1,4 +1,4 @@
-#ATOM TEXT EDİTÖRÜ
+# ATOM TEXT EDİTÖRÜ
 
 ## Kurulum
 
