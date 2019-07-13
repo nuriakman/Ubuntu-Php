@@ -1,4 +1,4 @@
-# SWICTH-CASE İFADESİ
+# SWITCH-CASE İFADESİ
 
 Bir değişkene bağlı koşullu işlem yaparken IF, ELSEIF, ELSEIF ... şeklinde uzunca bir komut kullanmak hem zamanımızı alır, hem de php derleyiciyi yorar. Bu gibi durumlarda Switch kodu işimizi kolaylaştırır.
 
