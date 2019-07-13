@@ -1,6 +1,6 @@
 # ANONİM FONKSİYONLAR
 
-Anonim fonksiyonlar, bir fonksiyon ismi kullanılmadan oluşturulan fonksiyonlardır. Genellikle, bir fonksiyonun parametresi olarak tanımlanır ve o fonksiyona bir argüman değeri sağlarlar. Örneklerden anlayabileceğinizi umut ediyorum.
+Anonim fonksiyonlar, bir fonksiyon ismi kullanılmadan oluşturulan fonksiyonlardır. Genellikle, bir fonksiyonun parametresi olarak tanımlanır ve o fonksiyona bir argüman değeri sağlarlar. Anonim fonksiyonlara da parametre verilebilir ve dizi içerisinde de kullanılabilir.
 
 Örnek;
 
