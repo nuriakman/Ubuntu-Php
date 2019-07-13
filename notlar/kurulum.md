@@ -28,7 +28,7 @@ Kurulum komutlarının açıklamalı sade listesine [buradan](https://github.com
 Php için olmazsa olmaz, ***açık kaynak kodlu*** ve ücretsiz bir web sunucusu yazılımı olan *Apache* yi kuralım;
 
 ```bash
-  $ sudo apt install -y apache2 apache2-utils # Apache kur.
+  $ sudo apt install apache2 -y # Apache kur.
   $ sudo sudo systemctl enable apache2 # Apache2'yi açılışta otomatik başlat.
 ```
 
