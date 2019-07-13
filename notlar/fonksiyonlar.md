@@ -83,3 +83,9 @@ Uzun metin kısaltma fonksiyonu yapalım.
 
      echo kisametin($metin, 100);
  ```
+
+Ekran çıktısı;
+
+```php
+  Lorem Ipsum Nedir? Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lore...
+```
