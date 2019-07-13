@@ -56,7 +56,8 @@ Uzun metin kısaltma fonksiyonu yapalım.
 ```php
   $metin="Lorem Ipsum Nedir? Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.
   Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı
-  galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır.";
+  galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak
+  kullanılmıştır.";
 
     echo substr($metin, 0, 100)."... Devamı";
 ```
@@ -66,7 +67,8 @@ Uzun metin kısaltma fonksiyonu yapalım.
  ```php
   $metin="Lorem Ipsum Nedir? Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.
   Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı
-  galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır.";
+  galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak
+  kullanılmıştır.";
 
      function kisametin($metin, $boyu=10){
        // Önce toplam karakter sayısını bulalım.
