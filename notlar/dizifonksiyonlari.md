@@ -1,4 +1,4 @@
-# DİZİ FONKSİYONLARI 1. BÖLÜM
+# DİZİ FONKSİYONLARI
 
 | Fonksiyon | Açıklama |
 | ----- | ----- |
