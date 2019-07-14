@@ -98,7 +98,7 @@ $arr = [
     ]
   ]
 ];
-
+/******** KENDİ ANAHTAR ARAMA FONKSİYONUMUZ *************/
 /*01*/  function _array_key_exists($aranan_key, $arr){
 /*02*/    foreach ($arr as $key => $value) {
 /*03*/       if ($key == $aranan_key) {
@@ -119,8 +119,11 @@ $arr = [
 /*16*/     echo "$anahtar anahtarı yok.";
 /*17*/   }
 
-
-
 echo "</pre>";
 ?>
 ```
+**Kendi Arama Fonksiyonumuz:**
+
+Fonksiyonumuz 1. parametreye vermiş olduğumuz anahtar değerini, 2. parametrede gönderdiğimiz dizi değişkeni içerisinde olup olmadığına bakar. Bunun için önce foreach() fonksiyonu ile her bir eleman için diziyi döndürür. 3. satırda dönen her anahtar değerini bizim aradığımız anahtar değerine eşit olup olmadığına bakar. Eğer eşitse 4. satırda 'doğru' sonucunu döndürür.
+
+Eşit değilse, 6. satırdaki döngü çalışır. Bu döngü dizi elemanlarının da bir dizi olup olmadığına bakar. Yani aradığımız anahtar alt dizi anahtarı olabilir. Eğer altta bir dizi varsa 7. satırda aradığımız anahtarı $aranan_key değişkeni ile tekrar sorar. Anahtarı bulduğunda true döner. Bu işlemi iç içe olan bütün dizilerde yapar.
