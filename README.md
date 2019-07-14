@@ -54,3 +54,7 @@
 - [Fonksiyonların Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/fonksiyonlar.md)
 - [Anonim Fonksiyonlar](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/anonim_fonksiyonlar.md)
 - [Fonksiyonlarda Sınırsız Parametre Göndermek](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/fonksiyon_sinirsiz_parametre.md)
+
+### PHP'DE TANIMLI FONKSİYONLAR
+
+- [Dizi Fonksiyonları](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/dizifonksiyonlari.md)
