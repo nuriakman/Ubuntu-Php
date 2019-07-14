@@ -8,69 +8,119 @@
 | `implode()` | Birleştir. explode() fonksiyonunun tam tersidir. Bir diziyi istediğimiz karakterle birleştirip string ifadeye çeviriyor. |
 | `count()` | Bir dizinin kaç tane elemanı olduğunu bulmamızı sağlar. |
 | `is_array()` | Kontrol fonksiyonudur. İçerisine girdiğimiz değişkenin dizi olup olmadığını gösterir. |
-| `shuffle()` | Diziyi karıştırarak, her bastırdığımızda farklı olarak görünmesini sağlar. |
-| `array_combine()` ||
-| `array_count_values()` ||
-| `array_flip()` ||
-| `array_key_exists()` ||
-| `()` ||
-| `()` ||
-| `()` ||
-| `()` ||
-| `()` ||
-| `()` ||
-| `()` ||
-| `()` ||
-| `()` ||
-| `()` ||
+| `shuffle()` | Diziyi karıştırarak, her bastırdığımızda elemanların sıralamasını değiştirir. |
+| `array_combine()` | İki farklı diziyi anahtar değer olarak birleştirmek için kullanılır. |
+| `array_count_values()` | Dizide tekrarlanan elemanların kaç kez tekrarlandığını bulmak için kullanılır. |
+| `array_flip()` | Anahtarlar ile değerlerin yerini değiştirmeye yarar. |
+| `array_key_exists()` | Dizi içerisinde belirlediğimiz anahtarın olup olmadığını kontrol eder. İç içe dizilerde kullanılamaz. |
+
 
 
 Örnekler; tetst.php adında bir sayfa oluşturup aşağıdaki kodu deneyebilir yada altta ekran çıktısından bakabilirsiniz.
 
 ```php
 <?php
-  $arr = [
-    'ad' => 'Hasan',
-    'soyad' => 'Çiçek',
-    'yas' => 50
-  ];
+$arr = [
+  'ad' => 'Hasan',
+  'soyad' => 'Çiçek',
+  'yas' => 50
+];
 
-   echo "<pre>";
+echo "<pre>";
 
-   // print_r Kullanımı
-   echo "<b>print_r() Çıktısı:</b></br></br>";
-   print_r($arr);
+/* print_r Kullanımı */
+// print_r($arr);
 
-   // var_dump() Kullanımı
-   echo "</br><b>var_dump() Çıktısı:</b></br></br>";
-   var_dump($arr);
+/* var_dump() Kullanımı */
+// var_dump($arr);
 
-   // explode() Kullanımı
-   echo "</br><b>explode() Çıktısı:</b></br></br>";
-   $test = "Hasan, Nuri, Ahmet, Leyla, Kemal, Nalan";
-   $arr = explode(',', $test);
-   print_r($arr);
+/* explode() Kullanımı */
+$test = "Hasan, Nuri, Ahmet, Leyla, Kemal, Nalan";
+$arr = explode(',', $test); /* Virgüle göre parçalasın! */
+// print_r($arr);
 
-   // implode() Kullanımı
-   echo "</br><b>implode() Çıktısı:</b></br></br>";
-   $string = implode('|', $arr); // Örnek için yukarıdaki $arr'yi aldık. Aralarına | koyduk.
-   echo $string;
-   echo "</b></br></br>"; // Üç satır boşluk.
+/* implode() Kullanımı */
+$string = implode('|', $arr); /* Örnek için yukarıdaki $arr'yi aldık. Aralarına | koyduk. */
+//echo $string;
 
-   // count() Kullanımı
-   echo "</br><b>count() Çıktısı:</b></br></br>";
-   echo count($arr); // Yukarıdaki $arr'yi aldık.
-   echo "</b></br></br>"; // Üç satır boşluk.
+/* count() Kullanımı */
+// echo count($arr); /* Yukarıdaki $arr'yi aldık. */
 
-   // is_array() Kullanımı
-   echo "</br><b>is_array() Çıktısı:</b></br></br>";
+/* is_array() Kullanımı
+if (is_array($string)){
+  echo "Bu bir dizidir.";
+} else {
+  echo "Bu bir dizi değildir.";
+}  // Burayı çalıştırmak için sondakileri açıklama satırına alın. */
 
-   if (is_array($string)){
-     echo "Bu bir dizidir.";
-   } else {
-     echo "Bu bir dizi değildir.";
-   }
+/* shuffle() Kullanımı */
+$dizi = [1,2,3,4,5,6,7,8,9,10];
+shuffle($dizi);
+// print_r($dizi);
 
-   echo "</pre>";
+/* array_combine() Kullanımı */
+$key = ['ad', 'soyad'];
+$values = ['Hasan', 'Çiçek'];
+$arr = array_combine($key, $values);
+// print_r($arr);
+
+/* array_count_values() Kullanımı */
+$arr = [Hamit, Ahmet, Samet, Aynur, Nuri, Hamit, Nuri, Samet, Nuri];
+$arr2 = array_count_values($arr);
+// print_r($arr2);
+
+/* array_flip() Kullanımı */
+$arr = [
+  'ad' => 'Hasan', // Bu anahtarın var olup olmadığını kontrol edeceğiz.
+  'soyad' => 'Çiçek',
+  'yas' => 50
+];
+$arr2 = array_flip($arr);
+// print_r($arr2);
+
+/* array_key_exists() Kullanımı
+if (array_key_exists('ad', $arr)) {
+  echo 'ad anahtarı var.';
+} else {
+  echo 'ad anahtarı yok.';
+} */
+
+/* array_key_exists() İç İçe dizilerde Kullanımı */
+/* Burada kendi fonksiyonumuzu yazmamız gerekecek! */
+$arr = [
+  'ad' => 'Hasan',
+  'a'  => [
+    'b' => [
+      'c' => [
+        'd' => 'e',
+        'e' => 'f'
+      ]
+    ]
+  ]
+];
+
+/*01*/  function _array_key_exists($aranan_key, $arr){
+/*02*/    foreach ($arr as $key => $value) {
+/*03*/       if ($key == $aranan_key) {
+/*04*/         return true;
+/*05*/       }
+/*06*/       if (is_array($value)) {
+/*07*/         return _array_key_exists($aranan_key, $value);
+/*08*/       }
+/*09*/     }
+/*10*/     return false;
+/*11*/   }
+
+/*12*/   $anahtar = 'c'; /* Değişkeni değiştirerek deneyin. */
+
+/*13*/   if (_array_key_exists($anahtar, $arr)) {
+/*14*/     echo "$anahtar anahtarı var.";
+/*15*/   } else {
+/*16*/     echo "$anahtar anahtarı yok.";
+/*17*/   }
+
+
+
+echo "</pre>";
 ?>
 ```
