@@ -13,36 +13,36 @@
 | `array_count_values()` | Dizide tekrarlanan elemanların kaç kez tekrarlandığını bulmak için kullanılır. |
 | `array_flip()` | Anahtarlar ile değerlerin yerini değiştirmeye yarar. |
 | `array_key_exists()` | Dizi içerisinde belirlediğimiz anahtarın olup olmadığını kontrol eder. İç içe dizilerde kullanılamaz. |
-| `array_map()` |  |
-| `array_filter()` |  |
-| `array_merge()` |  |
-| `array_rand()` |  |
-| `array_reverse()` |  |
-| `array_search()` |  |
-| `in_array()` |  |
-| `array_shift()` |  |
-| `array_pop()` |  |
-| `array_slice()` |  |
-| `array_sum()` |  |
-| `array_product()` |  |
-| `array_unique()` |  |
-| `array_values()` |  |
-| `array_push()` |  |
-| `array_unshift()` |  |
-| `array_keys()` |  |
-| `current()` |  |
-| `end()` |  |
-| `next()` |  |
-| `prev()` |  |
-| `reset()` |  |
-| `extract()` |  |
-| `asort()` |  |
-| `arsort()` |  |
-| `ksort()` |  |
-| `krsort()` |  |
+| `array_map()` | Dizideki elemanların değerini değiştirmek istediğimiz zaman kullanırız. Örneğin her elemanı 2 ile çarmak yada sonuna :) yapmak gb. |
+| `array_filter()` | Genellikle dizilerde değerleri boş olan elemanları bulmak için kullanılır. |
+| `array_merge()` | İki diziyi birleştirmek için kullanılır. |
+| `array_rand()` | Dizi içerisinden rastgele anahtar getirir. |
+| `array_reverse()` | Dizi elemanlarını tersten yazdırır. |
+| `array_search()` | Dizide değer aramak için kullanılır. Değer varsa anahtarını geri döndürür.(Birinci parametre aradığımız değer, ikinci parametre dizidir.) |
+| `in_array()` | Dizinde bir değerin olup ulmadığını kontrol ederiz. |
+| `array_shift()` | Dizinin ilk elemanının değerini alır. |
+| `array_pop()` | Dizinin son elemanının değerini alır. |
+| `array_slice()` | Dizinin belirli bir aralığını seçmek için kullanılır. Örneğin; `$yenidizi=array_slice($dizi, 3, 2);` Dizinin üçüncü elemanından başla, iki elemanını al. Yani; dört ve beşinci elemanını alır. Sadece üçü yazsaydık; üçüncüden sonrakileri verirdi. Sadece -2 dersek; son iki elemanı gösterir. |
+| `array_sum()` | Dizinin değerlerinin toplamını bulmak için kullanılır. |
+| `array_product()` | Dizi elemanlarını  çarpımını bulur. |
+| `array_unique()` | Dizide tekrarlana elemanları siler. |
+| `array_values()` | Dizideki değerleri alıp başka bir dizi oluşturmamıza yarar. Dizide benzer elemanlar olduğunda array_unique() ile benzerlerden temizlediğimizde kalan elemanların anahtarları karışık olur. İşte bu fonksiyonla temizlenmiş dizi elemanlarını başka bir diziye alır ve anahtarları tekrar oluştururuz. |
+| `array_push()` | Dizinin sonuna yeni bir eleman yada elemanlar eklemek için kullanılır. |
+| `array_unshift()` | Dizinin başına yeni bir eleman yada elemanlar eklemek için kullanılır. |
+| `array_keys()` | Dizinin anahtarlarını listelemek için kullanılır. |
+| `current()` | Dizinin ilk elemanını bulmak için kullanılır. |
+| `end()` | Dizinin son elemanını verir. |
+| `next()` | Dizideki sonraki elemanı bulmak için kullanılır. |
+| `prev()` | Dizideki önceki elemanı bulmak için kullanılır. |
+| `reset()` | Dizideki ilk elemana döner. Başa döner. |
+| `extract()` | Dizideki anahtarları değişken gibi kullanmamızı sağlar. |
+| `asort()` | Dizideki değerlere göre küçükten büyüğe doğru sıralama yapar. |
+| `arsort()` | Dizideki değerlere göre büyükten küçüğe doğru sıralama yapar. |
+| `ksort()` | Dizideki anahtarlara göre küçükten büyüğe doğru sıralama yapar. |
+| `krsort()` | Dizideki anahtarlara göre büyükten küçüğe doğru sıralama yapar. |
 
 
-Örnekler; tetst.php adında bir sayfa oluşturup aşağıdaki kodu deneyebilirsiniz. Kodları denerken yazdırma kodları (//) kaçış elemanları ile açıklama satırı gibi gösterilmiştir. Denediğiniz kodla alakalı satırdan kaldırın.
+**Örnekler 1.:**
 
 ```php
 <?php
@@ -140,3 +140,52 @@ Fonksiyonumuz 1. parametreye vermiş olduğumuz anahtar değerini, 2. parametred
 Eşit değilse, 6. satırdaki döngü çalışır. Bu döngü dizi elemanlarının da bir dizi olup olmadığına bakar. Yani aradığımız anahtar alt dizi anahtarı olabilir. Eğer altta bir dizi varsa 7. satırda aradığımız anahtarı $aranan_key değişkeni ile tekrar sorar. Anahtarı bulduğunda true döner. Bu işlemi iç içe olan bütün dizilerde yapar.
 
 Kısaca, dizide anahtarı arar. Dizi içerisinde dizi varsa onları da arar. İç İçe diziler bittiğinde bulamamış demektir ve false döndürür. Durur.
+
+**Örnekler 2.:**
+
+```php
+<?php
+  echo "<pre>";
+
+  /* array_map() Kullanımı */
+  function filtrele($val){
+    return $val."-)";
+  }
+
+  $arr  = [1,2,3,4,5,6,7,8,9];
+  $arr2 = array_map('filtrele', $arr);
+  // print_r($arr2);
+
+  /* array_filter() Kullanımı */
+  $arr = ['', 'Hasan', 'Nuri', ''];
+  //print_r($arr); // Hepsi görünür.
+  $arr = array_filter($arr);
+  //print_r($arr); // Boş olanlar görünmez.
+
+  /* array_merge() Kullanımı */
+  $arr1 = [1,2,3];
+  $arr2 = [4,5,6];
+  $arr  = array_merge($arr1, $arr2);
+  //print_r($arr);
+
+  /* array_rand() Kullanımı */
+  $arr = [
+    'ad' => 'Hasan',
+    'soyad' => 'Çiçek',
+    'yas' => 50,
+    'okul' => 'Lisans',
+    'durum' => 'aktif'
+  ];
+
+  $random = array_rand($arr, 2);
+  $values = array_map(function($key) use($arr){ // Anonim fonksiyon.
+    return$arr[$key];
+  }, $random);
+  print_r($values);
+
+  echo "</pre>";
+?>
+
+
+
+```
