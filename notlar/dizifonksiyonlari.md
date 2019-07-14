@@ -1,4 +1,4 @@
-# DİZİ FONKSİYONLARI
+# DİZİ FONKSİYONLARI 1. BÖLÜM
 
 | Fonksiyon | Açıklama |
 | ----- | ----- |
@@ -13,6 +13,34 @@
 | `array_count_values()` | Dizide tekrarlanan elemanların kaç kez tekrarlandığını bulmak için kullanılır. |
 | `array_flip()` | Anahtarlar ile değerlerin yerini değiştirmeye yarar. |
 | `array_key_exists()` | Dizi içerisinde belirlediğimiz anahtarın olup olmadığını kontrol eder. İç içe dizilerde kullanılamaz. |
+| `array_map()` |  |
+| `array_filter()` |  |
+| `array_merge()` |  |
+| `array_rand()` |  |
+| `array_reverse()` |  |
+| `array_search()` |  |
+| `in_array()` |  |
+| `array_shift()` |  |
+| `array_pop()` |  |
+| `array_slice()` |  |
+| `array_sum()` |  |
+| `array_product()` |  |
+| `array_unique()` |  |
+| `array_values()` |  |
+| `array_push()` |  |
+| `array_unshift()` |  |
+| `array_keys()` |  |
+| `current()` |  |
+| `end()` |  |
+| `next()` |  |
+| `prev()` |  |
+| `reset()` |  |
+| `extract()` |  |
+| `asort()` |  |
+| `arsort()` |  |
+| `ksort()` |  |
+| `krsort()` |  |
+
 
 Örnekler; tetst.php adında bir sayfa oluşturup aşağıdaki kodu deneyebilirsiniz. Kodları denerken yazdırma kodları (//) kaçış elemanları ile açıklama satırı gibi gösterilmiştir. Denediğiniz kodla alakalı satırdan kaldırın.
 
