@@ -55,36 +55,45 @@
   echo "<pre>";
   /* print_r Kullanımı */
   // print_r($arr);
+
   /* var_dump() Kullanımı */
   // var_dump($arr);
+
   /* explode() Kullanımı */
   $test = "Hasan, Nuri, Ahmet, Leyla, Kemal, Nalan";
   $arr = explode(',', $test); /* Virgüle göre parçalasın! */
   // print_r($arr);
+
   /* implode() Kullanımı */
   $string = implode('|', $arr); /* Örnek için yukarıdaki $arr'yi aldık. Aralarına | koyduk. */
   //echo $string;
+
   /* count() Kullanımı */
   // echo count($arr); /* Yukarıdaki $arr'yi aldık. */
+
   /* is_array() Kullanımı
   if (is_array($string)){
     echo "Bu bir dizidir.";
   } else {
     echo "Bu bir dizi değildir.";
   }  // Burayı çalıştırmak için sondakileri açıklama satırına alın. */
+
   /* shuffle() Kullanımı */
   $dizi = [1,2,3,4,5,6,7,8,9,10];
   shuffle($dizi);
   // print_r($dizi);
+
   /* array_combine() Kullanımı */
   $key = ['ad', 'soyad'];
   $values = ['Hasan', 'Çiçek'];
   $arr = array_combine($key, $values);
   // print_r($arr);
+
   /* array_count_values() Kullanımı */
   $arr = [Hamit, Ahmet, Samet, Aynur, Nuri, Hamit, Nuri, Samet, Nuri];
   $arr2 = array_count_values($arr);
   // print_r($arr2);
+
   /* array_flip() Kullanımı */
   $arr = [
     'ad' => 'Hasan', // Bu anahtarın var olup olmadığını kontrol edeceğiz.
@@ -93,12 +102,14 @@
   ];
   $arr2 = array_flip($arr);
   // print_r($arr2);
+
   /* array_key_exists() Kullanımı
   if (array_key_exists('ad', $arr)) {
     echo 'ad anahtarı var.';
   } else {
     echo 'ad anahtarı yok.';
   } */
+
   /* array_key_exists() İç İçe dizilerde Kullanımı */
   /* Burada kendi fonksiyonumuzu yazmamız gerekecek! */
   $arr = [
@@ -112,6 +123,7 @@
       ]
     ]
   ];
+
   /******** KENDİ ANAHTAR ARAMA FONKSİYONUMUZ *************/
   /*01*/  function _array_key_exists($aranan_key, $arr){
   /*02*/    foreach ($arr as $key => $value) {
@@ -185,7 +197,4 @@ Kısaca, dizide anahtarı arar. Dizi içerisinde dizi varsa onları da arar. İ�
 
   echo "</pre>";
 ?>
-
-
-
 ```
