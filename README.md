@@ -58,4 +58,3 @@
 ### PHP'DE TANIMLI FONKSİYONLAR
 
 - [Dizi Fonksiyonları](httpLs://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/dizifonksiyonlari.md)
-- [Strıng Fonksiyonları](httpLs://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/stringfonksiyonlari.md)
