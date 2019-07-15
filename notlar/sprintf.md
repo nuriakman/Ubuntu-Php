@@ -1,4 +1,4 @@
-# PRINTF(), SPRINTF(), VPRINTF() VE VSPRINTF() FONKSİYONLARI
+## PRINTF(), SPRINTF(), VPRINTF() VE VSPRINTF() FONKSİYONLARI
 
 Diyelim ki "*Afrika'da 5 tane maymun var.*" cümlesini dinamik olarak ekrana yazdırmak istiyoruz. Önce değişkenlerimizi oluşturalım;
 
@@ -18,4 +18,8 @@ Burada ne kadar "***%s***" varsa arkadaşlar, ilk virgülden sonra o kadar veri 
   $tarih = '2-7-1969';
 
   vprintf('%02d-%02d-%d', explode('-', $tarih));
+```
+Ekran çıktısı;
+```php
+  02-07-1969
 ```
