@@ -59,3 +59,4 @@
 
 - [Dizi Fonksiyonları](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/dizifonksiyonlari.md)
 - [String Fonksiyonları](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/stringfonksiyonlari.md)
+- [printf(), sprintf(), vprintf() ve vsprintf() Fonksiyonları](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/sprintf.md)
