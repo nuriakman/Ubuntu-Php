@@ -14,4 +14,4 @@
 | `rtrim()` | Sağda bulunan boşlukları kaldırır. `rtrim($str);` |
 | `substr()` | İfadede istediğimiz yeri çekip almamızı sağlar. `substr($str, 2, 3);` 3 parametre alır. 1. parametre 'ifade', 2. parametre "nereden başlıyacağı" ve 3. parametre ise "kaç karakter alacağı". |
 | `str_replace()` | İfade içerisinde değişiklik yapmamızı sağlar. `str_replace('search_value', 'value', $str);` 3 parametre alır. 1. parametre "neyi değiştireceğimi", 2. parametre "yerine ne gelecek" ve 3. parametre ise "ifademiz" dir.|
-| `strrepeat()` | Bir karakteri tekrar ettirmemizi sağlar. `strrepeat('to be repeated', 'how many');` 2 parametre alır. 1. parametrede tekrar etmesini istediğimiz karakteri, 2. parametredese ise tekrar sayısını gireriz. |
+| `str_repeat()` | Bir karakteri tekrar ettirmemizi sağlar. `str_repeat('to be repeated', 'how many');` 2 parametre alır. 1. parametrede tekrar etmesini istediğimiz karakteri, 2. parametredese ise tekrar sayısını gireriz. |
