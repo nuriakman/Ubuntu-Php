@@ -7,19 +7,20 @@
 | `explode()` | Parçala. Belirli bir karakterle bir birinden ayrılmış olan ifadeleri, parçalamamıza olanak sağlıyor. Kısaca o metinden istediğimiz yeri alabilmemize yarıyor. `explode(',', $arr);`|
 | `implode()` | Birleştir. explode() fonksiyonunun tam tersidir. Bir diziyi istediğimiz karakterle birleştirip string ifadeye çeviriyor. `implode('|', $arr);` |
 | `count()` | Bir dizinin kaç tane elemanı olduğunu bulmamızı sağlar. `count($arr);` |
-| `is_array()` | Kontrol fonksiyonudur. İçerisine girdiğimiz değişkenin dizi olup olmadığını gösterir. `is_array($degisken);` |
+| `is_array()` | Kontrol fonksiyonudur. İçerisine girdiğimiz değişkenin dizi olup olmadığını gösterir. `is_array($variable);` |
 | `shuffle()` | Diziyi karıştırarak, her bastırdığımızda elemanların sıralamasını değiştirir. `shuffle($arr);`|
 | `array_combine()` | İki farklı diziyi anahtar değer olarak birleştirmek için kullanılır. `array_combine($key, $values);` |
 | `array_count_values()` | Dizide tekrarlanan elemanların kaç kez tekrarlandığını bulmak için kullanılır. `array_count_values($arr);` |
 | `array_flip()` | Anahtarlar ile değerlerin yerini değiştirmeye yarar. `array_flip($arr);` |
 | `array_key_exists()` | Dizi içerisinde belirlediğimiz anahtarın olup olmadığını kontrol eder. `array_key_exists('key', $arr);` İç içe dizilerde kullanılamaz. İç içe için aşağıdaki örneğe balınız. |
-| `array_map()` | Dizideki elemanların değerini değiştirmek istediğimiz zaman kullanırız. Örneğin her elemanı 2 ile çarpmak yada sonuna :) yapmak gb. `array_map('filtrele', $arr);` |
-| `array_filter()` | Genellikle dizilerde değerleri boş olan elemanları bulmak için kullanılır. `array_filter($arr);` |
+
+| `array_map()` | Bir dizi içerisindeki her elemanın değerini alıp ve bir manipülasyon üzerinde oynama yaparak geri döndürür. Örneğin; Değerlerin yüzdesini almak istediğimizde, string değerlerin önüne arkasına gelen işaretleri değiştirmek istediğimizde vb.) Örnek çalışma aşağıdadır. |
+| `array_filter()` | Genellikle dizilerde değerleri boş olan elemanları bulmak ve kaldırmak için kullanılır. Yeni bir değişken oluşturularak yapılır. `$arr = array_filter($arr);` |
 | `array_merge()` | İki diziyi birleştirmek için kullanılır. `array_merge($arr1, $arr2);` |
-| `array_rand()` | Dizi içerisinden rastgele anahtar getirir. |
-| `array_reverse()` | Dizi elemanlarını tersten yazdırır. |
-| `array_search()` | Dizide değer aramak için kullanılır. Değer varsa anahtarını geri döndürür.(Birinci parametre aradığımız değer, ikinci parametre dizidir.) |
-| `in_array()` | Dizinde bir değerin olup ulmadığını kontrol ederiz. |
+| `array_rand()` | Dizi içerisinden rastgele anahtar getirir. `array_rand($arr);` |
+| `array_reverse()` | Dizi elemanlarını tersten yazdırır. `array_reverse($arr);` |
+| `array_search()` | Dizide değer aramak için kullanılır. Değer varsa anahtarını geri döndürür. `array_reverse($wanted, $arr);` 1. parametre aradığımız değer, 2. parametre dizidir.) |
+| `in_array()` | Dizinde bir değerin olup olmadığını kontrol ederiz. |
 | `array_shift()` | Dizinin ilk elemanının değerini alır. |
 | `array_pop()` | Dizinin son elemanının değerini alır. |
 | `array_slice()` | Dizinin belirli bir aralığını seçmek için kullanılır. Örneğin; `$yenidizi=array_slice($dizi, 3, 2);` Dizinin üçüncü elemanından başla, iki elemanını al. Yani; dört ve beşinci elemanını alır. Sadece üçü yazsaydık; üçüncüden sonrakileri verirdi. Sadece -2 dersek; son iki elemanı gösterir. |
@@ -101,19 +102,15 @@ Kısaca, dizide anahtarı arar. Dizi içerisinde dizi varsa onları da arar. İ�
 
 ```php
 <?php
-  echo "<pre>";
+  echo "<pre>";  
+  /* Anonim fonksiyon kullanımına da örnek var. */
 
   /* array_map() Kullanımı */
-  function filtrele($val){
-    return $val."-)";
-  }
-
   $arr  = [1,2,3,4,5,6,7,8,9];
-  $arr2 = array_map('filtrele', $arr);
+  $arr2 = array_map(function($val){return $val.' -';}, $arr);
   // print_r($arr2);
 
   /* array_rand() Kullanımı */
-  /* Anonim fonksiyon kullanımına da örnek var. */
   $arr = [
     'ad' => 'Hasan',
     'soyad' => 'Çiçek',
@@ -123,9 +120,7 @@ Kısaca, dizide anahtarı arar. Dizi içerisinde dizi varsa onları da arar. İ�
   ];
 
   $random = array_rand($arr, 2);
-  $values = array_map(function($key) use($arr){ // Anonim fonksiyon.
-    return$arr[$key];
-  }, $random);
+  $values = array_map(function($key) use($arr){return$arr[$key];}, $random);
   print_r($values);
 
   echo "</pre>";
