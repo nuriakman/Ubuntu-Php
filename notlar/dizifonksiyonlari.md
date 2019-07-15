@@ -1,8 +1,8 @@
 # DİZİ FONKSİYONLARI
 
-| Fonksiyon | Açıklama |
+| Fonksiyon-Kullanımı | Açıklama |
 | ----- | ----- |
-| `print_r()` | Dizi yada objenin okunabilir bir şekilde, insani bir şekilde yapısını gösterir. `print_r($arr);` |
+| `print_r($arr);` | Dizi yada objenin okunabilir bir şekilde, insani bir şekilde yapısını gösterir. |
 | `var_dump()` | Dizi yada objenin okunabilir bir şekilde, programlama görünümünde yapısını gösterir. `var_dump($arr);` |
 | `explode()` | Parçala. Belirli bir karakterle bir birinden ayrılmış olan ifadeleri, parçalamamıza olanak sağlıyor. Kısaca o metinden istediğimiz yeri alabilmemize yarıyor. `explode(',', $arr);`|
 | `implode()` | Birleştir. explode() fonksiyonunun tam tersidir. Bir diziyi istediğimiz karakterle birleştirip string ifadeye çeviriyor. `implode('|', $arr);` |
@@ -20,7 +20,7 @@
 | `array_reverse()` | Dizi elemanlarını tersten yazdırır. `array_reverse($arr);` |
 | `array_search()` | Dizide değer aramak için kullanılır. Değer varsa anahtarını geri döndürür. `array_reverse($wanted, $arr);` 1. parametre aradığımız değer, 2. parametre dizidir.) |
 | `in_array()` | Dizinde bir değerin olup olmadığını kontrol ederiz. |
-| `array_shift()` | Dizinin ilk elemanının değerini alır. |
+| `array_shift()` | Dizinin ilk elemanının değerini alır. `in_array($arry);` |
 | `array_pop()` | Dizinin son elemanının değerini alır. |
 | `array_slice()` | Dizinin belirli bir aralığını seçmek için kullanılır. Örneğin; `$yenidizi=array_slice($dizi, 3, 2);` Dizinin üçüncü elemanından başla, iki elemanını al. Yani; dört ve beşinci elemanını alır. Sadece üçü yazsaydık; üçüncüden sonrakileri verirdi. Sadece -2 dersek; son iki elemanı gösterir. |
 | `array_sum()` | Dizinin değerlerinin toplamını bulmak için kullanılır. |
