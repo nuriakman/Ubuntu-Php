@@ -11,16 +11,16 @@
 | `shuffle($arr);` | Diziyi karıştırarak, her bastırdığımızda elemanların sıralamasını değiştirir. |
 | `array_combine($key,$values);` | İki farklı diziyi anahtar değer olarak birleştirmek için kullanılır. |
 | `array_count_values()` | Dizide tekrarlanan elemanların kaç kez tekrarlandığını bulmak için kullanılır. `array_count_values($arr);` |
-| `array_flip()` | Anahtarlar ile değerlerin yerini değiştirmeye yarar. `array_flip($arr);` |
-| `array_key_exists()` | Dizi içerisinde belirlediğimiz anahtarın olup olmadığını kontrol eder. `array_key_exists('key', $arr);` İç içe dizilerde kullanılamaz. İç içe için aşağıdaki örneğe balınız. |
+| `array_flip($arr);` | Anahtarlar ile değerlerin yerini değiştirmeye yarar. |
+| `array_key_exists('key',$arr);` | Dizi içerisinde belirlediğimiz anahtarın olup olmadığını kontrol eder. İç içe dizilerde kullanılamaz. İç içe için aşağıdaki örneğe balınız. |
 | `array_map()` | Bir dizi içerisindeki her elemanın değerini alıp ve bir manipülasyon üzerinde oynama yaparak geri döndürür. Örneğin; Değerlerin yüzdesini almak istediğimizde, string değerlerin önüne arkasına gelen işaretleri değiştirmek istediğimizde vb.) Örnek çalışma aşağıdadır. |
-| `array_filter()` | Genellikle dizilerde değerleri boş olan elemanları bulmak ve kaldırmak için kullanılır. Yeni bir değişken oluşturularak yapılır. `$arr = array_filter($arr);` |
-| `array_merge()` | İki diziyi birleştirmek için kullanılır. `array_merge($arr1, $arr2);` |
-| `array_rand()` | Dizi içerisinden rastgele anahtar getirir. `array_rand($arr);` |
-| `array_reverse()` | Dizi elemanlarını tersten yazdırır. `array_reverse($arr);` |
-| `array_search()` | Dizide değer aramak için kullanılır. Değer varsa anahtarını geri döndürür. `array_reverse($wanted, $arr);` 1. parametre aradığımız değer, 2. parametre dizidir.) |
-| `in_array()` | Dizinde bir değerin olup olmadığını kontrol ederiz. |
-| `array_shift()` | Dizinin ilk elemanının değerini alır. `in_array($arry);` |
+| `$arr = array_filter($arr);` | Genellikle dizilerde değerleri boş olan elemanları bulmak ve kaldırmak için kullanılır. Yeni bir değişken oluşturularak yapılır.  |
+| `array_merge($arr1,$arr2);` | İki diziyi birleştirmek için kullanılır. |
+| `array_rand($arr);` | Dizi içerisinden rastgele anahtar getirir. |
+| `array_reverse($arr);` | Dizi elemanlarını tersten yazdırır. |
+| `array_reverse($wanted,$arr);` | Dizide değer aramak için kullanılır. Değer varsa anahtarını geri döndürür. 1. parametre aradığımız değer, 2. parametre dizidir.) |
+| `in_array($value,$arr)` | Dizinde bir değerin olup olmadığını kontrol ederiz. Aşağıda kullanıldı. |
+| `array_shift()` | Dizinin ilk elemanının değerini alır. |
 | `array_pop()` | Dizinin son elemanının değerini alır. |
 | `array_slice()` | Dizinin belirli bir aralığını seçmek için kullanılır. Örneğin; `$yenidizi=array_slice($dizi, 3, 2);` Dizinin üçüncü elemanından başla, iki elemanını al. Yani; dört ve beşinci elemanını alır. Sadece üçü yazsaydık; üçüncüden sonrakileri verirdi. Sadece -2 dersek; son iki elemanı gösterir. |
 | `array_sum()` | Dizinin değerlerinin toplamını bulmak için kullanılır. |
