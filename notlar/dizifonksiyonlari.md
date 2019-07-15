@@ -13,7 +13,6 @@
 | `array_count_values()` | Dizide tekrarlanan elemanların kaç kez tekrarlandığını bulmak için kullanılır. `array_count_values($arr);` |
 | `array_flip()` | Anahtarlar ile değerlerin yerini değiştirmeye yarar. `array_flip($arr);` |
 | `array_key_exists()` | Dizi içerisinde belirlediğimiz anahtarın olup olmadığını kontrol eder. `array_key_exists('key', $arr);` İç içe dizilerde kullanılamaz. İç içe için aşağıdaki örneğe balınız. |
-
 | `array_map()` | Bir dizi içerisindeki her elemanın değerini alıp ve bir manipülasyon üzerinde oynama yaparak geri döndürür. Örneğin; Değerlerin yüzdesini almak istediğimizde, string değerlerin önüne arkasına gelen işaretleri değiştirmek istediğimizde vb.) Örnek çalışma aşağıdadır. |
 | `array_filter()` | Genellikle dizilerde değerleri boş olan elemanları bulmak ve kaldırmak için kullanılır. Yeni bir değişken oluşturularak yapılır. `$arr = array_filter($arr);` |
 | `array_merge()` | İki diziyi birleştirmek için kullanılır. `array_merge($arr1, $arr2);` |
