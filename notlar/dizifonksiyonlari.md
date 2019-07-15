@@ -5,17 +5,17 @@
 | `print_r()` | Dizi yada objenin okunabilir bir şekilde, insani bir şekilde yapısını gösterir. `print_r($arr);` |
 | `var_dump()` | Dizi yada objenin okunabilir bir şekilde, programlama görünümünde yapısını gösterir. `var_dump($arr);` |
 | `explode()` | Parçala. Belirli bir karakterle bir birinden ayrılmış olan ifadeleri, parçalamamıza olanak sağlıyor. Kısaca o metinden istediğimiz yeri alabilmemize yarıyor. `explode(',', $arr);`|
-| `implode()` | Birleştir. explode() fonksiyonunun tam tersidir. Bir diziyi istediğimiz karakterle birleştirip string ifadeye çeviriyor. |
-| `count()` | Bir dizinin kaç tane elemanı olduğunu bulmamızı sağlar. |
-| `is_array()` | Kontrol fonksiyonudur. İçerisine girdiğimiz değişkenin dizi olup olmadığını gösterir. |
-| `shuffle()` | Diziyi karıştırarak, her bastırdığımızda elemanların sıralamasını değiştirir. |
-| `array_combine()` | İki farklı diziyi anahtar değer olarak birleştirmek için kullanılır. |
-| `array_count_values()` | Dizide tekrarlanan elemanların kaç kez tekrarlandığını bulmak için kullanılır. |
-| `array_flip()` | Anahtarlar ile değerlerin yerini değiştirmeye yarar. |
-| `array_key_exists()` | Dizi içerisinde belirlediğimiz anahtarın olup olmadığını kontrol eder. İç içe dizilerde kullanılamaz. |
-| `array_map()` | Dizideki elemanların değerini değiştirmek istediğimiz zaman kullanırız. Örneğin her elemanı 2 ile çarmak yada sonuna :) yapmak gb. |
-| `array_filter()` | Genellikle dizilerde değerleri boş olan elemanları bulmak için kullanılır. |
-| `array_merge()` | İki diziyi birleştirmek için kullanılır. |
+| `implode()` | Birleştir. explode() fonksiyonunun tam tersidir. Bir diziyi istediğimiz karakterle birleştirip string ifadeye çeviriyor. `implode('|', $arr);` |
+| `count()` | Bir dizinin kaç tane elemanı olduğunu bulmamızı sağlar. `count($arr);` |
+| `is_array()` | Kontrol fonksiyonudur. İçerisine girdiğimiz değişkenin dizi olup olmadığını gösterir. `is_array($degisken);` |
+| `shuffle()` | Diziyi karıştırarak, her bastırdığımızda elemanların sıralamasını değiştirir. `shuffle($arr);`|
+| `array_combine()` | İki farklı diziyi anahtar değer olarak birleştirmek için kullanılır. `array_combine($key, $values);` |
+| `array_count_values()` | Dizide tekrarlanan elemanların kaç kez tekrarlandığını bulmak için kullanılır. `array_count_values($arr);` |
+| `array_flip()` | Anahtarlar ile değerlerin yerini değiştirmeye yarar. `array_flip($arr);` |
+| `array_key_exists()` | Dizi içerisinde belirlediğimiz anahtarın olup olmadığını kontrol eder. `array_key_exists('key', $arr);` İç içe dizilerde kullanılamaz. İç içe için aşağıdaki örneğe balınız. |
+| `array_map()` | Dizideki elemanların değerini değiştirmek istediğimiz zaman kullanırız. Örneğin her elemanı 2 ile çarpmak yada sonuna :) yapmak gb. `array_map('filtrele', $arr);` |
+| `array_filter()` | Genellikle dizilerde değerleri boş olan elemanları bulmak için kullanılır. `array_filter($arr);` |
+| `array_merge()` | İki diziyi birleştirmek için kullanılır. `array_merge($arr1, $arr2);` |
 | `array_rand()` | Dizi içerisinden rastgele anahtar getirir. |
 | `array_reverse()` | Dizi elemanlarını tersten yazdırır. |
 | `array_search()` | Dizide değer aramak için kullanılır. Değer varsa anahtarını geri döndürür.(Birinci parametre aradığımız değer, ikinci parametre dizidir.) |
@@ -53,54 +53,6 @@
   ];
 
   echo "<pre>";
-
-
-
-  /* implode() Kullanımı */
-  $string = implode('|', $arr); /* Örnek için yukarıdaki $arr'yi aldık. Aralarına | koyduk. */
-  //echo $string;
-
-  /* count() Kullanımı */
-  // echo count($arr); /* Yukarıdaki $arr'yi aldık. */
-
-  /* is_array() Kullanımı
-  if (is_array($string)){
-    echo "Bu bir dizidir.";
-  } else {
-    echo "Bu bir dizi değildir.";
-  }  // Burayı çalıştırmak için sondakileri açıklama satırına alın. */
-
-  /* shuffle() Kullanımı */
-  $dizi = [1,2,3,4,5,6,7,8,9,10];
-  shuffle($dizi);
-  // print_r($dizi);
-
-  /* array_combine() Kullanımı */
-  $key = ['ad', 'soyad'];
-  $values = ['Hasan', 'Çiçek'];
-  $arr = array_combine($key, $values);
-  // print_r($arr);
-
-  /* array_count_values() Kullanımı */
-  $arr = [Hamit, Ahmet, Samet, Aynur, Nuri, Hamit, Nuri, Samet, Nuri];
-  $arr2 = array_count_values($arr);
-  // print_r($arr2);
-
-  /* array_flip() Kullanımı */
-  $arr = [
-    'ad' => 'Hasan', // Bu anahtarın var olup olmadığını kontrol edeceğiz.
-    'soyad' => 'Çiçek',
-    'yas' => 50
-  ];
-  $arr2 = array_flip($arr);
-  // print_r($arr2);
-
-  /* array_key_exists() Kullanımı
-  if (array_key_exists('ad', $arr)) {
-    echo 'ad anahtarı var.';
-  } else {
-    echo 'ad anahtarı yok.';
-  } */
 
   /* array_key_exists() İç İçe dizilerde Kullanımı */
   /* Burada kendi fonksiyonumuzu yazmamız gerekecek! */
@@ -160,19 +112,8 @@ Kısaca, dizide anahtarı arar. Dizi içerisinde dizi varsa onları da arar. İ�
   $arr2 = array_map('filtrele', $arr);
   // print_r($arr2);
 
-  /* array_filter() Kullanımı */
-  $arr = ['', 'Hasan', 'Nuri', ''];
-  //print_r($arr); // Hepsi görünür.
-  $arr = array_filter($arr);
-  //print_r($arr); // Boş olanlar görünmez.
-
-  /* array_merge() Kullanımı */
-  $arr1 = [1,2,3];
-  $arr2 = [4,5,6];
-  $arr  = array_merge($arr1, $arr2);
-  //print_r($arr);
-
   /* array_rand() Kullanımı */
+  /* Anonim fonksiyon kullanımına da örnek var. */
   $arr = [
     'ad' => 'Hasan',
     'soyad' => 'Çiçek',
