@@ -25,21 +25,21 @@
 | `$yenidizi=array_slice($dizi,3,2);` | Dizinin belirli bir aralığını seçmek için kullanılır. 3 parametre alır. 1. parametre dizi, 2. parametre kaçıncı elemandan başlayacağı, 3. parametre kaç eleman alacağı. |
 | `array_sum($arr);` | Dizinin değerlerinin toplamını bulmak için kullanılır. |
 | `array_product($arr);` | Dizi elemanlarını  çarpımını bulur. |
-| `array_unique($arr);` | Dizide tekrarlana elemanları siler. |
-| `array_values()` | Dizideki değerleri alıp başka bir dizi oluşturmamıza yarar. Dizide benzer elemanlar olduğunda array_unique() ile benzerlerden temizlediğimizde kalan elemanların anahtarları karışık olur. İşte bu fonksiyonla temizlenmiş dizi elemanlarını başka bir diziye alır ve anahtarları tekrar oluştururuz. |
-| `array_push()` | Dizinin sonuna yeni bir eleman yada elemanlar eklemek için kullanılır. |
-| `array_unshift()` | Dizinin başına yeni bir eleman yada elemanlar eklemek için kullanılır. |
-| `array_keys()` | Dizinin anahtarlarını listelemek için kullanılır. |
-| `current()` | Dizinin ilk elemanını bulmak için kullanılır. |
-| `end()` | Dizinin son elemanını verir. |
-| `next()` | Dizideki sonraki elemanı bulmak için kullanılır. |
-| `prev()` | Dizideki önceki elemanı bulmak için kullanılır. |
-| `reset()` | Dizideki ilk elemana döner. Başa döner. |
-| `extract()` | Dizideki anahtarları değişken gibi kullanmamızı sağlar. |
-| `asort()` | Dizideki değerlere göre küçükten büyüğe doğru sıralama yapar. |
-| `arsort()` | Dizideki değerlere göre büyükten küçüğe doğru sıralama yapar. |
-| `ksort()` | Dizideki anahtarlara göre küçükten büyüğe doğru sıralama yapar. |
-| `krsort()` | Dizideki anahtarlara göre büyükten küçüğe doğru sıralama yapar. |
+| `array_unique($arr);` | Dizide tekrarlanan elemanları siler. |
+| `array_values($arr);` | Dizideki değerleri alıp başka bir dizi oluşturmamıza yarar. Dizide benzer elemanlar olduğunda array_unique() ile benzerlerden temizlediğimizde kalan elemanların anahtarları karışık olur. İşte bu fonksiyonla temizlenmiş dizi elemanlarını başka bir diziye alır ve anahtarları tekrar oluştururuz. Kısaca anahtarları yeniden sıralamak için kullanabiliriz. |
+| `array_push($arr,$new_value);` | Dizinin sonuna yeni bir eleman yada elemanlar eklemek için kullanılır. |
+| `array_unshift($arr,$new_value);` | Dizinin başına yeni bir eleman yada elemanlar eklemek için kullanılır. |
+| `array_keys($arr);` | Dizinin anahtarlarını listelemek için kullanılır. |
+| `current($arr);` | Dizinin ilk elemanını bulmak için kullanılır. |
+| `end($arr);` | Dizinin son elemanını verir. |
+| `next($arr);` | Dizideki sonraki elemanı bulmak için kullanılır. |
+| `prev($arr);` | Dizideki önceki elemanı bulmak için kullanılır. |
+| `reset($arr);` | Dizideki ilk elemana döner. Başa döner. |
+| `extract($arr);` | Dizideki anahtarları değişken gibi kullanmamızı sağlar. |
+| `asort($arr);` | Dizideki değerlere göre küçükten büyüğe doğru sıralama yapar. |
+| `arsort($arr);` | Dizideki değerlere göre büyükten küçüğe doğru sıralama yapar. |
+| `ksort($arr);` | Dizideki anahtarlara göre küçükten büyüğe doğru sıralama yapar. |
+| `krsort($arr);` | Dizideki anahtarlara göre büyükten küçüğe doğru sıralama yapar. |
 
 
 **Örnekler 1.:**
