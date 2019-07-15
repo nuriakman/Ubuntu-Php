@@ -42,10 +42,13 @@
 | `krsort($arr);` | Dizideki anahtarlara göre büyükten küçüğe doğru sıralama yapar. |
 
 
-**Örnekler 1.:**
+**Örnek 1:**
+
+*array_key_exists() İç İçe dizilerde Kullanımı*
+
+*Burada kendi fonksiyonumuzu yazmamız gerekecek!*
 
 ```php
-<?php
   $arr = [
     'ad' => 'Hasan',
     'soyad' => 'Çiçek',
@@ -54,8 +57,6 @@
 
   echo "<pre>";
 
-  /* array_key_exists() İç İçe dizilerde Kullanımı */
-  /* Burada kendi fonksiyonumuzu yazmamız gerekecek! */
   $arr = [
     'ad' => 'Hasan',
     'a'  => [
@@ -67,7 +68,6 @@
       ]
     ]
   ];
-
   /******** KENDİ ANAHTAR ARAMA FONKSİYONUMUZ *************/
   /*01*/  function _array_key_exists($aranan_key, $arr){
   /*02*/    foreach ($arr as $key => $value) {
@@ -87,9 +87,8 @@
   /*16*/     echo "$anahtar anahtarı yok.";
   /*17*/   }
   echo "</pre>";
-?>
 ```
-**Kendi Arama Fonksiyonumuz:**
+**Örneğin Açıklaması (Kendi Arama Fonksiyonumuz):**
 
 Fonksiyonumuz 1. parametreye vermiş olduğumuz anahtar değerini, 2. parametrede gönderdiğimiz dizi değişkeni içerisinde olup olmadığına bakar. Bunun için önce foreach() fonksiyonu ile her bir eleman için diziyi döndürür. 3. satırda dönen her anahtar değerini bizim aradığımız anahtar değerine eşit olup olmadığına bakar. Eğer eşitse 4. satırda 'doğru' sonucunu döndürür.
 
@@ -97,19 +96,25 @@ Eşit değilse, 6. satırdaki döngü çalışır. Bu döngü dizi elemanların�
 
 Kısaca, dizide anahtarı arar. Dizi içerisinde dizi varsa onları da arar. İç İçe diziler bittiğinde bulamamış demektir ve false döndürür. Durur.
 
-**Örnekler 2.:**
+**Örnek 2:**
 
 ```php
-<?php
   echo "<pre>";  
   /* Anonim fonksiyon kullanımına da örnek var. */
 
   /* array_map() Kullanımı */
   $arr  = [1,2,3,4,5,6,7,8,9];
   $arr2 = array_map(function($val){return $val.' -';}, $arr);
-  // print_r($arr2);
+  print_r($arr2);
+  echo "</pre>";
+```
 
-  /* array_rand() Kullanımı */
+**Örnek 3:**
+
+*array_rand() Kullanımı*
+
+```php  
+  echo "<pre>";
   $arr = [
     'ad' => 'Hasan',
     'soyad' => 'Çiçek',
@@ -121,7 +126,5 @@ Kısaca, dizide anahtarı arar. Dizi içerisinde dizi varsa onları da arar. İ�
   $random = array_rand($arr, 2);
   $values = array_map(function($key) use($arr){return$arr[$key];}, $random);
   print_r($values);
-
   echo "</pre>";
-?>
 ```
