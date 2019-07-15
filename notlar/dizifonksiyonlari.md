@@ -3,13 +3,13 @@
 | Fonksiyon-Kullanımı | Açıklama |
 | ----- | ----- |
 | `print_r($arr);` | Dizi yada objenin okunabilir bir şekilde, insani bir şekilde yapısını gösterir. |
-| `var_dump()` | Dizi yada objenin okunabilir bir şekilde, programlama görünümünde yapısını gösterir. `var_dump($arr);` |
-| `explode()` | Parçala. Belirli bir karakterle bir birinden ayrılmış olan ifadeleri, parçalamamıza olanak sağlıyor. Kısaca o metinden istediğimiz yeri alabilmemize yarıyor. `explode(',', $arr);`|
-| `implode()` | Birleştir. explode() fonksiyonunun tam tersidir. Bir diziyi istediğimiz karakterle birleştirip string ifadeye çeviriyor. `implode('|', $arr);` |
-| `count()` | Bir dizinin kaç tane elemanı olduğunu bulmamızı sağlar. `count($arr);` |
-| `is_array()` | Kontrol fonksiyonudur. İçerisine girdiğimiz değişkenin dizi olup olmadığını gösterir. `is_array($variable);` |
-| `shuffle()` | Diziyi karıştırarak, her bastırdığımızda elemanların sıralamasını değiştirir. `shuffle($arr);`|
-| `array_combine()` | İki farklı diziyi anahtar değer olarak birleştirmek için kullanılır. `array_combine($key, $values);` |
+| `var_dump($arr);` | Dizi yada objenin okunabilir bir şekilde, programlama görünümünde yapısını gösterir.  |
+| `explode(',', $arr);` | Parçala. Belirli bir karakterle bir birinden ayrılmış olan ifadeleri, parçalamamıza olanak sağlıyor. Kısaca o metinden istediğimiz yeri alabilmemize yarıyor. |
+| `implode('|', $arr);` | Birleştir. explode() fonksiyonunun tam tersidir. Bir diziyi istediğimiz karakterle birleştirip string ifadeye çeviriyor. |
+| `count($arr);` | Bir dizinin kaç tane elemanı olduğunu bulmamızı sağlar. |
+| `is_array($variable);` | Kontrol fonksiyonudur. İçerisine girdiğimiz değişkenin dizi olup olmadığını gösterir. |
+| `shuffle($arr);` | Diziyi karıştırarak, her bastırdığımızda elemanların sıralamasını değiştirir. |
+| `array_combine($key, $values);` | İki farklı diziyi anahtar değer olarak birleştirmek için kullanılır. |
 | `array_count_values()` | Dizide tekrarlanan elemanların kaç kez tekrarlandığını bulmak için kullanılır. `array_count_values($arr);` |
 | `array_flip()` | Anahtarlar ile değerlerin yerini değiştirmeye yarar. `array_flip($arr);` |
 | `array_key_exists()` | Dizi içerisinde belirlediğimiz anahtarın olup olmadığını kontrol eder. `array_key_exists('key', $arr);` İç içe dizilerde kullanılamaz. İç içe için aşağıdaki örneğe balınız. |
