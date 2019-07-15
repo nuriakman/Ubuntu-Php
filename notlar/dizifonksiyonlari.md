@@ -1,4 +1,4 @@
-# DİZİ FONKSİYONLARI
+# Dizi Fonksiyonları
 
 | Fonksiyon-Kullanımı | Açıklama |
 | ----- | ----- |

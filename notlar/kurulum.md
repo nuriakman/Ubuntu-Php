@@ -491,7 +491,3 @@ Atom editör içinde DB_NAME, DB_USER, DB_PASSWORD, DB_HOST Sabitleri tanımlan�
 http://localhost/wordpress adresinden wordpress sitesine girilebilir.
 
 http://localhost/wordpress/wp-admin adresinden wordpress YÖNETİM sayfalarına girilebilir.
-
-
-
-[Php Nedir?](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/php_nedir.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php) :arrow_right: [Doğru Editör Seçimi](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/notlar/editor_secimi.md)

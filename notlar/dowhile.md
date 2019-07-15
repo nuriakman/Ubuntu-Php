@@ -1,4 +1,4 @@
-# DO-WHILE DÖNGÜSÜ
+# Do-While Döngüsü
 
 Önce **do** 'da yazılan içerik çalışır, sonra "*koşul*" doğru olduğu sürece devam eder.
 

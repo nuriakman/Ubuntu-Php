@@ -1,4 +1,4 @@
-# FOR DÖNGÜSÜ
+# For Döngüsü
 
 For döngüsü belirli sayıda dönecek olan kodların kullanımında kullanılır. 3 parametre girilir. Birinci parametre döngüde kullanılacak olan ***değişkeni ve değerini*** tanımlar, ikinci parametre ***koşulu*** belirtir, üçüncü parametre ise her döndüğünde ***yapacağı işlemi*** belirtir.
 

@@ -1,4 +1,4 @@
-# FONKSİYONLARIN KULLANIMI
+# Fonksiyonların Kullanımı
 
 PHP’nin kendi içinde yüzlerce fonksiyonu vardır. Örneğin; isset(), empty(), unset() gibi. Fonksiyon oluşturmak ve kullanmak gayet basit, ama basit olduğu gibi derin konuları da var.
 

@@ -1,4 +1,4 @@
-# FOREACH DÖNGÜSÜ
+# Foreach Döngüsü
 
 "*Foreach*" döngüsü sadece dizilerde kullanılır. Bir diziyi döngüye sokarak işlem yapmamızı sağlar.
 

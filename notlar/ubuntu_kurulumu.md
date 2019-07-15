@@ -16,7 +16,3 @@
 
 
 ![](https://lh3.googleusercontent.com/eq14ERX5YAYjIjm0BzowW32SP8pY49garm7GPAcAjxZg6gZu_ld6ulxjspc8cDnXsr5ChynlWGXF)
-
-
-
-[ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php)
