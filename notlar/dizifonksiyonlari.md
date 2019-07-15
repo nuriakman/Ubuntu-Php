@@ -5,7 +5,7 @@
 | `print_r($arr);` | Dizi yada objenin okunabilir bir şekilde, insani bir şekilde yapısını gösterir. |
 | `var_dump($arr);` | Dizi yada objenin okunabilir bir şekilde, programlama görünümünde yapısını gösterir.  |
 | `explode(',', $arr);` | Parçala. Belirli bir karakterle bir birinden ayrılmış olan ifadeleri, parçalamamıza olanak sağlıyor. Kısaca o metinden istediğimiz yeri alabilmemize yarıyor. |
-| `implode('|', $arr);` | Birleştir. explode() fonksiyonunun tam tersidir. Bir diziyi istediğimiz karakterle birleştirip string ifadeye çeviriyor. |
+| `implode('\|', $arr);` | Birleştir. explode() fonksiyonunun tam tersidir. Bir diziyi istediğimiz karakterle birleştirip string ifadeye çeviriyor. |
 | `count($arr);` | Bir dizinin kaç tane elemanı olduğunu bulmamızı sağlar. |
 | `is_array($variable);` | Kontrol fonksiyonudur. İçerisine girdiğimiz değişkenin dizi olup olmadığını gösterir. |
 | `shuffle($arr);` | Diziyi karıştırarak, her bastırdığımızda elemanların sıralamasını değiştirir. |
