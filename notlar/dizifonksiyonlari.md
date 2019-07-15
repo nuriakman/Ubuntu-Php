@@ -5,7 +5,7 @@
 | `print_r($arr);` | Dizi yada objenin okunabilir bir şekilde, insani bir şekilde yapısını gösterir. |
 | `var_dump($arr);` | Dizi yada objenin okunabilir bir şekilde, programlama görünümünde yapısını gösterir.  |
 | `explode(',', $arr);` | Parçala. Belirli bir karakterle bir birinden ayrılmış olan ifadeleri, parçalamamıza olanak sağlıyor. Kısaca o metinden istediğimiz yeri alabilmemize yarıyor. |
-| `implode('\|', $arr);` | Birleştir. explode() fonksiyonunun tam tersidir. Bir diziyi istediğimiz karakterle birleştirip string ifadeye çeviriyor. |
+| `implode('\|', $arr);` | Birleştir. `explode();` fonksiyonunun tam tersidir. Bir diziyi istediğimiz karakterle birleştirip string ifadeye çeviriyor. |
 | `count($arr);` | Bir dizinin kaç tane elemanı olduğunu bulmamızı sağlar. |
 | `is_array($variable);` | Kontrol fonksiyonudur. İçerisine girdiğimiz değişkenin dizi olup olmadığını gösterir. |
 | `shuffle($arr);` | Diziyi karıştırarak, her bastırdığımızda elemanların sıralamasını değiştirir. |
@@ -20,12 +20,12 @@
 | `array_reverse($arr);` | Dizi elemanlarını tersten yazdırır. |
 | `array_reverse($wanted,$arr);` | Dizide değer aramak için kullanılır. Değer varsa anahtarını geri döndürür. 1. parametre aradığımız değer, 2. parametre dizidir.) |
 | `in_array($value,$arr)` | Dizinde bir değerin olup olmadığını kontrol ederiz. Aşağıda kullanıldı. |
-| `array_shift()` | Dizinin ilk elemanının değerini alır. |
-| `array_pop()` | Dizinin son elemanının değerini alır. |
-| `array_slice()` | Dizinin belirli bir aralığını seçmek için kullanılır. Örneğin; `$yenidizi=array_slice($dizi, 3, 2);` Dizinin üçüncü elemanından başla, iki elemanını al. Yani; dört ve beşinci elemanını alır. Sadece üçü yazsaydık; üçüncüden sonrakileri verirdi. Sadece -2 dersek; son iki elemanı gösterir. |
-| `array_sum()` | Dizinin değerlerinin toplamını bulmak için kullanılır. |
-| `array_product()` | Dizi elemanlarını  çarpımını bulur. |
-| `array_unique()` | Dizide tekrarlana elemanları siler. |
+| `array_shift($arr);` | Dizinin ilk elemanının değerini alır, diziden çıkartır. |
+| `array_pop($arr);` | Dizinin son elemanının değerini alır, diziden çıkartır. |
+| `$yenidizi=array_slice($dizi, 3, 2);` | Dizinin belirli bir aralığını seçmek için kullanılır. 3 parametre alır. 1. parametre dizi, 2. parametre kaçıncı elemandan başlayacağı, 3. parametre kaç eleman alacağı. |
+| `array_sum($arr);` | Dizinin değerlerinin toplamını bulmak için kullanılır. |
+| `array_product($arr);` | Dizi elemanlarını  çarpımını bulur. |
+| `array_unique($arr);` | Dizide tekrarlana elemanları siler. |
 | `array_values()` | Dizideki değerleri alıp başka bir dizi oluşturmamıza yarar. Dizide benzer elemanlar olduğunda array_unique() ile benzerlerden temizlediğimizde kalan elemanların anahtarları karışık olur. İşte bu fonksiyonla temizlenmiş dizi elemanlarını başka bir diziye alır ve anahtarları tekrar oluştururuz. |
 | `array_push()` | Dizinin sonuna yeni bir eleman yada elemanlar eklemek için kullanılır. |
 | `array_unshift()` | Dizinin başına yeni bir eleman yada elemanlar eklemek için kullanılır. |
