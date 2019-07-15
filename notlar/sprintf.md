@@ -1,5 +1,7 @@
 ## PRINTF(), SPRINTF(), VPRINTF() VE VSPRINTF() FONKSİYONLARI
 
+Not: sprintfve vsprintf ekrana ancak `echo` ile yazdırılabilir. Dört fonksiyonda aynı işlemi yapar.
+
 Diyelim ki "*Afrika'da 5 tane maymun var.*" cümlesini dinamik olarak ekrana yazdırmak istiyoruz. Önce değişkenlerimizi oluşturalım;
 
 ```php
