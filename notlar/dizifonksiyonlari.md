@@ -22,7 +22,7 @@
 | `in_array($value,$arr)` | Dizinde bir değerin olup olmadığını kontrol ederiz. Aşağıda kullanıldı. |
 | `array_shift($arr);` | Dizinin ilk elemanının değerini alır, diziden çıkartır. |
 | `array_pop($arr);` | Dizinin son elemanının değerini alır, diziden çıkartır. |
-| `$yenidizi=array_slice($dizi, 3, 2);` | Dizinin belirli bir aralığını seçmek için kullanılır. 3 parametre alır. 1. parametre dizi, 2. parametre kaçıncı elemandan başlayacağı, 3. parametre kaç eleman alacağı. |
+| `$yenidizi=array_slice($dizi,3,2);` | Dizinin belirli bir aralığını seçmek için kullanılır. 3 parametre alır. 1. parametre dizi, 2. parametre kaçıncı elemandan başlayacağı, 3. parametre kaç eleman alacağı. |
 | `array_sum($arr);` | Dizinin değerlerinin toplamını bulmak için kullanılır. |
 | `array_product($arr);` | Dizi elemanlarını  çarpımını bulur. |
 | `array_unique($arr);` | Dizide tekrarlana elemanları siler. |
