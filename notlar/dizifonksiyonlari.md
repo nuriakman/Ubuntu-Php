@@ -2,9 +2,9 @@
 
 | Fonksiyon | Açıklama |
 | ----- | ----- |
-| `print_r()` | Dizi yada objenin okunabilir bir şekilde, insani bir şekilde yapısını gösterir. |
-| `var_dump()` | Dizi yada objenin okunabilir bir şekilde, programlama görünümünde yapısını gösterir. |
-| `explode()` | Parçala. Belirli bir karakterle bir birinden ayrılmış olan ifadeleri, parçalamamıza olanak sağlıyor. Kısaca o metinden istediğimiz yeri alabilmemize yarıyor. |
+| `print_r()` | Dizi yada objenin okunabilir bir şekilde, insani bir şekilde yapısını gösterir. `print_r($arr);` |
+| `var_dump()` | Dizi yada objenin okunabilir bir şekilde, programlama görünümünde yapısını gösterir. `var_dump($arr);` |
+| `explode()` | Parçala. Belirli bir karakterle bir birinden ayrılmış olan ifadeleri, parçalamamıza olanak sağlıyor. Kısaca o metinden istediğimiz yeri alabilmemize yarıyor. `explode(',', $arr);`|
 | `implode()` | Birleştir. explode() fonksiyonunun tam tersidir. Bir diziyi istediğimiz karakterle birleştirip string ifadeye çeviriyor. |
 | `count()` | Bir dizinin kaç tane elemanı olduğunu bulmamızı sağlar. |
 | `is_array()` | Kontrol fonksiyonudur. İçerisine girdiğimiz değişkenin dizi olup olmadığını gösterir. |
@@ -53,16 +53,8 @@
   ];
 
   echo "<pre>";
-  /* print_r Kullanımı */
-  // print_r($arr);
 
-  /* var_dump() Kullanımı */
-  // var_dump($arr);
 
-  /* explode() Kullanımı */
-  $test = "Hasan, Nuri, Ahmet, Leyla, Kemal, Nalan";
-  $arr = explode(',', $test); /* Virgüle göre parçalasın! */
-  // print_r($arr);
 
   /* implode() Kullanımı */
   $string = implode('|', $arr); /* Örnek için yukarıdaki $arr'yi aldık. Aralarına | koyduk. */
