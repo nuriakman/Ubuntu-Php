@@ -9,7 +9,7 @@
 | `count($arr);` | Bir dizinin kaç tane elemanı olduğunu bulmamızı sağlar. |
 | `is_array($variable);` | Kontrol fonksiyonudur. İçerisine girdiğimiz değişkenin dizi olup olmadığını gösterir. |
 | `shuffle($arr);` | Diziyi karıştırarak, her bastırdığımızda elemanların sıralamasını değiştirir. |
-| `array_combine($key, $values);` | İki farklı diziyi anahtar değer olarak birleştirmek için kullanılır. |
+| `array_combine($key,$values);` | İki farklı diziyi anahtar değer olarak birleştirmek için kullanılır. |
 | `array_count_values()` | Dizide tekrarlanan elemanların kaç kez tekrarlandığını bulmak için kullanılır. `array_count_values($arr);` |
 | `array_flip()` | Anahtarlar ile değerlerin yerini değiştirmeye yarar. `array_flip($arr);` |
 | `array_key_exists()` | Dizi içerisinde belirlediğimiz anahtarın olup olmadığını kontrol eder. `array_key_exists('key', $arr);` İç içe dizilerde kullanılamaz. İç içe için aşağıdaki örneğe balınız. |
