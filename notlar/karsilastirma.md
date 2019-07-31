@@ -3,13 +3,15 @@
 | Operatör | Açıklama |
 |----|----|
 | \== | Eşittir. |
+| === | Aynıdır, Denkse. |
 | \!= | Eşit değildir. |
-| \> | Büyüktür. |
+| \<> | Eşit değildir. |
+| \!== | Farklıdır. |
 | \< | Küçüktür. |
-| \>= | Büyükse yada eşitse. |
-| \<= | Küçükse yada eşitse. |
-| \=== | Denkse. |
-| \!== | Denk değilse. |
+| \> | Büyüktür. |
+| \<= | Küçük yada eşittir. |
+| \>= | Büyük yada eşittir. |
+| <=> | Mekik (Php 7 ve üstü).|
 
 *İpucu 1: Sonuçlar true(1) yada false(0) döner.*
 
