@@ -8,21 +8,21 @@ Git'i kurduktan sonra "GitBash" i açın. GitBash'den yapacaklarımızı aşağ�
 - Adımızı ve E-Posta adresimizi tanıtalım,
 
 ```bash
-  $ git config --global user.name "Adınız ve soyadınız ya da kullanıcı adınız"
-  $ git config --global user.email "E-Posta adresiniz"
+  git config --global user.name "Adınız ve soyadınız ya da kullanıcı adınız"
+  git config --global user.email "E-Posta adresiniz"
 ```
 
 - SSH KEY'i oluşturalım ve Github'a yükleyelim,
 cat id_rsa.pub
 ```bash
-  $ ssh-keygen -t rsa -C "E-Posta adresiniz"
+  ssh-keygen -t rsa -C "E-Posta adresiniz"
 ```
 
 - Şimdi oluşturduğumuz SSH Key'i kopyalayıp GitHub'a yapıştıralım.
 
 ```bash
-  $ cd /c/Users/user/.ssh/
-  $ cat id_rsa.pub
+  cd /c/Users/user/.ssh/
+  cat id_rsa.pub
 ```
 
 ``cat`` komutu ile "id_rsa.pub" dosyasının içerisindeki keygeni "rsa" dan başlayıp "eposta" adresimiz dahil olacak şekilde kopyalıyoruz.
@@ -42,26 +42,26 @@ Yeni projemize geçip yeşil renkte olan ***Clone or Download*** butonuna basıy
 Şimdi devam edebilmemiz için /c/xampp/htdocs klasörüne geçmemiz gerekiyor. Bunun için;
 
 ```bash
-  $ cd /c/xampp/htdocs/
+  cd /c/xampp/htdocs/
 ```
 
 Github'da bulunan projemizi lokalimize klonlamak için;
 
 ```bash
-  $ git clone KOPYALADIĞINIZ_PROJE_ADRESİ
+  git clone KOPYALADIĞINIZ_PROJE_ADRESİ
   cat id_rsa.pub
 ```
 
 Şu ana kadar bir şeyleri unutmadıysak projemiz "HTDOCS" klasörü altına klonlanmaya başlamıştır. Klonlama işlemi bittikten sonra proje klasörünün içerisine geçiyoruz;
 
 ```bash
-  $ cd /c/xampp/htdocs/proje_adi
+  cd /c/xampp/htdocs/proje_adi
 ```
 
 Atom text editörde projemizi ekleyerek çalışmaya başlamak için;
 
 ```bash
-  $ atom .
+  atom .
 ```
 
 Komutunu gönderdikten sonra atom editörü projemizle beraber çalışmaya hazır şekilde açılacaktır.
