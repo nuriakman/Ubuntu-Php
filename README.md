@@ -12,7 +12,7 @@
 - [Başlarken...](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/baslangic.md)
 - [Php Nedir?](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/php_nedir.md)
 - [LAMP Kurulumu](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/kurulum.md)
-- [Wiçndows'da Git Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/git_windows.md)
+- [Windows'da Git Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/git_windows.md)
 - [Doğru Editör Seçimi (IDM)](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/editor_secimi.md)
 
 ### PHP'YE GİRİŞ
