@@ -2,7 +2,7 @@
 ## LYK EĞİTİM NOTLARI
 
 
-![](https://lh3.googleusercontent.com/hTju6PNPOVRXbORlfGwkr0uJUkfjDED-gGrxbZfb4UKSqIJhVE0FlQCUH9MIyZNm93-TRd_Z5nAa)
+![Mustafa Akgül Özgür Yazılım Yaz Kampı 2019](https://lh3.googleusercontent.com/hTju6PNPOVRXbORlfGwkr0uJUkfjDED-gGrxbZfb4UKSqIJhVE0FlQCUH9MIyZNm93-TRd_Z5nAa)
 
 
 ***Ben bu konuyu biliyorum diye düşünüp bazı konuları geçebileceğinizi düşünebilirsiniz. Size tavsiyem bildiğinizi sandığınız konulara da bir göz atın derim...***
@@ -12,7 +12,8 @@
 - [Başlarken...](./notlar/baslangic.md)
 - [Php Nedir?](./notlar/php_nedir.md)
 - [LAMP Kurulumu](./notlar/kurulum.md)
-- [Windows'da Git Kullanımı](./notlar/git_windows.md)
+- [Windows'da Git Kurulumu, SSH Key ve Github Ayarları](./notlar/git_windows.md)
+- [Git Komutları-Kullanımı](./notlar/git_kullanimi.md)
 - [Doğru Editör Seçimi (IDM)](./notlar/editor_secimi.md)
 
 ### PHP'YE GİRİŞ
