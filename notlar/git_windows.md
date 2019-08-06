@@ -26,6 +26,6 @@ cat id_rsa.pub
 
 ``cat`` komutu ile "id_rsa.pub" dosyasının içerisindeki keygeni "rsa" dan başlayıp "eposta" adresimiz dahil olacak şekilde kopyalıyoruz.
 
-[github.com/settings/keys](github.com/settings/keys sayfasına geçip, başlığı yazdıktan sonra Key bölümüne kopyaladığımız ssh key'i yapıştırıyoruz.) sayfasına geçip, başlığı yazdıktan sonra Key bölümüne kopyaladığımız ssh key'i yapıştırıyoruz.
+[github.com/settings/keys](https://github.com/settings/keys) github.com/settings/keys sayfasına geçip, başlığı yazdıktan sonra Key bölümüne kopyaladığımız ssh key'i yapıştırıyoruz. sayfasına geçip, başlığı yazdıktan sonra Key bölümüne kopyaladığımız ssh key'i yapıştırıyoruz.
 
 Bu yaptığımız işlemler sonucunda github.com ile makinamız arasında güvenli bir  "GİT" çalışma ortamı oluşturmuş olduk.
