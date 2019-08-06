@@ -64,4 +64,6 @@ Atom text editörde projemizi ekleyerek çalışmaya başlamak için;
   atom .
 ```
 
-Komutunu gönderdikten sonra atom editörü projemizle beraber çalışmaya hazır şekilde açılacaktır.
+Komutunu gönderdikten sonra atom editörü projemizle beraber çalışmaya hazır şekilde açılacaktır. Artık çalışmaya hazırsınız.
+
+Git kullanımı hakkında bilgiye [buradan](/git_kullanimi.md)ulaşabilirsiniz.
