@@ -9,59 +9,59 @@
 
 ### BAŞLANGIÇ
 
-- [Başlarken...](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/baslangic.md)
-- [Php Nedir?](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/php_nedir.md)
-- [LAMP Kurulumu](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/kurulum.md)
-- [Windows'da Git Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/git_windows.md)
-- [Doğru Editör Seçimi (IDM)](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/editor_secimi.md)
+- [Başlarken...](./notlar/baslangic.md)
+- [Php Nedir?](./notlar/php_nedir.md)
+- [LAMP Kurulumu](./notlar/kurulum.md)
+- [Windows'da Git Kullanımı](./notlar/git_windows.md)
+- [Doğru Editör Seçimi (IDM)](./notlar/editor_secimi.md)
 
 ### PHP'YE GİRİŞ
 
-- [Yazım Kuralları (Syntax)](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/yazim_kurallari.md)
-- [Veri Türleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/veri_turleri.md)
-- [Değişkenlerin Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/degiskenler.md)
-- [Sabit Değişkenler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/sabit_degiskenler.md)
-- [Sihirli Karakterler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/sihirli_karakterler.md)
+- [Yazım Kuralları (Syntax)](./notlar/yazim_kurallari.md)
+- [Veri Türleri](./notlar/veri_turleri.md)
+- [Değişkenlerin Kullanımı](./notlar/degiskenler.md)
+- [Sabit Değişkenler](./notlar/sabit_degiskenler.md)
+- [Sihirli Karakterler](./notlar/sihirli_karakterler.md)
 
 ### OPERATÖRLER
 
-- [Aritmatik Operatörler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/aritmatik.md)
-- [Atama Operatörleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/atama.md)
-- [Artırma ve Azaltma Operatörleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/artirma_azaltma.md)
-- [Karşılaştırma Operatörleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/karsilastirma.md)
-- [Mantıksal Operatörler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/mantiksal.md)
+- [Aritmatik Operatörler](./notlar/aritmatik.md)
+- [Atama Operatörleri](./notlar/atama.md)
+- [Artırma ve Azaltma Operatörleri](./notlar/artirma_azaltma.md)
+- [Karşılaştırma Operatörleri](./notlar/karsilastirma.md)
+- [Mantıksal Operatörler](./notlar/mantiksal.md)
 
 ### DİZİLER
 
-- [Dizi Oluşturmak ve Dizi Tanımlamanın İki Yolu](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/diziler.md)
-- [İç İçe Dizi Oluşturmak](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/ic_ice_diziler.md)
-- [Sabit Değişkenlerde Dizilerin Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/sabit_degiskenlerde_dizi.md)
+- [Dizi Oluşturmak ve Dizi Tanımlamanın İki Yolu](./notlar/diziler.md)
+- [İç İçe Dizi Oluşturmak](./notlar/ic_ice_diziler.md)
+- [Sabit Değişkenlerde Dizilerin Kullanımı](./notlar/sabit_degiskenlerde_dizi.md)
 
 ### KOŞULLU İFADELER
 
-- [İf-Else İfadesi](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/if_else.md)
-- [Switch-Case İfadesi](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/switch_case.md)
-- [Ternary(Üçlü) Operatör Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/ternary.md)
+- [İf-Else İfadesi](./notlar/if_else.md)
+- [Switch-Case İfadesi](./notlar/switch_case.md)
+- [Ternary(Üçlü) Operatör Kullanımı](./notlar/ternary.md)
 
 ### DÖNGÜLER
 
-- [For Döngüsü](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/for.md)
-- [Foreach Döngüsü](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/foreach.md)
-- [While Döngüsü](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/while.md)
-- [Do-While Döngüsü](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/dowhile.md)
+- [For Döngüsü](./notlar/for.md)
+- [Foreach Döngüsü](./notlar/foreach.md)
+- [While Döngüsü](./notlar/while.md)
+- [Do-While Döngüsü](./notlar/dowhile.md)
 
 ### FONKSİYONLAR  
 
-- [Fonksiyonların Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/fonksiyonlar.md)
-- [Anonim Fonksiyonlar](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/anonim_fonksiyonlar.md)
-- [Fonksiyonlarda Sınırsız Parametre Göndermek](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/fonksiyon_sinirsiz_parametre.md)
+- [Fonksiyonların Kullanımı](./notlar/fonksiyonlar.md)
+- [Anonim Fonksiyonlar](./notlar/anonim_fonksiyonlar.md)
+- [Fonksiyonlarda Sınırsız Parametre Göndermek](./notlar/fonksiyon_sinirsiz_parametre.md)
 
 ### PHP'DE TANIMLI FONKSİYONLAR
 
-- [Dizi Fonksiyonları](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/dizifonksiyonlari.md)
-- [String Fonksiyonları](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/stringfonksiyonlari.md)
-- [printf(), sprintf(), vprintf() ve vsprintf() Fonksiyonları](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/sprintf.md)
+- [Dizi Fonksiyonları](./notlar/dizifonksiyonlari.md)
+- [String Fonksiyonları](./notlar/stringfonksiyonlari.md)
+- [printf(), sprintf(), vprintf() ve vsprintf() Fonksiyonları](./notlar/sprintf.md)
 
 ### PHP'DE FORM İŞLEMLERİ
 
-- [Form nedir? Özellikleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/form.md)
+- [Form nedir? Özellikleri](./notlar/form.md)
