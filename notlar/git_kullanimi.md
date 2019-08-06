@@ -1,5 +1,12 @@
 # GİT KOMUTLARI
 
+# Git Nedir?
+
+Git en temel mantığı ile versiyon kontrol sistemidir. Projelerimizde kodlarımızı, versiyonlarımızı ve yazdığımız yorumları vb. işlemleri tutmamıza ve geriye dönüp neler yapmışız bakabilmemize yarar.
+Kendi bilgisayarımızda ya da gitlab, github ve bitbucket gibi projelerimizi barındırabileceğimiz bulut sistemlerinde rahatlıkla kullanabiliriz. Bir projede birden fazla kişinin çalışmasına olanak sağlar.
+
+[Git komutları hakkında detaylı bilgi. (*****)](https://git-scm.com/docs)
+
 ### Hazırlık
 
 Başlamadan önce hatırlatmak isterim ki; git kullanımı gerek ***gitBash***'de olsun, gerek ***linux*** kolsolda olsun ve gerekse ***osx*** sistemlerde olsun aynıdır. Sadece ***osx*** sistemlerde "***git***" yada herhangi bir terminal komutu yoksa bunu "***brew***" paket yöneticisini kurduktan sonra kullanabiliyorsunuz. ***Brew Paket Yöneticisi***'ni ve ***git***'i kurmak için aşağıdaki komutu osx terminalden gönderin. Git kolmutu genelde osx sistemlerde yüklü gelir, ben sadece sırası gelmişken osx sistemlere paket yöneticisi ve paketler nasıl yüklenir bilgi vermek istedim.
@@ -29,9 +36,9 @@ Osx için; /Application/MAMP/html/
 #### Lokalde projemi değiştirdim, repository'i nasıl eşitlerim?
 
 Aşağıdaki üç satır komutların açıklaması;
-- Önce yeni dosya yada klasör oluşturmuş isen onları ekle,
+- Önce yeni dosya yada klasör oluşturmuş isen onları ekle, buradaki . bulunduğumuz klasörü temsil eder.
 - Yaptığın ekleme yada güncelleme hakkında not ilişkilendir,
-- Github'da yer alan projeni güncelle yani gönder.
+- Github'da yer alan projeni güncelle yani gönder. Burada "master" bulunduğumuz dalı (branch) temsil eder. Varsayılan olarak "master" dır.
 
 ```bash
   git add .
@@ -75,3 +82,44 @@ Depo yoksa ``fatal: Not a git repository (or any of the parent directories): .gi
 ```bash
   git remote add origin git@github.com:yeniceri1453/Ubuntu-Php.git
 ```
+
+#### Projemde yeni dal (branch) nasıl oluşturabilirim?
+
+```bash
+  git branch yeni_dal_ismi
+```
+
+#### İstediğim dala (branch) nasıl geçebilirim?
+
+```bash
+  git checkout dal_ismi
+```
+
+#### Projemde dalı (branch) nasıl silebilirim?
+
+```bash
+  git branch -D dal_ismi
+```
+
+#### Dalı (branch) gövdeye nasıl birleştirebilirim?
+
+```bash
+  git merge dal_ismi
+```
+
+#### Eski sürüme nasıl dönerim?
+
+- Eski sürümleri (commit) nasıl görebilirim?
+
+```bash
+  git log
+```
+
+- Eski sürüme (commit) nasıl giderim?
+  a1453 yazan yere gitmek istediğiniz commit anahtarının ilk 5 karakteridir.
+  
+```bash
+  git checkout <commit - a1453..>
+```
+
+Devam edecek........
