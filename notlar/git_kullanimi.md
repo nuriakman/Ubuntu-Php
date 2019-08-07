@@ -117,9 +117,15 @@ Depo yoksa ``fatal: Not a git repository (or any of the parent directories): .gi
 
 - Eski sürüme (commit) nasıl giderim?
   a1453 yazan yere gitmek istediğiniz commit anahtarının ilk 5 karakteridir.
-  
+
 ```bash
   git checkout <commit - a1453..>
+```
+
+- Şimdiki zamana nasıl dönerim?
+
+```bash
+  git reset
 ```
 
 Devam edecek........
