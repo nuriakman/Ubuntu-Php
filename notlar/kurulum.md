@@ -12,13 +12,13 @@ Kurulum komutlarının açıklamalı sade listesine [buradan](https://github.com
 **Depo Listesinin Güncellenmesi:** Linux sistemi kendisini güncellemek için bir merkeze bakıp, kontrol yapmaya ihtiyacı vardır. Bu listelerin bakılacağı yerler /etc/apt/sources.list dosyasında tutulur. "update" komutu ile sistemde kurulu olan paketler, paket deposundaki versiyonları ile farklarına bakılır ve fark varsa liste güncellenir. Bu komut kurulum yapmaz. Ubuntu paket listeleri hakkında detaylı bilgiye [buradan](https://wiki.ubuntu-tr.net/index.php?title=Yaz%C4%B1l%C4%B1m_ve_G%C3%BCncelle%C5%9Ftirmeler) ulaşabilirsiniz.
 
 ```bash
-  $ sudo apt update # Depo listelerini güncelle.
+  sudo apt update # Depo listelerini güncelle.
 ```
 
 **Paketlerin Güncellenmesi:** Sistemde kurulu olan paketler, "upgrade" komutu ile güncellenen listeye göre bulunan en son sürüme yükseltir.
 
 ```bash  
-  $ sudo apt upgrade -y # Paketlerin yeni sürümleri varsa yükselt.
+  sudo apt upgrade -y # Paketlerin yeni sürümleri varsa yükselt.
 ```
 
 ## PHP PAKETLERİNİN KURULMASI
@@ -28,14 +28,14 @@ Kurulum komutlarının açıklamalı sade listesine [buradan](https://github.com
 Php için olmazsa olmaz, ***açık kaynak kodlu*** ve ücretsiz bir web sunucusu yazılımı olan *Apache* yi kuralım;
 
 ```bash
-  $ sudo apt install apache2 -y # Apache kur.
-  $ sudo sudo systemctl enable apache2 # Apache2'yi açılışta otomatik başlat.
+  sudo apt install apache2 -y # Apache kur.
+  sudo sudo systemctl enable apache2 # Apache2'yi açılışta otomatik başlat.
 ```
 
 Apache kurulumunu test için aşağıdaki komutu gönderin. Çıkmak için ise `CTRL+C` ya da `q` ya basın.
 
 ```bash
-  $ sudo systemctl status apache2.service # Aşağıdaki çıktıyı verecektir!
+  sudo systemctl status apache2.service # Aşağıdaki çıktıyı verecektir!
 ```
 
 **Örnek Ekran Görüntüsü:**
@@ -69,7 +69,7 @@ Apache kurulumunu test için aşağıdaki komutu gönderin. Çıkmak için ise `
 
 ```bash
   # Html dizini ve alt elemanlarının sahibini ve grubunu www-data yap.
-  $ sudo chown www-data:www-data /var/www/html/ -R
+  sudo chown www-data:www-data /var/www/html/ -R
 ```
 
 ### VERİTABANI (MariaDB) KURULUMU
@@ -77,9 +77,9 @@ Apache kurulumunu test için aşağıdaki komutu gönderin. Çıkmak için ise `
 MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL'in yaratıcısı olan *Monty Widenius*'un MySQL'in kodunu çatallayıp (fork) "çoğunlukla" MySQL ile aynı komutları, arayüzleri ve API'leri destekleyecek şekilde geliştirmeye başlanan, toplulukla iç içe hızlı ve verimli şekilde geliştirilmeye devam edilen MySQL ilişkisel veritabanı yönetim sistemidir.
 
 ```bash
-  $ sudo apt install mariadb-server mariadb-client -y # Mariadb'yi kur.
-  $ sudo sudo systemctl enable mariadb # Mariadb'yi açılışta otomatik başlat.
-  $ systemctl status mariadb.service
+  sudo apt install mariadb-server mariadb-client -y # Mariadb'yi kur.
+  sudo sudo systemctl enable mariadb # Mariadb'yi açılışta otomatik başlat.
+  systemctl status mariadb.service
 ```
 
 Çıkmak için ise `CTRL+C` ya da `q` ya basın.
@@ -109,7 +109,7 @@ hasan@armada:/var/www/html/Ubuntu-Php$ systemctl status mariadb.service
 **Root Kullanıcısı İçin Parola Belirleme:**
 
 ```bash
-  $ sudo mysql -u root
+  sudo mysql -u root
 ```
 
 **Örnek Ekran Görüntüsü:**
@@ -142,7 +142,7 @@ Aşağıdaki komutları, satır satır gönderin.
 Not: Unutmayacağınız bir parola lütfen!
 
 ```bash
-  $ sudo mysql_secure_installation   
+  sudo mysql_secure_installation   
 ```
 **Parola** yı iki defa girmenizi ister.  **Parola** ekranda görülmez ve aynı olmak zorundadır. Bu komuttan sonra gelen ekranda, sırasıyla aşağıda yer alan resimlerdeki adımları izleyin;
 
@@ -155,7 +155,7 @@ Not: Unutmayacağınız bir parola lütfen!
 **my.cnf dosyası** sunucunuzda bulunan **veri tabanı yönetim sisteminin** ayar dosyasıdır ve oldukça önemlidir. my.cnf sunucuda varsayılan olarak /etc/my.cnf yolu ile erişilebilir ve düzenlenebilir şekilde kayıtlıdır. Ayrıca dosyanın yerini konsoldan aşağıdaki komutu yazarak bulabiliriz.
 
 ```bash
-  $ sudo find / -name my.cnf
+  sudo find / -name my.cnf
 ```
 
 Ekran çıktısı:
@@ -170,7 +170,7 @@ Ekran çıktısı:
 Dosyayı konsoldan açmak için;
 
 ```bash
-  $ sudo nano /etc/mysql/my.cnf # Kendi dosya adresinizi girin!
+  sudo nano /etc/mysql/my.cnf # Kendi dosya adresinizi girin!
 ```
 
 Aşağıdaki ayarları bir seferde kopyalayıp sayfanın en altına yapıştırabilirsiniz.
@@ -282,33 +282,33 @@ Aşağıdaki ayarları bir seferde kopyalayıp sayfanın en altına yapıştıra
 
 ```bash
   # Php'yi belirtilen paketlerle beraber kur.    
-  $ sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc -y
-  $ sudo apt install php-gd php-mysql php-mbstring php-xml libapache2-mod-php -y
+  sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc -y
+  sudo apt install php-gd php-mysql php-mbstring php-xml libapache2-mod-php -y
   # Php versiyon kontrolu yap.
-  $ sudo php -v
+  sudo php -v
   # Apache Web sunucusunu yeniden başlat.
-  $ sudo systemctl restart apache2
+  sudo systemctl restart apache2
 ```
 
 **Html Dizini İçin Yetkilendirme:**
 
 ```bash
-  $ sudo adduser $USER www-data
-  $ sudo chown -R $USER:www-data /var/www/html/
+  sudo adduser $USER www-data
+  sudo chown -R $USER:www-data /var/www/html/
 ```
 
 **Masaüstü'ne HTML Klasörü Kısayolunun Oluşturulması:**
 
 ```bash
-  $ cd ~/Masaüstü # Masaüstü dizinine geç.
-  $ ln -s /var/www/html/ # Masaüstü'ne kısayol oluştur.  
+  cd ~/Masaüstü # Masaüstü dizinine geç.
+  ln -s /var/www/html/ # Masaüstü'ne kısayol oluştur.  
 ```
 
 **PHP Betiklerini Apache Sunucusunda Test Etmek:**
 
 ```bash
-  $ cd /var/www/html/ # html dizinine geç.
-  $ sudo nano /var/www/html/info.php # info.php dosyasını oluştur ve konsolda aç.
+  cd /var/www/html/ # html dizinine geç.
+  sudo nano /var/www/html/info.php # info.php dosyasını oluştur ve konsolda aç.
 ```
 İçerisine altta yer alan bir satırlık ilk php kodumuzu yazalım ve `CTRL+C` sonra `E` sonra `ENTER` şeklinde kayıt edep çıkalım.
 
@@ -330,7 +330,7 @@ php.ini dosyasının adresine [buradan](http://localhost/info.php) ulaşabilirsi
 
 Dosyayı konsoldan açmak için;
 ```bash
-  $ sudo nano /etc/php/7.2/apache2/php.ini # Kendi dosya adresinizi girin!
+  sudo nano /etc/php/7.2/apache2/php.ini # Kendi dosya adresinizi girin!
 ```
 
 Aşağıdaki ayarları bir seferde kopyalayıp sayfanın en altına yapıştırabilirsiniz.
@@ -365,29 +365,29 @@ Aşağıdaki ayarları bir seferde kopyalayıp sayfanın en altına yapıştıra
 **Kurulum:**
 
 ```bash
-   $ sudo apt install git -y # Git kurulumunu yap.
-   $ git --version # Git versiyonunu gösterirse kurulum tamamdır.
+   sudo apt install git -y # Git kurulumunu yap.
+   git --version # Git versiyonunu gösterirse kurulum tamamdır.
 ```
 
 **Kullanıcı Ayarlarının Yapılması:**
 
 ```bash
-   $ git config --global user.name "kullaniciadi" # "kullaniciadi" kullanıcısını tanı.
-   $ git config --global user.email eposta # eposta'yı tanı.
+   git config --global user.name "kullaniciadi" # "kullaniciadi" kullanıcısını tanı.
+   git config --global user.email eposta # eposta'yı tanı.
 ```
 
 **_git init:** init komutu, bulunduğumuz dizini uzak bir sunucutaki bir sunucuya gönderebilmeniz için, bir Git repository’si haline getirip .git uzantılı bir dizin oluşturur.  Git/github kullanımı hakkında detaylı bilgiye [buradan](http://github.com) ulaşabilirsiniz.
 
 ```bash
-  $ cd /var/www/html/ # html dizinine geç.
-  $ git init # Git'i bu dizin için konuşlandır.
+  cd /var/www/html/ # html dizinine geç.
+  git init # Git'i bu dizin için konuşlandır.
 ```
 
 ### SSH KEY ÜRETME
 
 ```bash
-  $ cd ~/.ssh # Eğer hata verirse sorun yok alt satırdan devam edin.
-  $ ssh-keygen
+  cd ~/.ssh # Eğer hata verirse sorun yok alt satırdan devam edin.
+  ssh-keygen
 ```
 Ekran çıktısı;
 ```bash
@@ -417,7 +417,7 @@ Ekran çıktısı;
 **GitHub Sitesine SSH Key\'i Ekleme:**
 
 ```bash
-  $ cat ~/.ssh/id_rsa.pub # Ssh Key'in olduğu dosyayı aç.
+  cat ~/.ssh/id_rsa.pub # Ssh Key'in olduğu dosyayı aç.
 ```
 
 *Örnek Ssh Key görüntüsü;*
@@ -438,10 +438,10 @@ Ekran çıktısı;
 PHP ile yazılmış tam özellikli bir veritabanı yönetim aracıdır. PhpMyAdmin, Adminer tersine hedef sunucuya dağıtmak için hazır, tek bir dosya oluşur. Adminer MySQL, PostgreSQL, SQLite, MS SQL ve Oracle için kullanılabilir.
 
 ```bash
-  $ cd /var/www/html/ # html dizinine geç.
-  $ mkdir adminer # Burada "adminer" adında bir dizin oluştur.
-  $ cd adminer # adminer dizinine geç.
-  $ wget -O index.php https://www.adminer.org/latest.php # latest.php dosyasını buraya indir.
+  cd /var/www/html/ # html dizinine geç.
+  mkdir adminer # Burada "adminer" adında bir dizin oluştur.
+  cd adminer # adminer dizinine geç.
+  wget -O index.php https://www.adminer.org/latest.php # latest.php dosyasını buraya indir.
 ```
 
 Dosyayı indirdikten sonra dosyanın ismi "index.php" değilse "index.php" olarak değiştirmeyi unutmayın. html dizininin içerisindeki index.html dosyasını silin. Bundan sonra localhos'a girdiğimizde artık karımıza aşağıdaki resimde yer alan ekran çıkacaktır.
@@ -454,21 +454,33 @@ Adminer [bağlantısını](http://localhost/adminer/)  seçtiğimizde ise aşağ
 
 Veritabanı işlemleri hakkında daha geniş bilgiye [buradan](https://www.php.net/manual/tr/book.mysql.php) ulaşabilirsiniz.
 
+## SUBLİME TEXT EDİTÖRÜ KURULUMU
+
+
+```bash
+  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+  sudo apt-get install apt-transport-https
+  echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+  echo "deb https://download.sublimetext.com/ apt/dev/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+  sudo apt-get update
+  sudo apt-get install sublime-text
+```
+
 ## ATOM TEXT EDİTÖRÜ KURULUMU
 
 ### Atom Paketi Deposunun Listeye Eklenmesi
 
 ```bash
   # Atom paketinin indirileceği depoyu sisteme ekle.
-  $ wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
-  $ sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
-  $ sudo apt update
+  wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
+  sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+  sudo apt update
 ```
 
 ### Kurulumu
 
 ```bash
-  $ sudo apt install atom -y  # Atom paketini kur.
+  sudo apt install atom -y  # Atom paketini kur.
 ```
 
 Atom Metin editörü hakkında bilgiye ve kullanışlı eklentilerine [buradan](https://emregeldegul.net/2017/10/kullanisli-atom-paketleri/) ulaşabilirsiniz.
