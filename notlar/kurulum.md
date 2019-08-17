@@ -339,9 +339,8 @@ Aşağıdaki ayarları bir seferde kopyalayıp sayfanın en altına yapıştıra
       display_startup_errors = On
       display_errors         = On
       short_open_tag         = On
-      opcache.enable         = 0
+      opcache.enable         = Off
       upload_max_filesize    = 128M
-      upload_max_size        = 128M
       post_max_size          = 128M
       max_input_vars         = 5000
       date.timezone          = "Europe/Istanbul"
