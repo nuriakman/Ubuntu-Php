@@ -101,6 +101,7 @@
       sudo apt install <PACKAGE_NAME>
  ```
  *Kullanılabilecek paket listesi*
+ 
 | PCI.ID          |    16.04 LTS          |              17.10+|
 |-----------------|-----------------------|---------------------|
 |14e4:0576           |Special Case #1                   |UNKNOWN      |
