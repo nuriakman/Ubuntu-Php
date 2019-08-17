@@ -114,7 +114,9 @@ enp3s0    no wireless extensions.
 lo        no wireless extensions.
 ```
 
-3- Kablosuz aygıtları listeleme,
+3- Kablosuz aygıtları mevcut durumunu listeleme,
+
+Herhangi bir "evet" varsa, ``rfkill``’ün wifi’nizin engellemesini engelleyen bir şey anlamına gelir; Bu servisi bulup durdurmalısın. ``sudo service {service} stop`` Genel olarak, bunlar diğer ağ araçlarıdır.
 
 ```sh
 rfkill list all
@@ -132,16 +134,44 @@ rfkill list all
 	Soft blocked: no
 	Hard blocked: no
 ```
+```sh
+nmcli c
+```
+Örnek Çıktı;
 
-```sh     
-      lspci -vnn | grep Network
-      iwconfig
-      lspci -nn -d 14e4:
-      sudo apt-get purge bcmwl-kernel-source
-      sudo apt update
-      sudo update-pciids
-      sudo apt install bcmwl-kernel-source
- ```
+```sh
+NAME                UUID                                  TYPE      DEVICE 
+Kablolu bağlantı 1  275520a7-0648-3a1c-9f0b-d2740923ddce  ethernet  enp3s0 
+babaminyeri         857252a5-7b01-4888-a6a1-550221d3dca3  wifi      --   
+```
+```sh
+nmcli d
+```
+Örnek Çıktı;
+
+```sh
+DEVICE  TYPE      STATE         CONNECTION         
+enp3s0  ethernet  bağlandı      Kablolu bağlantı 1 
+lo      loopback  yönetilmeyen  --       
+```
+#### nmcli komutları
+
+```sh
+# Bağlantı durumu görme
+nmcli general status
+nmcli c
+nmcli d
+# type:wifi
+nmcli r wifi on
+# Manuel bağlanma
+nmcli d wifi connect "bağlantı adı" password "parola"
+# Bağlantıyı ayağa kaldırma
+nmcli c up <name>
+```
+
+
+
+
  *Kullanılabilecek paket listesi*
  
 | PCI.ID          |    16.04 LTS          |              17.10+|
@@ -193,6 +223,18 @@ rfkill list all
 |14e4:4727           |bcmwl-kernel-source               |bcmwl-kernel-source |       
 |14e4:4727 rev 01    |Special Case #1                   |Special Case #1 |       
 |14e4:a962           |firmware-b43-installer            |firmware-b43-installer|
+
+
+
+```sh     
+      lspci -vnn | grep Network
+      iwconfig
+      lspci -nn -d 14e4:
+      sudo apt-get purge bcmwl-kernel-source
+      sudo apt update
+      sudo update-pciids
+      sudo apt install bcmwl-kernel-source
+ ```
  
  
 **2. YOL**
