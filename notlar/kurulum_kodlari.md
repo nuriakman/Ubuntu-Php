@@ -98,9 +98,7 @@
       sudo apt-get purge bcmwl-kernel-source
       sudo apt update
       sudo update-pciids
-      sudo apt install firmware-b43-installer
-      sudo reboot
-      sudo apt install <PACKAGE_NAME>
+      sudo apt install bcmwl-kernel-source
  ```
  *Kullanılabilecek paket listesi*
  
