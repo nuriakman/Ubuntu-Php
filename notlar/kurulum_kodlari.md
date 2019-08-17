@@ -89,9 +89,51 @@
 
 *LENOVO Z580 Wireless KARTI WİFİ KABLOSUZ ALICI KART Broadcom BCM94313HMGB 802.11b/g Wireless LAN WiFi Card*
 
-**1. YOL**
+
+1- Sürücü tespiti yapalım,
 
 ```sh
+lspci -vvnn | grep 14e4
+```
+Örnek Çıktı; Aşağıda *14e4:* ile başlayan yerler kablosuz ağ adaptörlerimizin kodlarını vermektedir.
+
+```sh
+04:00.0 Network controller [0280]: Broadcom Inc. and subsidiaries BCM4313 802.11bgn Wireless Network Adapter [14e4:4727] (rev 01)
+	Subsystem: Broadcom Inc. and subsidiaries BCM4313 802.11bgn Wireless Network Adapter [14e4:0587]
+```
+2- Kablosuz ağ kartımızı görüntüleyelim,
+
+```sh
+iwconfig
+```
+Örnek Çıktı;
+
+```sh
+enp3s0    no wireless extensions.
+
+lo        no wireless extensions.
+```
+
+3- Kablosuz aygıtları listeleme,
+
+```sh
+rfkill list all
+```
+Örnek Çıktı;
+
+```sh
+0: ideapad_wlan: Wireless LAN
+	Soft blocked: no
+	Hard blocked: no
+1: ideapad_bluetooth: Bluetooth
+	Soft blocked: no
+	Hard blocked: no
+5: hci0: Bluetooth
+	Soft blocked: no
+	Hard blocked: no
+```
+
+```sh     
       lspci -vnn | grep Network
       iwconfig
       lspci -nn -d 14e4:
