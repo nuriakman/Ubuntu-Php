@@ -276,6 +276,18 @@ Aşağıdaki ayarları bir seferde kopyalayıp sayfanın en altına yapıştıra
       key-buffer-size                 = 150M
 ```
 
+#### MARİADB AÇILIŞTA DEVREYE GİRMEZSE ÇALIŞTIRILAMAZSA AŞAĞIDAKİ KOMUTLARI SIRASIYLA GÖNDER.
+
+```sh
+sudo apt-get install software-properties-common
+sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
+sudo add-apt-repository 'deb [arch=amd64,arm64,ppc64el] http://mariadb.mirrors.ovh.net/MariaDB/repo/10.3/ubuntu bionic main'
+sudo apt update
+sudo apt install mariadb-server
+sudo systemctl restart mariadb
+systemctl status mariadb.service
+```
+
 ### PHP KURULUMU
 
 *Not: Bu komutta kurulacak php7 paketleri temel ihtiyaçlar için zorunlu paketlerdir.*
