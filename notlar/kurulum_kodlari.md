@@ -165,3 +165,13 @@
       sudo modprobe -r b43 ssb wl brcmfmac brcmsmac bcma
       sudo modprobe wl
 ```
+
+**3. YOL**
+
+```sh
+      sudo apt update && sudo apt upgrade -y
+      sudo service fwupd start
+      sudo fwupdmgr refresh
+      sudo fwupdmgr update
+      # KAYNAK: https://itsfoss.com/update-firmware-ubuntu/
+```
