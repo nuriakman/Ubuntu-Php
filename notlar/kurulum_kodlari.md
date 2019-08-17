@@ -84,3 +84,81 @@
       # Mysql parolası belirlemek.
       sudo mysql_secure_installation
 ```
+
+### LENOVO Z580 WİRELESS STA SÜRÜCÜLERİNİ YÜKLEME
+
+**1. YOL**
+
+```sh
+      lspci -vnn | grep Network
+      iwconfig
+      lspci -nn -d 14e4:
+      sudo apt-get purge bcmwl-kernel-source
+      sudo apt update
+      sudo update-pciids
+      sudo apt install firmware-b43-installer
+      sudo reboot
+      sudo apt install <PACKAGE_NAME>
+ ```
+ *Kullanılabilecek paket listesi*
+ PCI.ID              16.04 LTS                        17.10+
+------------------------------------------------------------------------------------
+14e4:0576           Special Case #1                   UNKNOWN      
+14e4:1713           firmware-b43-installer            firmware-b43-installer      
+14e4:4301           firmware-b43-installer            firmware-b43-installer      
+14e4:4306           firmware-b43-installer            firmware-b43-installer      
+14e4:4306 rev 02    firmware-b43-installer            firmware-b43-installer      
+14e4:4306 rev 03    firmware-b43-installer            firmware-b43-installer      
+14e4:4307           firmware-b43-installer            firmware-b43-installer      
+14e4:4311           firmware-b43-installer            firmware-b43-installer      
+14e4:4311 rev 01    firmware-b43-installer            firmware-b43-installer      
+14e4:4312           firmware-b43-installer            firmware-b43-installer      
+14e4:4313           firmware-b43-installer            firmware-b43-installer               
+14e4:4315           firmware-b43-installer            firmware-b43-installer      
+14e4:4315 rev 01    firmware-b43-installer            firmware-b43-installer
+14e4:4318           firmware-b43-installer            firmware-b43-installer                
+14e4:4318 rev 02    firmware-b43-installer            firmware-b43-installer                
+14e4:4319           firmware-b43-installer            firmware-b43-installer               
+14e4:4320 rev 02    firmware-b43-installer            firmware-b43-installer               
+14e4:4320 rev 03    firmware-b43-installer            firmware-b43-installer            
+14e4:4321           firmware-b43-installer            firmware-b43-installer  
+14e4:4324           firmware-b43-installer            firmware-b43-installer        
+14e4:4325           firmware-b43-installer            firmware-b43-installer      
+14e4:4328           firmware-b43-installer            firmware-b43-installer
+14e4:4328 rev 03    bcmwl-kernel-source               bcmwl-kernel-source      
+14e4:4329           bcmwl-kernel-source               bcmwl-kernel-source        
+14e4:432a           bcmwl-kernel-source               bcmwl-kernel-source        
+14e4:432b           bcmwl-kernel-source               bcmwl-kernel-source        
+14e4:432c           bcmwl-kernel-source               bcmwl-kernel-source        
+14e4:432d           bcmwl-kernel-source               bcmwl-kernel-source       
+14e4:4331           firmware-b43-installer            firmware-b43-installer          
+14e4:4335           firmware-b43-installer            firmware-b43-installer      
+14e4:4350           firmware-b43-installer            firmware-b43-installer  
+14e4:4353           Special Case #1                   UNKNOWN        
+14e4:4353 rev 01    Special Case #1                   UNKNOWN                 
+14e4:4357           Special Case #1                   UNKNOWN        
+14e4:4358           bcmwl-kernel-source               bcmwl-kernel-source
+14e4:4359           bcmwl-kernel-source               bcmwl-kernel-source       
+14e4:4360           bcmwl-kernel-source               bcmwl-kernel-source    
+14e4:4365           bcmwl-kernel-source               bcmwl-kernel-source      
+14e4:4365 rev 01    bcmwl-kernel-source               bcmwl-kernel-source      
+14e4:43a0           bcmwl-kernel-source               bcmwl-kernel-source
+14e4:43ae rev 02    UNKNOWN                           UNKNOWN     
+14e4:43b1           bcmwl-kernel-source               bcmwl-kernel-source        
+14e4:43b1 rev 03    bcmwl-kernel-source               bcmwl-kernel-source              
+14e4:43c3 rev 04    UNKNOWN                           Special Case #2                     
+14e4:4727           bcmwl-kernel-source               bcmwl-kernel-source        
+14e4:4727 rev 01    Special Case #1                   Special Case #1        
+14e4:a962           firmware-b43-installer            firmware-b43-installer
+ 
+ 
+**2. YOL**
+
+ ```sh
+      # KABLOLU BAĞLANTI VARKEN YAP!
+      sudo apt-get update
+      sudo apt-get --reinstall install bcmwl-kernel-source
+      # BİLGİSAYARI YENİDEN BAŞLATMADAN DEVREYE ALMA
+      sudo modprobe -r b43 ssb wl brcmfmac brcmsmac bcma
+      sudo modprobe wl
+```
