@@ -87,6 +87,8 @@
 
 ### LENOVO Z580 WİRELESS STA SÜRÜCÜLERİNİ YÜKLEME
 
+*LENOVO Z580 Wireless KARTI WİFİ KABLOSUZ ALICI KART Broadcom BCM94313HMGB 802.11b/g Wireless LAN WiFi Card*
+
 **1. YOL**
 
 ```sh
