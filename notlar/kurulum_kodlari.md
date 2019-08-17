@@ -166,7 +166,7 @@
       sudo modprobe wl
 ```
 
-**3. YOL**
+**3. YOL (Nuri Akman)**
 
 ```sh
       sudo apt update && sudo apt upgrade -y
