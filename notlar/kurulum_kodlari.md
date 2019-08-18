@@ -257,3 +257,15 @@ nmcli c up <name>
       sudo fwupdmgr update
       # KAYNAK: https://itsfoss.com/update-firmware-ubuntu/
 ```
+
+## Terminus – A modern age terminal on Ubuntu
+
+Terminus, Hyper’den esinlenerek tasarlanmış, zarif ve kullanımı kolay, web tabanlı bir linux terminalinden başka bir şey değildir. İşleri zamanında yapmak isteyen insanlar için tasarlanmıştır. Windows, MacOS yanı sıra Linux üzerinde çalışır ve çeşitli tema ve renk düzenleri ile birlikte gelir.
+
+**Kurulum:**
+
+```sh
+sudo apt install gdebi
+wget https://github.com/Eugeny/terminus/releases/download/v1.0.0-alpha.18/terminus_1.0.0-alpha.18_amd64.deb
+sudo gdebi terminus_1.0.0-alpha.18_amd64.deb
+```
