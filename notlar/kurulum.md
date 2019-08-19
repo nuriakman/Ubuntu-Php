@@ -365,8 +365,7 @@ Aşağıdaki ayarları bir seferde kopyalayıp sayfanın en altına yapıştıra
 ### Apache ve MariaDB Servislerinin Tekrar Başlatılması
 
 ```sh
-      sudo systemctl start apache2
-      sudo systemctl start mariadb
+      sudo systemctl start apache2 && sudo systemctl start mariadb && shutdown -r now
 ```
 
 ### GİT KURULUMU
