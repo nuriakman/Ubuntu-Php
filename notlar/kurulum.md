@@ -362,7 +362,7 @@ Aşağıdaki ayarları bir seferde kopyalayıp sayfanın en altına yapıştıra
       disable_functions          = exec, passthru, shell_exec, system, proc_open, popen, curl_exec, curl_multi_exec, parse_ini_file, show_source
 ```
 
-### Apache ve MariaDB Servislerinin Tekrar Başlatılması
+### Servislerin ve Bilgisayarın Tekrar Başlatılması
 
 ```sh
       sudo systemctl start apache2 && sudo systemctl start mariadb && shutdown -r now
