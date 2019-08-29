@@ -150,8 +150,28 @@ dmesg -level=err,warn
 
 ### PCI aygıtlarını listeleme
 
+PCI aygıtlar genelde sisteme bağlı ses, Ethernet kartı, RAID kontrol kartı ve ekran kartı gibi cihazları gösterir.
 -vv parametresi ile daha detaylı gösterir.
+-m daha okunaklı yapar.
 
 ```bash
 lspci -v
+```
+
+### USB aygıtlarını listeleme
+
+```bash
+lsusb -v 
+```
+
+### CPU bilgisi almak
+
+```bash
+lscpu
+```
+
+### Hangi masaüstü ortamını kullandığımızı görmek
+
+``bash
+echo $DESKTOP_SESSION
 ```
