@@ -13,8 +13,8 @@ Ubuntu gibi Debian temelli Linux dağıtımlarında, tanımlanmış kaynaklardan
 | sudo apt-get install paket_adı | Paket kurmak | :green_heart: |
 | sudo apt-get install paket1 paket2 paket3.... | Birden çok paket kurmak | :green_heart: |
 | sudo apt-get remove paket_adı | Kurulu paketi kaldırmak | :broken_heart: |
-| sudo apt-get purge paket_adı | Paketi dosyaları ile birlikte kaldırmak |
-| sudo apt-get autoremove | Paketi bağımlılıkları ile birlikte kaldırmak |
+| sudo apt-get purge paket_adı | Paketi dosyaları ile birlikte kaldırmak | :broken_heart: |
+| sudo apt-get autoremove | Paketi bağımlılıkları ile birlikte kaldırmak | :broken_heart: |
 | sudo apt-get update | Paket listesini güncellemek | :green_heart: |
 | sudo apt-get upgrade | Kurulu paketleri güncellemek | :green_heart: |
 | sudo apt-get dist-upgrade | Tüm sistemi yükseltmek | :broken_heart: |
