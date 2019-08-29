@@ -4,6 +4,26 @@
   # !!! Linux komutları ve dosya/klasör adları büyük-küçük harf duyarlıdır. !!!
 ```
 
+## APT-GET
+
+Ubuntu gibi Debian temelli Linux dağıtımlarında, tanımlanmış kaynaklardan yeni yazılım paketlerini indirme ve bağımlılıkları ile birlikte kurma, paketleri yükseltme, paket liste içeriklerini güncelleme gibi işlemleri yerine getirmek için kullanılan bir komut satırı arayüzüdür.
+
+| Komut |Açıklama  |!!!|
+|--|--|--|
+| sudo apt-get install paket_adı | Paket kurmak | :green_heart: |
+| sudo apt-get install paket1 paket2 paket3.... | Birden çok paket kurmak | :green_heart: |
+| sudo apt-get remove paket_adı | Kurulu paketi kaldırmak | :broken_heart: |
+| sudo apt-get purge paket_adı | Paketi dosyaları ile birlikte kaldırmak |
+| sudo apt-get autoremove | Paketi bağımlılıkları ile birlikte kaldırmak |
+| sudo apt-get update | Paket listesini güncellemek | :green_heart: |
+| sudo apt-get upgrade | Kurulu paketleri güncellemek | :green_heart: |
+| sudo apt-get dist-upgrade | Tüm sistemi yükseltmek | :broken_heart: |
+| sudo add-apt-repository yeni_deponun_PPA_adresi | Yeni depo eklemek | :green_heart: |
+| sudo apt-cache search paket_adı | Program aramak | :green_heart: |
+| sudo apt-cache show paket_adı | Program hakkında bilgi almak | :green_heart: |
+| sudo apt-get clean | Sistemde "/var/cache/apt/archives/" dizininde tutulan paketleri silmek | :broken_heart: |
+| apt-get help | Apt komutları hakkında yardım almak | :green_heart: |
+
 ## Temel Komutlar
 
 | Komut |Açıklama  |!!!|
