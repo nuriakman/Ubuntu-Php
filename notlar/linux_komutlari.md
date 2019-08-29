@@ -112,3 +112,46 @@ Sistemimizin performansını artırmak için gerekli olan "Medya Kodekleri" ni y
 ```bash
   $ apt-cache search php7
 ```
+
+## FAYDALI KOMUTLAR
+
+### Sistem sıcaklığını öğrenmek
+
+İlgili paketin kurulması ve çalıştırılması;
+
+```bash
+apt-get install lm-sensors
+sensors
+```
+
+### Sistemin kaç BİT olduğunu öğrenmek
+
+```bash
+uname -m
+```
+
+### Sistem hakkında detaylı bilgi almak
+
+```bash
+uname -a
+```
+
+### Donanım bilgisi almak
+
+```bash
+dmesg
+```
+
+### Donanım bilgisi hata aramak
+
+```bash
+dmesg -level=err,warn
+```
+
+### PCI aygıtlarını listeleme
+
+-vv parametresi ile daha detaylı gösterir.
+
+```bash
+lspci -v
+```
