@@ -233,3 +233,46 @@ journalctl -b
 sudo useradd -m -s /bin/bash yeniKullaniciAdi
 ```
 
+### Kullanıcıya şifre atamak
+
+```bash
+sudo usermod -p sifre kullaniciAdi
+```
+
+### Kullanıcı silmek
+
+```bash
+sudo userdel -r kullaniciAdi 
+```
+
+### Gruba kullanıcı eklemek
+
+```bash
+sudo usermod -G grupAdi eklenecekKullaniciAdi
+```
+
+### Kullanıcı gruplarını görmek 
+
+```bash
+cat /etc/group
+```
+
+### Kullanıcının dahil olduğu grupları görmek
+
+```bash
+cat /etc/group | grep "kullaniciAdi"
+```
+
+### Yeni kullanıcı grubu eklemek
+
+```bash
+sudo grupadd yeniGrupAdi
+```
+
+### Grup adını değiştirmek
+
+```bash
+sudo groupmod -p yeniGrupAdi eskiGrupAdi
+```
+
+
