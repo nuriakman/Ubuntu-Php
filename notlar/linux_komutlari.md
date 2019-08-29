@@ -275,4 +275,65 @@ sudo grupadd yeniGrupAdi
 sudo groupmod -p yeniGrupAdi eskiGrupAdi
 ```
 
+## DOSYA İŞLEMLERİ
+
+### Dosya sıkıştırmak
+
+gzip dışında bzip2 vardır, biraz daha fazla şıkıştırabilir. bunzip ile çıkartılır.
+
+```bash
+gzip dosyaadi
+```
+
+### Dosyayı çıkarmak
+
+```bash
+gunzip dosyaAdi 
+```
+
+### Dosyaları arşivlemek
+
+Birden fazla doysa için kullanılır.
+
+"-c" yeni arşiv dosyası oluşturmak için,
+"-v" işlenen dosyaların listelenmesi için,
+"-f" ise çıktının bir dosya olacağını belirtmek için kullanılır.
+
+```bash
+tar -cvf dosya1.x dosya2.x dosya3.x
+```
+
+### Arşiv dosyasının içerisindeki dosyaları görüntülemek
+
+Bu işlem dosyaları ayıklamaz sadece listeler!
+
+```bash
+tar -tf dosyaAdi
+```
+
+### Arşiv dosyasından dosyaları ayıklamak/çıkarmak
+
+```bash
+tar -xvf dosyaAdi
+```
+
+### Arşiv dosyasına yeni bir dosya ilave etmek
+
+```bash
+tar -rf dosyaAdi.tar yeniDosta.x 
+```
+
+### Dosyaları arşivlerken aynı anda sıkıştırmak
+
+```bash
+tar -zcvf arsiv.tar.gz dosya1 dosya2 dosya3 
+```
+
+### Arşivlenip sıkıştırılmış bir dosyayı ayıklamak
+
+```bash
+tar -zxvf arsiv.tar.gz
+```
+
+
 
