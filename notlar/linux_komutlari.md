@@ -210,3 +210,26 @@ Modülün bağımlılıkları varsa ve bundan dolayı hata alıyorsanız;
 modprobe -r modülAdi
 ```
 
+### Komut dosyalarının hangi adreste saklandığını öğrenmek
+
+```bash
+which komutadi
+```
+
+### Önyükleme günlüklerini görüntülemek
+
+```bash
+journalctl -b 
+```
+
+## KULLANICI İŞLEMLERİ
+
+### Yeni kullanıcı eklemek
+
+“-m” HOME klasörünün de oluşturmasını sağlar,
+“-s” Shell olarak bash kabuğunu atar.
+
+```bash
+sudo useradd -m -s /bin/bash yeniKullaniciAdi
+```
+
