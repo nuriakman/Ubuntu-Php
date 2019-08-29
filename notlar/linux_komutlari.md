@@ -175,3 +175,38 @@ lscpu
 ``bash
 echo $DESKTOP_SESSION
 ```
+
+### Hangi modüllerin yüklü olduğuna bakmak
+
+```bash
+lsmod
+```
+
+### Yüklü modüllerden herhangi birinin bilgilerini sorgulamak
+
+-a komutu modülün yazarını gösterir(lsmod ile aldığımız modül adı kullanılır).
+
+```bash
+modinfo -d modülAdi
+```
+
+### Modül yüklemek 
+
+```bash
+modprobe modülAdi
+```
+
+### Modül kaldırmak 
+
+Modül meşgul ise kaldırmaz!
+
+```bash
+rmmod modülAdi
+```
+
+Modülün bağımlılıkları varsa ve bundan dolayı hata alıyorsanız;
+
+```bash
+modprobe -r modülAdi
+```
+
