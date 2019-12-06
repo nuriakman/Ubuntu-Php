@@ -10,7 +10,7 @@
       # Paketlerin yeni sürümleri varsa yükseltmek.
       sudo apt upgrade -y
       # Apache'yi kurmak.
-      sudo apt install apache2-y
+      sudo apt install apache2 -y
       # Apache2'yi açılışta otomatik başlaması için ayarlamak.
       sudo sudo systemctl enable apache2     
       # Html dizini ve alt elemanlarının sahibini ve grubunu www-data yapmak.
