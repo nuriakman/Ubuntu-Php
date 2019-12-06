@@ -20,8 +20,8 @@
       # Mariadb'yi açılışta otomatik başlaması için ayarlamak.
       sudo sudo systemctl enable mariadb
       # Php'yi belirtilen paketlerle beraber kur.    
-      $ sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc -y
-      $ sudo apt install php-gd php-mysql php-mbstring php-xml libapache2-mod-php -y
+      sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc -y
+      sudo apt install php-gd php-mysql php-mbstring php-xml libapache2-mod-php -y
       # Apache Web sunucusunu yeniden başlatmak.
       sudo systemctl restart apache2
       # Html dizini için kullanıcıyı yetkilendirmek.
@@ -42,7 +42,7 @@
       # Git'e "kullaniciadi" kullanıcısını tanıtmak. Adını ve Soyadını gir.
       git config --global user.name "kullaniciadi"
       # Git'e eposta'yı tanıtmak. E-Posta'nı gir.
-      $ git config --global user.email eposta
+      git config --global user.email eposta
       # Git init için "html" dizinine geç.
       cd /var/www/html/
       # Git'i bu dizin için konuşlandır.
