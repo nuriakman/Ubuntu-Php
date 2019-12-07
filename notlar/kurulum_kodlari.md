@@ -89,11 +89,19 @@ sudo apt-get install sublime-text
 ```
 
 #### LİSANS
+~/.config/sublime-text-3/Local/ adresinde "**License.sublime_license**" isimli dosya varmı kontrol edin.
 ```bash
-sudo chattr +i ~/.config/sublime-text-3/Local/License.sublime_license
+cd ~/.config/sublime-text-3/Local/
+ls -al
+# Varsa geditle aç içerisine anahtarı yapıştır.
+sudo gedit License.sublime_license
+# Eğer değişiklik yapılamıyorsa salt okunur açılıyorsa,
+sudo chattr -i License.sublime_license
+#Gedit komutunu tekrar çalıştır.
+# Yapıştırdıktan sonra kaydet ve kapat.
 ```
-Dosya yoksa yolu izleyerek kontrol et ve ekle. Sonrasında aşağıdaki anahtarı olduğu gibi yapıştır ve kaydet.
 
+###### Lisans Anahtarı
 ```
 ----- BEGIN LICENSE -----
 Member J2TeaM
@@ -108,6 +116,12 @@ A684C2DC 0B1583D4 19CBD290 217618CD
 DD9AF44B 99C49590 D2DBDEE1 75860FD2
 8C8BB2AD B2ECE5A4 EFC08AF2 25A9B864
 ------ END LICENSE ------
+```
+
+Sonrasında dosya hakkında (içeriği, sahibi ve adı gb.) herhangi bir şeyin değiştirilememesi için aşağıdaki komutu uygulayın. İptal için +i yi -i yapın. +i yapıldısında sudo su bile işlemez :). Siz anladınız!
+
+```bash
+sudo chattr +i License.sublime_license
 ```
 
 ## ATOM KURMAK
