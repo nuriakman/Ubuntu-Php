@@ -3,65 +3,58 @@
 *Açıklama satırlarını okuyarak kodları konsolda satır satır çalıştırın!*
 
 ```sh
-      # Ekranları araç çubuğundan tek tıkla aç-kapat özelliğini vermek.
+      # Ekranları araç çubuğundan tek tıkla aç-kapat özelliğini ver.
+      # Kolay kullanım için bu önemli.
       gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
-      # Depo listelerinden versiyon kontrolünü yapmak.
+      # Depo listelerinden versiyon kontrolünü yap.
       sudo apt update
-      # Paketlerin yeni sürümleri varsa yükseltmek.
+      # Paketlerin yeni sürümleri varsa yükselt.
       sudo apt upgrade -y
-      # Apache'yi kurmak.
+      # Apache'yi kur.
       sudo apt install apache2 -y
-      # Apache2'yi açılışta otomatik başlaması için ayarlamak.
+      # Apache2'yi açılışta otomatik başlaması için ayarla.
       sudo sudo systemctl enable apache2     
-      # Html dizini ve alt elemanlarının sahibini ve grubunu www-data yapmak.
+      # Html dizini ve alt elemanlarının sahibini ve grubunu www-data yap.
       sudo chown www-data:www-data /var/www/html/ -R
-      # Mariadb'yi kurmak.
+      # Mariadb'yi kur.
       sudo apt install mariadb-server mariadb-client -y
-      # Mariadb'yi açılışta otomatik başlaması için ayarlamak.
+      # Mariadb'yi açılışta otomatik başlaması için ayarla.
       sudo sudo systemctl enable mariadb
       # Php'yi belirtilen paketlerle beraber kur.    
       sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc -y
       sudo apt install php-gd php-mysql php-mbstring php-xml libapache2-mod-php -y
-      # Apache Web sunucusunu yeniden başlatmak.
+      # Apache Web sunucusunu yeniden başlat.
       sudo systemctl restart apache2
-      # Html dizini için kullanıcıyı yetkilendirmek.
+      # Html dizini için kullanıcıyı yetkilendir.
       sudo adduser $USER www-data
-      # Html dizini için grubu yetkilendirmek.
+      # Html dizini için grubu yetkilendir.
       sudo chown -R $USER:www-data /var/www/html/
-      # Masaüstü dizinine geçmek.
+      # Masaüstü dizinine geç.
       cd ~/Masaüstü
-      # Masaüstü'ne kısayol oluşturmak.
+      # Masaüstü'ne kısayol oluştur.
       ln -s /var/www/html/
-      # html dizinine geçmek.
+      # html dizinine geç.
       cd /var/www/html/
+      # Apache ve Mariadb'yi yeniden başlat.
       sudo systemctl restart apache2
-      # Mariadb'yi yeniden başlatmak.
       sudo systemctl restart mariadb
-      # Git kurulumunu yapmak.
+      # Git kurulumunu yap "html" dizinide içinde yap.
+      # Bu şekilde bütün projelerde kullanabilirsin.
       sudo apt install git -y
       # Git'e "kullaniciadi" kullanıcısını tanıtmak. Adını ve Soyadını gir.
-      git config --global user.name "kullaniciadi"
+      git config --global user.name "Adın Soyadın"
       # Git'e eposta'yı tanıtmak. E-Posta'nı gir.
-      git config --global user.email eposta
-      # Git init için "html" dizinine geç.
-      cd /var/www/html/
+      git config --global user.email epostan
+      # /var/www/html/ dizini içerisinde Git init çalıştır.
       # Git'i bu dizin için konuşlandır.
       git init
-      # Admineri kurmak için "html" dizinine geçmek.
-      cd /var/www/html/
-      # Burada "adminer" adında bir dizin oluşturmak.
+      # /var/www/html/ dizin içinde "Adminer"i kur.
+      # Burada "adminer" adında bir dizin oluştur.
       mkdir adminer
-      # adminer dizinine geçmek.
+      # adminer dizinine geç.
       cd adminer
-      # Adminer'in index.php dosyasını buraya indirmek.
+      # Adminer'in index.php dosyasını buraya indir.
       wget -O index.php https://www.adminer.org/latest.php
-      # Atom paketinin indirileceği depoyu sisteme eklemek.
-      wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -  
-      sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
-      # Yeni eklediğimiz depo listesinin tanınması için listeleri güncellemek.
-      sudo apt update
-      # Atom paketini kurmak.
-      sudo apt install atom -y
 ```
 
 *Bu satırı tek çalıştır.*
@@ -85,10 +78,29 @@
       sudo mysql_secure_installation
 ```
 
+## SUBLİME TEXT 3 KURULUMU
+```bash
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo apt-get install apt-transport-https
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+echo "deb https://download.sublimetext.com/ apt/dev/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt-get update
+sudo apt-get install sublime-text
+```
+## ATOM KURMAK
+```bash
+      # Atom paketinin indirileceği depoyu sisteme eklemek.
+      wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -  
+      sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+      # Yeni eklediğimiz depo listesinin tanınması için listeleri güncellemek.
+      sudo apt update
+      # Atom paketini kurmak.
+      sudo apt install atom -y
+ ```
+ 
 ### LENOVO Z580 WİRELESS STA SÜRÜCÜLERİNİ YÜKLEME
 
 *LENOVO Z580 Wireless KARTI WİFİ KABLOSUZ ALICI KART Broadcom BCM94313HMGB 802.11b/g Wireless LAN WiFi Card*
-
 
 1- Sürücü tespiti yapalım,
 
@@ -269,11 +281,3 @@ sudo apt install gdebi
 wget https://github.com/Eugeny/terminus/releases/download/v1.0.0-alpha.18/terminus_1.0.0-alpha.18_amd64.deb
 sudo gdebi terminus_1.0.0-alpha.18_amd64.deb
 ```
-## SUBLİME TEXT 3 KURULUMU
-```bash
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-sudo apt-get install apt-transport-https
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-echo "deb https://download.sublimetext.com/ apt/dev/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt-get update
-sudo apt-get install sublime-text
