@@ -89,7 +89,8 @@ sudo apt-get install sublime-text
 ```
 
 #### LİSANS
-~/.config/sublime-text-3/Local/ adresinde "**License.sublime_license**" isimli dosya varmı kontrol edin.
+~/.config/sublime-text-3/Local/ adresinde "**License.sublime_license**" isimli dosya varmı kontrol edin. Aşağıdaki komutlaları sırası ile konoldan gönderin.
+
 ```bash
 cd ~/.config/sublime-text-3/Local/
 ls -al
