@@ -88,7 +88,7 @@ sudo apt-get update
 sudo apt-get install sublime-text
 ```
 
-#### LİSANS
+#### LİSANS İŞLEMLERİ
 ~/.config/sublime-text-3/Local/ adresinde "**License.sublime_license**" isimli dosya varmı kontrol edin. Aşağıdaki komutlaları sırası ile konoldan gönderin.
 
 ```bash
@@ -102,7 +102,7 @@ sudo chattr -i License.sublime_license
 # Yapıştırdıktan sonra kaydet ve kapat.
 ```
 
-###### Lisans Anahtarı
+##### Lisans Anahtarı
 ```
 ----- BEGIN LICENSE -----
 Member J2TeaM
