@@ -78,7 +78,7 @@ exit;
 sudo mysql_secure_installation
 ```
 
-## SUBLİME TEXT 3  EDİTÖRÜNÜN KURULUMU
+## SUBLİMETEXT 3  EDİTÖRÜNÜN KURULUMU
 ```bash
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo apt-get install apt-transport-https
@@ -89,7 +89,7 @@ sudo apt-get install sublime-text
 ```
 
 #### LİSANS İŞLEMLERİ
-~/.config/sublime-text-3/Local/ adresinde "**License.sublime_license**" isimli dosya varmı kontrol edin. Aşağıdaki komutlaları sırası ile konoldan gönderin.
+```~/.config/sublime-text-3/Local/``` adresinde "**License.sublime_license**" isimli dosya varmı kontrol edin. Aşağıdaki komutlaları sırası ile konoldan gönderin.
 
 ```bash
 cd ~/.config/sublime-text-3/Local/
@@ -124,6 +124,46 @@ Sonrasında dosya hakkında (içeriği, sahibi ve adı gb.) herhangi bir şeyin 
 ```bash
 sudo chattr +i License.sublime_license
 ```
+
+### SUBLİMETEXT 3 YARARLI EKLENTİLERİ
+Sublimetext editöründe eklentileri "Package Control" üzerinden kolayca yapabiliriz. Bu Control'u çalıştırabilmemiz için öncelikle menüden View sekmesi altındaki "Show Console" seçeneğini tıklayarak Sublimetext Konsolunu açıyoruz. Buraya aşağıdaki kodları tek seferde yapıştırıp onaylayın.
+
+```bash
+import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) 
+```
+
+Konsoldaki işlem bittikten sonra CTRL+SHİFT+P tuş kombinasyonunu yapın. Açılan kutuya "install" yazdığınızda aşağıdalistelelen seçeneklerden "Package Control: Install Package" 'i seçin. Artık açılan ekrana yüklemek istediğiniz paket ismini yazarak ona ulaşıp kurabilirsiniz.
+
+#### Yararlı Sublimetext Eklentileri
+|Eklenti Adı | Açıklaması |
+|---|---|
+| Emmet | Kod kalıplarını hızlıca tanımlama. |
+| HTML5 | HTML5'e ait yeni tag'leri tamamlar. |
+| Inc-Dec-Value | Emmet'in yaptığı gibi rakamsal değerleri 0.1'er, 1'er, 10'ar, 100'er olarak artırıp eksiltebilir. |
+| AdvancedNewFile | Yeni dosya ve klasör oluşturabilmemizi sağlar. |
+| Alignment | Kodları hizaya getirir. |
+| AutoSemiColon | CSS ve Javascript'te satır ve nitelik sonlarına ; otomatik olarak koyar. |
+| AutoFileName | Dosya isimlerini otomatik tamamlar. |
+| BracketHighlighter | Alanların başı ve sonunu belirginleştiriyor. |
+| Case Conversion | Değişken isimlerini oluştururken kullandığımız metodlar arasında hızlı geçiş yapar. |
+| ColorHighlighter | Renk kodlarının altına aynı renkte çizgi çeker. |
+| CSS Extended Completions | Css, less ve scss dosyalarını tarayarak; bütün sınıfları, fonksiyonları ve id'leri belleğine alıp otomatik tamamlama olarak sunar. |
+| DocBlockr | Kod bloklarına dökümantasyon oluşturur. |
+| jQuery | jQuery'nin fonksiyonlarını otomatik tamamlar. |
+| Monokai Extended | Sublime Text daha spesifik obje ve alt sınıfları renklendiriyor. |
+| Quick File Open | Hızlı dosya ulaşma. |
+| Random Everything | Random veriler üretir. |
+| SFTP | Sunucu dosyalarında gezintiye çıkabilir, değişiklik yapabilir, silebilir, oluşturabilir, klasör ve dosyaların chmod değerlerini belirleyebilir, lokalden sunucuya (ya da tam tersi) senkronizasyon ve değişiklikleri gerçekleştirebilir ve en önemlisi dosyayı kaydeder kaydetmez sunucuya otomatik olarak upload edebilirsiniz. |
+| SublimeCodeIntel | Otomatik tamamlama. |
+| SublimeLinter | Hataları belirgin yapar. |
+| SwapStrings | Yanlış yazılanı çapraz değiştirir. İki terimin yerlerini tek bir komut ile değiştirebilir. |
+| Terminal | Bu eklenti ile proje'nin ana dizinini hedef göstererek, ya da aktif olarak açık dosyanın bulunduğu klasörü hedef göstererek terminal penceresi açabiliyorsunuz. |
+| GitGutter | Projede yapılan değişiklikleri gösterir. |
+| GitHubinator | Github da arama yapar. Nerede yazmıştım derdine son. |
+| SidebarEnhancements | Sol taraftaki sidebarda sağ tık özellikleri katar. |
+| AlignTab | Akıllı hizalama. |
+| A File Icon | Dosya iconlarını getirir. |
+
 
 ## ATOM TEXT EDİTÖRÜNÜN KURULUMU
 ```bash
