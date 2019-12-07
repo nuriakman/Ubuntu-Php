@@ -2,83 +2,83 @@
 
 *Açıklama satırlarını okuyarak kodları konsolda satır satır çalıştırın!*
 
-```sh
-      # Ekranları araç çubuğundan tek tıkla aç-kapat özelliğini ver.
-      # Kolay kullanım için bu önemli.
-      gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
-      # Depo listelerinden versiyon kontrolünü yap.
-      sudo apt update
-      # Paketlerin yeni sürümleri varsa yükselt.
-      sudo apt upgrade -y
-      # Apache'yi kur.
-      sudo apt install apache2 -y
-      # Apache2'yi açılışta otomatik başlaması için ayarla.
-      sudo sudo systemctl enable apache2     
-      # Html dizini ve alt elemanlarının sahibini ve grubunu www-data yap.
-      sudo chown www-data:www-data /var/www/html/ -R
-      # Mariadb'yi kur.
-      sudo apt install mariadb-server mariadb-client -y
-      # Mariadb'yi açılışta otomatik başlaması için ayarla.
-      sudo sudo systemctl enable mariadb
-      # Php'yi belirtilen paketlerle beraber kur.    
-      sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc -y
-      sudo apt install php-gd php-mysql php-mbstring php-xml libapache2-mod-php -y
-      # Apache Web sunucusunu yeniden başlat.
-      sudo systemctl restart apache2
-      # Html dizini için kullanıcıyı yetkilendir.
-      sudo adduser $USER www-data
-      # Html dizini için grubu yetkilendir.
-      sudo chown -R $USER:www-data /var/www/html/
-      # Masaüstü dizinine geç.
-      cd ~/Masaüstü
-      # Masaüstü'ne kısayol oluştur.
-      ln -s /var/www/html/
-      # html dizinine geç.
-      cd /var/www/html/
-      # Apache ve Mariadb'yi yeniden başlat.
-      sudo systemctl restart apache2
-      sudo systemctl restart mariadb
-      # Git kurulumunu yap "html" dizinide içinde yap.
-      # Bu şekilde bütün projelerde kullanabilirsin.
-      sudo apt install git -y
-      # Git'e "kullaniciadi" kullanıcısını tanıtmak. Adını ve Soyadını gir.
-      git config --global user.name "Adın Soyadın"
-      # Git'e eposta'yı tanıtmak. E-Posta'nı gir.
-      git config --global user.email epostan
-      # /var/www/html/ dizini içerisinde Git init çalıştır.
-      # Git'i bu dizin için konuşlandır.
-      git init
-      # /var/www/html/ dizin içinde "Adminer"i kur.
-      # Burada "adminer" adında bir dizin oluştur.
-      mkdir adminer
-      # adminer dizinine geç.
-      cd adminer
-      # Adminer'in index.php dosyasını buraya indir.
-      wget -O index.php https://www.adminer.org/latest.php
+```bash
+# Ekranları araç çubuğundan tek tıkla aç-kapat özelliğini ver.
+# Kolay kullanım için bu önemli.
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+# Depo listelerinden versiyon kontrolünü yap.
+sudo apt update
+# Paketlerin yeni sürümleri varsa yükselt.
+sudo apt upgrade -y
+# Apache'yi kur.
+sudo apt install apache2 -y
+# Apache2'yi açılışta otomatik başlaması için ayarla.
+sudo sudo systemctl enable apache2     
+# Html dizini ve alt elemanlarının sahibini ve grubunu www-data yap.
+sudo chown www-data:www-data /var/www/html/ -R
+# Mariadb'yi kur.
+sudo apt install mariadb-server mariadb-client -y
+# Mariadb'yi açılışta otomatik başlaması için ayarla.
+sudo sudo systemctl enable mariadb
+# Php'yi belirtilen paketlerle beraber kur.    
+sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc -y
+sudo apt install php-gd php-mysql php-mbstring php-xml libapache2-mod-php -y
+# Apache Web sunucusunu yeniden başlat.
+sudo systemctl restart apache2
+# Html dizini için kullanıcıyı yetkilendir.
+sudo adduser $USER www-data
+# Html dizini için grubu yetkilendir.
+sudo chown -R $USER:www-data /var/www/html/
+# Masaüstü dizinine geç.
+cd ~/Masaüstü
+# Masaüstü'ne kısayol oluştur.
+ln -s /var/www/html/
+# html dizinine geç.
+cd /var/www/html/
+# Apache ve Mariadb'yi yeniden başlat.
+sudo systemctl restart apache2
+sudo systemctl restart mariadb
+# Git kurulumunu yap "html" dizinide içinde yap.
+# Bu şekilde bütün projelerde kullanabilirsin.
+sudo apt install git -y
+# Git'e "kullaniciadi" kullanıcısını tanıtmak. Adını ve Soyadını gir.
+git config --global user.name "Adın Soyadın"
+# Git'e eposta'yı tanıtmak. E-Posta'nı gir.
+git config --global user.email epostan
+# /var/www/html/ dizini içerisinde Git init çalıştır.
+# Git'i bu dizin için konuşlandır.
+git init
+# /var/www/html/ dizin içinde "Adminer"i kur.
+# Burada "adminer" adında bir dizin oluştur.
+mkdir adminer
+# adminer dizinine geç.
+cd adminer
+# Adminer'in index.php dosyasını buraya indir.
+wget -O index.php https://www.adminer.org/latest.php
 ```
 
 *Bu satırı tek çalıştır.*
 
 ```sh
-      # Root kullanıcısı için parola belirlemek. Mariadb konsoluna geçer.
-      sudo mysql -u root
+# Root kullanıcısı için parola belirlemek. Mariadb konsoluna geçer.
+sudo mysql -u root
 ```
 *Buradaki komutları tek tek mariadb ekranından gönderin!*
 
 ```sh
-        show databases;
-        use mysql;
-        update user set plugin='' where User='root';
-        flush privileges;
-        exit;
+show databases;
+use mysql;
+update user set plugin='' where User='root';
+flush privileges;
+exit;
 ```
 
 ```sh
-      # Mysql parolası belirlemek.
-      sudo mysql_secure_installation
+# Mysql parolası belirlemek.
+sudo mysql_secure_installation
 ```
 
-## SUBLİME TEXT 3 KURULUMU
+## SUBLİME TEXT 3  EDİTÖRÜNÜN KURULUMU
 ```bash
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo apt-get install apt-transport-https
@@ -125,15 +125,15 @@ Sonrasında dosya hakkında (içeriği, sahibi ve adı gb.) herhangi bir şeyin 
 sudo chattr +i License.sublime_license
 ```
 
-## ATOM KURMAK
+## ATOM TEXT EDİTÖRÜNÜN KURULUMU
 ```bash
-      # Atom paketinin indirileceği depoyu sisteme eklemek.
-      wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -  
-      sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
-      # Yeni eklediğimiz depo listesinin tanınması için listeleri güncellemek.
-      sudo apt update
-      # Atom paketini kurmak.
-      sudo apt install atom -y
+# Atom paketinin indirileceği depoyu sisteme eklemek.
+wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -  
+sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+# Yeni eklediğimiz depo listesinin tanınması için listeleri güncellemek.
+sudo apt update
+# Atom paketini kurmak.
+sudo apt install atom -y
  ```
  
 ### TERMİNALDEN BİR KAÇ PÜF
@@ -184,7 +184,6 @@ iwconfig
 
 ```sh
 enp3s0    no wireless extensions.
-
 lo        no wireless extensions.
 ```
 
@@ -199,14 +198,14 @@ rfkill list all
 
 ```sh
 0: ideapad_wlan: Wireless LAN
-	Soft blocked: no
-	Hard blocked: no
+  Soft blocked: no
+  Hard blocked: no
 1: ideapad_bluetooth: Bluetooth
-	Soft blocked: no
-	Hard blocked: no
+  Soft blocked: no
+  Hard blocked: no
 5: hci0: Bluetooth
-	Soft blocked: no
-	Hard blocked: no
+  Soft blocked: no
+  Hard blocked: no
 ```
 ```sh
 nmcli c
@@ -242,9 +241,6 @@ nmcli d wifi connect "bağlantı adı" password "parola"
 # Bağlantıyı ayağa kaldırma
 nmcli c up <name>
 ```
-
-
-
 
  *Kullanılabilecek paket listesi*
  
