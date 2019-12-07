@@ -98,6 +98,30 @@ sudo apt-get install sublime-text
       sudo apt install atom -y
  ```
  
+### TERMİNALDEN BİR KAÇ PÜF
+```bash
+# Bilgisayarı kapatmak.
+shutdown now
+# Bilgisayarı yeniden başlatmak.
+shutdown -r now
+# Bilgisayarı uyutmak.
+systemctl suspend
+```
+ 
+### LENOVO Z580 NUMLOCK AÇILIŞTA AKTİF ETMEK
+GDM giriş pencresinde Numlock tuşunun otomatik açılması. Aşağıdaki komutları sırasıyla girdikten sonra bilgisayarı tekrar başlatırsanız aktif  oluyor.
+```bash
+sudo apt-get install numlockx
+sudo -i
+xhost +SI:localuser:gdm
+su gdm -s /bin/bash
+gsettings set org.gnome.settings-daemon.peripherals.keyboard numlock-state 'on'
+gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
+exit
+exit
+shutdown -r now
+```
+
 ### LENOVO Z580 WİRELESS STA SÜRÜCÜLERİNİ YÜKLEME
 
 *LENOVO Z580 Wireless KARTI WİFİ KABLOSUZ ALICI KART Broadcom BCM94313HMGB 802.11b/g Wireless LAN WiFi Card*
