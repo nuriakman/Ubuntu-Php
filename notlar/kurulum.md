@@ -1,8 +1,8 @@
 # PHP ÇALIŞMA ORTAMI HAZIRLAMA (LAMP)
 
 ```bash
-  Not: Konsol komutlarını kopyalarken, "#" simgesi ile başlayan yerleri almayınız.
-       Buralar açıklamadır. Komutların ne yaptığını, ne işe yaradığını anlamanız için yazılmıştır.
+Not: Konsol komutlarını kopyalarken, "#" simgesi ile başlayan yerleri almayınız.
+     Buralar açıklamadır. Komutların ne yaptığını, ne işe yaradığını anlamanız için yazılmıştır.
 ```
 
 Kurulum komutlarının açıklamalı sade listesine [buradan](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/kurulum_kodlari.md) ulaşabilirsiniz.
@@ -12,13 +12,13 @@ Kurulum komutlarının açıklamalı sade listesine [buradan](https://github.com
 **Depo Listesinin Güncellenmesi:** Linux sistemi kendisini güncellemek için bir merkeze bakıp, kontrol yapmaya ihtiyacı vardır. Bu listelerin bakılacağı yerler /etc/apt/sources.list dosyasında tutulur. "update" komutu ile sistemde kurulu olan paketler, paket deposundaki versiyonları ile farklarına bakılır ve fark varsa liste güncellenir. Bu komut kurulum yapmaz. Ubuntu paket listeleri hakkında detaylı bilgiye [buradan](https://wiki.ubuntu-tr.net/index.php?title=Yaz%C4%B1l%C4%B1m_ve_G%C3%BCncelle%C5%9Ftirmeler) ulaşabilirsiniz.
 
 ```bash
-  sudo apt update # Depo listelerini güncelle.
+sudo apt update # Depo listelerini güncelle.
 ```
 
 **Paketlerin Güncellenmesi:** Sistemde kurulu olan paketler, "upgrade" komutu ile güncellenen listeye göre bulunan en son sürüme yükseltir.
 
 ```bash  
-  sudo apt upgrade -y # Paketlerin yeni sürümleri varsa yükselt.
+sudo apt upgrade -y # Paketlerin yeni sürümleri varsa yükselt.
 ```
 
 ## PHP PAKETLERİNİN KURULMASI
@@ -28,37 +28,37 @@ Kurulum komutlarının açıklamalı sade listesine [buradan](https://github.com
 Php için olmazsa olmaz, ***açık kaynak kodlu*** ve ücretsiz bir web sunucusu yazılımı olan *Apache* yi kuralım;
 
 ```bash
-  sudo apt install apache2 -y # Apache kur.
-  sudo sudo systemctl enable apache2 # Apache2'yi açılışta otomatik başlat.
+sudo apt install apache2 -y # Apache kur.
+sudo sudo systemctl enable apache2 # Apache2'yi açılışta otomatik başlat.
 ```
 
-Apache kurulumunu test için aşağıdaki komutu gönderin. Çıkmak için ise `CTRL+C` ya da `q` ya basın.
-
 ```bash
-  sudo systemctl status apache2.service # Aşağıdaki çıktıyı verecektir!
+sudo systemctl status apache2.service # Aşağıdaki çıktıyı verecektir!
 ```
 
 **Örnek Ekran Görüntüsü:**
 
 ```bash
-    hasan@armada:/var/www/html$ sudo systemctl status apache2.service
-    [sudo] password for hasan:
-    ● apache2.service - The Apache HTTP Server
-       Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
-       Active: active (running) since Sat 2019-07-06 18:08:51 +03; 1min 58s ago
-         Docs: https://httpd.apache.org/docs/2.4/
-      Process: 898 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
-     Main PID: 1035 (apache2)
-        Tasks: 6 (limit: 4566)
-       Memory: 18.4M
-       CGroup: /system.slice/apache2.service
-               ├─1035 /usr/sbin/apache2 -k start
-               ├─1187 /usr/sbin/apache2 -k start
-               ├─1188 /usr/sbin/apache2 -k start
-               ├─1189 /usr/sbin/apache2 -k start
-               ├─1190 /usr/sbin/apache2 -k start
-               └─1191 /usr/sbin/apache2 -k start
+hasan@armada:/var/www/html$ sudo systemctl status apache2.service
+[sudo] password for hasan:
+● apache2.service - The Apache HTTP Server
+   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+   Active: active (running) since Sat 2019-07-06 18:08:51 +03; 1min 58s ago
+     Docs: https://httpd.apache.org/docs/2.4/
+  Process: 898 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
+ Main PID: 1035 (apache2)
+    Tasks: 6 (limit: 4566)
+   Memory: 18.4M
+   CGroup: /system.slice/apache2.service
+           ├─1035 /usr/sbin/apache2 -k start
+           ├─1187 /usr/sbin/apache2 -k start
+           ├─1188 /usr/sbin/apache2 -k start
+           ├─1189 /usr/sbin/apache2 -k start
+           ├─1190 /usr/sbin/apache2 -k start
+           └─1191 /usr/sbin/apache2 -k start
 ```
+
+Çıkmak için ```:q``` yapın!
 
 **Sunucuyu Test Etmek:** Taracımızın adres çubuğuna "127.0.0.1" veya "localhost" yazarak "*Apache2 Ubuntu Default Page*" sayfasını görebiliyorsak yani aşağıdaki resim gibi bir sayfa ile karşılaştıysak apache kurulmuş demektir. Testi buradan ( [localhost](http://localhost/)  yada [127.0.0.1](http://127.0.0.1/)  ) yapabilirsiniz.
 
@@ -68,8 +68,10 @@ Apache kurulumunu test için aşağıdaki komutu gönderin. Çıkmak için ise `
 **Kök Klasörü Yetkilendirmesi:** Apache'nin kullandığı /var/www/html/ kök dizininde işlem yapabilmesi için, sahipliğini "apache" kullanıcısına veriyoruz.
 
 ```bash
-  # Html dizini ve alt elemanlarının sahibini ve grubunu www-data yap.
-  sudo chown www-data:www-data /var/www/html/ -R
+# Html dizini için kullanıcıyı yetkilendir.
+sudo adduser $USER www-data
+# Html dizini ve alt elemanlarının sahibini ve grubunu www-data yap.
+sudo chown -R $USER:www-data /var/www/html/
 ```
 
 ### VERİTABANI (MariaDB) KURULUMU
@@ -77,12 +79,12 @@ Apache kurulumunu test için aşağıdaki komutu gönderin. Çıkmak için ise `
 MariaDB, GNU Genel Kamu Lisansı altında serbest olarak kullanılabilen, MySQL'in yaratıcısı olan *Monty Widenius*'un MySQL'in kodunu çatallayıp (fork) "çoğunlukla" MySQL ile aynı komutları, arayüzleri ve API'leri destekleyecek şekilde geliştirmeye başlanan, toplulukla iç içe hızlı ve verimli şekilde geliştirilmeye devam edilen MySQL ilişkisel veritabanı yönetim sistemidir.
 
 ```bash
-  sudo apt install mariadb-server mariadb-client -y # Mariadb'yi kur.
-  sudo sudo systemctl enable mariadb # Mariadb'yi açılışta otomatik başlat.
-  systemctl status mariadb.service
+sudo apt install mariadb-server mariadb-client -y # Mariadb'yi kur.
+sudo sudo systemctl enable mariadb # Mariadb'yi açılışta otomatik başlat.
+systemctl status mariadb.service
 ```
 
-Çıkmak için ise `CTRL+C` ya da `q` ya basın.
+Çıkmak için ise ```:q``` ya basın.
 
 **Örnek Ekran Görüntüsü:**
 
@@ -109,32 +111,32 @@ hasan@armada:/var/www/html/Ubuntu-Php$ systemctl status mariadb.service
 **Root Kullanıcısı İçin Parola Belirleme:**
 
 ```bash
-  sudo mysql -u root
+sudo mysql -u root
 ```
 
 **Örnek Ekran Görüntüsü:**
 
 ```sh
-      hasan@armada:~$ sudo mariadb -u root
-      Welcome to the MariaDB monitor.  Commands end with ; or \g.
-      Your MariaDB connection id is 47
-      Server version: 10.3.13-MariaDB-2 Ubuntu 19.04
+hasan@armada:~$ sudo mariadb -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 47
+Server version: 10.3.13-MariaDB-2 Ubuntu 19.04
 
-      Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
 
-      Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
-      MariaDB [(none)]>
+MariaDB [(none)]>
 ```
 
 Aşağıdaki komutları, satır satır gönderin.
 
 ```bash
-      show databases;
-      use mysql;
-      update user set plugin='' where User='root';
-      flush privileges;
-      exit; # Mariadb'den çıkış.
+show databases;
+use mysql;
+update user set plugin='' where User='root';
+flush privileges;
+exit; # Mariadb'den çıkış.
 ```
 
 **MySql Parolası Belirleme:**
@@ -142,7 +144,7 @@ Aşağıdaki komutları, satır satır gönderin.
 Not: Unutmayacağınız bir parola lütfen!
 
 ```bash
-  sudo mysql_secure_installation   
+sudo mysql_secure_installation   
 ```
 **Parola** yı iki defa girmenizi ister.  **Parola** ekranda görülmez ve aynı olmak zorundadır. Bu komuttan sonra gelen ekranda, sırasıyla aşağıda yer alan resimlerdeki adımları izleyin;
 
@@ -167,113 +169,112 @@ Ekran çıktısı:
   /etc/alternatives/my.cnf
 ```
 
-Dosyayı konsoldan açmak için;
+Dosyayı konsoldan açmak için (nano, via, gedit);
 
 ```bash
-  sudo nano /etc/mysql/my.cnf # Kendi dosya adresinizi girin!
+  sudo gedit /etc/mysql/my.cnf # Kendi dosya adresinizi girin!
 ```
 
 Aşağıdaki ayarları bir seferde kopyalayıp sayfanın en altına yapıştırabilirsiniz.
 
 ```bash
-      [client]
-      port                            = 3306
-      socket                          = /var/lib/mysql/mysql.sock
+[client]
+port = 3306
+socket = /var/lib/mysql/mysql.sock
 
-      [mysqld-safe]
-      socket                          = /var/lib/mysql/mysql.sock
-      nice                            = 0
+[mysqld-safe]
+socket = /var/lib/mysql/mysql.sock
+nice = 0
 
-      [mysqld]
-      # Basic
-      innodb_force_recovery = 1
-      bind-address                    = 127.0.0.1 # Comment out if you want remote servers to connect to this server's MySQL instance
-      datadir                         = /var/lib/mysql
-      lc-messages-dir                 = /usr/share/mysql
-      max-allowed-packet              = 128M
-      max-connect-errors              = 1000000
-      pid-file                        = /var/lib/mysql/mysql.pid
-      port                            = 3306
-      skip-external-locking
-      skip-name-resolve
-      socket                          = /var/lib/mysql/mysql.sock
-      tmpdir                          = /dev/shm/mysql/
-      user                            = mysql
+[mysqld]
+# Basic
+innodb_force_recovery = 1
+bind-address = 127.0.0.1 # Comment out if you want remote servers to connect to this server's MySQL instance
+datadir = /var/lib/mysql
+lc-messages-dir = /usr/share/mysql
+max-allowed-packet = 128M
+max-connect-errors = 1000000
+pid-file = /var/lib/mysql/mysql.pid
+port = 3306
+skip-external-locking
+skip-name-resolve
+socket = /var/lib/mysql/mysql.sock
+tmpdir = /dev/shm/mysql/
+user = mysql
 
+# MyISAM Query Cache Settings
+query-cache-limit = 1M    # UPD
+query-cache-size = 70M   # UPD
+query-cache-type = 1
 
-      # MyISAM Query Cache Settings
-      query-cache-limit               = 1M    # UPD
-      query-cache-size                = 70M   # UPD
-      query-cache-type                = 1
+key-buffer-size = 150M   # UPD
 
-      key-buffer-size                 = 150M   # UPD
+low-priority-updates = 1
+concurrent-insert = 2
 
-      low-priority-updates            = 1
-      concurrent-insert               = 2
+# Common
+max-connections = 100   # UPD
+back-log = 512
 
-      # Common
-      max-connections                 = 100   # UPD
-      back-log                        = 512
+wait-timeout = 90
+interactive-timeout = 90
 
-      wait-timeout                    = 90
-      interactive-timeout             = 90
+join-buffer-size = 2M    # UPD
+read-buffer-size = 2M    # UPD
+read-rnd-buffer-size = 4M    # UPD
+sort-buffer-size = 4M    # UPD
 
-      join-buffer-size                = 2M    # UPD
-      read-buffer-size                = 2M    # UPD
-      read-rnd-buffer-size            = 4M    # UPD
-      sort-buffer-size                = 4M    # UPD
+thread-cache-size = 16   # UPD (most of the times you probably won't need to change this)
+thread-stack = 192K
 
-      thread-cache-size               = 16   # UPD (most of the times you probably won't need to change this)
-      thread-stack                    = 192K
+max-heap-table-size = 50M
+tmp-table-size = 50M
 
-      max-heap-table-size             = 50M
-      tmp-table-size                  = 50M
+table-definition-cache = 8000  # UPD
+table-open-cache = 1000  # UPD
+open-files-limit = 24000 # UPD
 
-      table-definition-cache          = 8000  # UPD
-      table-open-cache                = 1000  # UPD
-      open-files-limit                = 24000 # UPD
+ft-min-word-len = 3     # Minimum length of words to be indexed for search results
 
-      ft-min-word-len                 = 3     # Minimum length of words to be indexed for search results
+expire-logs-days = 2
+log-error = /var/lib/mysql/mysql_error.log
+log-queries-not-using-indexes = 1
+long-query-time = 0.1
+max-binlog-size = 100M
+slow-query-log = 1
+slow-query-log-file = /var/lib/mysql/mysql_slow.log
 
-      expire-logs-days                = 2
-      log-error                       = /var/lib/mysql/mysql_error.log
-      log-queries-not-using-indexes   = 1
-      long-query-time                 = 0.1
-      max-binlog-size                 = 100M
-      slow-query-log                  = 1
-      slow-query-log-file             = /var/lib/mysql/mysql_slow.log
+thread-cache-size = 16   # UPD (most of the times you probably won't need to change this)
+thread-stack = 192K
 
-      thread-cache-size               = 16   # UPD (most of the times you probably won't need to change this)
-      thread-stack                    = 192K
+max-heap-table-size = 50M
+tmp-table-size = 50M
 
-      max-heap-table-size             = 50M
-      tmp-table-size                  = 50M
+table-definition-cache = 8000  # UPD
+table-open-cache = 1000  # UPD
+open-files-limit = 24000 # UPD
 
-      table-definition-cache          = 8000  # UPD
-      table-open-cache                = 1000  # UPD
-      open-files-limit                = 24000 # UPD
+ft-min-word-len = 3     # Minimum length of words to be indexed for search results
 
-      ft-min-word-len                 = 3     # Minimum length of words to be indexed for search results
+expire-logs-days = 2
+log-error = /var/lib/mysql/mysql_error.log
+log-queries-not-using-indexes = 1
+long-query-time = 0.1
+max-binlog-size = 100M
+slow-query-log = 1
+slow-query-log-file = /var/lib/mysql/mysql_slow.log
 
-      expire-logs-days                = 2
-      log-error                       = /var/lib/mysql/mysql_error.log
-      log-queries-not-using-indexes   = 1
-      long-query-time                 = 0.1
-      max-binlog-size                 = 100M
-      slow-query-log                  = 1
-      slow-query-log-file             = /var/lib/mysql/mysql_slow.log
+max_allowed_packet = 32M
+open_files_limit = 50000
+[mysqldump]
+quick
+quote-names
+max-allowed-packet = 16M
 
-      max_allowed_packet=32M
-      open_files_limit=50000
-      [mysqldump]
-      quick
-      quote-names
-      max-allowed-packet              = 16M
+[mysql]
 
-      [mysql]
-
-      [isamchk]
-      key-buffer-size                 = 150M
+[isamchk]
+key-buffer-size = 150M
 ```
 
 #### MARİADB AÇILIŞTA DEVREYE GİRMEZSE ÇALIŞTIRILAMAZSA AŞAĞIDAKİ KOMUTLARI SIRASIYLA GÖNDER.
@@ -293,39 +294,39 @@ systemctl status mariadb.service
 *Not: Bu komutta kurulacak php7 paketleri temel ihtiyaçlar için zorunlu paketlerdir.*
 
 ```bash
-  # Php'yi belirtilen paketlerle beraber kur.    
-  sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc -y
-  sudo apt install php-gd php-mysql php-mbstring php-xml libapache2-mod-php -y
-  # Php versiyon kontrolu yap.
-  sudo php -v
-  # Apache Web sunucusunu yeniden başlat.
-  sudo systemctl restart apache2
+# Php'yi belirtilen paketlerle beraber kur.    
+sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc -y
+sudo apt install php-gd php-mysql php-mbstring php-xml libapache2-mod-php -y
+# Php versiyon kontrolu yap.
+sudo php -v
+# Apache Web sunucusunu yeniden başlat.
+sudo systemctl restart apache2
 ```
 
 **Html Dizini İçin Yetkilendirme:**
 
 ```bash
-  sudo adduser $USER www-data
-  sudo chown -R $USER:www-data /var/www/html/
+sudo adduser $USER www-data
+sudo chown -R $USER:www-data /var/www/html/
 ```
 
 **Masaüstü'ne HTML Klasörü Kısayolunun Oluşturulması:**
 
 ```bash
-  cd ~/Masaüstü # Masaüstü dizinine geç.
-  ln -s /var/www/html/ # Masaüstü'ne kısayol oluştur.  
+cd ~/Masaüstü # Masaüstü dizinine geç.
+ln -s /var/www/html/ # Masaüstü'ne kısayol oluştur.  
 ```
 
 **PHP Betiklerini Apache Sunucusunda Test Etmek:**
 
 ```bash
-  cd /var/www/html/ # html dizinine geç.
-  sudo nano /var/www/html/info.php # info.php dosyasını oluştur ve konsolda aç.
+cd /var/www/html/ # html dizinine geç.
+sudo nano /var/www/html/info.php # info.php dosyasını oluştur ve konsolda aç.
 ```
 İçerisine altta yer alan bir satırlık ilk php kodumuzu yazalım ve `CTRL+C` sonra `E` sonra `ENTER` şeklinde kayıt edep çıkalım.
 
 ```php
-  <?php phpinfo(); ?>
+<?php phpinfo(); ?>
 ```
 
 Kurulum testini [buradan](http://localhost/info.php) yapabilirsiniz. Eğer alt resim gibi bir ekran ile karşılaştıysanız, sorun yok yola devam.
@@ -342,24 +343,24 @@ php.ini dosyasının adresine [buradan](http://localhost/info.php) ulaşabilirsi
 
 Dosyayı konsoldan açmak için;
 ```bash
-  sudo nano /etc/php/7.2/apache2/php.ini # Kendi dosya adresinizi girin!
+sudo nano /etc/php/7.2/apache2/php.ini # Kendi dosya adresinizi girin!
 ```
 
 Aşağıdaki ayarları bir seferde kopyalayıp sayfanın en altına yapıştırabilirsiniz.
 
 ```bash
-      display_startup_errors = On
-      display_errors         = On
-      short_open_tag         = On
-      opcache.enable         = Off
-      upload_max_filesize    = 128M
-      post_max_size          = 128M
-      max_input_vars         = 5000
-      date.timezone          = "Europe/Istanbul"
-      error_reporting        = E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE & ~E_WARNING
-      mbstring.language          = Turkish
-      mbstring.internal_encoding = UTF-8
-      disable_functions          = exec, passthru, shell_exec, system, proc_open, popen, curl_exec, curl_multi_exec, parse_ini_file, show_source
+display_startup_errors = On
+display_errors = On
+short_open_tag = On
+opcache.enable = Off
+upload_max_filesize = 128M
+post_max_size = 128M
+max_input_vars = 5000
+date.timezone = "Europe/Istanbul"
+error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE & ~E_WARNING
+mbstring.language = Turkish
+mbstring.internal_encoding = UTF-8
+disable_functions = exec, passthru, shell_exec, system, proc_open, popen, curl_exec, curl_multi_exec, parse_ini_file, show_source
 ```
 
 ### Servislerin ve Bilgisayarın Tekrar Başlatılması
