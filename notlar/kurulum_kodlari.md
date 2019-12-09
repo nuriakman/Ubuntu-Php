@@ -96,6 +96,8 @@ cd ~/.config/sublime-text-3/Local/
 ls -al
 # Varsa geditle aç içerisine anahtarı yapıştır.
 sudo gedit License.sublime_license
+# Dosya yoksa.
+touch License.sublime_license
 # Eğer değişiklik yapılamıyorsa salt okunur açılıyorsa,
 sudo chattr -i License.sublime_license
 #Gedit komutunu tekrar çalıştır.
