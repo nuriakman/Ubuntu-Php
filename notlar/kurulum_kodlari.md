@@ -1,6 +1,6 @@
 # PHP ÇALIŞMA ORTAMI KURULUM KODLARI
 
-*Açıklama satırlarını okuyarak kodları konsolda satır satır çalıştırın!*
+*Açıklama satırlarını okuyarak kodları konsolda satır satır çalıştırın!* 
 
 ```bash
 # Ekranları araç çubuğundan tek tıkla aç-kapat özelliğini ver.
