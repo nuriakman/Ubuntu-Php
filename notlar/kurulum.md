@@ -287,6 +287,7 @@ sudo apt update
 sudo apt install mariadb-server
 sudo systemctl restart mariadb
 systemctl status mariadb.service
+# Version ve sürüme göre kodlara https://downloads.mariadb.org/mariadb/repositories/#mirror=nodesdirect
 ```
 
 ### PHP KURULUMU
