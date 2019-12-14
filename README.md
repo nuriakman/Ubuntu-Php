@@ -2,55 +2,67 @@
 ## LYK EĞİTİM NOTLARI
 
 
-![](https://lh3.googleusercontent.com/hTju6PNPOVRXbORlfGwkr0uJUkfjDED-gGrxbZfb4UKSqIJhVE0FlQCUH9MIyZNm93-TRd_Z5nAa)
+![Mustafa Akgül Özgür Yazılım Yaz Kampı 2019](https://lh3.googleusercontent.com/hTju6PNPOVRXbORlfGwkr0uJUkfjDED-gGrxbZfb4UKSqIJhVE0FlQCUH9MIyZNm93-TRd_Z5nAa)
 
 
 ***Ben bu konuyu biliyorum diye düşünüp bazı konuları geçebileceğinizi düşünebilirsiniz. Size tavsiyem bildiğinizi sandığınız konulara da bir göz atın derim...***
 
 ### BAŞLANGIÇ
 
-- [Php Nedir?](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/php_nedir.md)
-- [LAMP Kurulumu](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/kurulum.md)
-- [Doğru Editör Seçimi (IDM)](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/editor_secimi.md)
+- [Başlarken...](./notlar/baslangic.md)
+- [Php Nedir?](./notlar/php_nedir.md)
+- [LAMP Kurulumu](./notlar/kurulum.md)
+- [Windows'da Git Kurulumu, SSH Key ve Github Ayarları](./notlar/git_windows.md)
+- [Git Komutları-Kullanımı](./notlar/git_kullanimi.md)
+- [Doğru Editör Seçimi (IDM)](./notlar/editor_secimi.md)
 
 ### PHP'YE GİRİŞ
 
-- [Yazım Kuralları (Syntax)](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/yazim_kurallari.md)
-- [Veri Türleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/veri_turleri.md)
-- [Değişkenlerin Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/degiskenler.md)
-- [Sabit Değişkenler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/sabit_degiskenler.md)
-- [Sihirli Karakterler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/sihirli_karakterler.md)
+- [Yazım Kuralları (Syntax)](./notlar/yazim_kurallari.md)
+- [Veri Türleri](./notlar/veri_turleri.md)
+- [Değişkenlerin Kullanımı](./notlar/degiskenler.md)
+- [Sabit Değişkenler](./notlar/sabit_degiskenler.md)
+- [Sihirli Karakterler](./notlar/sihirli_karakterler.md)
 
 ### OPERATÖRLER
 
-- [Aritmatik Operatörler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/aritmatik.md)
-- [Atama Operatörleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/atama.md)
-- [Artırma ve Azaltma Operatörleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/artirma_azaltma.md)
-- [Karşılaştırma Operatörleri](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/karsilastirma.md)
-- [Mantıksal Operatörler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/mantiksal.md)
+- [Aritmatik Operatörler](./notlar/aritmatik.md)
+- [Atama Operatörleri](./notlar/atama.md)
+- [Artırma ve Azaltma Operatörleri](./notlar/artirma_azaltma.md)
+- [Karşılaştırma Operatörleri](./notlar/karsilastirma.md)
+- [Mantıksal Operatörler](./notlar/mantiksal.md)
 
 ### DİZİLER
 
-- [Dizi Oluşturmak ve Dizi Tanımlamanın İki Yolu](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/diziler.md)
-- [İç İçe Dizi Oluşturmak](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/ic_ice_diziler.md)
-- [Sabit Değişkenlerde Dizilerin Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/sabit_degiskenlerde_dizi.md)
+- [Dizi Oluşturmak ve Dizi Tanımlamanın İki Yolu](./notlar/diziler.md)
+- [İç İçe Dizi Oluşturmak](./notlar/ic_ice_diziler.md)
+- [Sabit Değişkenlerde Dizilerin Kullanımı](./notlar/sabit_degiskenlerde_dizi.md)
 
 ### KOŞULLU İFADELER
 
-- İf-Else İfadesi
-- Switch-Case İfadesi
-- Tennary(Üçlü) Operatör Kullanımı
-- İf-Else ve Switch-Case İçin Alternatif Söz Dizimleri
+- [İf-Else İfadesi](./notlar/if_else.md)
+- [Switch-Case İfadesi](./notlar/switch_case.md)
+- [Ternary(Üçlü) Operatör Kullanımı](./notlar/ternary.md)
 
 ### DÖNGÜLER
 
-- For Döngüsü
-- Foreach Döngüsü
-- While Döngüsü
-- Do-While Döngüsü
+- [For Döngüsü](./notlar/for.md)
+- [Foreach Döngüsü](./notlar/foreach.md)
+- [While Döngüsü](./notlar/while.md)
+- [Do-While Döngüsü](./notlar/dowhile.md)
 
-### FONKSİYONLAR
+### FONKSİYONLAR  
 
-- Fonksiyonların Kullanımı
-- Anonim Fonksiyonlar
-- Fonksiyonlarda Sınırsız Parametre Göndermek
+- [Fonksiyonların Kullanımı](./notlar/fonksiyonlar.md)
+- [Anonim Fonksiyonlar](./notlar/anonim_fonksiyonlar.md)
+- [Fonksiyonlarda Sınırsız Parametre Göndermek](./notlar/fonksiyon_sinirsiz_parametre.md)
+
+### PHP'DE TANIMLI FONKSİYONLAR
+
+- [Dizi Fonksiyonları](./notlar/dizifonksiyonlari.md)
+- [String Fonksiyonları](./notlar/stringfonksiyonlari.md)
+- [printf(), sprintf(), vprintf() ve vsprintf() Fonksiyonları](./notlar/sprintf.md)
+
+### PHP'DE FORM İŞLEMLERİ
+
+- [Form nedir? Özellikleri](./notlar/form.md)

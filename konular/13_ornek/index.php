@@ -1,47 +1,45 @@
 <!DOCTYPE html>
-<html lang="tr">
-<head>
-  <title>Bootstrap 4 Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</head>
+<html>
 <body>
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <!-- Brand -->
-    <a class="navbar-brand" href="#">LYK 2019</a>
 
-    <!-- Links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link 1</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link 2</a>
-      </li>
+  <form name="yukleme" method="post" action="index.php" enctype="multipart/form-data">
+    <table border="0">
+      <tr>
+        <td>Dosya Seçiniz:</td>
+        <td><input type="file" name="dosya"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><input type="submit" name="yukle" value="Yükle"></td>
+      </tr>
+    </table>
+  </form>
 
-      <!-- Dropdown -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Dropdown link
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Link 1</a>
-          <a class="dropdown-item" href="#">Link 2</a>
-          <a class="dropdown-item" href="#">Link 3</a>
-        </div>
-      </li>
-    </ul>
-  </nav>
-  <br>
-  <div class="container-fluid">
-    <div class="row col-md-3 bg-dark text-white">
+  <?php
+  function turkce($metin){
+    $aranan=array("ç","Ç","ğ","Ğ","ı","İ","ö","Ö","ş","Ş","ü","Ü"," ");
+    $yerine=array("c","c","g","g","i","i","o","o","s","s","u","u","_");
+    return str_replace($aranan,$yerine,$metin);
+  }
 
+  if($_POST){
+    $gecici_ad=$_FILES["dosya"]["tmp_name"];
+    $kalici_yol_ad="Ubuntu-Php/xxx/".turkce($_FILES["dosya"]["name"]);
 
-    </div>
-  </div>
+    if ($_FILES["dosya"]["error"]) // hata oluştu ise
+    echo "<font color='green'>Hata : ",$_FILES["dosya"]["error"],"</font>";
+    else{
+      if (file_exists($kalici_yol_ad)) // yüklenen dosya upload dizininde varsa
+      echo "<font color='red'>Yazdığınız ad ile bir dosya zaten kayıtlıdır.</font>";
+      else{
+        if (move_uploaded_file($gecici_ad,$kalici_yol_ad)) // eğer dosya kaydedilirse
+        echo "<font color='green'>Dosya başarı ile yüklendi.</font>";
+        else
+        echo "<font color='red'>Dosya yükleme başarısız.</font>";
+      }
+    }
+  }
+  ?>
+
 </body>
 </html>

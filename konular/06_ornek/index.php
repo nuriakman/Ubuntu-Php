@@ -2,9 +2,9 @@
   $Personel = array();
   $Personel[] = array("Adi"=>"Nuri",  "Soyadi"=>"Akman", "SicilNo"=>"1111");
   $Personel[] = array("Adi"=>"Kemal", "Soyadi"=>"Mutlu", "SicilNo"=>"3333");
-  $Personel[5]["Adi"]     = "Selami";
-  $Personel[5]["Soyadi"]  = "Üstün";
-  $Personel[5]["SicilNo"] = "2222";
+  $Personel[5]["Adi"]     = "Hasan";
+  $Personel[5]["Soyadi"]  = "Cicek";
+  $Personel[5]["SicilNo"] = "1383";
 
   echo "\n\n<h1>Dizi İçeriği</h1>";
   echo "<pre>";

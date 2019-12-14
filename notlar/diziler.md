@@ -1,6 +1,6 @@
 ## Diziler
 
-Diziler çoklu veri tutmaya yarayan yapılardır.
+Diziler çoklu veri tutmaya yarayan yapılardır. Bu değişkenler aynı türdedir ve tek bir ana değişken içerisinde bulunurlar.
 
 Dizilerin özellikleri;
 - `array()` fonksiyonu ile oluşturulur,
@@ -59,7 +59,3 @@ Dizilerin özellikleri;
       echo $kimlik['meslek'];
 ?>
 ```
-
-
-
-[Mantıksal Operatörler](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/mantiksal.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php) :arrow_right: [İç İçe Dizi Oluşturmak](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/ic_ice_diziler.md)

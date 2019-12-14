@@ -19,27 +19,37 @@ Peki veri tipini nasıl tespit ederiz. Bunun için `gettype();`fonksiyonunu kull
     $tatlimi = true;
     $meyveler = array(elma, armut, muz, ayva);
     $varmi = NULL;
+    $yokmu = " ";
 
-
-    echo "\$meyve"." değişkeninin türü ="." ".gettype($meyve)."<br>";
-    echo "\$adet"." değişkeninin türü ="." ".gettype($adet)."<br>";
-    echo "\$yarimkilo"." değişkeninin türü ="." ".gettype($yarimkilo)."<br>";
-    echo "\$tatlimi"." değişkeninin türü ="." ".gettype($tatlimi)."<br>";
-    echo "\$meyveler"." değişkeninin türü ="." ".gettype($meyveler)."<br>";
-    // ;Alt satırda boşluk bırakma diğerlerinden farklı olarak yapılmıştır.
-    echo "\$varmi"." değişkeninin türü ="." ".gettype($varmi)."<br>";
-
+    echo "\$meyve değişkeninin değeri \"$meyve\" türü ise \"".gettype($meyve)."\" dir.<br>";
+    echo "\$adet değişkeninin değeri \"$adet\" türü ise \"".gettype($adet)."\" dir.<br>";
+    echo "\$yarimkilo değişkeninin değeri \"$yarimkilo\" türü ise \"".gettype($yarimkilo)."\" dır.<br>";
+    echo "\$tatlimi değişkeninin değeri \"$tatlimi\" türü ise \"".gettype($tatlimi)."\" dir.<br>";
+    echo "\$varmi değişkeninin değeri \"$varmi\" türü ise \"".gettype($varmi)."\" dır.<br>";
+    echo "\$yokmu değişkeninin değeri \"$yokmu\" türü ise \"".gettype($yokmu)."\" dir. Bir araçubuğu boşluk var.<br><br>";
+    echo "\$meyveler değişkeninin değeri; <br><pre>";
+    print_r($meyveler);
+    echo "</pre>türü ise \"".gettype($meyveler)."\" dir.";
 ?>
 ```
 Ekran Görüntüsü,
 ```sh
-  $meyve değişkeninin türü = string
-  $adet değişkeninin türü = integer
-  $yarimkilo değişkeninin türü = double
-  $tatlimi değişkeninin türü = boolean
-  $meyveler değişkeninin türü = array
-  $varmi değişkeninin türü = NULL
+  $meyve değişkeninin değeri "elma" türü ise "string" dir.
+  $adet değişkeninin değeri "15" türü ise "integer" dir.
+  $yarimkilo değişkeninin değeri "0.5" türü ise "double" dır.
+  $tatlimi değişkeninin değeri "1" türü ise "boolean" dir.
+  $varmi değişkeninin değeri "" türü ise "NULL" dır.
+  $yokmu değişkeninin değeri " " türü ise "string" dir. Bir araçubuğu boşluk var.
+
+  $meyveler değişkeninin değeri;
+
+  Array
+  (
+      [0] => elma
+      [1] => armut
+      [2] => muz
+      [3] => ayva
+  )
+
+  türü ise "array" dir.
 ```
-
-
-[Yazım Kuralları](https://github.com/yeniceri1453/Ubuntu-Php/tree/master/notlar/yazim_kurallari.md) :arrow_left: [ANASAYFA](https://github.com/yeniceri1453/Ubuntu-Php) :arrow_right: [Değişkenlerin Kullanımı](https://github.com/yeniceri1453/Ubuntu-Php/blob/master/notlar/degiskenler.md)
