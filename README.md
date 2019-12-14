@@ -36,7 +36,6 @@
 
 - [Dizi Oluşturmak ve Dizi Tanımlamanın İki Yolu](./notlar/diziler.md)
 - [İç İçe Dizi Oluşturmak](./notlar/ic_ice_diziler.md)
-- [Sabit Değişkenlerde Dizilerin Kullanımı](./notlar/sabit_degiskenlerde_dizi.md)
 
 ### KOŞULLU İFADELER
 

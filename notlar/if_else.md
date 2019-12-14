@@ -1,4 +1,4 @@
-# If-Else İfadesi
+# if-else İfadesi
 
 Mantık;
 
